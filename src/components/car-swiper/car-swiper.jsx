@@ -23,17 +23,19 @@ const CarSwiper = ({ content }) => {
         modules={[Pagination, Navigation]}
         className="w-full h-screen mySwiper"
       >
-        {content?.map((item, ind) => {
-          <SwiperSlide key={ind}>
-            <div className={"relative w-full h-full swiper1"}>
-              <CarBanner
-                title={item.title}
-                subTitle={item.subTitle}
-                bg={item.bg}
-              />
-            </div>
-          </SwiperSlide>;
-        })}
+        {
+            content?.map((item, ind) =>(
+                <SwiperSlide key={ind}>
+                    <div className={"relative w-full h-full swiper1"}>
+                        <CarBanner
+                            title={item.title}
+                            subTitle={item.subTitle}
+                            bg={item.bg}
+                        />
+                    </div>
+                </SwiperSlide>
+            ) )
+        }
       </Swiper>
     </>
   );
