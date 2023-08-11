@@ -1,5 +1,5 @@
-export {default as Navbar} from './navbar/navbar'
-export {default as Footer} from './footer/footer'
+export {default as Navbar} from './navbar/Navbar'
+export {default as Footer} from './footer/Footer'
 export {default as BannerImage} from './banner-image/banner-image'
 export {default as StoreBox} from './store-box/store-box'
 export {default as NewsCard} from './news-card/news-card'

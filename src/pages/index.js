@@ -21,7 +21,7 @@ export default function Home() {
    <div>
    
    <header className="relative w-full h-screen">
-      <video className="object-cover w-full h-full"   autoplay loop muted>
+      <video className="object-cover w-full h-full"   autoPlay loop muted>
         <source className="w-full" src="https://lp-website-oss-static.leapmotor.com/Leapmotor-Chinese-web/c01-new-be-listed/c01video.mp4" type="video/mp4"/>
       </video>
 

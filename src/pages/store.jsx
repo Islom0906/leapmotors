@@ -20,7 +20,7 @@ const Store = () => {
         <StoreBox bg={stor3}/>
         <StoreBox bg={stor4}/>
         <StoreBox bg={stor2}/>
-        
+         <StoreBox bg={stor2}/>
       </div>
     </div>
   );

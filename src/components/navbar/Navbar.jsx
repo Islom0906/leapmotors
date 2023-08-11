@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import logo from '/public/logo.png'
+import logo from '/public/Logo.png'
 import Link from "next/link";
 import {GiHamburgerMenu} from "react-icons/gi"
 import {GrClose} from "react-icons/gr"
@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="w-full fixed top-0 left-0 h-[60px] z-20 " style={{background: "rgba(27, 27, 27, 0.85)"}}>
     <div className="container relative flex items-center justify-between w-full h-full">
       <div className="flex items-center justify-between sm:gap-20">
-        <a href="index.html" className="w-[154px] h-[34px] relative">
+        <Link href="/" className="w-[154px] h-[34px] relative">
         <Image
               src={logo}
               alt="Leapmotor"
@@ -22,7 +22,7 @@ const Navbar = () => {
               fill
             />
 
-        </a>
+        </Link>
         <ul className="items-center hidden gap-10 text-white uppercase lg:flex">
           <li><Link href="#" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">C11 reev</Link></li>
           <li><Link href="/C01" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">c01</Link></li>
@@ -46,7 +46,7 @@ const Navbar = () => {
                 <li><Link href="#" class="uppercase block lg:hidden ">t03</Link></li>
                 <li><Link href="#" class="uppercase block lg:hidden ">s01</Link></li>
                 <li className=""><Link href="#" className="capitalize">About Leapmotor</Link></li>
-                <li className=""><Link href="#" className="capitalize">News Room</Link></li>
+                <li className=""><Link href="/news" className="capitalize">News Room</Link></li>
                 <li className=""><Link href="/store" className="capitalize">Store</Link></li>
                 
               </ul>
