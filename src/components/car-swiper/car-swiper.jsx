@@ -21,7 +21,7 @@ const CarSwiper = ({ content , }) => {
         pagination={true}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="h-screen mySwiper"
+        className="h-screen mySwiper-team"
       >
         {
             content?.map((item, ind) =>(
