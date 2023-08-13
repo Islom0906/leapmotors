@@ -24,10 +24,11 @@ const Navbar = () => {
 
         </Link>
         <ul className="items-center hidden gap-10 text-white uppercase lg:flex">
-          <li><Link href="#" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">C11 reev</Link></li>
+          <li><Link href="C11Reev" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">C11 reev</Link></li>
+          <li><Link href="/C11" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">C11</Link></li>
           <li><Link href="/C01" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">c01</Link></li>
-          <li><Link href="#" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">t03</Link></li>
-          <li><Link href="#" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">s01</Link></li>
+          <li><Link href="/T03" className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">t03</Link></li>
+          
         </ul>
       </div>
       <div className="flex items-center md:gap-14">

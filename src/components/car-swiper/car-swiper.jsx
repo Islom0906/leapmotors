@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
-import { CarBanner } from "@/components";
+import { CarSwiperInner } from "@/components";
 
 SwiperCore.use([Autoplay]);
-const CarSwiper = ({ content }) => {
+const CarSwiper = ({ content , }) => {
   return (
     <>
       <Swiper
@@ -18,16 +18,16 @@ const CarSwiper = ({ content }) => {
           },
         }}
         loop={"true"}
-        pagination={false}
+        pagination={true}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="w-full h-screen mySwiper"
+        className="h-screen mySwiper"
       >
         {
             content?.map((item, ind) =>(
                 <SwiperSlide key={ind}>
                     <div className={"relative w-full h-full swiper1"}>
-                        <CarBanner
+                        <CarSwiperInner
                             title={item.title}
                             subTitle={item.subTitle}
                             bg={item.bg}

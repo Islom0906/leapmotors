@@ -13,6 +13,10 @@ import sectionC01bg  from '/public/section-bg-2.png'
 import sectionC11Suv  from '/public/section-3-logo.png'
 import sectionC11Suvbg  from '/public/section-bg-3.jpg'
 
+import T03bg from "/public/T03/section-bg-4.jpg";
+import T03Logo from "/public/T03/section-4-logo.png";
+
+
 import { BannerImage } from "@/components";
 
 export default function Home() {
@@ -39,6 +43,7 @@ export default function Home() {
       <BannerImage bg={sectionC11Bg} logo={sectionC11} text={'Intelligent Long Range Five-Seat SUV'} />
       <BannerImage bg={sectionC01bg} logo={sectionC01} text={'Intelligent Long Range Five-Seat SUV'} />
       <BannerImage bg={sectionC11Suvbg} logo={sectionC11Suv} text={'Intelligent Long Range Five-Seat SUV'} />
+      <BannerImage bg={T03bg} logo={T03Logo} text={'Smart Electric Mini Car'} />
     
    </div>
   )
