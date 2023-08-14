@@ -71,7 +71,7 @@ const T03Data = {
 
 const T03 = () => {
   return (
-    <>
+    <main className={'bg-black'}>
       <section className="h-screen ">
         <div className="relative w-full h-full">
           <Image
@@ -180,7 +180,7 @@ const T03 = () => {
       <CarBanner title={'More Convenient'} subTitle={'Technologies offer a more convenient , and efficient driving experience'} bg={section1Bg} bgRes={T03Logo}/>
       <CarText content={disclaimers} />
      
-    </>
+    </main>
   );
 };
 

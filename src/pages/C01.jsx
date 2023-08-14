@@ -71,7 +71,7 @@ const disclaimers= [
   ]
 
   return (
-    <>
+    <main className={'bg-black'}>
       <CarDetailBanner img={sectionC01} bg={sectionC01bg} text={'Leapmotor C01 Advance your life– Deluxe Technology Electric Vehicle'}/>
       
       <CarCharacteristics bg={sectionC01bg} characteristics={characteristics} />
@@ -97,7 +97,7 @@ const disclaimers= [
     <CarSwiper content={carSwipper1}  />
     <CarContentFooter title={'Leapmotor C01'} subTitle={'Advance Your Life'} bg={sectionC01bg} />
     <CarText content={disclaimers} />
-    </>
+    </main>
   )
 }
 

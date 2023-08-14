@@ -22,9 +22,9 @@ import { BannerImage } from "@/components";
 export default function Home() {
 
   return (
-   <div>
+   <main className={'bg-black'}>
    
-   <header className="relative w-full h-screen">
+   <section className="relative w-full h-screen ">
       <video className="object-cover w-full h-full"   autoPlay loop muted>
         <source className="w-full" src="https://lp-website-oss-static.leapmotor.com/Leapmotor-Chinese-web/c01-new-be-listed/c01video.mp4" type="video/mp4"/>
       </video>
@@ -39,12 +39,12 @@ export default function Home() {
           <Image src={logo} alt="logo" fill className="object-contain w-full h-full"/>
         </div>
       </div>
-    </header>
+    </section>
       <BannerImage bg={sectionC11Bg} logo={sectionC11} text={'Intelligent Long Range Five-Seat SUV'} />
       <BannerImage bg={sectionC01bg} logo={sectionC01} text={'Intelligent Long Range Five-Seat SUV'} />
       <BannerImage bg={sectionC11Suvbg} logo={sectionC11Suv} text={'Intelligent Long Range Five-Seat SUV'} />
       <BannerImage bg={T03bg} logo={T03Logo} text={'Smart Electric Mini Car'} />
     
-   </div>
+   </main>
   )
 }

@@ -68,7 +68,7 @@ const C11Reev = () => {
   };
 
   return (
-    <>
+    <main className={'bg-black'}>
       <CarDetailBanner
         imgLong={true}
         img={sectionC11Reev}
@@ -229,16 +229,16 @@ const C11Reev = () => {
         subTitle={
           "3.3 kW external discharge* fits squarely , into outdoor camping"
         }
-        
+
       />
       <CarBanner
         bg={sectionC11ReevBg}
         title={"Looking forward"}
       />
     <CarText content={disclaimers} />
-      
-    </>
+
+    </main>
   );
 };
 
-export default C11Reev;
+export default C11Reev
