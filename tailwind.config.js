@@ -10,7 +10,12 @@ module.exports = {
   theme: {
     extend: {
       container: {
-        center: true
+        center: true,
+        padding: {
+          DEFAULT: '3%' ,
+          lg: '5%'
+
+        },
       }
     },
   },

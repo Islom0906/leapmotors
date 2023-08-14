@@ -13,3 +13,4 @@ export {default as CarContentFooter} from './car-banner-content-bottom/car-banne
 export {default as CarText} from './car-text/car-text'
 export {default as CarBannerC11Reev} from './car-banner-C11Reev/car-banner-C11Reev'
 export {default as CarSwiperInnerVideo} from './car-swipper-inner-video/car-swipper-inner-video'
+export {default as AboutTeam} from './about-team/about-team'
