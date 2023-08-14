@@ -12,3 +12,4 @@ export {default as CarBannerContentBottom} from './car-banner-content-bottom/car
 export {default as CarContentFooter} from './car-banner-content-bottom/car-banner-content-bottom'
 export {default as CarText} from './car-text/car-text'
 export {default as AboutTeam} from './about-team/about-team'
+export {default as HoverCard} from './hover-card/hover-card'

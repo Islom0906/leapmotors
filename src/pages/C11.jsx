@@ -82,7 +82,7 @@ const disclaimers= [
 
 const C11 = () => {
   return (
-    <>
+    <main className={'bg-black'}>
       <CarCharacteristics bg={sectionC11bg} logo={sectionC11} characteristics={characteristics} />
       <CarCharacteristics bg={sectionC11bg} logo={sectionC11} characteristics={characteristics} />
       <CarSwiper content={carSwipper1} />
@@ -100,7 +100,7 @@ const C11 = () => {
     <CarBanner  title={'Superior Materials with Proven Dependability High-Strength Armor Body'} subTitle={'High-strength steel utilization rate of 76.2% <br> Hot-formed steel utilization rate of 17.4%'} bg={sectionC11bg}/>
     <CarText content={disclaimers} />
       
-    </>
+    </main>
   )
 }
 

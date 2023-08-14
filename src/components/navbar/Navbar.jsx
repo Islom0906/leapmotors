@@ -41,14 +41,14 @@ const Navbar = () => {
                 <GrClose onClick={() => setOpenNavbar(false)} className="text-2xl cursor-pointer"/>
               </div>
               <ul className="space-y-10">
-                <li><Link href="#" className="uppercase block lg:hidden ">c11 reev</Link></li>
-                <li><Link href="/C01" className="uppercase block lg:hidden ">c01</Link></li>
-                <li><Link href="#" className="uppercase block lg:hidden ">c11</Link></li>
-                <li><Link href="#" className="uppercase block lg:hidden ">t03</Link></li>
-                <li><Link href="#" className="uppercase block lg:hidden ">s01</Link></li>
-                <li className=""><Link href="/about" className="capitalize">About Leapmotor</Link></li>
-                <li className=""><Link href="/news" className="capitalize">News Room</Link></li>
-                <li className=""><Link href="/store" className="capitalize">Store</Link></li>
+                <li><Link onClick={() => setOpenNavbar(false)} href="#" className="uppercase block lg:hidden ">c11 reev</Link></li>
+                <li><Link onClick={() => setOpenNavbar(false)} href="/C01" className="uppercase block lg:hidden ">c01</Link></li>
+                <li><Link onClick={() => setOpenNavbar(false)} href="#" className="uppercase block lg:hidden ">c11</Link></li>
+                <li><Link onClick={() => setOpenNavbar(false)} href="#" className="uppercase block lg:hidden ">t03</Link></li>
+                <li><Link onClick={() => setOpenNavbar(false)} href="#" className="uppercase block lg:hidden ">s01</Link></li>
+                <li ><Link onClick={() => setOpenNavbar(false)} href="/about" className="capitalize">About Leapmotor</Link></li>
+                <li ><Link onClick={() => setOpenNavbar(false)} href="/news" className="capitalize">News Room</Link></li>
+                <li ><Link onClick={() => setOpenNavbar(false)} href="/store" className="capitalize">Store</Link></li>
                 
               </ul>
             </div>
