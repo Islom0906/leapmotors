@@ -3,7 +3,7 @@ import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
 import { CarSwiperInner } from "@/components";
 
 SwiperCore.use([Autoplay]);
-const CarSwiper = ({ content , }) => {
+const CarSwiper = ({ content , textColor }) => {
   return (
     <>
       <Swiper
@@ -28,6 +28,7 @@ const CarSwiper = ({ content , }) => {
                 <SwiperSlide key={ind}>
                     <div className={"relative w-full h-full swiper1"}>
                         <CarSwiperInner
+                            textColor={textColor}
                             title={item.title}
                             subTitle={item.subTitle}
                             bg={item.bg}
