@@ -5,7 +5,6 @@ import SwiperCore, {Autoplay, Navigation} from "swiper";
 import section1image1 from '/public/About-us/about us section 1.jpg'
 import section1image2 from '/public/About-us/about us section 1 image2.jpg'
 import teamImage from '/public/About-us/section-3 img1.jpg'
-import aboutOS from '/public/About-us/about-leapmotor-OS.jpg'
 import {AboutTeam, HoverCard} from "@/components";
 
 SwiperCore.use([Autoplay]);
