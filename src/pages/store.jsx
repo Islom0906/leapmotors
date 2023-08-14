@@ -22,6 +22,7 @@ const Store = () => {
         <StoreBox bg={stor2}/>
          <StoreBox bg={stor2}/>
       </div>
+      
     </div>
   );
 };
