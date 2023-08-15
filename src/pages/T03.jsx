@@ -1,8 +1,33 @@
 import Image from "next/image";
-import T03Logo from "/public/T03/section-4-logo.png";
 import { PiCaretDownBold } from "react-icons/pi";
-import section1Bg from "/public/T03/section-bg-4.jpg";
 import { CarSwiper ,CarText ,CarBanner } from "@/components";
+
+
+import T03Logo from "/public/index/section-4-logo.png";
+import section1 from "/public/index/section-bg-4.jpg";
+import section2 from "/public/T03/T03-section-2.jpg";
+import section3 from "/public/T03/T03-section-3.jpg";
+import section3_res from '/public/T03/T03-section-3-responsive.jpg';
+import section4_slider1 from "/public/T03/T03-slider-1.jpg";
+import section4_slider1_res from "/public/T03/T03-slider-1-responsive.png";
+import section4_slider2 from "/public/T03/T03-slider-2.jpg";
+import section4_slider2_res from "/public/T03/T03-slider-2-responsive.png";
+import section4_slider3 from "/public/T03/T03-slider-3.jpg";
+import section4_slider3_res from "/public/T03/T03-slider-3-responsive.png";
+import section4_slider4 from "/public/T03/T03-slider-4.jpg";
+import section4_slider4_res from "/public/T03/T03-slider-4-responsive.png";
+import section4_slider5 from "/public/T03/T03-slider-5.jpg";
+import section4_slider5_res from "/public/T03/T03-slider-5-responsive.png";
+import section5_slider1 from "public/T03/T03-slider-2-1.jpg";
+import section5_slider1_res from "public/T03/T03-slider-2-1-responsive.png";
+import section5_slider2 from "public/T03/T03-slider-2-2.jpg";
+import section6 from "public/T03/T03-section-6.jpg";
+import section6_res from "public/T03/T03-section-6-responsive.jpg";
+import section7 from "public/T03/T03-lastsection.jpg";
+import section7_res from "public/T03/T03-lastsection-responsive.jpg";
+
+
+
 
 const disclaimers= [
   '*1 The data are for reference only as there may be errors due to manual measurement.',
@@ -26,30 +51,65 @@ const disclaimers= [
   '*14 Leapmotor reserves the right to interpret and change product information such as technical parameters and configuration within the law.'
 ]
 
-const carSwipper1 = [
+const carSwipper2 = [
   {
     title: 'Energetic Curved Body',
     subTitle: 'Reduces wind resistance coefficient，showing a strong sense of science and technology',
-    bg: section1Bg,
+    bg: section5_slider1,
+    bgRes: section5_slider1_res,
+
   },
   {
     title: 'Through Headlamp',
     subTitle: 'Digital crystalline headlamp with smooth dynamic effect',
-    bg: section1Bg,
+    bg: section5_slider2,
+
+  }
+]
+
+const carSwipper1 = [
+  {
+    title: 'Energetic Curved Body',
+    subTitle: 'Reduces wind resistance coefficient，showing a strong sense of science and technology',
+    bg: section4_slider1,
+    bgRes: section4_slider1_res,
+  },
+  {
+    title: 'Through Headlamp',
+    subTitle: 'Digital crystalline headlamp with smooth dynamic effect',
+    bg: section4_slider2,
+    bgRes: section4_slider2_res,
+
   },
   {
     title: 'Frameless Door',
     subTitle: 'Front laminated silent glass rear privacy glass',
-    bg: section1Bg,
-  }
-]
+    bg: section4_slider3,
+    bgRes: section4_slider3_res,
 
+  },
+  {
+    title: 'Frameless Door',
+    subTitle: 'Front laminated silent glass rear privacy glass',
+    bg: section4_slider4,
+    bgRes: section4_slider4_res,
+
+  },
+  {
+    title: 'Frameless Door',
+    subTitle: 'Front laminated silent glass rear privacy glass',
+    bg: section4_slider5,
+    bgRes: section4_slider5_res,
+
+  },
+
+]
 
 const T03Data = {
   logo: T03Logo,
   section1: {
     subTitle: "Super-Safe Five-Door Pure Electric Model",
-    bg: section1Bg,
+    bg: section1,
     content: [
       {
         title: "high-strength steel cage body",
@@ -119,7 +179,7 @@ const T03 = () => {
         <div className="relative w-full h-full">
         <Image
             alt="car"
-            src={T03Data.section1.bg}
+            src={section2}
             className="object-cover w-full h-full"
           />
           <div className="absolute top-0 left-0 w-full h-full">
@@ -170,14 +230,14 @@ const T03 = () => {
           </div>
         </div>
       </section>
-      <CarBanner title={'Safer'} subTitle={'High-strength cage body for all-around safety protection'} bg={section1Bg} bgRes={T03Logo}/>
+      <CarBanner title={'Safer'} subTitle={'High-strength cage body for all-around safety protection'} bg={section3} bgRes={section3_res}/>
   
       
       <CarSwiper content={carSwipper1} />
-      <CarSwiper content={carSwipper1} />
+      <CarSwiper content={carSwipper2} />
 
-      <CarBanner title={'More Comfortable'} subTitle={'Efficient and powerful output, easily adaptable to various road conditions'} bg={section1Bg} bgRes={T03Logo}/>
-      <CarBanner title={'More Convenient'} subTitle={'Technologies offer a more convenient , and efficient driving experience'} bg={section1Bg} bgRes={T03Logo}/>
+      <CarBanner title={'More Comfortable'} subTitle={'Efficient and powerful output, easily adaptable to various road conditions'} bg={section6} bgRes={section6_res}/>
+      <CarBanner title={'More Convenient'} subTitle={'Technologies offer a more convenient , and efficient driving experience'} bg={section7} bgRes={section7_res}/>
       <CarText content={disclaimers} />
      
     </main>

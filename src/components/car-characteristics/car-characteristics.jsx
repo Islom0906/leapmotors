@@ -23,7 +23,7 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
             <p className="text-base font-normal leading-9 md:text-lg lg:text-xl" > {characteristics.subTitle} </p>
           </div>
           <div className="hidden md:block">
-            <div className={`mx-auto text-left grid grid-cols-2 md:grid-cols-4 gap-[30px] w-fit text-white ${textColor ? `text-${textColor}`  : 'text-white'}`}>
+            <div className={`mx-auto text-left grid grid-cols-2 md:grid-cols-4 gap-[30px] w-fit ${textColor ? `text-${textColor}`  : 'text-white'}`}>
               <div>
                 <p className=" opacity-80 font-thin leading-[28px]">Lenght</p>
                 <p className="text-2xl  font-medium leading-[24px]">{characteristics.about.lenght} <span className="text-base">mm</span></p>

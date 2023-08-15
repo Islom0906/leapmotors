@@ -16,3 +16,4 @@ export {default as CarSwiperInnerVideo} from './car-swipper-inner-video/car-swip
 export {default as AboutTeam} from './about-team/about-team'
 export {default as HoverCard} from './hover-card/hover-card'
 export {default as GoogleMap} from './map/googleMap'
+export {default as LocationMaps} from './location-maps/location-maps'

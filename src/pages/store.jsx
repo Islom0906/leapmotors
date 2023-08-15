@@ -4,8 +4,6 @@ import stor2 from "/public/Store/store2-2.jpg";
 import stor3 from "/public/Store/store2-3.jpg";
 import stor4 from "/public/Store/store2-4.jpg";
 
-import React from "react";
-
 const Store = () => {
   return (
     <div className={'bg-black store'}>
@@ -25,6 +23,9 @@ const Store = () => {
         <div className={'h-auto md:min-h-screen w-full relative bg-[#f5f5f5] '}>
           <GoogleMap/>
         </div>
+
+
+    <LocationMaps />
     </div>
   );
 };

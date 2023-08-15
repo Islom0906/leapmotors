@@ -9,6 +9,7 @@ import '../localization/i18n'
 import {useEffect, useTransition} from "react";
 import * as i18n from "i18next";
 import {useTranslation} from "react-i18next";
+import 'aos/dist/aos.css';
 
 
 // import { Inter } from 'next/font/google'
@@ -35,9 +36,7 @@ export default function App({ Component, pageProps }) {
       <div>
         <main>
           <Layout>
-
             <Component {...pageProps} />
-
           </Layout>
         </main>
       </div>
