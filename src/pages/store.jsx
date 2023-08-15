@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { StoreBox } from "@/components";
+import { LocationMaps, StoreBox } from "@/components";
 import stor1 from "/public/Store/store2-1.jpg";
 import stor2 from "/public/Store/store2-2.jpg";
 import stor3 from "/public/Store/store2-3.jpg";
@@ -22,7 +22,9 @@ const Store = () => {
         <StoreBox bg={stor2}/>
          <StoreBox bg={stor2}/>
       </div>
-      
+
+    
+    <LocationMaps />
     </div>
   );
 };

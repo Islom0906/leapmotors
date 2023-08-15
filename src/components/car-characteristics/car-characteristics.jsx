@@ -8,7 +8,7 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
         <Image src={bg} alt="car" className="object-cover w-full h-full shadow-inner"/>
         <div className="w-full h-[150px] absolute top-0 left-0 bg-gradient-to-b from-black via-black z-10 block md:hidden object-bototm"></div>
         <div className="absolute top-[45px] md:top-20 w-full text-center z-20">
-          <div className={`mb-5 text-center ${textColor? `text-${textColor} ` :  text-white} `}>
+          <div className={`mb-5 text-center ${textColor? `text-${textColor} ` :  'text-white'} `}>
           {
                   logo ?
                   <div className='flex items-center justify-center'>
@@ -23,7 +23,7 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
             <p className="text-base font-normal leading-9 md:text-lg lg:text-xl" > {characteristics.subTitle} </p>
           </div>
           <div className="hidden md:block">
-            <div className={`mx-auto text-left grid grid-cols-2 md:grid-cols-4 gap-[30px] w-fit text-white ${textColor ? `text-${textColor}`  : 'text-white'}`}>
+            <div className={`mx-auto text-left grid grid-cols-2 md:grid-cols-4 gap-[30px] w-fit ${textColor ? `text-${textColor}`  : 'text-white'}`}>
               <div>
                 <p className=" opacity-80 font-thin leading-[28px]">Lenght</p>
                 <p className="text-2xl  font-medium leading-[24px]">{characteristics.about.lenght} <span className="text-base">mm</span></p>

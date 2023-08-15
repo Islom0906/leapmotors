@@ -28,6 +28,7 @@ const CarSwiper = ({ content , textColor }) => {
                 <SwiperSlide key={ind}>
                     <div className={"relative w-full h-full swiper1"}>
                         <CarSwiperInner
+                            bgResp={item.bgResp}
                             textColor={textColor}
                             title={item.title}
                             subTitle={item.subTitle}

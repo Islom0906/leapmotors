@@ -15,7 +15,9 @@
     "react-dom": "18.2.0",
     "react-hydration-provider": "^1.0.2",
     "react-icons": "^4.10.1",
-    "swiper": "^9.3.2"
+    "swiper": "^9.3.2",
+    "aos": "^2.3.4"
+
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

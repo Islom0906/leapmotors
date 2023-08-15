@@ -1,12 +1,20 @@
+import Image from "next/image"
 
-
-const CarSwiperInner = ({title , subTitle , bg ,textColor}) => {
+const CarSwiperInner = ({title , subTitle , bg  , bgResp ,textColor}) => {
   return (
     <>
       <section class="relative h-full bg-white md:h-screen">
       <div class="relative w-full h-full px-5 pt-5 pb-10 md:p-0">
         <div className="w-full h-[470px] md:h-full  rounded-lg md:rounded-none mb-5">
-          {/* <Image src={bg} alt="car" className="object-cover w-full h-full"/> */}
+        {
+        bgResp ?
+          <>  
+            <Image src={bgResp} alt="car" className="block object-cover w-full h-full md:hidden" />
+            <Image src={bg} alt="car" className="hidden object-cover w-full h-full md:block" />
+          </>
+          :
+          <Image src={bg} alt="car" className="object-cover w-full h-full" />
+        }
         </div>
         <div class="md:absolute top-[60px] w-full text-center">
           <div class={`w-full  mb-5 text-center ${textColor ? `text-${textColor} ` : 'md:text-white'} `}>

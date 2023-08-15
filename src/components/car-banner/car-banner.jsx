@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Aos from 'aos'
 
 const CarBanner = ({title , subTitle , bg , bgRes , center ,textColor}) => {
   return (
@@ -17,10 +17,10 @@ const CarBanner = ({title , subTitle , bg , bgRes , center ,textColor}) => {
         }
 
         <div className="w-full h-[150px] absolute top-0 left-0 bg-gradient-to-b from-black via-black z-10 block md:hidden"></div>
-        <div className={` absolute top-0 left-0 py-[60px] z-20 w-full h-full text-center ${center ? 'flex justify-center items-center' : ''} `}>
+        <div  className={` absolute top-0 left-0 py-[60px] z-20 w-full h-full text-center ${center ? 'flex justify-center items-center' : ''} `}>
           <div className={`mb-5 text-center ${textColor ? `text-${textColor}` : 'text-white'} `}>
-            <p className=" font-semibold text-[28px] leading-7 md:leading-8 mb-4">{title}</p>
-            <p className="text-sm font-normal md:leading-5">{subTitle}</p>
+            <p data-aos='fade-up' data-aos-anchor-placement="top-bottom" className=" font-semibold text-[28px] leading-7 md:leading-8 mb-4">{title}</p>
+            <p data-aos='fade-up' data-aos-anchor-placement="top-bottom" className="text-sm font-normal md:leading-5">{subTitle}</p>
           </div>
         </div>
         <div className="w-full h-[150px] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black z-10 block md:hidden"></div>

@@ -15,3 +15,4 @@ export {default as CarBannerC11Reev} from './car-banner-C11Reev/car-banner-C11Re
 export {default as CarSwiperInnerVideo} from './car-swipper-inner-video/car-swipper-inner-video'
 export {default as AboutTeam} from './about-team/about-team'
 export {default as HoverCard} from './hover-card/hover-card'
+export {default as LocationMaps} from './location-maps/location-maps'

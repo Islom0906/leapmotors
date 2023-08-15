@@ -1,4 +1,9 @@
 
+
+import AOS from 'aos';
+import {useEffect} from 'react';
+
+
 import Image from "next/image";
 import brand from '/public/brand.png'
 import logo from '/public/Logo.png'
@@ -13,14 +18,20 @@ import sectionC01bg  from '/public/section-bg-2.png'
 import sectionC11Suv  from '/public/section-3-logo.png'
 import sectionC11Suvbg  from '/public/section-bg-3.jpg'
 
-import T03bg from "/public/T03/section-bg-4.jpg";
-import T03Logo from "/public/T03/section-4-logo.png";
+import T03bg from "/public/index/section-bg-4.jpg";
+import T03Logo from "/public/index/section-4-logo.png";
 
 
 import { BannerImage } from "@/components";
 
 export default function Home() {
 
+
+  useEffect(() => {
+    AOS.init({  
+      once:true
+    });
+}, []);
   return (
    <main className={'bg-black'}>
    
@@ -31,11 +42,11 @@ export default function Home() {
 
 
 
-      <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] opacity-90">
-        <div className="w-[180px] h-[180px] mx-auto bg-transparent relative">
-          <Image src={brand} alt="brand" fill className="object-contain w-full h-full"/>
+      <div  className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] opacity-90">
+        <div data-aos='fade-up' className="w-[180px] h-[180px] mx-auto bg-transparent relative">
+          <Image  src={brand} alt="brand" fill className="object-contain w-full h-full"/>
         </div>
-        <div className="md:w-[532px] md:h-[118px] bg-transparent relative">
+        <div data-aos='fade-up' className="md:w-[532px] md:h-[118px] bg-transparent relative">
           <Image src={logo} alt="logo" fill className="object-contain w-full h-full"/>
         </div>
       </div>
