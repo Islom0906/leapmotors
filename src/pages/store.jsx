@@ -23,9 +23,6 @@ const Store = () => {
         <div className={'h-auto md:min-h-screen w-full relative bg-[#f5f5f5] '}>
           <GoogleMap/>
         </div>
-
-
-    <LocationMaps />
     </div>
   );
 };
