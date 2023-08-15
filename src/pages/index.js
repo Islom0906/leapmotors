@@ -21,16 +21,14 @@ import { BannerImage } from "@/components";
 
 export default function Home() {
 
+
   return (
-   <main className={'bg-black'}>
+   <main className={'bg-black'} >
    
    <section className="relative w-full h-screen ">
       <video className="object-cover w-full h-full"   autoPlay loop muted>
         <source className="w-full" src="https://lp-website-oss-static.leapmotor.com/Leapmotor-Chinese-web/c01-new-be-listed/c01video.mp4" type="video/mp4"/>
       </video>
-
-
-
       <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] opacity-90">
         <div className="w-[180px] h-[180px] mx-auto bg-transparent relative">
           <Image src={brand} alt="brand" fill className="object-contain w-full h-full"/>

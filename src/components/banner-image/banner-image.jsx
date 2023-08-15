@@ -4,7 +4,6 @@ import Image from "next/image";
 
 const BannerImage = ({ bg , logo , text }) => {
   return (
-    <>
       <section className="relative w-full h-screen">
         <div className="relative w-full h-full">
           <Image
@@ -35,7 +34,6 @@ const BannerImage = ({ bg , logo , text }) => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 

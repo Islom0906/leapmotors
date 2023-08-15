@@ -5,7 +5,7 @@ import { CarSwiperInner } from "@/components";
 SwiperCore.use([Autoplay]);
 const CarSwiper = ({ content , textColor }) => {
   return (
-    <>
+    <section>
       <Swiper
         id={"mySwiper1"}
         autoplay={{
@@ -38,7 +38,7 @@ const CarSwiper = ({ content , textColor }) => {
             ) )
         }
       </Swiper>
-    </>
+    </section>
   );
 };
 

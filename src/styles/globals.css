@@ -9,20 +9,43 @@
 /*html{*/
 /*    scroll-snap-type: y mandatory;*/
 /*    scroll-behavior: smooth !important;*/
+/*    scroll-snap-stop: always;*/
 /*}*/
 
-/*section{*/
+
+/*section,footer{*/
 /*    scroll-snap-align: start;*/
-
 /*}*/
+/*.store {*/
+/*    scroll-snap-align: none !important;*/
+/*}*/
+
+/*map*/
+
+.App {
+    height: 100vh;
+    width: 100vw;
+}
+
+.map-container {
+    height: 100%;
+    width: 100%;
+}
+
+.gm-ui-hover-effect{
+    right: -2px !important;
+    top: -2px !important;
+}
+
+/*swiper*/
 
 .swiper-button-prev {
   left: 30px !important;
-  
+
 }
 
 .swiper-button-prev::after{
-  padding: 10px 20px;
+    padding: 20px 23px;
   font-size: 13px !important;
   border-radius: 50%;
   border: 1px solid white;
@@ -35,7 +58,7 @@
 }
 
 .swiper-button-next::after{
-  padding: 10px 20px;
+  padding: 20px 23px;
   font-size: 13px !important;
   border-radius: 50%;
   border: 1px solid white;

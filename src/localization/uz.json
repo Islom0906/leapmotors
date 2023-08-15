@@ -1,0 +1,14 @@
+{
+  "translation": {
+    "navbar": {
+      "store": "do'kon",
+      "about": "Leapmotor haqida",
+      "news": "yangiliklar xonasi"
+    },
+    "footer": {
+      "privacy": "Конфиденциальность и юридическая информация",
+      "investor": "Investorlar bilan aloqalar",
+      "cooking": "Cookie sozlamalari"
+    }
+  }
+}
