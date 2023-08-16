@@ -274,6 +274,8 @@ const C11Reev = () => {
         textColor={"black"}
         bg={section8}
         characteristics={characteristics}
+
+        
       />
       <CarBanner
         title={"Leapmotor OS 3.0 Smart Cockpit"}
@@ -308,7 +310,7 @@ const C11Reev = () => {
               type="video/mp4"
             />
           </video>
-
+ 
           <div class="absolute top-[60px] w-full text-center">
             <div class="mb-5 text-center">
               <p class="text-white text-lg font-arial-semibold lg:text-[22px] leading-7 md:leading-8 mb-2">
