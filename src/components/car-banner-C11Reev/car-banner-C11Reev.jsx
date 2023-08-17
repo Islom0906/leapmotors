@@ -22,7 +22,7 @@ const carBannerC11Reev = ({banner, title , subTitle  } ) => {
               </p>
             </div>
             <div>
-              <div class="mx-auto text-left flex  md:flex-row flex-col justify-between md:justify-start items-center gap-y-[10px] gap-x-[30px] px-5 sm:px-20 md:px-0 w-full md:w-fit">
+              {/* <div class="mx-auto text-left flex  md:flex-row flex-col justify-between md:justify-start items-center gap-y-[10px] gap-x-[30px] px-5 sm:px-20 md:px-0 w-full md:w-fit">
                 <div class="flex flex-row md:flex-col justify-between md:justify-start items-center w-full">
                   <div class="mb-3">
                     <p data-aos="fade-up"
@@ -71,7 +71,7 @@ const carBannerC11Reev = ({banner, title , subTitle  } ) => {
                     RMB 185,800
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div class="w-full h-[150px] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black z-10 block md:hidden"></div>

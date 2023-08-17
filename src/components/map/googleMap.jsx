@@ -85,7 +85,7 @@ const GoogleMaps = () => {
                     ))
                 }
             </div>
-            <div className="h-[400px] md:h-screen w-screen ">
+            <div className="h-[400px] md:h-screen">
                 {!isLoaded ? (
                     <h1>Loading...</h1>
                 ) : (
