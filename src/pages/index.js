@@ -31,11 +31,11 @@ export default function Home() {
     AOS.init({
       once:true
     });
+
 }, []);
   return (
-   <main className={'bg-black'}>
-   
-   <section className="relative w-full h-screen ">
+   <main className={'bg-black section'} >
+       <section className="relative w-full h-screen scroll-snap">
       <video className="object-cover w-full h-full"   autoPlay loop muted>
         <source className="w-full" src="https://lp-website-oss-static.leapmotor.com/Leapmotor-Chinese-web/c01-new-be-listed/c01video.mp4" type="video/mp4"/>
       </video>
@@ -55,7 +55,7 @@ export default function Home() {
       <BannerImage bg={sectionC01bg} logo={sectionC01} text={'Intelligent Long Range Five-Seat SUV'} />
       <BannerImage bg={sectionC11Suvbg} logo={sectionC11Suv} text={'Intelligent Long Range Five-Seat SUV'} />
       <BannerImage bg={T03bg} logo={T03Logo} text={'Smart Electric Mini Car'} />
-    
+
    </main>
   )
 }

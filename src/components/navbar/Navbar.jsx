@@ -63,7 +63,7 @@ const Navbar = () => {
                 <li><Link onClick={() => setOpenNavbar(false)} href="#" className="uppercase block lg:hidden ">c11</Link></li>
                 <li><Link onClick={() => setOpenNavbar(false)} href="#" className="uppercase block lg:hidden ">t03</Link></li>
                 <li><Link onClick={() => setOpenNavbar(false)} href="#" className="uppercase block lg:hidden ">s01</Link></li>
-                <li ><Link onClick={() => setOpenNavbar(false)} href="/about" className="capitalize">{t('navbar.about')}</Link></li>
+                {/*<li ><Link onClick={() => setOpenNavbar(false)} href="/about" className="capitalize">{t('navbar.about')}</Link></li>*/}
                 <li ><Link onClick={() => setOpenNavbar(false)} href="/news" className="capitalize">{t('navbar.news')}</Link></li>
                 <li ><Link onClick={() => setOpenNavbar(false)} href="/store" className="capitalize">{t('navbar.store')}</Link></li>
                 

@@ -37,6 +37,16 @@
     top: -2px !important;
 }
 
+html{
+    scroll-snap-type: y mandatory;
+}
+
+.section .scroll-snap,.footer{
+    scroll-snap-align: center;
+}
+
+
+
 /*swiper*/
 
 .swiper-button-prev {
@@ -93,6 +103,3 @@
 }
 
 
-@media (min-width: 500px) {
-
-}
