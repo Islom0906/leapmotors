@@ -3,29 +3,6 @@ import { PiCaretDownBold } from "react-icons/pi";
 import { CarSwiper ,CarText ,CarBanner } from "@/components";
 
 
-import T03Logo from "/public/index/section-4-logo.png";
-import section1 from "/public/index/section-bg-4.jpg";
-import section2 from "/public/T03/T03-section-2.jpg";
-import section3 from "/public/T03/T03-section-3.jpg";
-import section3_res from '/public/T03/T03-section-3-responsive.jpg';
-import section4_slider1 from "/public/T03/T03-slider-1.jpg";
-import section4_slider1_res from "/public/T03/T03-slider-1-responsive.png";
-import section4_slider2 from "/public/T03/T03-slider-2.jpg";
-import section4_slider2_res from "/public/T03/T03-slider-2-responsive.png";
-import section4_slider3 from "/public/T03/T03-slider-3.jpg";
-import section4_slider3_res from "/public/T03/T03-slider-3-responsive.png";
-import section4_slider4 from "/public/T03/T03-slider-4.jpg";
-import section4_slider4_res from "/public/T03/T03-slider-4-responsive.png";
-import section4_slider5 from "/public/T03/T03-slider-5.jpg";
-import section4_slider5_res from "/public/T03/T03-slider-5-responsive.png";
-import section5_slider1 from "public/T03/T03-slider-2-1.jpg";
-import section5_slider1_res from "public/T03/T03-slider-2-1-responsive.png";
-import section5_slider2 from "public/T03/T03-slider-2-2.jpg";
-import section6 from "public/T03/T03-section-6.jpg";
-import section6_res from "public/T03/T03-section-6-responsive.jpg";
-import section7 from "public/T03/T03-lastsection.jpg";
-import section7_res from "public/T03/T03-lastsection-responsive.jpg";
-
 
 
 
@@ -55,14 +32,14 @@ const carSwipper2 = [
   {
     title: 'Energetic Curved Body',
     subTitle: 'Reduces wind resistance coefficient，showing a strong sense of science and technology',
-    bg: section5_slider1,
-    bgRes: section5_slider1_res,
+    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/86f110e8-26bd-4302-8e7a-00daa0a1e746-T03-slider-2-1.jpg`,
+    bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/4f9844d6-14cf-42d0-8800-d2d3ad0e0753-T03-slider-2-1-responsive.png`,
 
   },
   {
     title: 'Through Headlamp',
     subTitle: 'Digital crystalline headlamp with smooth dynamic effect',
-    bg: section5_slider2,
+    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/ad5e2492-9cd0-42fe-a374-9088a3dbbde5-T03-slider-2-2.jpg`,
 
   }
 ]
@@ -71,45 +48,45 @@ const carSwipper1 = [
   {
     title: 'Energetic Curved Body',
     subTitle: 'Reduces wind resistance coefficient，showing a strong sense of science and technology',
-    bg: section4_slider1,
-    bgRes: section4_slider1_res,
+    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/3d32a252-29de-4759-9235-09c008417d1a-T03-slider-1.jpg`,
+    bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/1b0fb212-bbe2-478a-87a6-eb4e40cb891c-T03-slider-1-responsive.png`,
   },
   {
     title: 'Through Headlamp',
     subTitle: 'Digital crystalline headlamp with smooth dynamic effect',
-    bg: section4_slider2,
-    bgRes: section4_slider2_res,
+    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/af716b54-4cc1-457e-93bf-8dfc5e732c6c-T03-slider-2.jpg`,
+    bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/82da93d0-5505-4666-b8aa-17315b0b0452-T03-slider-2-responsive.png`,
 
   },
   {
     title: 'Frameless Door',
     subTitle: 'Front laminated silent glass rear privacy glass',
-    bg: section4_slider3,
-    bgRes: section4_slider3_res,
+    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/3ac5e9a3-5935-4c20-b936-ebb2263aa384-T03-slider-3.jpg`,
+    bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/6a9e99f3-7b05-43ee-baf2-4c13e6257676-T03-slider-3-responsive.png`,
 
   },
   {
     title: 'Frameless Door',
     subTitle: 'Front laminated silent glass rear privacy glass',
-    bg: section4_slider4,
-    bgRes: section4_slider4_res,
+    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/bac53e31-8e74-46bd-9fdf-e67a87606bb4-T03-slider-4.jpg`,
+    bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/3b2e2ae5-4a12-4783-8955-fd0c44ee3712-T03-slider-4-responsive.png`,
 
   },
   {
     title: 'Frameless Door',
     subTitle: 'Front laminated silent glass rear privacy glass',
-    bg: section4_slider5,
-    bgRes: section4_slider5_res,
+    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/5196a6c8-646d-4a95-ac44-222f7e10094b-T03-slider-5.jpg`,
+    bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/0e75d8c2-e01a-43a7-899e-e786b7d47a7d-T03-slider-5-responsive.png`,
 
   },
 
 ]
 
 const T03Data = {
-  logo: T03Logo,
+  logo: `${process.env.NEXT_PUBLIC_API_URL}/media/9f538f2a-68ba-4199-97b0-05937e96bcbd-section-4-logo.png`,
   section1: {
     subTitle: "Super-Safe Five-Door Pure Electric Model",
-    bg: section1,
+    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/9ef38574-78be-4774-a14d-abbf3612f709-section-bg-4.jpg`,
     content: [
       {
         title: "high-strength steel cage body",
@@ -138,6 +115,7 @@ const T03 = () => {
             alt="car"
             src={T03Data.section1.bg}
             className="object-cover w-full h-full"
+            fill
           />
           <div className="absolute  top-20 left-[50%] translate-x-[-50%] h-[calc(100%-80px)] flex flex-col items-center lg:justify-start justify-between">
             <div>
@@ -147,6 +125,7 @@ const T03 = () => {
                     fill
                     alt="logo"
                     className="w-full h-full mx-auto"
+                    fill
                   />
                 </div>
               <div className="mb-3 text-center">
@@ -179,8 +158,9 @@ const T03 = () => {
         <div className="relative w-full h-full">
         <Image
             alt="car"
-            src={section2}
+            src={`${process.env.NEXT_PUBLIC_API_URL}/media/8bd6857e-4221-4e86-9e42-b11626ebce1f-T03-section-2.jpg`}
             className="object-cover w-full h-full"
+            fill
           />
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="container flex flex-col justify-between h-full py-10 md:py-20 md:justify-start">
@@ -230,14 +210,14 @@ const T03 = () => {
           </div>
         </div>
       </section>
-      <CarBanner title={'Safer'} subTitle={'High-strength cage body for all-around safety protection'} bg={section3} bgRes={section3_res}/>
+      <CarBanner title={'Safer'} subTitle={'High-strength cage body for all-around safety protection'} bg={`${process.env.NEXT_PUBLIC_API_URL}/media/d8c17662-76c3-4e70-a4b8-81afced59727-T03-section-3.jpg`} bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/c8f47102-0e43-478b-93cb-1040d67b0da9-T03-section-3-responsive.jpg`}/>
   
       
       <CarSwiper content={carSwipper1} />
       <CarSwiper content={carSwipper2} />
 
-      <CarBanner title={'More Comfortable'} subTitle={'Efficient and powerful output, easily adaptable to various road conditions'} bg={section6} bgRes={section6_res}/>
-      <CarBanner title={'More Convenient'} subTitle={'Technologies offer a more convenient , and efficient driving experience'} bg={section7} bgRes={section7_res}/>
+      <CarBanner title={'More Comfortable'} subTitle={'Efficient and powerful output, easily adaptable to various road conditions'} bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7a188914-b863-49b9-82a5-daf8b03b49b7-T03-section-6.jpg`} bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/ec3abf0b-21af-4ca0-9c6a-1b241f353e5f-T03-section-6-responsive.jpg`}/>
+      <CarBanner title={'More Convenient'} subTitle={'Technologies offer a more convenient , and efficient driving experience'} bg={`${process.env.NEXT_PUBLIC_API_URL}/media/3f69c6d2-209b-4176-893c-08b7d8404388-T03-lastsection.jpg`} bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/bb0a3cea-1023-4109-8ca6-b8b86fe74f52-T03-lastsection-responsive.jpg`}/>
       <CarText content={disclaimers} />
      
     </main>

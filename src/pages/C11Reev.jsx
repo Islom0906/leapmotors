@@ -12,43 +12,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
 import { CarSwiperInner } from "@/components";
 
-import section1 from "public/index/section-bg-1.jpg";
-import section2 from "public/Leapmotor-C11-REEV/section-2-bg.jpg";
-import section3 from "public/Leapmotor-C11-REEV/section-3-bg.jpg";
-import section4 from "public/Leapmotor-C11-REEV/last-slide-bg-4.jpg";
-import section5_slide1 from "public/Leapmotor-C11-REEV/slide-1-bg-1.jpg";
-import section5_slide2 from "public/Leapmotor-C11-REEV/slide-1-bg-2.jpg";
-import section5_slide3 from "public/Leapmotor-C11-REEV/slide-1-bg-3.jpg";
-import section6 from "public/Leapmotor-C11-REEV/section-5-bg.jpg";
-import section7_slide1 from "public/Leapmotor-C11-REEV/slide-2-bg-1.jpg";
-import section7_slide2 from "public/Leapmotor-C11-REEV/slide-2-bg-2.jpg";
-import section7_slide3 from "public/Leapmotor-C11-REEV/slide-2-bg-3.png";
-import section7_slide4 from "public/Leapmotor-C11-REEV/slide-2-bg-4.png";
-import section8 from "public/Leapmotor-C11-REEV/section-8-bg.jpg";
-import section9 from "public/Leapmotor-C11-REEV/section-9-bg.jpg";
-import section9_res from "public/Leapmotor-C11-REEV/section-9-bg-res.jpg";
-import section10 from "public/Leapmotor-C11-REEV/section-10-bg.jpg";
-import section11 from "public/Leapmotor-C11-REEV/section-11-bg.jpg";
-import section12_slide3 from "public/Leapmotor-C11-REEV/slide-3-bg-1.jpg";
-import section12_slide4 from "public/Leapmotor-C11-REEV/slide-3-bg-2.jpg";
-import section13 from "public/Leapmotor-C11-REEV/section-14.jpg";
-
-
-// video
-import section14 from "public/Leapmotor-C11-REEV/last-slide-bg-1.jpg";
-// video
-import section15_slide1 from 'public/Leapmotor-C11-REEV/last-slide-bg-1.jpg';
-import section15_slide2 from 'public/Leapmotor-C11-REEV/last-slide-bg-1.jpg';
-import section15_slide3 from 'public/Leapmotor-C11-REEV/last-slide-bg-1.jpg';
-import section15_slide4 from 'public/Leapmotor-C11-REEV/last-slide-bg-1.jpg';
-import section16_slide1 from "public/Leapmotor-C11-REEV/section-17-slide-5-bg-1.jpg";
-import section16_slide2 from "public/Leapmotor-C11-REEV/section-17-slide-5-bg-2.jpg";
-import section16_slide3 from "public/Leapmotor-C11-REEV/section-17-slide-5-bg-3.jpg";
-import section17 from "public/Leapmotor-C11-REEV/section-19.jpg";
-import section18_slide1 from "public/Leapmotor-C11-REEV/slide-6-bg-1.jpg";
-import section18_slide2 from "public/Leapmotor-C11-REEV/slide-6-bg-2.jpg";
-import section19 from "public/Leapmotor-C11-REEV/section-21-bg.jpg";
-import section20 from "public/Leapmotor-C11-REEV/section-22-bg.jpg";
 
 
 
@@ -81,12 +44,12 @@ const C11Reev = () => {
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section12_slide3,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/2f85017d-2850-4e89-9d4f-84662d1e289e-slide-3-bg-1.jpg`,
     },
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section12_slide4,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c90bed48-2162-403f-bb64-cf247ad27eae-slide-3-bg-2.jpg`,
     },
   ];
   const carSwipper4 = [
@@ -94,17 +57,17 @@ const C11Reev = () => {
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section16_slide1,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/74d08da7-eb18-4d08-ae2e-35f744a569ed-section-17-slide-5-bg-1.jpg`,
     },
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section16_slide2,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/26c80da0-74a6-4338-93cf-e35e51b2f670-section-17-slide-5-bg-2.jpg`,
     },
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section16_slide3,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/a05fd2d6-bbc7-42c0-95f0-4dd38835c1f4-section-17-slide-5-bg-3.jpg`,
     },
   ];
   const carSwipper5 = [
@@ -112,12 +75,12 @@ const C11Reev = () => {
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section18_slide1,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/f018bd26-8e8f-4d3a-af53-57cc96b585d7-slide-6-bg-1.jpg`,
     },
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section18_slide2,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/bf8282f7-c34d-45c0-8a8b-f920be749a88-slide-6-bg-2.jpg`,
     },
     
   ];
@@ -126,22 +89,22 @@ const C11Reev = () => {
     {
       title: 'Implementation of 23 Intelligent Driving Assist Functions*',
       subTitle : 'Lane Change Alert (LCA)',
-      video : '/Leapmotor-C11-REEV/section-16-slide1.mp4'
+      video : `${process.env.NEXT_PUBLIC_API_URL}/media/90922059-80d8-426a-b6e0-2160de6b27e9-section-16-slide1.mp4`
     },
     {
       title: 'Implementation of 23 Intelligent Driving Assist Functions*',
       subTitle : 'Lane Change Assist (ALC)',
-      video : '/Leapmotor-C11-REEV/section-16-slide2.mp4'
+      video : `${process.env.NEXT_PUBLIC_API_URL}/media/7d7aec9e-85fc-424e-bd9c-d623498584a3-section-16-slide2.mp4`
     },
     {
       title: 'Implementation of 23 Intelligent Driving Assist Functions*',
       subTitle : 'Traffic Jam Assist (TJA)',
-      video : '/Leapmotor-C11-REEV/section-16-slide3.mp4'
+      video : `${process.env.NEXT_PUBLIC_API_URL}/media/eb4f0222-5ea3-4228-ad53-468ccb3d4618-section-16-slide3.mp4`
     },
     {
       title: 'Implementation of 23 Intelligent Driving Assist Functions*',
       subTitle : 'Traffic Jam Assist (TJA)',
-      video : '/Leapmotor-C11-REEV/section-16-slide4.mp4'
+      video : `${process.env.NEXT_PUBLIC_API_URL}/media/a2dd8ae3-a67b-469d-8c5b-1540a7db6d16-section-16-slide4.mp4`
     },
   ]
 
@@ -150,22 +113,22 @@ const C11Reev = () => {
       title: "Energetic Curved Body",
       subTitle:
         "Reduces wind resistance coefficient，showing a strong sense of science and technology",
-      bg: section7_slide1,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/78b6ef23-ce98-43da-8074-1609a273a67a-slide-2-bg-1.jpg`,
     },
     {
       title: "Through Headlamp",
       subTitle: "Digital crystalline headlamp with smooth dynamic effect",
-      bg: section7_slide2,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/ee1652de-7ea4-4074-b45a-5f74f1143f8f-slide-2-bg-2.jpg`,
     },
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section7_slide3,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/9f104634-1ab0-47c7-a3cf-5ae366888a65-slide-2-bg-3.png`,
     },
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section7_slide4,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/2ff461be-1fa0-4ef0-88dd-0e5db2a1e9d7-slide-2-bg-4.png`,
     },
   ];
   const carSwipper1 = [
@@ -173,17 +136,17 @@ const C11Reev = () => {
       title: "Energetic Curved Body",
       subTitle:
         "Reduces wind resistance coefficient，showing a strong sense of science and technology",
-      bg: section5_slide1,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/f2c6411d-5afe-4b46-8959-88716544b6c5-slide-1-bg-1.jpg`,
     },
     {
       title: "Through Headlamp",
       subTitle: "Digital crystalline headlamp with smooth dynamic effect",
-      bg: section5_slide2,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/ae3fe179-ec44-49c5-8efe-84d909d19016-slide-1-bg-2.jpg`,
     },
     {
       title: "Frameless Door",
       subTitle: "Front laminated silent glass rear privacy glass",
-      bg: section5_slide3,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/e8e116fd-e431-4950-9699-d7e3b5186ed2-slide-1-bg-3.jpg`,
     },
   ];
 
@@ -208,18 +171,19 @@ const C11Reev = () => {
       <CarBannerC11Reev
         title={"C11 Extended Range"}
         subTitle={"Price in China"}
-        banner={section2}
+        banner={`${process.env.NEXT_PUBLIC_API_URL}/media/2113df8a-0039-4345-831f-79df7d0c12cb-section-2-bg.jpg`}
       />
       <CarBannerC11Reev
         title={"Extended Range Vehicle With Longer Pure Electric Range"}
-        banner={section3}
+        banner={`${process.env.NEXT_PUBLIC_API_URL}/media/4a239aa1-e8f5-4045-b290-bb1a81fcaecd-section-3-bg.jpg`}
       />
 
       <section class="h-screen ">
         <div class="relative w-full h-full">
           <Image
-            src={section4}
+            src={`${process.env.NEXT_PUBLIC_API_URL}/media/0cf19281-6dfa-4db4-9e8f-ba2fecd4a551-last-slide-bg-4.jpg`}
             alt="car"
+            fill
             class="object-cover w-full h-full"
           />
           <div class="absolute top-[45px] md:top-20 w-full text-center z-20">
@@ -266,29 +230,29 @@ const C11Reev = () => {
       
       <CarBanner
         title={"Technology and Natural Aesthetics"}
-        bg={section6}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/145e9e01-b7cc-425b-bde7-dd9688447dd8-section-5-bg.jpg`}
         textColor="black"
       />
       <CarSwiper content={carSwipper2} textColor={"black"} />
       <CarCharacteristics
         textColor={"black"}
-        bg={section8}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/72d9c4b3-5acd-4f3b-b167-7cb8ae8accf8-section-8-bg.jpg`}
         characteristics={characteristics}
 
         
       />
       <CarBanner
         title={"Leapmotor OS 3.0 Smart Cockpit"}
-        bg={section8}
-        bgRes={section8}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/72d9c4b3-5acd-4f3b-b167-7cb8ae8accf8-section-8-bg.jpg`}
+        bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/72d9c4b3-5acd-4f3b-b167-7cb8ae8accf8-section-8-bg.jpg`}
       />
-      <CarBanner bg={section9} bgRes={section9_res} />
+      <CarBanner bg={`${process.env.NEXT_PUBLIC_API_URL}/media/45f45abd-c95f-4730-b317-176f03c35e21-section-9-bg.jpg`} bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/309b733a-854a-410e-80a0-650521fecc94-section-9-bg-res.jpg`} />
       <CarBanner
-        bg={section10}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/667d54e2-374f-4723-b4c4-7acd61c3041c-section-10-bg.jpg`}
         title={"A real luxurious vehicle belongs to the whole family"}
       />
       <CarBanner
-        bg={section11}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7bb16ad4-6969-47d2-8c38-c878bbc35d40-section-11-bg.jpg`}
         title={"360° Wide Field of View 14,932 cm² Panoramic Starry Roof*"}
         subTitle={"8% improved field of view* and 99.5% UV isolation rate"}
       />
@@ -306,7 +270,7 @@ const C11Reev = () => {
           <video className="object-cover w-full h-full" autoPlay loop muted>
             <source
               className="w-full"
-              src='/Leapmotor-C11-REEV/section-15-bg.mp4'
+              src={`${process.env.NEXT_PUBLIC_API_URL}/media/5f5270eb-3e0c-42b3-b63a-79d00fc31296-section-15-bg.mp4`}
               type="video/mp4"
             />
           </video>
@@ -358,7 +322,7 @@ const C11Reev = () => {
       <CarSwiper content={carSwipper4} />
 
       <CarBanner
-        bg={section17}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/73cd3996-94b7-4ef0-b4b0-fbe3a1de3620-section-19.jpg`}
         title={"Explore and Travel with Mobility"}
         subTitle={
           "3.3 kW external discharge* fits squarely , into outdoor camping"
@@ -367,7 +331,7 @@ const C11Reev = () => {
       />
       <CarSwiper content={carSwipper5} />
       <CarBanner
-        bg={section19}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/3a561359-eb26-4a4e-b508-9802adddb4e8-section-21-bg.jpg`}
         title={"Explore and Travel with Mobility"}
         subTitle={
           "3.3 kW external discharge* fits squarely , into outdoor camping"
@@ -375,7 +339,7 @@ const C11Reev = () => {
 
       />
       <CarBanner
-        bg={section20}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/ba2b8fe1-efb3-4ade-9339-1c1b88411a69-section-22-bg.jpg`}
         title={"Looking forward to your next mile"}
       />
     <CarText content={disclaimers} />

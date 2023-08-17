@@ -8,6 +8,7 @@ const carBannerC11Reev = ({banner, title , subTitle  } ) => {
           <Image
             src={banner}
             alt="car"
+            fill
             class="w-full h-full object-cover"
           />
           <div class="absolute top-[45px] md:top-20 w-full text-center z-20">

@@ -1,22 +1,18 @@
+import Link from 'next/link'
 import {AiFillFacebook} from 'react-icons/ai'
 import {useTranslation} from "react-i18next";
-import Link from "next/link";
-import Image from "next/image";
-import { AiFillFacebook } from "react-icons/ai";
-import { useTranslation } from "react-i18next";
-import {RiInstagramFill} from 'react-icons/ri';
-import {BsTwitter} from 'react-icons/bs';
-import leapLogoBlack from 'public/Leapmotor_logo.png'
+import {useRouter} from "next/router";
 
 
 const Footer = () => {
         const {t}=useTranslation()
+    const {pathname}=useRouter()
         return (
             <>
-                <footer class="bg-white py-10">
+                <footer class={`bg-white py-10 ${pathname==='/' && 'footer'}`}>
                     <div class="container">
                         <ul class="flex flex-wrap gap-7 text-xl text-[#4d5d81] font-bold mb-10">
-                            <li><Link href="#">{t('navbar.about')}</Link></li>
+                            {/*<li><Link href="#">{t('navbar.about')}</Link></li>*/}
                             <li><Link href="#">{t('navbar.news')}</Link></li>
                             <li><Link href="#">{t('footer.privacy')}</Link></li>
                             <li><Link href="#">{t('footer.investor')}</Link></li>

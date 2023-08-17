@@ -9,11 +9,11 @@ const CarBanner = ({title , subTitle , bg , bgRes , center ,textColor}) => {
      {
         bgRes ?
           <>  
-            <Image src={bgRes} alt="car" className="block object-cover w-full h-full md:hidden" />
-            <Image src={bg} alt="car" className="hidden object-cover w-full h-full md:block" />
+            <Image src={bgRes} alt="car" className="block object-cover w-full h-full md:hidden" fill/>
+            <Image src={bg} alt="car" className="hidden object-cover w-full h-full md:block" fill/>
           </>
           :
-          <Image src={bg} alt="car" className="object-cover w-full h-full" />
+          <Image src={bg} alt="car" className="object-cover w-full h-full" fill/>
         }
 
         <div className="w-full h-[150px] absolute top-0 left-0 bg-gradient-to-b from-black via-black z-10 block md:hidden"></div>

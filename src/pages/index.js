@@ -22,6 +22,7 @@ import T03bg from "/public/index/section-bg-4.jpg";
 import T03Logo from "/public/index/section-4-logo.png";
 
 import { BannerImage } from "@/components";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 
 export default function Home() {
@@ -36,7 +37,7 @@ export default function Home() {
    <main className={'bg-black section'} >
        <section className="relative w-full h-screen scroll-snap">
       <video className="object-cover w-full h-full"   autoPlay loop muted>
-        <source className="w-full" src="https://lp-website-oss-static.leapmotor.com/Leapmotor-Chinese-web/c01-new-be-listed/c01video.mp4" type="video/mp4"/>
+        <source className="w-full" src={`${process.env.NEXT_PUBLIC_API_URL}/media/25210b0f-2664-4c62-808e-c46d57ca4013-c01video.mp4`} type="video/mp4"/>
       </video>
 
 
