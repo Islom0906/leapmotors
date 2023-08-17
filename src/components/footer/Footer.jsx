@@ -5,7 +5,7 @@ import { AiFillFacebook } from "react-icons/ai";
 
 import {RiInstagramFill} from 'react-icons/ri';
 import {BsTwitter} from 'react-icons/bs';
-import leapLogoBlack from 'public/Leapmotor_logo.png'git
+import leapLogoBlack from 'public/Leapmotor_logo.png'
 import {useRouter} from "next/router";
 
 
@@ -14,7 +14,7 @@ const Footer = () => {
     const {pathname}=useRouter()
         return (
           <>
-      <footer class="bg-white py-10">
+      <footer class={`bg-white py-10 ${pathname==='/' && 'footer'}`}>
         <div class="container flex md:flex-row flex-col justify-between   gap-7 md:gap-0 ">
           <ul class="flex flex-col gap-4 md:gap-7 text-md md:text-xl text-[#4d5d81] font-bold order-2 md:order-1">
             <li>
