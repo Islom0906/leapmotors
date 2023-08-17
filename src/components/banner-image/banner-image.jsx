@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const BannerImage = ({ bg , logo , text , link }) => {
   return (
-      <section className="relative w-full h-screen">
+      <section className="relative w-full h-screen section scroll-snap">
         <div data-aos='fade' data-aos-anchor-placement="top-bottom" className="relative w-full h-full">
           <Image
             src={bg}
