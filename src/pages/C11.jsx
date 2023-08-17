@@ -81,6 +81,7 @@ const disclaimers= [
 
 
 const C11 = () => {
+  
   return (
     <main className={'bg-black'}>
       <CarCharacteristics bg={sectionC11bg} logo={sectionC11} characteristics={characteristics} />

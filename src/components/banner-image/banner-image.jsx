@@ -2,7 +2,7 @@ import Aos from "aos";
 import Image from "next/image";
 
 
-const BannerImage = ({ bg , logo , text }) => {
+const BannerImage = ({ bg , logo , text , link }) => {
   return (
       <section className="relative w-full h-screen section scroll-snap">
         <div data-aos='fade' data-aos-anchor-placement="top-bottom" className="relative w-full h-full">
@@ -26,7 +26,7 @@ const BannerImage = ({ bg , logo , text }) => {
               </p>
             </div>
             <a  data-aos='fade-up' data-aos-anchor-placement="top-bottom"
-              href="#"
+              href={link}
               className="text-white text-lg bg-transparent border border-white w-[145px] flex mx-auto justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
             >
               Learn More

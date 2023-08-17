@@ -21,8 +21,8 @@ import sectionC11Suvbg  from '/public/section-bg-3.jpg'
 import T03bg from "/public/index/section-bg-4.jpg";
 import T03Logo from "/public/index/section-4-logo.png";
 
-
 import { BannerImage } from "@/components";
+
 
 export default function Home() {
 
@@ -31,7 +31,6 @@ export default function Home() {
     AOS.init({
       once:true
     });
-
 }, []);
   return (
    <main className={'bg-black section'} >
@@ -51,11 +50,12 @@ export default function Home() {
         </div>
       </div>
     </section>
-      <BannerImage bg={sectionC11Bg} logo={sectionC11} text={'Intelligent Long Range Five-Seat SUV'} />
-      <BannerImage bg={sectionC01bg} logo={sectionC01} text={'Intelligent Long Range Five-Seat SUV'} />
-      <BannerImage bg={sectionC11Suvbg} logo={sectionC11Suv} text={'Intelligent Long Range Five-Seat SUV'} />
-      <BannerImage bg={T03bg} logo={T03Logo} text={'Smart Electric Mini Car'} />
+      <BannerImage bg={sectionC11Bg} logo={sectionC11} text={'Intelligent Long Range Five-Seat SUV'} link={'C11Reev'}/>
+      <BannerImage bg={sectionC01bg} logo={sectionC01} text={'Intelligent Long Range Five-Seat SUV'}  link={'C01'}/>
+      <BannerImage bg={sectionC11Suvbg} logo={sectionC11Suv} text={'Intelligent Long Range Five-Seat SUV'} link={'C11'} />
+      <BannerImage bg={T03bg} logo={T03Logo} text={'Smart Electric Mini Car'}  link={'/T03'} />
 
-   </main>
+      </main>
+
   )
 }
