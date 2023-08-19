@@ -5,7 +5,7 @@ const CarBannerContentBottom = ({ content , bg  }) => {
     <>
       <section className="h-screen">
         <div className="relative w-full h-full">
-        <Image src={bg} alt="car" className="object-cover w-full h-full" />
+        <Image  fill src={bg} alt="car" className="object-cover w-full h-full" />
 
           <div className="absolute z-20 block w-full text-center top-10 md:hidden">
             <div className="mb-5">
@@ -23,7 +23,7 @@ const CarBannerContentBottom = ({ content , bg  }) => {
             </div>
           </div>
 
-          <div className="absolute z-20 hidden w-full text-center bottom-10 md:block">
+          <div className="absolute z-[100] hidden w-full  text-center bottom-10 md:block">
             <div className="flex justify-center gap-10 mb-5">
               {content?.map((item, ind) => (
                 <div

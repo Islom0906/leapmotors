@@ -4,12 +4,12 @@ const CarDetailBanner = ({ bg, img, text, title ,imgLong }) => {
   return (
     <>
       <section className="relative h-screen">
-        <Image fill src={bg} alt="car" className="object-cover w-full h-full" />
+        <Image fill src={bg} alt="car" className="object-cover w-full h-full" fill/>
         <div className="absolute top-[140px] w-full text-center">
           <div className="flex items-center justify-center w-full ">
               {img ? (
             <div className={`h-10 mb-3 relative  ${imgLong ? 'w-[500px]' : 'w-[88px] sm:w-[95px]'} `}>
-                <Image  src={img} alt="logo" className="object-contain w-full h-full " />
+                <Image  src={img} alt="logo" className="object-contain w-full h-full " fill/>
             </div>
               ) : (
                 <h3 className="text-white font-arial-semibold text-[22px] leading-7 md:leading-8">

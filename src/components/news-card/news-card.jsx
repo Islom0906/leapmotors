@@ -6,7 +6,7 @@ import Link from 'next/link'
 const NewsCard = ({url , text , img , data} ) => {
   return (
     <>
-      <Link  className="w-full lg:w-auto block " href={url}>
+      <Link  className="w-full lg:w-auto block space-y-4" href={`/news/${url}`}>
           <div className='relative aspect-video'>
             <Image
               fill
@@ -16,14 +16,14 @@ const NewsCard = ({url , text , img , data} ) => {
             />
 
           </div>
-            <div className="overflow-x-hidden">
+            <div className="overflow-x-hidden ">
               <p
-                className="text-[15px] md:text-xl text-[#4d5d81] font-semibold leading-[26px]"
+                className="text-base text-[#4d5d81] font-medium leading-[26px]"
               >
                 {text}
               </p>
             </div>
-            <p className="leading-[22px] text-sm text-[#666]"> {data} </p>
+            <p className="leading-[22px] text-base text-[#666]"> {data} </p>
           </Link>
     </>
   )
