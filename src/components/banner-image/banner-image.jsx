@@ -4,15 +4,15 @@ import Image from "next/image";
 
 const BannerImage = ({ bg , logo , text , link }) => {
   return (
-      <section className="relative w-full h-screen section scroll-snap">
+      <section className="relative w-full h-screen  scroll-snap ">
         <div data-aos='fade' data-aos-anchor-placement="top-bottom" className="relative w-full h-full">
           <Image
             src={bg}
             fill
             alt="car"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full object-bottom"
           />
-          <div className="absolute top-20 left-[50%] translate-x-[-50%]">
+          <div className="absolute top-32 left-[50%]  translate-x-[-50%]">
             <div className="h-10 md:h-[60px] w-full" data-aos='fade-up' data-aos-anchor-placement="top-bottom">
               <Image
                 src={logo}

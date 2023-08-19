@@ -54,8 +54,9 @@ export default function About() {
         <>
             <Head>
                 <title>Leapmotor-About Leapmotor</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+                    <meta property='og:title' content="Leapmotor uz About, Leapmotor uzbekistan About,Leap-motor About"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                    <link rel="icon" href="/brand.png"/>
             </Head>
             <main className={'bg-black'}>
                 {/*section banner*/}

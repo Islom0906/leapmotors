@@ -1,10 +1,19 @@
 import Link from 'next/link'
 import news1 from '/public/section-bg-1.jpg'
 import {NewsCard} from '@/components'
+import Head from "next/head";
 
 
 const news = () => {
     return (
+
+        <>
+            <Head>
+                <title>Leapmotor-News Roow</title>
+                <meta property='og:title' content="Leapmotor uz News, Leapmotor uzbekistan News,Leap-motor News"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <link rel="icon" href="/brand.png"/>
+            </Head>
         <section className="mt-4  ">
             <div className="container ">
                 <div className="py-[60px] pb-6">
@@ -26,6 +35,8 @@ const news = () => {
                 </div>
             </div>
         </section>
+        </>
+
     )
 }
 

@@ -38,32 +38,32 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
               </div>
               <div>
                 <p className=" opacity-80 font-thin leading-[28px]">Wheelbase</p>
-                <p className="text-2xl  font-medium leading-[24px]">{characteristics.about.wheelbase} <span class="text-base">mm</span></p>
+                <p className="text-2xl  font-medium leading-[24px]">{characteristics.about.wheelbase} <span className="text-base">mm</span></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="absolute z-20 block w-full text-center bottom-5 md:hidden">
-          <div class={`mx-auto text-left grid grid-cols-2 md:grid-cols-4 gap-[30px] w-fit text-white  text-${textColor} `}>
+        <div className="absolute z-20 block w-full text-center bottom-5 md:hidden">
+          <div className={`mx-auto text-left grid grid-cols-2 md:grid-cols-4 gap-[30px] w-fit text-white  text-${textColor} `}>
             <div>
-              <p class=" opacity-80 font-arial-thin leading-[28px]">Lenght</p>
-              <p class="text-2xl  font-arial-medium leading-[24px]">{characteristics.about.lenght} <span class="text-base">mm</span></p>
+              <p className=" opacity-80 font-arial-thin leading-[28px]">Lenght</p>
+              <p className="text-2xl  font-arial-medium leading-[24px]">{characteristics.about.lenght} <span className="text-base">mm</span></p>
             </div>
             <div>
-              <p class=" opacity-80 font-arial-thin leading-[28px]">Width</p>
-              <p class="text-2xl  font-arial-medium leading-[24px]">{characteristics.about.width} <span class="text-base">mm</span></p>
+              <p className=" opacity-80 font-arial-thin leading-[28px]">Width</p>
+              <p className="text-2xl  font-arial-medium leading-[24px]">{characteristics.about.width} <span className="text-base">mm</span></p>
             </div>
             <div>
-              <p class=" opacity-80 font-arial-thin leading-[28px]">Height</p>
-              <p class="text-2xl  font-arial-medium leading-[24px]">{characteristics.about.height} <span class="text-base">mm</span></p>
+              <p className=" opacity-80 font-arial-thin leading-[28px]">Height</p>
+              <p className="text-2xl  font-arial-medium leading-[24px]">{characteristics.about.height} <span className="text-base">mm</span></p>
             </div>
             <div>
-              <p class=" opacity-80 font-arial-thin leading-[28px]">Wheelbase</p>
-              <p class="text-2xl  font-arial-medium leading-[24px]">{characteristics.about.wheelbase} <span class="text-base">mm</span></p>
+              <p className=" opacity-80 font-arial-thin leading-[28px]">Wheelbase</p>
+              <p className="text-2xl  font-arial-medium leading-[24px]">{characteristics.about.wheelbase} <span className="text-base">mm</span></p>
             </div>
           </div>
         </div>
-        <div class="w-full h-[150px] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black z-10 block md:hidden"></div>
+        <div className="w-full h-[150px] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black z-10 block md:hidden"></div>
         </div>
     </section>
     </>

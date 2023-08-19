@@ -49,7 +49,7 @@ const GoogleMaps = () => {
     ];
 
     const handleMarkerClick = (id, lat, lng, addressRu, addressUz, nameRu, nameUz, workingTime, tel) => {
-        mapRef.panTo({lat, lng})
+        mapRef?.panTo({lat, lng})
         setInfoWindowData({id, addressRu, addressUz, nameRu, nameUz, workingTime, tel})
         setIsOpen(true)
     }

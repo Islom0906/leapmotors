@@ -6,19 +6,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*html{*/
-/*    scroll-snap-type: y mandatory;*/
-/*    scroll-behavior: smooth !important;*/
-/*    scroll-snap-stop: always;*/
-/*}*/
+html{
+    scroll-snap-type: y mandatory;
+}
 
+.section .scroll-snap,.footer{
+    scroll-snap-align: center;
+}
 
-/*section,footer{*/
-/*    scroll-snap-align: start;*/
-/*}*/
-/*.store {*/
-/*    scroll-snap-align: none !important;*/
-/*}*/
 
 /*map*/
 
@@ -37,13 +32,6 @@
     top: -2px !important;
 }
 
-html{
-    scroll-snap-type: y mandatory;
-}
-
-.section .scroll-snap,.footer{
-    scroll-snap-align: center;
-}
 
 
 

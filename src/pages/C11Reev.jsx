@@ -11,6 +11,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
 import { CarSwiperInner } from "@/components";
+import Head from "next/head";
 
 
 
@@ -161,6 +162,13 @@ const C11Reev = () => {
   };
 
   return (
+      <>
+        <Head>
+          <title>Leapmotor-C11REEV</title>
+          <meta property='og:title' content="Leapmotor uz C11REEV, Leapmotor uzbekistan C11REEV,Leap-motor C11REEV"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <link rel="icon" href="/brand.png"/>
+        </Head>
     <main className={'bg-black'}>
       {/* <CarDetailBanner
         imgLong={true}
@@ -178,44 +186,44 @@ const C11Reev = () => {
         banner={`${process.env.NEXT_PUBLIC_API_URL}/media/4a239aa1-e8f5-4045-b290-bb1a81fcaecd-section-3-bg.jpg`}
       />
 
-      <section class="h-screen ">
-        <div class="relative w-full h-full">
+      <section className="h-screen ">
+        <div className="relative w-full h-full">
           <Image
             src={`${process.env.NEXT_PUBLIC_API_URL}/media/0cf19281-6dfa-4db4-9e8f-ba2fecd4a551-last-slide-bg-4.jpg`}
             alt="car"
             fill
-            class="object-cover w-full h-full"
+            className="object-cover w-full h-full"
           />
-          <div class="absolute top-[45px] md:top-20 w-full text-center z-20">
-            <div class="mb-5 text-center">
-              <p class="text-white text-[26px] font-arial-semibold md:font-arial-normal md:text-2xl lg:text-2xl leading-[44px] md:leading-[32px] mb-3">
+          <div className="absolute top-[45px] md:top-20 w-full text-center z-20">
+            <div className="mb-5 text-center">
+              <p className="text-white text-[26px] font-arial-semibold md:font-arial-normal md:text-2xl lg:text-2xl leading-[44px] md:leading-[32px] mb-3">
                 “5+2”Travel Freely
               </p>
             </div>
             <div>
-              <div class="mx-auto text-left md:flex sm:gap-6 w-fit">
-                <div class="flex items-center gap-2">
-                  <p class="text-[44px] md:text-[63px] text-white font-arial-semibold leading-[70px]">
+              <div className="mx-auto text-left md:flex sm:gap-6 w-fit">
+                <div className="flex items-center gap-2">
+                  <p className="text-[44px] md:text-[63px] text-white font-arial-semibold leading-[70px]">
                     5
                   </p>
-                  <div class="flex flex-col h-full justify-evenly">
-                    <p class="text-white font-arial-normal leading-[16px]">
+                  <div className="flex flex-col h-full justify-evenly">
+                    <p className="text-white font-arial-normal leading-[16px]">
                       For Urban Commuting
                     </p>
-                    <p class="text-white font-arial-normal leading-[16px]">
+                    <p className="text-white font-arial-normal leading-[16px]">
                       Feel Free to Use Electricity
                     </p>
                   </div>
                 </div>
-                <div class="flex items-center gap-2 md:border-l border-[#ffffff57] md:pl-5">
-                  <p class="text-[44px] md:text-[63px] text-white font-arial-semibold leading-[70px]">
+                <div className="flex items-center gap-2 md:border-l border-[#ffffff57] md:pl-5">
+                  <p className="text-[44px] md:text-[63px] text-white font-arial-semibold leading-[70px]">
                     2
                   </p>
-                  <div class="flex flex-col h-full justify-evenly">
-                    <p class="text-white font-arial-normal leading-[16px]">
+                  <div className="flex flex-col h-full justify-evenly">
+                    <p className="text-white font-arial-normal leading-[16px]">
                       For Holiday Travel
                     </p>
-                    <p class="text-white font-arial-normal leading-[16px]">
+                    <p className="text-white font-arial-normal leading-[16px]">
                       No Worries About the Range
                     </p>
                   </div>
@@ -265,8 +273,8 @@ const C11Reev = () => {
         }
         center={true}
       /> */}
-      <section class=" h-screen">
-        <div class="relative w-full h-full">
+      <section className=" h-screen">
+        <div className="relative w-full h-full">
           <video className="object-cover w-full h-full" autoPlay loop muted>
             <source
               className="w-full"
@@ -275,12 +283,12 @@ const C11Reev = () => {
             />
           </video>
  
-          <div class="absolute top-[60px] w-full text-center">
-            <div class="mb-5 text-center">
-              <p class="text-white text-lg font-arial-semibold lg:text-[22px] leading-7 md:leading-8 mb-2">
+          <div className="absolute top-[60px] w-full text-center">
+            <div className="mb-5 text-center">
+              <p className="text-white text-lg font-arial-semibold lg:text-[22px] leading-7 md:leading-8 mb-2">
                 Leapmotor Pilot Intelligent Driving Assist Solution*
               </p>
-              <p class="text-sm text-white font-arial-normal md:leading-5">
+              <p className="text-sm text-white font-arial-normal md:leading-5">
                 28 pieces of intelligent perception hardware support L3-level
                 assisted driving <br />
                 12 ultrasonic radars｜5 millimeter-wave radars｜4 surround view
@@ -297,6 +305,7 @@ const C11Reev = () => {
         autoplay={{
           delay: 4000,
         }}
+        speed={1000}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -345,6 +354,8 @@ const C11Reev = () => {
     <CarText content={disclaimers} />
 
     </main>
+      </>
+
   );
 };
 

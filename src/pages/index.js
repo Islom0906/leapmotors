@@ -23,6 +23,7 @@ import T03Logo from "/public/index/section-4-logo.png";
 
 import { BannerImage } from "@/components";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+import Head from "next/head";
 
 
 export default function Home() {
@@ -34,6 +35,13 @@ export default function Home() {
     });
 }, []);
   return (
+      <>
+      <Head>
+          <title>Leapmotor-Home</title>
+          <meta property='og:title' content="Leapmotor,Leapmotors,Leapmotor uz, Leapmotor uzbekistan,Leap-motor"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <link rel="icon" href="/brand.png"/>
+      </Head>
    <main className={'bg-black section'} >
        <section className="relative w-full h-screen scroll-snap">
       <video className="object-cover w-full h-full"   autoPlay loop muted>
@@ -57,6 +65,6 @@ export default function Home() {
       <BannerImage bg={T03bg} logo={T03Logo} text={'Smart Electric Mini Car'}  link={'/T03'} />
 
       </main>
-
+      </>
   )
 }

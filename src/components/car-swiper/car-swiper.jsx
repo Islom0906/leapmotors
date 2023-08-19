@@ -17,6 +17,7 @@ const CarSwiper = ({ content , textColor }) => {
             spaceBetween: 0,
           },
         }}
+        speed={1000}
         loop={"true"}
         pagination={true}
         navigation={true}

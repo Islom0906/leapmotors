@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PiCaretDownBold } from "react-icons/pi";
 import { CarSwiper ,CarText ,CarBanner } from "@/components";
+import Head from "next/head";
 
 
 
@@ -108,6 +109,13 @@ const T03Data = {
 
 const T03 = () => {
   return (
+      <>
+        <Head>
+          <title>Leapmotor-T03</title>
+          <meta property='og:title' content="Leapmotor uz T03, Leapmotor uzbekistan T03,Leap-motor T03"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <link rel="icon" href="/brand.png"/>
+        </Head>
     <main className={'bg-black'}>
       <section className="h-screen ">
         <div className="relative w-full h-full">
@@ -221,6 +229,8 @@ const T03 = () => {
       <CarText content={disclaimers} />
      
     </main>
+      </>
+
   );
 };
 

@@ -2,6 +2,7 @@
 import { CarBanner, CarBannerContentBottom, CarCharacteristics, CarContentFooter, CarDetailBanner, CarSwiper, CarText } from '@/components'
 import sectionC01  from '/public/section-2-logo.png'
 import sectionC01bg  from '/public/section-bg-2.png'
+import Head from "next/head";
 
 
 
@@ -71,6 +72,13 @@ const disclaimers= [
   ]
 
   return (
+      <>
+        <Head>
+          <title>Leapmotor-C01</title>
+          <meta property='og:title' content="Leapmotor uz C01, Leapmotor uzbekistan C01,Leap-motor C01"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <link rel="icon" href="/brand.png"/>
+        </Head>
     <main className={'bg-black'}>
       <CarDetailBanner img={sectionC01} bg={sectionC01bg} text={'Leapmotor C01 Advance your life– Deluxe Technology Electric Vehicle'}/>
       
@@ -98,6 +106,8 @@ const disclaimers= [
     <CarContentFooter title={'Leapmotor C01'} subTitle={'Advance Your Life'} bg={sectionC01bg} />
     <CarText content={disclaimers} />
     </main>
+      </>
+
   )
 }
 

@@ -1,6 +1,7 @@
 import { CarCharacteristics , CarSwiper  , CarBanner , CarText} from "@/components"
 import sectionC11  from '/public/section-3-logo.png'
 import sectionC11bg  from '/public/section-bg-3.jpg'
+import Head from "next/head";
 
 
 const characteristics = {
@@ -83,6 +84,13 @@ const disclaimers= [
 const C11 = () => {
   
   return (
+      <>
+        <Head>
+          <title>Leapmotor-C11</title>
+          <meta property='og:title' content="Leapmotor uz C11, Leapmotor uzbekistan C11,Leap-motor C11"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <link rel="icon" href="/brand.png"/>
+        </Head>
     <main className={'bg-black'}>
       <CarCharacteristics bg={sectionC11bg} logo={sectionC11} characteristics={characteristics} />
       <CarCharacteristics bg={sectionC11bg} logo={sectionC11} characteristics={characteristics} />
@@ -102,6 +110,8 @@ const C11 = () => {
     <CarText content={disclaimers} />
       
     </main>
+      </>
+
   )
 }
 
