@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import moment from "moment";
 
 
 
@@ -11,19 +12,19 @@ const NewsCard = ({url , text , img , data} ) => {
             <Image
               fill
               className="object-cover w-full "
-              src={img}
+              src={`${process.env.NEXT_PUBLIC_API_URL}/${img}`}
               alt="car name"
             />
 
           </div>
             <div className="overflow-x-hidden ">
               <p
-                className="text-base text-[#4d5d81] font-medium leading-[26px]"
+                className="text-base text-[#4d5d81] font-medium leading-[26px] three-line-dots"
               >
                 {text}
               </p>
             </div>
-            <p className="leading-[22px] text-base text-[#666]"> {data} </p>
+            <p className="leading-[22px] text-base text-[#666]"> {moment(data).fromNow()} </p>
           </Link>
     </>
   )

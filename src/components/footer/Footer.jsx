@@ -82,7 +82,7 @@ const Footer = () => {
                   >
                     <span>{t('footer.createdBy')}</span>
                     <div className={'w-[50px] h-[50px] relative'}>
-                      <Image className="flex-shrink-0 w-10 object-contain md:w-14 hover:rotate-[360deg] duration-700" fill src={'/A.png'} />
+                      <Image className="flex-shrink-0 w-10 object-contain md:w-14 hover:rotate-[360deg] duration-700" alt={'abduganiev logo'} fill src={'/A.png'} />
 
                     </div>
                   </a>

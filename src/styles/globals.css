@@ -33,7 +33,14 @@ html{
 }
 
 
-
+/*3dots*/
+.three-line-dots {
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
 
 /*swiper*/
 

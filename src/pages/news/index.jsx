@@ -2,9 +2,13 @@ import Link from 'next/link'
 import news1 from '/public/About-us/about us section 1.jpg'
 import {NewsCard} from '@/components'
 import Head from "next/head";
+import axios from "axios";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+import {useSelector} from "react-redux";
 
 
-const news = () => {
+const news = ({news}) => {
+    const {lang} = useSelector(state => state.lang)
     return (
 
         <>
@@ -14,30 +18,49 @@ const news = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
-        <section className="mt-4  ">
-            <div className="container ">
-                <div className="pt-[80px] pb-[60px]">
-                    <Link href="#" className="text-[#4d5d81] text-[20px] font-semibold"
-                    >News Room
-                    </Link>
-                </div>
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-                    <NewsCard url={"1"} img={news1} text={'Leapmotor’s First Mass Production Model with CTC...'}
-                              data={'February 25, 2022'}/>
-                    <NewsCard url={"1"} img={news1} text={'Leapmotor’s First Mass Production Model with CTC...'}
-                              data={'February 25, 2022'}/>
-                    <NewsCard url={"1"} img={news1} text={'Leapmotor’s First Mass Production Model with CTC...'}
-                              data={'February 25, 2022'}/>
-                    <NewsCard url={"1"} img={news1} text={'Leapmotor’s First Mass Production Model with CTC...'}
-                              data={'February 25, 2022'}/>
+            <section className="mt-4">
+                <div className="container ">
+                    <div className="pt-[80px] pb-[60px]">
+                        <Link href="#" className="text-[#4d5d81] text-[20px] font-semibold"
+                        >News Room
+                        </Link>
+                    </div>
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                        {
+                            news?.map((item) => (
+                                <NewsCard key={item?._id} url={item?.slug} img={item?.description[0]?.image?.path}
+                                          text={lang === 'ru' ? item?.titleRu : item?.titleUz}
+                                          data={item?.createdAt}/>
+                            ))
+                        }
 
 
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </>
 
     )
+}
+
+
+export async function getServerSideProps({req, res}) {
+
+    res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=10, stale-while-revalidate=59'
+    )
+    // Fetch data from external API
+    const [news] = await Promise.all([
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/news`),
+    ])
+
+    // Pass data to the page via props
+    return {
+        props: {
+            news: news.data
+        }
+    };
 }
 
 export default news

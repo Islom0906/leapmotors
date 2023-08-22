@@ -168,6 +168,36 @@ const C11Reev = () => {
   ];
 
 
+  const carDataSectoin2=[
+    {
+      title:'C11 Extended Range  180 Comfortable Version',
+      data:'RMB 149,800'
+    },
+    {
+      title:'C11 Extended Range  285  Comfortable Version',
+      data:'RMB 165,800'
+    },
+    {
+      title:'C11 Extended Range <br> 285 Smart Version',
+      data:'RMB 185,800'
+    }
+  ]
+
+  const carDataSectoin3=[
+    {
+      title:'Large Battery <br> Capacity',
+      data:'43.74kWh*'
+    },
+    {
+      title:'CLTC Pure Electric  Range',
+      data:'285km*'
+    },
+    {
+      title:'CLTC Comprehensive  Range',
+      data:'1024km*'
+    }
+  ]
+
   const characteristics = {
     title: "Luxury Five Seats",
     about: {
@@ -195,10 +225,12 @@ const C11Reev = () => {
       <CarBannerC11Reev
         title={"C11 Extended Range"}
         subTitle={"Price in China"}
+        carData={carDataSectoin2}
         banner={`${process.env.NEXT_PUBLIC_API_URL}/media/492a753d-0554-4942-8a59-193c60c6188c-C11-Reev-section-2-bg.jpg`}
       />
       <CarBannerC11Reev
         title={"Extended Range Vehicle With Longer Pure Electric Range"}
+        carData={carDataSectoin3}
         banner={`${process.env.NEXT_PUBLIC_API_URL}/media/c2331545-8907-4346-8c17-8a941364cc45-C11-Reev-section-3bg.jpg`}
       />
 
