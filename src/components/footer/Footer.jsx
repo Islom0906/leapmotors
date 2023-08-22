@@ -5,7 +5,6 @@ import { AiFillFacebook } from "react-icons/ai";
 
 import {RiInstagramFill} from 'react-icons/ri';
 import {BsTwitter} from 'react-icons/bs';
-import leapLogoBlack from 'public/Leapmotor_logo.png'
 import {useRouter} from "next/router";
 import {useQuery} from "react-query";
 import apiService from "@/service/api";
@@ -33,13 +32,13 @@ const Footer = () => {
                   <li className={'flex justify-center'}>
                     <Link className="text-center md:text-start"  href="#">{t("footer.investor")}</Link>
                   </li>
-                  <li className={'flex justify-center'}>
-                    <Link className="text-center md:text-start"  href="#">{t("footer.cooking")}</Link>
-                  </li>
+                  {/*<li className={'flex justify-center'}>*/}
+                  {/*  <Link className="text-center md:text-start"  href="#">{t("footer.cooking")}</Link>*/}
+                  {/*</li>*/}
                 </ul>
                 <div className="flex justify-center order-1 md:order-2">
-                  <Link href={'/'} className="w-[250px] aspect-[2/1] relative ">
-                    <Image className="object-contain" fill src={leapLogoBlack} />
+                  <Link href={'/'} className="w-[100px] aspect-[1/1] relative ">
+                    <Image className="object-contain" fill src={'/Leapmotor-logo.png'} />
                   </Link>
                 </div>
 
@@ -55,7 +54,7 @@ const Footer = () => {
                         href={`tel:${data?.data?.tel}`}
                         className="text-[#4d5d81]   underline underline-offset-8 flex items-center gap-2"
                     >
-                      <span> Oloy bozori </span>
+                      <span> {t('footer.address')} </span>
                     </a>
                   </div>
                   <div className="flex  gap-8  text-[#4d5d81] justify-center md:justify-end">
@@ -81,7 +80,7 @@ const Footer = () => {
                       className="text-base text-[#4d5d81] font-bold flex gap-3 items-center justify-center"
                       href={"https://abduganiev.uz/"}
                   >
-                    <span>Sayt tayyorlovchi</span>
+                    <span>{t('footer.createdBy')}</span>
                     <div className={'w-[50px] h-[50px] relative'}>
                       <Image className="flex-shrink-0 w-10 object-contain md:w-14 hover:rotate-[360deg] duration-700" fill src={'/A.png'} />
 

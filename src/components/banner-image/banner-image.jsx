@@ -1,9 +1,11 @@
 import Aos from "aos";
 import Image from "next/image";
 import Link from "next/link";
+import {useTranslation} from "react-i18next";
 
 
 const BannerImage = ({ bg , logo , text , link }) => {
+  const {t}=useTranslation()
   return (
       <section className="relative w-full h-screen  scroll-snap ">
         <div data-aos='fade' data-aos-anchor-placement="top-bottom" className="relative w-full h-full">
@@ -11,6 +13,7 @@ const BannerImage = ({ bg , logo , text , link }) => {
             src={bg}
             fill
             alt="car"
+            priority={true}
             className="object-cover w-full h-full object-bottom"
           />
           <div className="absolute top-32 left-[50%]  translate-x-[-50%]">
@@ -19,6 +22,8 @@ const BannerImage = ({ bg , logo , text , link }) => {
                 src={logo}
                 alt="logo"
                 fill
+                priority={true}
+
                 className="w-[280px] xs:w-[425px] lg:w-[637px] h-full mx-auto object-contain"
               />
             </div>
@@ -31,7 +36,7 @@ const BannerImage = ({ bg , logo , text , link }) => {
               href={link}
               className="text-white text-lg bg-transparent border border-white w-[145px] flex mx-auto justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
             >
-              Learn More
+              {t('more')}
             </Link>
           </div>
         </div>

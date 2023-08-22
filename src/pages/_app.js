@@ -38,7 +38,7 @@ export default function App({Component, pageProps}) {
         <QueryClientProvider client={queryClient}>
         <Provider store={store}>
             <HydrationProvider>
-                <main>
+                <main >
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>

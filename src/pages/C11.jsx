@@ -101,17 +101,18 @@ const carSwipper5 = [
 
 const carSwipper6 = [
     {
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/d37f7a34-dbfa-49d2-8ded-f2818472e9aa-section-bg-3.jpg`,
-    },
-    {
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/301a8992-2a3b-4ebb-9573-698d22167648-slider-2-1bg.jpg`
-    },
-    {
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/d0cd8b94-d99a-4530-a1d6-f25256b2b921-slide-gallery-3.jpg`,
     },
     {
+        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/adceae5f-ba4e-4e47-ab99-922eebcbb878-C11-section-2-bg.jpg`
+    },
+    {
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/f338e05f-8ab3-45d4-aa4e-247e0909045e-slide-gallery-1.jpg`
-    }
+    },
+    {
+        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/2eee31cd-e306-4bda-8a78-992ec9637bc4-C11-section-4-slider-1-1bg.jpg`,
+    },
+
 ]
 
 const disclaimers = [

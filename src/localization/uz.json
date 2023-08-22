@@ -8,7 +8,10 @@
     "footer": {
       "privacy": "Maxfiylik va huquqiy ma'lumotlar",
       "investor": "Dillerlar bilan aloqa",
-      "cooking": "Cookie sozlamalari"
-    }
+      "cooking": "Cookie sozlamalari",
+      "createdBy": "Sayt tayyorlovchi",
+      "address": "Oloy bozori avtoturargohi"
+    },
+    "more": "Batafsil ma'lumot"
   }
 }

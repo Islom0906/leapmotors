@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
     }, [show]);
   return (
-    <div className="relative">
+    <div className="relative ">
       <Navbar />
       <div className={"min-h-screen bg-white" }>{children}</div>
       <Footer />
