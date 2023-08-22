@@ -4,7 +4,7 @@ const CarDetailBanner = ({ bg, img, text, title ,imgLong }) => {
   return (
     <>
       <section className="relative h-screen">
-        <Image fill src={bg} alt="car" className="object-cover w-full h-full" fill/>
+        <Image fill src={bg} alt="car" className="object-cover w-full h-full" priority={true}/>
         <div className="absolute top-[140px] w-full text-center">
           <div className="flex items-center justify-center w-full ">
               {img ? (

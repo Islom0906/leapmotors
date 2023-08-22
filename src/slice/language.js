@@ -1,19 +1,18 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState={
-    show:false
+    lang:"ru"
 }
 
 export const LanguageSlice=createSlice({
     name:'language',
     initialState,
     reducers:{
-
-        isShowSidebar:(state,{payload})=>{
-            state.show=payload
+        checkLanguageAction:(state,{payload})=>{
+            state.lang=payload
         }
     }
 })
 
-export const {isShowSidebar}=LanguageSlice.actions
+export const {checkLanguageAction}=LanguageSlice.actions
 export default LanguageSlice.reducer

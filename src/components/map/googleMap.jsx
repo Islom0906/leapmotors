@@ -3,7 +3,7 @@ import {GoogleMap, InfoWindowF, MarkerF, useLoadScript} from "@react-google-maps
 
 import {RiMapPinLine, RiPhoneLine, RiTimeLine} from "react-icons/ri";
 
-const GoogleMaps = () => {
+const GoogleMaps = ({mapData}) => {
     const {isLoaded} = useLoadScript({
         googleMapsApiKey: 'AIzaSyCgyx5fAyg8xJ__lQ28TwFGpnSStYHIYog',
     });
@@ -12,41 +12,19 @@ const GoogleMaps = () => {
     const [infoWindowData, setInfoWindowData] = useState();
     const onLoad = (map) => {
         setMapRef(map)
-        if (markers.length===1){
-        map.setCenter({lat:markers[0].lat,lng:markers[0].lng})
+        if (mapData.length===1){
+        map.setCenter({lat:Number(mapData[0].lat),lng:Number(mapData[0].lng)})
         map.setZoom(14)
 
         }else {
         const bounds = new google.maps.LatLngBounds();
-        markers?.forEach(({lat, lng}) => bounds.extend({lat, lng}));
+            mapData?.forEach(({lat, lng}) => bounds.extend({lat:Number(lat), lng:Number(lng)}));
         map.fitBounds(bounds);
 
         }
     };
 
-    const markers = [
-        {
-            nameRu: 'Yuhang Powerlong Plaza do\'koni',
-            nameUz: 'Yuhang Powerlong Plaza do\'koni',
-            addressRu: "№ 2853, Yuhangtang yo'li, Cangqian ko'chasi, L1-026-2",
-            addressUz: "№ 2853, Yuhangtang yo'li, Cangqian ko'chasi, L1-026-2",
-            workingTime: '10:00-22:00',
-            tel: '15068735153',
-            lat: 41.318542,
-            lng: 69.283087,
-        },
-        // {
-        //     nameRu: 'Yuhang Jiangnan Times do\'koni',
-        //     nameUz: 'Yuhang Jiangnan Times do\'koni',
-        //     addressRu: "1F-017, 017-1, Jiangnan Times savdo markazi, Yuxan ko'chasi",
-        //     addressUz: "1F-017, 017-1, Jiangnan Times savdo markazi, Yuxan ko'chasi",
-        //     workingTime: '9:30-21:30',
-        //     tel: '0571-88520112',
-        //     lat: 41.291611,
-        //     lng: 69.238948
-        // },
 
-    ];
 
     const handleMarkerClick = (id, lat, lng, addressRu, addressUz, nameRu, nameUz, workingTime, tel) => {
         mapRef?.panTo({lat, lng})
@@ -59,9 +37,9 @@ const GoogleMaps = () => {
     return (
         <>
             <div
-                className={'hidden static md:absolute top-[10%] left-[3%] md:w-[460px] w-[90%] mx-auto  flex-col md:gap-0 gap-3 items-center  md:py-0 py-5   divide-y-0 md:divide-y max-h-[80%] overflow-y-auto z-50'}>
+                className={` ${mapData.length>1 ? 'flex' : 'hidden' } static md:absolute top-[10%] left-[3%] md:w-[460px] w-[90%] mx-auto  flex-col md:gap-0 gap-3 items-center  md:py-0 py-5   divide-y-0 md:divide-y max-h-[80%] overflow-y-auto z-50`}>
                 {
-                    markers.map((item, ind) => (
+                    mapData.map((item, ind) => (
                         <div
                             className={'space-y-2 sm:space-y-3 px-4 py-2 sm:px-7 sm:py-5 cursor-pointer bg-white rounded-lg md:rounded-none w-full'}
                             key={ind}>
@@ -93,14 +71,14 @@ const GoogleMaps = () => {
                         mapContainerClassName="map-container"
                         onLoad={onLoad}
                     >
-                        {markers.map(({lat, lng, addressRu, addressUz, nameRu, nameUz, workingTime, tel}, ind) => (
-                            <MarkerF position={{lat, lng}} key={ind}
+                        {mapData.map(({lat, lng, addressRu, addressUz, nameRu, nameUz, workingTime, tel}, ind) => (
+                            <MarkerF position={{lat:Number(lat), lng:Number(lng)}} key={ind}
                                      icon={{
                                          url: '/store-checked.png', // Path to your custom image
                                          scaledSize: new window.google.maps.Size(45, 50),
                                      }}
                                      onClick={() => {
-                                         handleMarkerClick(ind, lat, lng, addressRu, addressUz, nameRu, nameUz, workingTime, tel)
+                                         handleMarkerClick(ind, Number(lat), Number(lng), addressRu, addressUz, nameRu, nameUz, workingTime, tel)
                                      }}
                             >
                                 {
@@ -128,11 +106,9 @@ const GoogleMaps = () => {
                                 }
                             </MarkerF>
                         ))}
-
                     </GoogleMap>
                 )}
             </div>
-
 
         </>
 

@@ -3,11 +3,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import news1 from '/public/section-bg-1.jpg'
+import Head from "next/head";
 
 
 const NewsInner = () => {
     return (
         <>
+            <Head>
+                <title>Leap-Motor  Slug</title>
+                <meta property='og:title' content="Leapmotor uz News, Leapmotor uzbekistan News,Leap-motor News"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <link rel="icon" href="/brand.png"/>
+            </Head>
             <section className={''}>
                 <div className="container ">
                     <div className="mt-[95px] mb-[35px] md:mb-[40px]">

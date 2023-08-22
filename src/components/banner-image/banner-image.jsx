@@ -18,6 +18,7 @@ const BannerImage = ({ bg , logo , text , link }) => {
               <Image
                 src={logo}
                 alt="logo"
+                fill
                 className="w-[280px] xs:w-[425px] lg:w-[637px] h-full mx-auto object-contain"
               />
             </div>

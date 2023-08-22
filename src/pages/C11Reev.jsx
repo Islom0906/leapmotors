@@ -5,13 +5,14 @@ import {
   CarSwiper,
   CarBanner,
   CarSwiperInnerVideo,
-  CarText
+  CarText, HoverCard
 } from "@/components";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
 import { CarSwiperInner } from "@/components";
 import Head from "next/head";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 
 
@@ -43,54 +44,69 @@ const C11Reev = () => {
   const carSwipper3 = [
     
     {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/2f85017d-2850-4e89-9d4f-84662d1e289e-slide-3-bg-1.jpg`,
+      title: "6D Ergonomic Seat* ",
+      subTitle: "Nappa leather seats*, 6-way electric adjustment for driver's seat + 4-way lumbar support adjustment*  Ventilated and heated front seats with spa-level 8-point intelligent massage*",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/d1903d0f-0e8c-4cd8-9f61-7bf5624c9df5-C11-Reev-section-12-slider-1-2bg.jpg`,
     },
     {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c90bed48-2162-403f-bb64-cf247ad27eae-slide-3-bg-2.jpg`,
+      title: "Rear-row Integrated Multimedia Control Panel*",
+      subTitle: "Seat heating, volume, A/C, song switching, and other functions are also under one key control of the rear passengers",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/6d7c8da5-3e54-495b-a345-8df650c50773-C11-Reev-section-12-slider-1-1bg.jpg`,
     },
   ];
   const carSwipper4 = [
     
     {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/74d08da7-eb18-4d08-ae2e-35f744a569ed-section-17-slide-5-bg-1.jpg`,
+      title: "Luxury Independent Suspension",
+      subTitle: "Front Double Wishbone / Rear Five Link Suspension Million-dollar luxury car driving experience, taking into account both comfort and controllability",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/07b7c1e6-e2e5-4b42-b1cb-6f47d23f1e3c-C11-Reev-section-16-slider-1-3bg.jpg`,
     },
     {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/26c80da0-74a6-4338-93cf-e35e51b2f670-section-17-slide-5-bg-2.jpg`,
+      title: "100% Independently Developed Variable-Structured Oil-Cooled Electric Drive, the First in the Industry",
+      subTitle: "Maximum power of 200 kW     Designed compatible torque of 300—500 N·m Maximum speed of 16,000 rpm    Designed service life of 1 million km",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/6713a7ab-04a3-4d33-a65d-6daa1f7bb466-C11-Reev-section-16-slider-1-1bg.jpg`,
     },
     {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/a05fd2d6-bbc7-42c0-95f0-4dd38835c1f4-section-17-slide-5-bg-3.jpg`,
+      title: "100% Self-Developed Direct-Drive Oil-Cooled Extended-Range Generator System",
+      subTitle: "110 kW/88 kW platform development Characterized by low noise and efficient matching of engine fuel",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/5622e412-6d49-4723-90a6-267c69274305-C11-Reev-section-16-slider-1-2bg.jpg`,
     },
   ];
   const carSwipper5 = [
     
     {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/f018bd26-8e8f-4d3a-af53-57cc96b585d7-slide-6-bg-1.jpg`,
+      title: "Self-Developed AI Intelligent Battery Management System",
+      subTitle: "Real-time monitoring of battery data, supporting early warning, and full-time active protection via the vehicle and cloud Thermal runaway BMS wakes up the vehicle and provides advanced early warning protection",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/bda884f2-ee12-4c6c-b24f-a3a533930795-C11-Reev-section-18-slider-1-1bg.jpg`,
     },
     {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/bf8282f7-c34d-45c0-8a8b-f920be749a88-slide-6-bg-2.jpg`,
+      title: "Self-Developed Through-Type Large Module Battery Pack",
+      subTitle: "Large battery capacity of 43.74 kWh* The maximum CLTC battery endurance of 285 km*",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/a95900c4-3534-4053-86a3-8bec3a898aa7-C11-Reev-section-18-slider-1-2bg.jpg`,
     },
     
   ];
 
+  const carSwipper6 = [
+    {
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/cd8d1b69-e984-4eeb-aba2-aa4cba5de1df-last2.jpg`,
+    },
+    {
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/75581a25-717a-4287-95b0-909adc926f58-last1.jpg`,
+    },
+    {
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/fca63e41-6635-4bfa-8ffc-becdee688dbb-last3.jpg`,
+    },
+    {
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/78224616-b9f4-42c4-829b-6b8fb3c69e99-last4.jpg`,
+    },
+  ]
+
   const videoBlog = [ 
     {
       title: 'Implementation of 23 Intelligent Driving Assist Functions*',
-      subTitle : 'Lane Change Alert (LCA)',
-      video : `${process.env.NEXT_PUBLIC_API_URL}/media/90922059-80d8-426a-b6e0-2160de6b27e9-section-16-slide1.mp4`
+      subTitle : 'Traffic Jam Assist (TJA)',
+      video : `${process.env.NEXT_PUBLIC_API_URL}/media/341b133c-3ad4-4cda-a61f-6ce801cfe26a-16-3.mp4`
     },
     {
       title: 'Implementation of 23 Intelligent Driving Assist Functions*',
@@ -99,56 +115,56 @@ const C11Reev = () => {
     },
     {
       title: 'Implementation of 23 Intelligent Driving Assist Functions*',
-      subTitle : 'Traffic Jam Assist (TJA)',
+      subTitle : 'SDIS Narrow Lane Assist System',
       video : `${process.env.NEXT_PUBLIC_API_URL}/media/eb4f0222-5ea3-4228-ad53-468ccb3d4618-section-16-slide3.mp4`
     },
     {
       title: 'Implementation of 23 Intelligent Driving Assist Functions*',
-      subTitle : 'Traffic Jam Assist (TJA)',
+      subTitle : 'Lane Change Alert (LCA)',
       video : `${process.env.NEXT_PUBLIC_API_URL}/media/a2dd8ae3-a67b-469d-8c5b-1540a7db6d16-section-16-slide4.mp4`
     },
   ]
 
   const carSwipper2 = [
     {
-      title: "Energetic Curved Body",
+      title: "Flush Door Handle*",
       subTitle:
-        "Reduces wind resistance coefficient，showing a strong sense of science and technology",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/78b6ef23-ce98-43da-8074-1609a273a67a-slide-2-bg-1.jpg`,
+        "It improves the aerodynamic performance of the vehicle and reduces the wind resistance",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c3e21933-b421-4540-9b54-882cd2930afe-C11-Reev-section-7-slider-1-1bg.jpg`,
     },
     {
-      title: "Through Headlamp",
-      subTitle: "Digital crystalline headlamp with smooth dynamic effect",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/ee1652de-7ea4-4074-b45a-5f74f1143f8f-slide-2-bg-2.jpg`,
-    },
-    {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/9f104634-1ab0-47c7-a3cf-5ae366888a65-slide-2-bg-3.png`,
+      title: "Time Capsule Sporty Front Head",
+      subTitle: "23 high-power LEDs respectively on both sides, a new grille design, simple and powerful",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c781fd9e-1d86-477a-a8fc-f708ca452dc7-C11-Reev-section-7-slider-1-2bg.jpg`,
     },
     {
       title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/2ff461be-1fa0-4ef0-88dd-0e5db2a1e9d7-slide-2-bg-4.png`,
+      subTitle: "Front double-layer silent glass to make it quieter*",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/e9f38cb7-79ef-498b-afee-e3f870305a25-C11-Reev-section-7-slider-1-3bg.jpg`,
+    },
+    {
+      title: "Smooth Through-Type Taillights*",
+      subTitle: "182 LED rear taillights create smooth and dynamic lighting effects in one go",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/a51187c2-1118-4652-9f02-4992bf50409a-C11-Reev-section-7-slider-1-4bg.jpg`,
     },
   ];
   const carSwipper1 = [
     {
-      title: "Energetic Curved Body",
+      title: "So \"Big\" as to Hold the Happy Family",
+      subTitle: "Trunk volume is 375 L Fold the rear row forward and the trunk can be expanded up to 840 L",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/520256cf-35ef-4ecc-a953-793bbdc98ff7-C11-Reev-section-5-slider-1-1bg.jpg`,
+    },
+    {
+      title: "Luxury Five Seats",
       subTitle:
         "Reduces wind resistance coefficient，showing a strong sense of science and technology",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/f2c6411d-5afe-4b46-8959-88716544b6c5-slide-1-bg-1.jpg`,
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/236c60a0-0d43-489d-9d2a-c7f7738c6598-C11-Reev-section-5-slider-1-2bg.jpg`,
     },
     {
-      title: "Through Headlamp",
-      subTitle: "Digital crystalline headlamp with smooth dynamic effect",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/ae3fe179-ec44-49c5-8efe-84d909d19016-slide-1-bg-2.jpg`,
-    },
-    {
-      title: "Frameless Door",
-      subTitle: "Front laminated silent glass rear privacy glass",
-      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/e8e116fd-e431-4950-9699-d7e3b5186ed2-slide-1-bg-3.jpg`,
-    },
+      title: "Long Wheelbase and Large Space",
+      subTitle: "Wheelbase of 2,930 mm, with encircling cockpit Be it sitting or lying, enjoy a great comfort",
+      bg: `${process.env.NEXT_PUBLIC_API_URL}/media/4dc447c6-9b74-4096-b0a1-fea07ba1032d-C11-Reev-section-5-slider-1-3bg.jpg`,
+    }
   ];
 
 
@@ -164,35 +180,36 @@ const C11Reev = () => {
   return (
       <>
         <Head>
-          <title>Leapmotor-C11REEV</title>
+          <title>Leap-Motor C11REEV</title>
           <meta property='og:title' content="Leapmotor uz C11REEV, Leapmotor uzbekistan C11REEV,Leap-motor C11REEV"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
           <link rel="icon" href="/brand.png"/>
         </Head>
     <main className={'bg-black'}>
-      {/* <CarDetailBanner
+       <CarDetailBanner
         imgLong={true}
-        img={sectionC11Reev}
-        bg={section1}
+        img={`${process.env.NEXT_PUBLIC_API_URL}/media/7761680e-347d-47c4-a96a-4eccfd8f2ec1-slide-01-logo.png`}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7c0b9341-73dc-4f0c-a4f5-6853f6ed5751-C11-Reev-section-1bg.jpg`}
         text={"Intelligent Long Range Five-Seat SUV"}
-      /> */}
+      />
       <CarBannerC11Reev
         title={"C11 Extended Range"}
         subTitle={"Price in China"}
-        banner={`${process.env.NEXT_PUBLIC_API_URL}/media/2113df8a-0039-4345-831f-79df7d0c12cb-section-2-bg.jpg`}
+        banner={`${process.env.NEXT_PUBLIC_API_URL}/media/492a753d-0554-4942-8a59-193c60c6188c-C11-Reev-section-2-bg.jpg`}
       />
       <CarBannerC11Reev
         title={"Extended Range Vehicle With Longer Pure Electric Range"}
-        banner={`${process.env.NEXT_PUBLIC_API_URL}/media/4a239aa1-e8f5-4045-b290-bb1a81fcaecd-section-3-bg.jpg`}
+        banner={`${process.env.NEXT_PUBLIC_API_URL}/media/c2331545-8907-4346-8c17-8a941364cc45-C11-Reev-section-3bg.jpg`}
       />
 
       <section className="h-screen ">
         <div className="relative w-full h-full">
           <Image
-            src={`${process.env.NEXT_PUBLIC_API_URL}/media/0cf19281-6dfa-4db4-9e8f-ba2fecd4a551-last-slide-bg-4.jpg`}
+            src={`${process.env.NEXT_PUBLIC_API_URL}/media/d197cbbe-f6d9-4d46-ab91-f51a2d8ad41e-C11-Reev-section-4bg.jpg`}
             alt="car"
             fill
             className="object-cover w-full h-full"
+            priority={true}
           />
           <div className="absolute top-[45px] md:top-20 w-full text-center z-20">
             <div className="mb-5 text-center">
@@ -238,41 +255,41 @@ const C11Reev = () => {
       
       <CarBanner
         title={"Technology and Natural Aesthetics"}
-        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/145e9e01-b7cc-425b-bde7-dd9688447dd8-section-5-bg.jpg`}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/2b51c4a8-4a25-4fb1-8a3b-40ac095761f7-C11-Reev-section-6-bg.jpg`}
         textColor="black"
       />
       <CarSwiper content={carSwipper2} textColor={"black"} />
-      <CarCharacteristics
-        textColor={"black"}
-        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/72d9c4b3-5acd-4f3b-b167-7cb8ae8accf8-section-8-bg.jpg`}
-        characteristics={characteristics}
+      {/*<CarCharacteristics*/}
+      {/*  textColor={"black"}*/}
+      {/*  bg={`${process.env.NEXT_PUBLIC_API_URL}/media/72d9c4b3-5acd-4f3b-b167-7cb8ae8accf8-section-8-bg.jpg`}*/}
+      {/*  characteristics={characteristics}*/}
 
-        
-      />
+      {/*  */}
+      {/*/>*/}
       <CarBanner
         title={"Leapmotor OS 3.0 Smart Cockpit"}
-        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/72d9c4b3-5acd-4f3b-b167-7cb8ae8accf8-section-8-bg.jpg`}
-        bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/72d9c4b3-5acd-4f3b-b167-7cb8ae8accf8-section-8-bg.jpg`}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/8bfef56b-b41a-49f6-923d-3bed34ee9a1b-C11-Reev-section-8-bg.jpg`}
+        bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/5541e411-9525-4191-87de-13fa5d592541-C11Reev-slide-08-res.jpg`}
       />
-      <CarBanner bg={`${process.env.NEXT_PUBLIC_API_URL}/media/45f45abd-c95f-4730-b317-176f03c35e21-section-9-bg.jpg`} bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/309b733a-854a-410e-80a0-650521fecc94-section-9-bg-res.jpg`} />
+      <CarBanner bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7884874f-5ce2-4438-8cfc-415405d72e78-C11-Reev-section-9-bg.jpg`} bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/f79c95ac-797d-452a-8471-2958aea7252d-C11-Reev-section-9-bg-responsive.jpg`} />
       <CarBanner
-        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/667d54e2-374f-4723-b4c4-7acd61c3041c-section-10-bg.jpg`}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/78b52aaa-4b94-472e-a313-13fc3b9eafd8-C11-Reev-section-10-bg.jpg`}
         title={"A real luxurious vehicle belongs to the whole family"}
       />
       <CarBanner
-        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7bb16ad4-6969-47d2-8c38-c878bbc35d40-section-11-bg.jpg`}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/f84154ae-126e-400a-a6b7-a34c442ab220-C11-Reev-section-11-bg.jpg`}
         title={"360° Wide Field of View 14,932 cm² Panoramic Starry Roof*"}
         subTitle={"8% improved field of view* and 99.5% UV isolation rate"}
       />
       <CarSwiper content={carSwipper3} />
-      {/* <CarBanner
-        bg={section14}
-        title={"360° Wide Field of View 14,932 cm² Panoramic Starry Roof*"}
+       <CarBanner
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/a344178d-336a-4a52-bb49-850cfe382850-C11-Reev-section-13-bg.jpg`}
+        title={"Million-level Mobile Music Cockpit"}
         subTitle={
           "Standard 12 speakers, tuned by expert Arkamys from France 6 sound effects available with an immersive environment"
         }
         center={true}
-      /> */}
+      />
       <section className=" h-screen">
         <div className="relative w-full h-full">
           <video className="object-cover w-full h-full" autoPlay loop muted>
@@ -316,7 +333,7 @@ const C11Reev = () => {
         pagination={true}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="h-screen mySwiper"
+        className="md:h-screen mySwiper"
       >
         {
             videoBlog?.map((item, ind) =>(
@@ -331,16 +348,16 @@ const C11Reev = () => {
       <CarSwiper content={carSwipper4} />
 
       <CarBanner
-        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/73cd3996-94b7-4ef0-b4b0-fbe3a1de3620-section-19.jpg`}
-        title={"Explore and Travel with Mobility"}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/01920bd1-0f12-437f-ac75-fa66272bf58a-C11-Reev-section-17-bg.jpg`}
+        title={"High-Strength Armor Body"}
         subTitle={
-          "3.3 kW external discharge* fits squarely , into outdoor camping"
+          "High-strength steel utilization rate of 80.84% Hot-formed steel utilization rate of 16.79%"
         }
 
       />
       <CarSwiper content={carSwipper5} />
       <CarBanner
-        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/3a561359-eb26-4a4e-b508-9802adddb4e8-section-21-bg.jpg`}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/d1f22c5d-25ba-41a8-a560-d33bb20c8928-C11-Reev-section-19-bg.jpg`}
         title={"Explore and Travel with Mobility"}
         subTitle={
           "3.3 kW external discharge* fits squarely , into outdoor camping"
@@ -348,9 +365,26 @@ const C11Reev = () => {
 
       />
       <CarBanner
-        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/ba2b8fe1-efb3-4ade-9339-1c1b88411a69-section-22-bg.jpg`}
+        bg={`${process.env.NEXT_PUBLIC_API_URL}/media/e448970d-bb7b-4c6c-97e5-e529dcd883d7-C11-Reev-section-20-bg.jpg`}
         title={"Looking forward to your next mile"}
       />
+      <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
+        <div className="container mx-auto pb-10">
+          <p className={'text-[30px] font-semibold text-white'}>Picture</p>
+
+        </div>
+        <div
+            className={'overflow-x-hidden w-full  relative flex flex-col md:flex-row  md:h-[90vh] gap-y-6'}>
+          {
+            carSwipper6?.map((item, ind) => (
+                <HoverCard
+                    image={item.bg}
+                    key={ind}
+                />
+            ))
+          }
+        </div>
+      </section>
     <CarText content={disclaimers} />
 
     </main>

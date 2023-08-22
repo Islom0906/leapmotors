@@ -9,11 +9,11 @@ const CarSwiperInner = ({title , subTitle , bg ,textColor,bgResp}) => {
         {
         bgResp ?
           <>
-            <Image src={bgResp} alt="car" className="block object-cover w-full h-full md:hidden" fill/>
-            <Image src={bg} alt="car" className="hidden object-cover w-full h-full md:block" fill/>
+            <Image src={bgResp} alt="car" className="block object-cover w-full h-full md:hidden" fill priority={true}/>
+            <Image src={bg} alt="car" className="hidden object-cover w-full h-full md:block" fill priority={true}/>
           </>
           :
-          <Image src={bg} alt="car" className="object-cover w-full h-full" fill/>
+          <Image src={bg} alt="car" className="object-cover w-full h-full" fill priority={true}/>
         }
         </div>
         <div className="md:absolute z-[10] top-[60px] w-full text-center">

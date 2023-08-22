@@ -7,6 +7,9 @@ import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
 import {isShowSidebar} from "@/slice/sidebar";
+import {checkLanguageAction} from "@/slice/language";
+import apiService from "@/service/api";
+import {useQuery} from "react-query";
 
 const Navbar = () => {
     const [openNavbar, setOpenNavbar] = useState(false)
@@ -16,7 +19,9 @@ const Navbar = () => {
     const {show} = useSelector(state => state.sidebar)
     const dispatch = useDispatch()
 
-
+    const {
+        data,
+    } = useQuery('get-model', () => apiService.getData('/product'))
     const showSidebar = (e, show) => {
         e.stopPropagation()
         dispatch(isShowSidebar(show))
@@ -24,6 +29,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const defaultLang = localStorage.getItem('langLeap')
+        dispatch(checkLanguageAction(defaultLang))
         if (defaultLang !== checkLang) {
             setCheckLang(defaultLang)
         }
@@ -32,6 +38,7 @@ const Navbar = () => {
     useEffect(() => {
         if (isChangeLang) {
             i18n.changeLanguage(checkLang)
+            dispatch(checkLanguageAction(checkLang))
             localStorage.setItem('langLeap', checkLang)
         }
     }, [checkLang]);
@@ -54,18 +61,15 @@ const Navbar = () => {
 
                 </Link>
                 <ul className="items-center hidden gap-10 text-white uppercase lg:flex">
-                    <li><Link href="/C11Reev"
-                              className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">C11
-                        reev</Link></li>
-                    <li><Link href="/C01"
-                              className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">c01</Link>
-                    </li>
-                    <li><Link href="/C11"
-                              className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">C11</Link>
-                    </li>
-                    <li><Link href="/T03"
-                              className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">t03</Link>
-                    </li>
+                    {
+                        data?.data?.map(link => (
+                            <li key={link?._id}>
+                                <Link href={`/${link?.model}`}
+                                      className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">{link?.model}</Link>
+                            </li>
+
+                        ))
+                    }
 
                 </ul>
             </div>
@@ -83,14 +87,15 @@ const Navbar = () => {
                                          className="text-2xl cursor-pointer"/>
                             </div>
                             <ul className="space-y-5">
-                                <li><Link onClick={(e) => showSidebar(e, false)} href="/C11Reev"
-                                          className="uppercase block lg:hidden ">c11 reev</Link></li>
-                                <li><Link onClick={(e) => showSidebar(e, false)} href="/C01"
-                                          className="uppercase block lg:hidden ">c01</Link></li>
-                                <li><Link onClick={(e) => showSidebar(e, false)} href="/C11"
-                                          className="uppercase block lg:hidden ">c11</Link></li>
-                                <li><Link onClick={(e) => showSidebar(e, false)} href="/T03"
-                                          className="uppercase block lg:hidden ">t03</Link></li>
+                                {
+                                    data?.data?.map(link => (
+                                        <li key={link?._id} onClick={(e) => showSidebar(e, false)}>
+                                            <Link href={`/${link?.model}`}
+                                                  className="uppercase block lg:hidden ">{link?.model}</Link>
+                                        </li>
+
+                                    ))
+                                }
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="/about"
                                           className="capitalize">{t('navbar.about')}</Link></li>
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="/news"

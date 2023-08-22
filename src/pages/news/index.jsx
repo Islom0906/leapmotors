@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import news1 from '/public/section-bg-1.jpg'
+import news1 from '/public/About-us/about us section 1.jpg'
 import {NewsCard} from '@/components'
 import Head from "next/head";
 
@@ -9,7 +9,7 @@ const news = () => {
 
         <>
             <Head>
-                <title>Leapmotor-News Roow</title>
+                <title>Leap-Motor News</title>
                 <meta property='og:title' content="Leapmotor uz News, Leapmotor uzbekistan News,Leap-motor News"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
