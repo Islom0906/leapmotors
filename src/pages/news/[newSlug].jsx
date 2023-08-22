@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import news1 from '/public/section-bg-1.jpg'
+import news1 from '/public/About-us/about us section 1.jpg'
 import Head from "next/head";
 
 
