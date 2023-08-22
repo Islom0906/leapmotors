@@ -7,7 +7,6 @@ import section1image2 from '/public/About-us/about us section 1 image2.jpg'
 import teamImage from '/public/About-us/section-3 img1.jpg'
 import {AboutTeam, HoverCard} from "@/components";
 import axios from "axios";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useSelector} from "react-redux";
 
 SwiperCore.use([Autoplay]);
