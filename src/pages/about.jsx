@@ -65,7 +65,7 @@ export default function About() {
                            className="w-full h-full  z-[2] lg:hidden object-cover" fill/>
                     <Image src={section1image1} alt="Leapmotor Image"
                            className="w-full h-full absolute top-0 right-0 z-[2] object-cover hidden lg:block " fill/>
-                    <div className="px-3 flex flex-col items-center absolute z-10 w-full top-48">
+                    <div className="absolute z-10 flex flex-col items-center w-full px-3 top-48">
                         <h1 className="text-white text-center text-xl font-semibold md:text-[28px] w-full lg:max-w-[844.425px]">We
                             are a leading smart EV company based in China that strives to deliver the finest
                             smart mobility experience to all consumers</h1>
@@ -73,13 +73,13 @@ export default function About() {
                 </section>
                 {/*section video*/}
                 <section className="w-full h-screen">
-                    <video autoPlay loop muted className="w-full h-full object-cover">
+                    <video autoPlay loop muted className="object-cover w-full h-full">
                         <source data-v-9a2df41a=""
                                 src="https://lp-website-oss-static.leapmotor.com/Leapmotor-English-web/leapmotor-PCmp4/Leapmotor-car-ai-gongchang.mp4"/>
                     </video>
                 </section>
             {/*section about company*/}
-            {/*    <section className="px-4 sm:pt-16 pt-10 swiper-about sm:pb-20 pb-12 w-full min-h-screen flex flex-col justify-between gap-10" style={{backgroundImage:`linear-gradient(#080808, rgba(0, 0, 0, 0.7)),url('/About-us/background.jpg')`}}>*/}
+            {/*    <section className="flex flex-col justify-between w-full min-h-screen gap-10 px-4 pt-10 pb-12 sm:pt-16 swiper-about sm:pb-20" style={{backgroundImage:`linear-gradient(#080808, rgba(0, 0, 0, 0.7)),url('/About-us/background.jpg')`}}>*/}
             {/*        <Swiper*/}
             {/*            id={'mySwiper1'}*/}
             {/*            autoplay={{*/}
@@ -105,7 +105,7 @@ export default function About() {
             {/*            }}*/}
             {/*            pagination={true}*/}
             {/*            modules={[Navigation]}*/}
-            {/*            className="  mySwiper w-full ">*/}
+            {/*            className="w-full mySwiper">*/}
             {/*            {*/}
             {/*                team?.map(item => (*/}
             {/*                    <SwiperSlide key={item?.id}>*/}
@@ -120,8 +120,8 @@ export default function About() {
             {/*            <p className="text-white text-[10px] md:text-2xl leading-[25px] md:leading-[25px] mt-5">We have a deep management team with diverse backgrounds who worked at world-renowned automotive and technology companies and financial institutions to bring us years of in-depth expertise and business acumen.</p>*/}
             {/*        </div>*/}
             {/*    </section>*/}
-                <section className="py-10 md:py-20 bg-white h-screen">
-                    <div className="container flex flex-col items-center md:justify-start justify-center h-full">
+                <section className="h-screen py-10 bg-white md:py-20">
+                    <div className="container flex flex-col items-center justify-center h-full md:justify-start">
                         <h1 className="text-[19px] text-[#4d5d80] font-arial-semibold md:text-[28px] text-center pb-4">Our full-suite of R&D capabilities and vertical integration</h1>
                         <p className="md:w-[95%] text-center text-[#4d5d80] text-xl">We offer smart EVs with superior technologies and features that are unparalleled among competing models within the same price range</p>
                         <div className={'w-full h-[31vh] sm:h-[45vh] md:h-[55vh] lg:h-[65vh] xl:h-[685px] relative'}>
@@ -130,7 +130,7 @@ export default function About() {
                         </div>
                     </div>
                 </section>
-                <section className="min-h-screen pt-16 md:pt-20 swiper-scroll px-6">
+                <section className="min-h-screen px-6 pt-16 md:pt-20 swiper-scroll">
                     <div className="flex flex-col items-center h-[20vh] ">
                         <p className="text-white text-sm leading-[20px] lg:w-[60%] text-center w-[90%] md:text-[22px] md:leading-[28px] mb-6 md:m-0">We internally develop all our key hardware and software across the core systems and electronic components of our vehicles with comprehensive in-house engineering and manufacturing capabilities</p>
                     </div>
