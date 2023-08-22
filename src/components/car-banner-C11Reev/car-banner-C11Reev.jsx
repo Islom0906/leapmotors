@@ -1,7 +1,9 @@
 import Image from "next/image"
 import Aos from "aos"
+import {useTranslation} from "react-i18next";
 
 const carBannerC11Reev = ({banner, title, subTitle, carData}) => {
+    const {t}=useTranslation()
     return (
         <section className="h-screen   mb-20 md:mb-0">
             <div className="h-full w-full relative">
@@ -36,14 +38,14 @@ const carBannerC11Reev = ({banner, title, subTitle, carData}) => {
 
                                                 <div data-aos="fade-up"
                                                    data-aos-anchor-placement="top-bottom"
-                                                   className="text-xs md:text-base text-white opacity-80 font-thin leadin-[16px]" dangerouslySetInnerHTML={{__html: data.title}}>
+                                                   className="text-xs md:text-base text-white opacity-80 font-thin leadin-[16px]" dangerouslySetInnerHTML={{__html: t(data.title)}}>
                                                 </div>
 
                                             </div>
                                             <p data-aos="fade-up"
                                                data-aos-anchor-placement="top-bottom"
                                                className="text-xl md:text-[28px] text-white font-semibold md:font-medium leading-[24px]">
-                                                {data.data}
+                                                {t(data.data)}
                                             </p>
                                         </div>
                                     ))

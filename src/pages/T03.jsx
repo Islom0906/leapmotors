@@ -3,7 +3,7 @@ import {PiCaretDownBold} from "react-icons/pi";
 import {CarSwiper, CarText, CarBanner, HoverCard} from "@/components";
 import Head from "next/head";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-
+import {useTranslation} from "react-i18next";
 
 const disclaimers = [
     '*1 The data are for reference only as there may be errors due to manual measurement.',
@@ -43,42 +43,6 @@ const carSwipper2 = [
     }
 ]
 
-const carSwipper1 = [
-    {
-        title: 'Safer',
-        subTitle: 'Leapmotor Pilot   L2 safe driving assist system makes driving easier 15 high-precision sensors and 10 intelligent driver assistance features',
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/445a1d2b-3a77-4283-a623-dc1a0e1438e0-T03-section-4-slider-1-2bg.jpg`,
-        bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/9f824a2f-6873-4dbc-9cdf-3bd13c1471c1-T03-section-4-slider-1-2bg-responsive.png`,
-    },
-    {
-        title: 'Safer',
-        subTitle: 'Leapmotor Pilot   L2 safe driving assist system makes driving easier 15 high-precision sensors and 10 intelligent driver assistance features',
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c40cdf72-0a6e-48bf-9f97-6f562547b4b0-T03-section-4-slider-1-3bg.jpg`,
-        bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/95613ae1-9071-4201-8aef-08fcf05fdb8e-T03-section-4-slider-1-3bg-responsive.png`,
-
-    },
-    {
-        title: 'Safer',
-        subTitle: 'Leapmotor Pilot   L2 safe driving assist system makes driving easier 15 high-precision sensors and 10 intelligent driver assistance features',
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/7e006151-2435-4aaf-8c53-cabf6e2c9d14-T03-section-4-slider-1-4bg.jpg`,
-        bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/41546e91-b553-43f7-864d-1ec3e8ac8542-T03-section-4-slider-1-4bg-responsive.png`,
-
-    },
-    {
-        title: 'Safer',
-        subTitle: 'Leapmotor Pilot   L2 safe driving assist system makes driving easier 15 high-precision sensors and 10 intelligent driver assistance features',
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/5196a6c8-646d-4a95-ac44-222f7e10094b-T03-slider-5.jpg`,
-        bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/0e75d8c2-e01a-43a7-899e-e786b7d47a7d-T03-slider-5-responsive.png`,
-
-    },
-    {
-        title: 'Safer',
-        subTitle: 'Leapmotor Pilot   L2 safe driving assist system makes driving easier 15 high-precision sensors and 10 intelligent driver assistance features',
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/0c4362b2-fbca-4a69-843a-4bd1a27a34f8-T03-section-4-slider-1-5bg.jpg`,
-        bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/0049fb38-5ade-454b-9159-9de1308181da-T03-section-4-slider-1-5bg-responsive.png`,
-
-    },
-]
 const carSwipper3 = [
     {
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/1512bb5e-bb4c-4ff3-833e-5fe7e7372849-t03-gallery-03.jpg`,
@@ -94,31 +58,70 @@ const carSwipper3 = [
     }
 ]
 
-const T03Data = {
-    logo: `${process.env.NEXT_PUBLIC_API_URL}/media/9f538f2a-68ba-4199-97b0-05937e96bcbd-section-4-logo.png`,
-    section1: {
-        subTitle: "Super-Safe Five-Door Pure Electric Model",
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/50b3343f-5dc5-4650-97ae-3ef817ff7b7a-T03-section-1-bg.jpg`,
-        content: [
-            {
-                title: "high-strength steel cage body",
-                content: "68%",
-            },
-            {
-                title: "CLTC range        ",
-                content: "403km",
-            },
-            {
-                title: "L2 safe driving assist system",
-                content: "Leapmotor Pilot",
-            },
-        ],
-    },
-
-
-};
-
 const T03 = () => {
+    const {t} = useTranslation()
+    const T03Data = {
+        logo: `${process.env.NEXT_PUBLIC_API_URL}/media/9f538f2a-68ba-4199-97b0-05937e96bcbd-section-4-logo.png`,
+        section1: {
+            subTitle: t('T03.section1.subtitle'),
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/50b3343f-5dc5-4650-97ae-3ef817ff7b7a-T03-section-1-bg.jpg`,
+            content: [
+                {
+                    title: t('T03.section1.title'),
+                    content: t('T03.section1.content'),
+                },
+                {
+                    title: t('T03.section1.subtitle2'),
+                    content: t('T03.section1.title2'),
+                },
+                {
+                    title: t('T03.section1.subtitle3'),
+                    content: t('T03.section1.title3'),
+                },
+            ],
+        },
+
+
+    };
+    const carSwipper1 = [
+
+        {
+            title: t('T03.carswipper1.title'),
+            subTitle: t('T03.carswipper1.subtitle'),
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/445a1d2b-3a77-4283-a623-dc1a0e1438e0-T03-section-4-slider-1-2bg.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/9f824a2f-6873-4dbc-9cdf-3bd13c1471c1-T03-section-4-slider-1-2bg-responsive.png`,
+        },
+        {
+            title: t('T03.carswipper1.title'),
+            subTitle: t('T03.carswipper1.subtitle'),
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c40cdf72-0a6e-48bf-9f97-6f562547b4b0-T03-section-4-slider-1-3bg.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/95613ae1-9071-4201-8aef-08fcf05fdb8e-T03-section-4-slider-1-3bg-responsive.png`,
+
+        },
+        {
+            title: t('T03.carswipper1.title'),
+            subTitle: t('T03.carswipper1.subtitle'),
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/7e006151-2435-4aaf-8c53-cabf6e2c9d14-T03-section-4-slider-1-4bg.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/41546e91-b553-43f7-864d-1ec3e8ac8542-T03-section-4-slider-1-4bg-responsive.png`,
+
+        },
+        {
+            title: t('T03.carswipper1.title'),
+            subTitle: t('T03.carswipper1.subtitle'),
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/5196a6c8-646d-4a95-ac44-222f7e10094b-T03-slider-5.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/0e75d8c2-e01a-43a7-899e-e786b7d47a7d-T03-slider-5-responsive.png`,
+
+        },
+        {
+            title: t('T03.carswipper1.title'),
+            subTitle: t('T03.carswipper1.subtitle'),
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/0c4362b2-fbca-4a69-843a-4bd1a27a34f8-T03-section-4-slider-1-5bg.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/0049fb38-5ade-454b-9159-9de1308181da-T03-section-4-slider-1-5bg-responsive.png`,
+
+        },
+    ]
+
+
     return (
         <>
             <Head>
@@ -189,10 +192,10 @@ const T03 = () => {
                                     <p
                                         className="text-white font-arial-semibold  text-[24px] md:text-[26px]"
                                     >
-                                        or above
+                                        {t('T03.section2.title')}
                                     </p>
                                     <p className="mt-[6px] lg:text-[14px] text-white font-arial-normal">
-                                        Reference Price for 2023 T03 in China
+                                        {t('T03.section2.subtitle')}
                                     </p>
                                 </div>
                                 <div className="flex justify-center">
@@ -202,28 +205,28 @@ const T03 = () => {
                                         <div
                                             className="flex gap-3 items-center justify-center md:w-[33%] md:border-r-2  ">
                                             <p className="text-white text-[21px] font-semibold">
-                                                200 Light Version
+                                                {t('T03.section2.name')}
                                             </p>
 
                                         </div>
                                         <div
                                             className="flex gap-3 items-center justify-center md:w-[33%] md:border-r-2 ">
                                             <p className="text-white text-[21px] font-semibold">
-                                                200 Light Version
+                                                {t('T03.section2.name2')}
                                             </p>
 
                                         </div>
                                         <div
                                             className="flex gap-3 items-center justify-center md:w-[33%] md:border-r-2 ">
                                             <p className="text-white text-[21px] font-semibold">
-                                                200 Light Version
+                                                {t('T03.section2.name3')}
                                             </p>
 
                                         </div>
                                         <div
                                             className="flex gap-3 items-center justify-center md:w-[33%] md:border-r-2 ">
                                             <p className="text-white text-[21px] font-semibold">
-                                                200 Light Version
+                                                {t('T03.section2.name4')}
                                             </p>
 
                                         </div>
@@ -236,7 +239,7 @@ const T03 = () => {
                     </div>
 
                 </section>
-                <CarBanner title={'Safer'} subTitle={'High-strength cage body for all-around safety protection'}
+                <CarBanner title={t('T03.section3.title')} subTitle={t('T03.section3.subtitle')}
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/c6130371-42d6-4fe6-84f8-dfd52b99a638-T03-section-3-bg.jpg`}
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/4a61b577-b2cf-4b1c-8d5b-ba03d750817c-T03-section-3bg-responsive.jpg`}
                            textColor={'black'}/>
