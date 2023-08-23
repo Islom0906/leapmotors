@@ -319,7 +319,7 @@ const characteristics = {
                                   bg={`${process.env.NEXT_PUBLIC_API_URL}/media/a5c21aec-6a91-4953-b46d-e80e16646baf-C01-section-21-bg.jpg`}/>
                 <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
                     <div className="container mx-auto pb-10">
-                        <p className={'text-[30px] font-semibold text-white'}>{t('c01.carcontentfooter.picture')}</p>
+                        <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
                     </div>
                     <div

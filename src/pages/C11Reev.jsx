@@ -388,7 +388,7 @@ const C11Reev = () => {
                 />
                 <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
                     <div className="container mx-auto pb-10">
-                        <p className={'text-[30px] font-semibold text-white'}>Picture</p>
+                        <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
                     </div>
                     <div

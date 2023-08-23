@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
-  console.log(characteristics.about)
   return (
     <>
       <section className="w-full h-screen mb-20 overflow-hidden md:mb-0">

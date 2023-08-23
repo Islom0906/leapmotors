@@ -251,7 +251,7 @@ const T03 = () => {
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/1c6e7ff6-9216-4060-aa39-180e53fa330a-T03-section-7bg-responsive.jpg`}/>
                 <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
                     <div className="container mx-auto pb-10">
-                        <p className={'text-[30px] font-semibold text-white'}>{t('T03.selected-picture')}</p>
+                        <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
                     </div>
                     <div

@@ -14,13 +14,11 @@ const NewsInner = () => {
     const {lang} = useSelector(state => state.lang)
     const router = useRouter()
     const {newSlug} = router.query
-    console.log(newSlug)
     const {
         data,
         refetch
     } = useQuery(['get-new-by-slug', newSlug], () => apiService.getDataByID('/news', newSlug))
 
-    console.log(data)
     useEffect(() => {
         if (newSlug !== '') {
             refetch()
