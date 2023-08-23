@@ -142,27 +142,18 @@ const carSwipper6 = [
 
 ]
 
-const disclaimers = [
-    '*1 The data are for reference only as there may be errors due to manual measurement.',
-
-    "*2*3 *4*10*11Some configurations are optional for users and not standard when the vehicle is off the assembly line."
-    ,
-    '*6 The wind resistance coefficient shown in the advertisement/page is from the test result of CATARC (Tianjin) Automotive Engineering Research Institute Co., Ltd. *7*8*9'
-    ,
-    'Some features may not be available immediately upon vehicle delivery. They will be gradually enabled by remote OTA update in the future.',
-    '*5 The time required from 0 to 100 km/h shown on the page is from the test result of CATARC Automotive Test Center (Ningbo) Co., Ltd. for the 4WD dual-motor high-performance model.'
-    ,
-
-    "*7 The Leapmotor Pilot intelligent driving assistance system cannot completely replace the driver's control, nor fully cope with all possible situations that may arise from traffic, weather and road conditions. The driver is required to maintain the necessary duty of care at all times and to intervene or take over in a timely manner according to the surrounding environment. In the case of complex traffic conditions, bad weather, special road conditions and etc., it is necessary to choose and use it carefully.",
-
-    "*11The range shown on the page is from the test result of the National Passenger Car Quality Supervision and Test Center for the RWD ultra-long-range model."
-    ,
-    "*12 Meditation mode and Camping mode will be released through OTA by Q2 2023"
-    ,
-    "*13 The contents shown on the page are prepared based on the vehicle configuration status information at the time of preparation. The actual vehicle may differ from the introductory information to some extent due to some objective reasons, such as the continuous changes in laws and regulations, different understanding of relevant information by individuals, and possible late update of introductory information. Please refer to actual vehicles on sale."
-    ,
-    '*14 Leapmotor reserves the right to interpret and change product information such as technical parameters and configuration within the law.'
-]
+    const disclaimers = [
+        t('c11reev.c11rev.name'),
+        t('c11reev.c11rev.name2'),
+        t('c11reev.c11rev.name3'),
+        t('c11reev.c11rev.name4'),
+        t('c11reev.c11rev.name5'),
+        t('c11reev.c11rev.name6'),
+        t('c11reev.c11rev.name7'),
+        t('c11reev.c11rev.name8'),
+        t('c11reev.c11rev.name9'),
+        t('c11reev.c11rev.name10'),
+    ]
 
 
 
