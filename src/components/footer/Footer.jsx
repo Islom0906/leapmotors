@@ -20,8 +20,8 @@ const Footer = () => {
         return (
           <>
             <footer className={`bg-[#e7eaf1] py-10 ${pathname==='/' && 'footer'}`}>
-              <div className="container flex flex-col justify-between md:flex-row gap-7 md:gap-0 ">
-                <ul className="flex flex-col items-center md:items-start gap-4 text-base text-[#4d5d81] font-bold order-2 md:order-1">
+              <div className="container grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <ul className="flex flex-col items-center md:items-start gap-4 text-base text-[#4d5d81] font-bold ">
                   <li className={'flex justify-center'}>
                     <Link className="text-center md:text-start"  href="#">{t("navbar.about")}</Link>
                   </li>
@@ -36,28 +36,24 @@ const Footer = () => {
                   {/*  <Link className="text-center md:text-start"  href="#">{t("footer.cooking")}</Link>*/}
                   {/*</li>*/}
                 </ul>
-                <div className="flex justify-center order-1 md:order-2">
-                  <Link href={'/'} className="w-[100px] aspect-[1/1] relative ">
-                    <Image className="object-contain" fill src={'/Leapmotor-logo.png'} />
-                  </Link>
-                </div>
+                <ul className="flex flex-col items-center md:items-end lg:items-start gap-4 text-base text-[#4d5d81] font-bold ">
+                  <li className={'flex justify-center'}>
+                    <Link className="text-center md:text-start"  href="#">{t("navbar.about")}</Link>
+                  </li>
+                  <li className={'flex justify-center'}>
+                    <Link  className="text-center md:text-start" href="#">{t("navbar.news")}</Link>
+                  </li>
+                  {/*<li className={'flex justify-center'}><Link  className="text-center md:text-start" href="#">{t('footer.privacy')}</Link></li>*/}
+                  <li className={'flex justify-center'}>
+                    <Link className="text-center md:text-start"  href="#">{t("footer.investor")}</Link>
+                  </li>
+                  {/*<li className={'flex justify-center'}>*/}
+                  {/*  <Link className="text-center md:text-start"  href="#">{t("footer.cooking")}</Link>*/}
+                  {/*</li>*/}
+                </ul>
 
-                <div className="order-3 space-y-5">
-                  <div className="flex flex-col items-center gap-3 text-base md:items-end">
-                    <a
-                      href={`tel:${data?.data?.tel}`}
-                        className="text-[#4d5d81]   underline underline-offset-8 flex items-center gap-2"
-                    >
-                      <span>{data?.data?.tel}</span>
-                    </a>
-                    <a
-                        href={`tel:${data?.data?.tel}`}
-                        className="text-[#4d5d81]   underline underline-offset-8 flex items-center gap-2"
-                    >
-                      <span> {t('footer.address')} </span>
-                    </a>
-                  </div>
-                  <div className="flex  gap-8  text-[#4d5d81] justify-center md:justify-end">
+                <div className="flex flex-col items-center space-y-5 md:items-start">
+                <div className="flex space-x-5  text-[#4d5d81] ">
                     <a target={'_blank'} href={data?.data?.facebook} className="">
                       <AiFillFacebook
                           className="text-xl md:text-2xl"
@@ -76,17 +72,42 @@ const Footer = () => {
                       />
                     </a>
                   </div>
-                  <a target={'_blank'}
-                      className="text-base text-[#4d5d81] font-bold flex gap-3 items-center justify-center"
-                      href={"https://abduganiev.uz/"}
-                  >
-                    <span>{t('footer.createdBy')}</span>
-                    <div className={'w-[50px] h-[50px] relative'}>
-                      <Image className="flex-shrink-0 w-10 object-contain md:w-14 hover:rotate-[360deg] duration-700" alt={'abduganiev logo'} fill src={'/A.png'} />
-
-                    </div>
-                  </a>
+                  <a
+                      href={'#'}
+                        className="text-[#4d5d81]   underline underline-offset-8 flex items-center gap-2"
+                    >
+                      <span className="capitalize">  Пн - сб  09:00 - 21: 00</span>
+                    </a>
+                 
                 </div>
+                <div className="space-y-5">
+                
+                  <div className="flex flex-col justify-center md:justify-end items-center md:items-end    gap-4 text-base text-[#4d5d81] font-bold ">
+                    <a
+                      href={`tel:${data?.data?.tel}`}
+                        className="text-[#4d5d81]   underline underline-offset-8 "
+                    >
+                      <span>{data?.data?.tel}  number </span>
+                    </a>
+                    <a
+                        href={`tel:${data?.data?.tel}`}
+                        className="text-[#4d5d81]   underline underline-offset-8 "
+                    >
+                      <span> {t('footer.address')} </span>
+                    </a>
+                  </div>
+                  <a target={'_blank'}
+                        className="text-base text-[#4d5d81] font-bold flex gap-3 items-center justify-center md:justify-end"
+                        href={"https://abduganiev.uz/"}
+                    >
+                      <span>{t('footer.createdBy')}</span>
+                      <div className={'w-[50px] h-[50px] relative'}>
+                        <Image className="flex-shrink-0 w-10 object-contain md:w-14 hover:rotate-[360deg] duration-700" alt={'abduganiev logo'} fill src={'/A.png'} />
+
+                      </div>
+                    </a>
+                </div>
+               
               </div>
             </footer>
 
