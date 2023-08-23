@@ -5,10 +5,12 @@ import Head from "next/head";
 import axios from "axios";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useSelector} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 
 const news = ({news}) => {
     const {lang} = useSelector(state => state.lang)
+    const {t}=useTranslation()
     return (
 
         <>
@@ -22,7 +24,7 @@ const news = ({news}) => {
                 <div className="container ">
                     <div className="pt-[80px] pb-[60px]">
                         <Link href="#" className="text-[#4d5d81] text-[20px] font-semibold"
-                        >News Room
+                        >{t('news.title')}
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 w-full">

@@ -133,12 +133,11 @@ const T03 = () => {
                             fill
                         />
                         <div
-                            className="absolute  top-20 left-[50%] translate-x-[-50%] h-[calc(100%-80px)] flex flex-col items-center lg:justify-start justify-between">
+                            className="absolute  top-[140px] left-[50%] translate-x-[-50%] h-[calc(100%-80px)] flex flex-col items-center lg:justify-start justify-between">
                             <div>
                                 <div className="relative h-[29px] mx-auto w-[60px]">
                                     <Image
                                         src={T03Data.logo}
-                                        fill
                                         alt="logo"
                                         className="w-full h-full mx-auto"
                                         fill

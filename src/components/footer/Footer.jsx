@@ -21,7 +21,7 @@ const Footer = () => {
           <>
             <footer className={`bg-[#e7eaf1] py-10 ${pathname==='/' && 'footer'}`}>
               <div className="container grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-                <ul className="flex flex-col items-center md:items-start gap-4 text-base text-[#4d5d81] font-bold ">
+                <ul className="flex flex-col items-center md:items-start gap-2 text-base text-[#0e577b] font-bold ">
                   <li className={'flex justify-center'}>
                     <Link className="text-center md:text-start"  href="/about">{t("navbar.about")}</Link>
                   </li>
@@ -30,7 +30,7 @@ const Footer = () => {
                   </li>
                   {/*<li className={'flex justify-center'}><Link  className="text-center md:text-start" href="#">{t('footer.privacy')}</Link></li>*/}
                   <li className={'flex justify-center'}>
-                    <Link className="text-center md:text-start"  href="/store">{t("navbar.dealersCenter")}</Link>
+                    <Link className="text-center md:text-start"  href="/dealers-center">{t("navbar.dealersCenter")}</Link>
                   </li>
                   <li className={'flex justify-center'}>
                     <Link className="text-center md:text-start"  href="/dealers">{t("navbar.dealers")}</Link>
@@ -39,24 +39,24 @@ const Footer = () => {
                   {/*  <Link className="text-center md:text-start"  href="#">{t("footer.cooking")}</Link>*/}
                   {/*</li>*/}
                 </ul>
-                <ul className="flex flex-col items-center md:items-end lg:items-start gap-4 text-base text-[#4d5d81] font-bold ">
+                <ul className="flex flex-col items-center md:items-end lg:items-start gap-2 text-base text-[#0e577b] font-bold ">
                   <li className={'flex justify-center'}>
-                    <Link className="text-center md:text-start"  href="/service">{t("navbar.service")}</Link>
+                    <Link className="text-center md:text-start"  href="#">{t("navbar.service")}</Link>
                   </li>
                   <li className={'flex justify-center'}>
                     <Link  className="text-center md:text-start" href="/drive">{t("navbar.testDrive")}</Link>
                   </li>
                   {/*<li className={'flex justify-center'}><Link  className="text-center md:text-start" href="#">{t('footer.privacy')}</Link></li>*/}
                   <li className={'flex justify-center'}>
-                    <Link className="text-center md:text-start"  href="/accessor">{t("navbar.accessories")}</Link>
+                    <Link className="text-center md:text-start"  href="#">{t("navbar.accessories")}</Link>
                   </li>
                   {/*<li className={'flex justify-center'}>*/}
                   {/*  <Link className="text-center md:text-start"  href="#">{t("footer.cooking")}</Link>*/}
                   {/*</li>*/}
                 </ul>
 
-                <div className="flex flex-col items-center space-y-5 md:items-start">
-                <div className="flex space-x-5  text-[#4d5d81] ">
+                <div className="flex flex-col items-center space-y-3 md:items-start">
+                <div className="flex space-x-5  text-[#0e577b] ">
                     <a target={'_blank'} href={data?.data?.facebook} className="">
                       <AiFillFacebook
                           className="text-xl md:text-2xl"
@@ -77,24 +77,24 @@ const Footer = () => {
                   </div>
                   <a
                       href={'#'}
-                        className="text-[#4d5d81]   underline underline-offset-8 flex items-center gap-2"
+                        className="text-[#0e577b]    flex items-center gap-2"
                     >
-                      <span className="capitalize">  Пн - сб  09:00 - 21: 00</span>
+                      <span className="capitalize">  Пн - сб  09:00 - 20: 00</span>
                     </a>
                  
                 </div>
-                <div className="space-y-5">
+                <div className="space-y-3">
                 
                   <div className="flex flex-col justify-center md:justify-end items-center md:items-end    gap-4 text-base text-[#4d5d81] font-bold ">
                     <a
                       href={`tel:${data?.data?.tel}`}
-                        className="text-[#4d5d81]   underline underline-offset-8 "
+                        className="text-[#0e577b]    "
                     >
-                      <span>{data?.data?.tel}  number </span>
+                      <span>{data?.data?.tel} </span>
                     </a>
                     <a
                         href={`tel:${data?.data?.tel}`}
-                        className="text-[#4d5d81]   underline underline-offset-8 "
+                        className="text-[#0e577b]    "
                     >
                       <span> {t('footer.address')} </span>
                     </a>

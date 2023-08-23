@@ -18,6 +18,13 @@
     },
     "more": "Узнать больше",
     "picture": "Изображение",
+    "news": {
+      "title": "Новости"
+    },
+    "dealers": {
+      "title": "Дилерам",
+      "text": "Мы рады предложить вам возможность стать частью нашей успешной компании и получить множество преимуществ."
+    },
     "c11reev": {
       "section1": "Умный, пятиместный внедорожник дальнего действия",
       "section2": {
@@ -25,11 +32,11 @@
         "sub-title": "Не применимо",
         "carDataSectoin2": {
           "title1": "Версия “C11 Extended Range 180 Comfortable”",
-          "data1": "RMB 149,800",
+          "data1": "",
           "title2": "Версия “C11 Extended Range 285 Comfortable”",
-          "data2": "RMB 165,800",
+          "data2": "",
           "title3": "Версия “C11 Extended Range <br> 285 Smart”",
-          "data3": "RMB 185,800"
+          "data3": ""
         }
       },
       "section3": {
@@ -323,13 +330,13 @@
         "title": "Reference Price in China",
         "about": {
           "title1": "Версия “C11 500 Comfortable“",
-          "text1": "RMB 155,800",
+          "text1": "",
           "title2": "Версия “C11 500 Smart“",
-          "text2": "RMB 169,800",
+          "text2": "",
           "title3": "Версия “C11 650 Smart“",
-          "text3": "RMB 189,80",
+          "text3": "",
           "title4":"Версия “C11 580 4WD Performance“",
-          "text4": "RMB 209,800"
+          "text4": ""
         }
       },
       "section3": {

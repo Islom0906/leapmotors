@@ -4,13 +4,13 @@ import axios from "axios";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useSelector} from "react-redux";
 
-const Store = ({filial,filialInner,map}) => {
+const DealersCenter = ({filial,filialInner,map}) => {
     const {lang}=useSelector(state => state.lang)
     return (
         <>
             <Head>
-                <title>Leap-Motor Store</title>
-                <meta property='og:title' content="Leapmotor uz Store, Leapmotor uzbekistan Store,Leap-motor Store"/>
+                <title>Leap-Motor DealersCenter</title>
+                <meta property='og:title' content="Leapmotor uz DealersCenter, Leapmotor uzbekistan DealersCenter,Leap-motor DealersCenter"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
@@ -69,4 +69,4 @@ export async function getServerSideProps({req, res}) {
 }
 
 
-export default Store;
+export default DealersCenter;

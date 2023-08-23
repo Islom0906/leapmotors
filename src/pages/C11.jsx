@@ -28,7 +28,8 @@ const characteristics1 = {
     ]
 }
 const characteristics2 = {
-    title: 'Reference Price in China',
+    title: '',
+    priceCountry:"Reference Price in China",
     subTitle: '',
     about: [
         {
