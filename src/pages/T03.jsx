@@ -36,12 +36,12 @@ const T03 = () => {
                     content: t('T03.section1.content'),
                 },
                 {
-                    title: t('T03.section1.subtitle2'),
-                    content: t('T03.section1.title2'),
+                    title: t('T03.section1.title2'),
+                    content: t('T03.section1.content2'),
                 },
                 {
-                    title: t('T03.section1.subtitle3'),
-                    content: t('T03.section1.title3'),
+                    title: t('T03.section1.title3'),
+                    content: t('T03.section1.content3'),
                 },
             ],
         },
