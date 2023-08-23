@@ -74,8 +74,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="flex items-center md:gap-14">
-                <Link href="/store"
-                      className="capitalize text-white hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.store')}</Link>
+                <Link href="/drive"
+                      className="capitalize text-white hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.testDrive')}</Link>
                 <div className="side-r">
                     <GiHamburgerMenu onClick={(e) => showSidebar(e, !show)}
                                      className="text-2xl text-white cursor-pointer"/>
@@ -101,12 +101,16 @@ const Navbar = () => {
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="/news"
                                           className="capitalize">{t('navbar.news')}</Link></li>
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="/store"
-                                          className="capitalize">{t('navbar.store')}</Link></li>
-                                <li><Link onClick={(e) => showSidebar(e, false)} href="#"
-                                          className="capitalize">{t('navbar.store')}</Link></li>
-                                <li><Link onClick={(e) => showSidebar(e, false)} href="#"
-                                          className="capitalize">{t('navbar.store')}</Link></li>
-{/* 
+                                          className="capitalize">{t('navbar.dealersCenter')}</Link></li>
+                                <li><Link onClick={(e) => showSidebar(e, false)} href="/dealers"
+                                          className="capitalize">{t('navbar.dealers')}</Link></li>
+                                <li><Link onClick={(e) => showSidebar(e, false)} href="/service"
+                                          className="capitalize">{t('navbar.service')}</Link></li>
+                                <li><Link onClick={(e) => showSidebar(e, false)} href="/drive"
+                                          className="capitalize block  lg:hidden">{t('navbar.testDrive')}</Link></li>
+                                <li><Link onClick={(e) => showSidebar(e, false)} href="/accessor"
+                                          className="capitalize">{t('navbar.accessories')}</Link></li>
+                                {/*
 О Leapmotor
 Новости
 Дилерские центры

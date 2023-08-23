@@ -23,14 +23,17 @@ const Footer = () => {
               <div className="container grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <ul className="flex flex-col items-center md:items-start gap-4 text-base text-[#4d5d81] font-bold ">
                   <li className={'flex justify-center'}>
-                    <Link className="text-center md:text-start"  href="#">{t("navbar.about")}</Link>
+                    <Link className="text-center md:text-start"  href="/about">{t("navbar.about")}</Link>
                   </li>
                   <li className={'flex justify-center'}>
-                    <Link  className="text-center md:text-start" href="#">{t("navbar.news")}</Link>
+                    <Link  className="text-center md:text-start" href="/news">{t("navbar.news")}</Link>
                   </li>
                   {/*<li className={'flex justify-center'}><Link  className="text-center md:text-start" href="#">{t('footer.privacy')}</Link></li>*/}
                   <li className={'flex justify-center'}>
-                    <Link className="text-center md:text-start"  href="#">{t("footer.investor")}</Link>
+                    <Link className="text-center md:text-start"  href="/store">{t("navbar.dealersCenter")}</Link>
+                  </li>
+                  <li className={'flex justify-center'}>
+                    <Link className="text-center md:text-start"  href="/dealers">{t("navbar.dealers")}</Link>
                   </li>
                   {/*<li className={'flex justify-center'}>*/}
                   {/*  <Link className="text-center md:text-start"  href="#">{t("footer.cooking")}</Link>*/}
@@ -38,14 +41,14 @@ const Footer = () => {
                 </ul>
                 <ul className="flex flex-col items-center md:items-end lg:items-start gap-4 text-base text-[#4d5d81] font-bold ">
                   <li className={'flex justify-center'}>
-                    <Link className="text-center md:text-start"  href="#">{t("navbar.about")}</Link>
+                    <Link className="text-center md:text-start"  href="/service">{t("navbar.service")}</Link>
                   </li>
                   <li className={'flex justify-center'}>
-                    <Link  className="text-center md:text-start" href="#">{t("navbar.news")}</Link>
+                    <Link  className="text-center md:text-start" href="/drive">{t("navbar.testDrive")}</Link>
                   </li>
                   {/*<li className={'flex justify-center'}><Link  className="text-center md:text-start" href="#">{t('footer.privacy')}</Link></li>*/}
                   <li className={'flex justify-center'}>
-                    <Link className="text-center md:text-start"  href="#">{t("footer.investor")}</Link>
+                    <Link className="text-center md:text-start"  href="/accessor">{t("navbar.accessories")}</Link>
                   </li>
                   {/*<li className={'flex justify-center'}>*/}
                   {/*  <Link className="text-center md:text-start"  href="#">{t("footer.cooking")}</Link>*/}

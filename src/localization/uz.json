@@ -1,9 +1,13 @@
 {
   "translation": {
     "navbar": {
-      "store": "do'kon",
+      "dealersCenter": "do'kon",
       "about": "Leapmotor haqida",
-      "news": "yangiliklar xonasi"
+      "news": "yangiliklar xonasi",
+      "dealers": "Dilerlar",
+      "service": "Xizmat",
+      "testDrive": "Sinov diski",
+      "accessories": "Aksessuarlar"
     },
     "footer": {
       "privacy": "Maxfiylik va huquqiy ma'lumotlar",
