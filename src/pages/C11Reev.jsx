@@ -149,7 +149,7 @@ const C11Reev = () => {
         },
         {
             title: t('c11reev.carSwipper1.title3'),
-            subTitle: t('c11reev.carSwipper.subtitle3'),
+            subTitle: t('c11reev.carSwipper1.subtitle3'),
             bg: `${process.env.NEXT_PUBLIC_API_URL}/media/4dc447c6-9b74-4096-b0a1-fea07ba1032d-C11-Reev-section-5-slider-1-3bg.jpg`,
         }
     ];
