@@ -91,7 +91,7 @@ const Navbar = () => {
                                     data?.data?.map(link => (
                                         <li key={link?._id} onClick={(e) => showSidebar(e, false)}>
                                             <Link href={`/${link?.model}`}
-                                                  className="uppercase block lg:hidden ">{link?.model}</Link>
+                                                  className="block uppercase lg:hidden ">{link?.model}</Link>
                                         </li>
 
                                     ))
@@ -102,11 +102,22 @@ const Navbar = () => {
                                           className="capitalize">{t('navbar.news')}</Link></li>
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="/store"
                                           className="capitalize">{t('navbar.store')}</Link></li>
+                                <li><Link onClick={(e) => showSidebar(e, false)} href="#"
+                                          className="capitalize">{t('navbar.store')}</Link></li>
+                                <li><Link onClick={(e) => showSidebar(e, false)} href="#"
+                                          className="capitalize">{t('navbar.store')}</Link></li>
+{/* 
+О Leapmotor
+Новости
+Дилерские центры
+Сервис
+Аксессуары
+Контакты */}
 
                             </ul>
                         </div>
                         <div className="flex items-center gap-3">
-                            <div className="w-5 h-5 relative flex-shrink-0">
+                            <div className="relative flex-shrink-0 w-5 h-5">
                                 <Image src="/global.png" alt="global" className="w-full h-full" fill/>
                             </div>
                             <div className="flex items-center gap-2 divide-x">

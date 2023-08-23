@@ -4,31 +4,26 @@ import section1image1 from "/public/About-us/about us section 1.jpg";
 const dealers = () => {
   return (
     <>
-      <div className="relative w-full aspect-video h-[250px] flex items-center   md:h-[300px] lg:h-[400px] ">
-        <Image
-          src={section1image1}
-          alt="OS Image"
-          fill
-          className="object-cover object-bottom w-full "
-        />
-        <div className="container mt-[60px]">
-          <div className="relative z-10  text-center md:text-start  lg:w-[70%]">
-            <h3 className="relative mb-5 text-xl font-bold leading-7 text-white md:text-3xl font-arial-semibold md:leading-8">
-              Дилерам
-            </h3>
-            <p className="text-md z-10 md:text-lg text-[#4d5d81]">
+    <div className="pt-[80px] pb-[60px]">
+      <div className="container">
+        
+                        <div  className="text-[#4d5d81] text-[20px]  relative mb-5 text-xl font-bold leading-7  md:text-3xl font-arial-semibold md:leading-8"
+                        >Дилерам
+                        </div>
+                        <p className="text-md z-10 md:text-lg text-[#4d5d81]">
               С другой стороны, укрепление и развитие внутренней структуры
               требует анализа системы массового участия. Для современного мира
               базовый вектор развития предоставляет широкие возможности для
               переосмысления внешнеэкономических политик.
             </p>
-          </div>
-        </div>
       </div>
+                    </div>
+      
       <section className="py-5 md:py-10 lg:py-20">
         <div className="container space-y-3">
           <h5 className="text-base font-bold md:text-xl">Общая информация</h5>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+          {/* md:grid-cols-2 */}
+          <div className="grid grid-cols-1 gap-5">
             <div>
               <label
                 for="helper-text"
@@ -44,7 +39,8 @@ const dealers = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {/* md:grid-cols-2 lg:grid-cols-3 */}
+          <div className="grid grid-cols-1 gap-5 ">
             <div>
               <label
                 for="countries"
@@ -92,7 +88,8 @@ const dealers = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {/* lg:grid-cols-3 */}
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 ">
             <div>
               <h5 className="text-base font-bold md:text-xl">
                 Прочая информация
@@ -114,8 +111,8 @@ const dealers = () => {
               <h5 className="text-base font-bold md:text-xl">
                 Наличие шоурума
               </h5>
-              <div className="flex justify-between space-x-1">
-                <div>
+              <div className="flex justify-between space-x-1 ">
+                <div className="w-full">
                   <label
                     for="helper-text"
                     class="block mb-2 text-sm font-medium text-gray-900 "
@@ -129,7 +126,7 @@ const dealers = () => {
                     placeholder="кв м"
                   />
                 </div>
-                <div>
+                <div >
                   <label
                     for="helper-text"
                     class="block mb-2 text-sm font-medium text-gray-900 "
@@ -146,7 +143,7 @@ const dealers = () => {
               </div>
               <h5 className="text-base font-bold md:text-xl">Наличие СТО</h5>
               <div className="flex justify-between space-x-1">
-                <div>
+                <div  className="w-full">
                   <label
                     for="helper-text"
                     class="block mb-2 text-sm font-medium text-gray-900 "
@@ -160,7 +157,7 @@ const dealers = () => {
                     placeholder="кв м”"
                   />
                 </div>
-                <div>
+                <div  className="w-full">
                   <label
                     for="helper-text"
                     class="block mb-2 text-sm font-medium text-gray-900 "
@@ -176,7 +173,7 @@ const dealers = () => {
                 </div>
               </div>
             </div>
-            <div className="space-y-3">
+            <div className="col-span-1 space-y-3 md:col-span-2">
               <h5 className="text-base font-bold md:text-xl">Наличие опыта</h5>
               <div>
                 <label
