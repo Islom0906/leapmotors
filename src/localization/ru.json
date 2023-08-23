@@ -89,7 +89,7 @@
         "title2": "Роскошные пять посадочных мест",
         "subtitle2": "Снижает коэффициент сопротивления ветру, демонстрируя сильное чувство науки и техники.",
         "title3": "Длинная колесная база и большое пространство",
-        "subTitle3": "Колесная база 2930 мм, с опоясывающей кабиной Будь то сидя или лежа, наслаждайтесь большим комфортом"
+        "subtitle3": "Колесная база 2930 мм, с опоясывающей кабиной Будь то сидя или лежа, наслаждайтесь большим комфортом"
       },
       "carSwipper2": {
         "title": "Скрытая дверная ручка*",
@@ -169,7 +169,23 @@
       "carswipper1": {
         "title": "Безопаснее",
         "subtitle": "Leapmotor Pilot Система помощи для безопасного вождения L2 15 высокоточных датчиков и 10 интеллектуальных функций помощи водителю"
-      }
+      },
+      "carswipper2": {
+        "title": "More Fashionable",
+        "subtitle": "The aesthetic curved surface design offers an excellent and intelligent travel experience",
+        "title2": "More Fashionable",
+        "subtitle2": "The aesthetic curved surface design offers an excellent and intelligent travel experience"
+      },
+      "carbanner": {
+        "title": "More Comfortable",
+        "subtitle": "Efficient and powerful output, easily adaptable to various road conditions"
+      },
+      "carbanner2": {
+        "title": "More Convenient",
+        "subtitle": "Technologies offer a more convenient , and efficient driving experience"
+      },
+      "selected-picture": "Selected Picture",
+      "disclaimer": "disclaimers"
     }
   }
 }
