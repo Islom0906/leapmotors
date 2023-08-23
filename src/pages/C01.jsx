@@ -17,12 +17,24 @@ import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/post
 const characteristics = {
     title: 'Technology and Natural Aesthetics',
     subTitle: ' Innovative technology integrated for the gentle,elegant appearance Creating a rich "vehicle style"',
-    about: {
-        lenght: '5050',
-        width: '1902',
-        height: '1509',
-        wheelbase: '2930'
-    }
+    about: [
+        {
+            title: "lenght",
+            text: "5050"
+        },
+        {
+            title: "width",
+            text: "1902"
+        },
+        {
+            title: "height",
+            text: "1509"
+        },
+        {
+            title: "wheelbase",
+            text: "2930"
+        }
+    ]
 }
 
 
@@ -64,16 +76,16 @@ const carSwipper1 = [
         subTitle: 'Front laminated silent glass rear privacy glass',
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/0e56a5ed-533f-43ea-b3cc-183069fde3c1-C01-section-4-slider-1-1bg.jpg`
     },
-  {
-    title: 'Frameless Door',
-    subTitle: 'Front laminated silent glass rear privacy glass',
-    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/7094a559-efab-459b-bfb1-6a4f6e96865b-C01-section-4-slider-1-2bg.jpg`
-  },
-  {
-    title: 'Flush Door Handle',
-    subTitle: 'Reduces wind resistance coefficient，showing a strong sense of science and technology',
-    bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c4cc8226-0933-4a12-a5c5-19180b1d5871-C01-section-4-slider-1-3bg.jpg`
-  }
+    {
+        title: 'Frameless Door',
+        subTitle: 'Front laminated silent glass rear privacy glass',
+        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/7094a559-efab-459b-bfb1-6a4f6e96865b-C01-section-4-slider-1-2bg.jpg`
+    },
+    {
+        title: 'Flush Door Handle',
+        subTitle: 'Reduces wind resistance coefficient，showing a strong sense of science and technology',
+        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c4cc8226-0933-4a12-a5c5-19180b1d5871-C01-section-4-slider-1-3bg.jpg`
+    }
 ]
 
 const carSwipper2 = [

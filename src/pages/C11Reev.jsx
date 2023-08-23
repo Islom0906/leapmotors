@@ -185,14 +185,14 @@ const C11Reev = () => {
         }
     ]
 
-    const characteristics = {
-        title: "Luxury Five Seats",
-        about: {
-            lenght: "5050",
-            width: "1902",
-            height: "1509",
-        },
-    };
+    // const characteristics = {
+    //     title: "Luxury Five Seats",
+    //     about: {
+    //         lenght: "5050",
+    //         width: "1902",
+    //         height: "1509",
+    //     },
+    // };
 
     return (
         <>

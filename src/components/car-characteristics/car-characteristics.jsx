@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
+  console.log(characteristics.about)
   return (
     <>
       <section className="w-full h-screen mb-20 overflow-hidden md:mb-0">
@@ -25,10 +26,10 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
           <div className="hidden md:block">
             <div className={`mx-auto lg:divide-x text-left grid grid-cols-2 lg:grid-cols-4 gap-y-10 w-fit ${textColor ? `text-${textColor}`  : 'text-white'}`}>
               {
-                Object.keys(characteristics.about).map((key,ind)=>(
+                characteristics?.about?.map((item,ind)=>(
                     <div className={'px-[15px]'} key={ind}>
-                      <p className=" opacity-80 font-thin leading-[28px] capitalize">{key}</p>
-                      <p className="text-3xl  font-medium leading-[24px]">{characteristics.about[key]}</p>
+                      <p className=" opacity-80 font-thin leading-[28px] capitalize">{item.title}</p>
+                      <p className="text-3xl  font-medium leading-[24px]">{item.text}</p>
                     </div>
                 ))
               }
@@ -39,10 +40,10 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
         <div className="absolute z-20 block w-full text-center bottom-5 md:hidden px-5">
           <div className={`mx-auto text-left grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-[30px] w-fit text-white  text-${textColor} `}>
             {
-              Object.keys(characteristics.about).map((key,ind)=>(
+              characteristics.about.map((item,ind)=>(
                   <div key={ind}>
-                    <p className=" opacity-80 font-arial-thin leading-[28px] capitalize">{key}</p>
-                    <p className=" text-lg sm:text-2xl  font-arial-medium leading-[24px]">{characteristics.about[key]}</p>
+                    <p className=" opacity-80 font-arial-thin leading-[28px] capitalize">{item.title}</p>
+                    <p className=" text-lg sm:text-2xl  font-arial-medium leading-[24px]">{item.text}</p>
                   </div>
               ))
             }

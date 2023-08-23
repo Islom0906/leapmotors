@@ -6,22 +6,46 @@ import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/post
 const characteristics1 = {
     title: 'Best-in-Class Smart Electric SUV',
     subTitle: '',
-    about: {
-        'Ultra-long range (CLTC)': '650km*',
-        'Acceleration from 0 to 100 km/h': '3.94s*',
-        'Utra long wheelbase': '2930mm\n',
-        '23 intelligent driving assist functions': 'Leapmotor Pilot*'
-    }
+    about: [
+        {
+            title:"Ultra-long range (CLTC)",
+            text:"650km*"
+        },
+        {
+            title:"Acceleration from 0 to 100 km/h",
+            text:"3.94s*"
+        },
+        {
+            title:"Utra long wheelbase",
+            text:"2930mm"
+        },
+        {
+            title:"23 intelligent driving assist functions",
+            text:"Leapmotor Pilot*"
+        }
+    ]
 }
 const characteristics2 = {
     title: 'Reference Price in China',
     subTitle: '',
-    about: {
-        'C11 500 Comfortable Vers': 'RMB 155,800',
-        'C11 500 Smart Version': 'RMB 169,800',
-        'C11 650 Smart Version': 'RMB 189,800',
-        'C11 580 4WD Performance Version': 'RMB 209,800'
-    }
+    about: [
+        {
+            title:"C11 500 Comfortable Vers",
+            text:"RMB 155,800"
+        },
+        {
+            title:"C11 500 Smart Version",
+            text:"RMB 169,800"
+        },
+        {
+            title:"C11 650 Smart Version",
+            text:"RMB 189,80"
+        },
+        {
+            title:"C11 580 4WD Performance Versio",
+            text:"RMB 209,800"
+        }
+    ]
 }
 
 const carSwipper1 = [
