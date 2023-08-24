@@ -390,6 +390,7 @@ const C11Reev = () => {
                     <div className="container mx-auto pb-10">
                         <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
+
                     </div>
                     <div
                         className={'overflow-x-hidden w-full  relative flex flex-col md:flex-row  md:h-[90vh] gap-y-6'}>

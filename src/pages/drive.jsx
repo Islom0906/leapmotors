@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const drive = () => {
+
   return (
     <section className="relative min-h-screen">
       <Image

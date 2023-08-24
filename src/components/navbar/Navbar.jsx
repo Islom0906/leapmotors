@@ -27,19 +27,19 @@ const Navbar = () => {
         dispatch(isShowSidebar(show))
     }
 
-    useEffect(() => {
-        const defaultLang = localStorage.getItem('langLeap')
-        dispatch(checkLanguageAction(defaultLang))
-        if (defaultLang !== checkLang) {
-            setCheckLang(defaultLang)
-        }
-    }, []);
+    // useEffect(() => {
+    //     // const defaultLang = localStorage.getItem('langLeap')
+    //     dispatch(checkLanguageAction(defaultLang))
+    //     if (defaultLang !== checkLang) {
+    //         setCheckLang(defaultLang)
+    //     }
+    // }, []);
 
     useEffect(() => {
         if (isChangeLang) {
             i18n.changeLanguage(checkLang)
             dispatch(checkLanguageAction(checkLang))
-            localStorage.setItem('langLeap', checkLang)
+            // localStorage.setItem('langLeap', checkLang)
         }
     }, [checkLang]);
     const changLang = (lang) => {

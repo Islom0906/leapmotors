@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 
 import '../localization/i18n'
 import {useEffect} from "react";
-import {useTranslation} from "react-i18next";
+// import {useTranslation} from "react-i18next";
 import 'aos/dist/aos.css';
 import {Provider, useDispatch} from "react-redux";
 import {store} from "@/store";
@@ -25,14 +25,14 @@ const queryClient=new QueryClient()
 // })
 // className={inter.className}
 export default function App({Component, pageProps}) {
-    const {i18n} = useTranslation()
-    useEffect(() => {
-        const getLang = localStorage.getItem('langLeap')
-        if (!getLang) {
-            localStorage.setItem('langLeap', 'ru')
-        }
-        i18n.changeLanguage(getLang)
-    }, [])
+    // const {i18n} = useTranslation()
+    // useEffect(() => {
+    //     const getLang = localStorage.getItem('langLeap')
+    //     if (!getLang) {
+    //         localStorage.setItem('langLeap', 'ru')
+    //     }
+    //     i18n.changeLanguage(getLang)
+    // }, [])
 
     return (
         <QueryClientProvider client={queryClient}>
