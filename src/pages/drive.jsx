@@ -1,7 +1,12 @@
 import Image from "next/image";
+import {useQuery} from "react-query";
+import apiService from "@/service/api";
+import Link from "next/link";
 
 const drive = () => {
-
+  const {
+    data,
+  } = useQuery('get-model', () => apiService.getData('/product'))
   return (
     <section className="relative min-h-screen">
       <Image
@@ -13,26 +18,18 @@ const drive = () => {
         <div className="relative z-10 w-full  h-screen pt-[10%]  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
           <div className="px-5 py-5 space-y-5 border border-black rounded-xl h-fit drive-card md:cols-span-1">
             <ul className="flex text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg shadow ">
-              <li className="w-full">
-                <button className="block w-full h-full p-2 font-bold text-gray-900 bg-gray-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none">
-                  C11 REEV
-                </button>
-              </li>
-              <li className="w-full">
-                <button className="block w-full h-full p-2 font-bold bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none">
-                  C01
-                </button>
-              </li>
-              <li className="w-full">
-                <button className="block w-full h-full p-2 font-bold bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none">
-                  C11
-                </button>
-              </li>
-              <li className="w-full">
-                <button className="block w-full h-full p-2 font-bold bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                  T03
-                </button>
-              </li>
+              {
+                data?.data?.map((link,ind) => (
+                    <li key={link?._id} className="w-full">
+                      <button className={`block w-full h-full p-2 font-bold text-gray-900 bg-gray-100 ${ind===0 ? 'rounded-l-lg' : data?.data?.length-1===ind ? "rounded-r-lg" : ""}  focus:ring-4 focus:ring-blue-300 active focus:outline-none`}>
+                        {link?.model}
+                      </button>
+                    </li>
+
+
+                ))
+              }
+
             </ul>
             <div>
               <h5 className="mb-2 text-base font-bold md:text-xl">
