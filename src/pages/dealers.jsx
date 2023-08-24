@@ -1,25 +1,22 @@
-import Image from "next/image";
-import section1image1 from "/public/About-us/about us section 1.jpg";
+import {useTranslation} from "react-i18next";
+
 
 const dealers = () => {
+  const {t}=useTranslation()
   return (
     <>
-    <div className="pt-[80px] pb-[60px]">
+    <div className="pt-[80px]">
       <div className="container">
         
-                        <div  className="text-[#4d5d81] text-[20px]  relative mb-5 text-xl font-bold leading-7  md:text-3xl font-arial-semibold md:leading-8"
-                        >Дилерам
+                        <div  className="text-[#4d5d81]   relative mb-5 text-xl font-bold leading-7  md:text-3xl font-arial-semibold md:leading-8"
+                        >{t('dealers.title')}
                         </div>
-                        <p className="text-md z-10 md:text-lg text-[#4d5d81]">
-              С другой стороны, укрепление и развитие внутренней структуры
-              требует анализа системы массового участия. Для современного мира
-              базовый вектор развития предоставляет широкие возможности для
-              переосмысления внешнеэкономических политик.
+                        <p className="text-md z-10 md:text-lg text-[#4d5d81]">{t('dealers.text')}
             </p>
       </div>
                     </div>
       
-      <section className="py-5 md:py-10 lg:py-20">
+      <section className="py-5  md:pb-10 md:pt-10 lg:pb-20">
         <div className="container space-y-3">
           <h5 className="text-base font-bold md:text-xl">Общая информация</h5>
           {/* md:grid-cols-2 */}
@@ -52,11 +49,20 @@ const dealers = () => {
                 id="countries"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               >
-                <option selected>Choose a country</option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
+                <option selected>Выберите регион</option>
+                <option value="">Ташкент</option>
+                <option value="">Андижан</option>
+                <option value="">Бухара</option>
+                <option value="">Фергана</option>
+                <option value="">Жиззах</option>
+                <option value="">Хоразм</option>
+                <option value="">Наманган</option>
+                <option value="">Навоий</option>
+                <option value="">Қашқадарё</option>
+                <option value="">Қорақалпоғистон</option>
+                <option value="">Самарқанд</option>
+                <option value="">Сирдарё</option>
+                <option value="">Сурхондарё</option>
               </select>
             </div>
             <div>
@@ -126,7 +132,7 @@ const dealers = () => {
                     placeholder="кв м"
                   />
                 </div>
-                <div >
+                <div className={'w-full'}>
                   <label
                     for="helper-text"
                     class="block mb-2 text-sm font-medium text-gray-900 "

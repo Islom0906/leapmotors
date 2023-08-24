@@ -7,7 +7,7 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
       <div className="relative w-full h-full">
         <Image src={bg} alt="car" className="object-cover w-full h-full shadow-inner" fill/>
         <div className="w-full h-[150px] absolute top-0 left-0 bg-gradient-to-b from-black via-black z-10 block md:hidden object-bototm"></div>
-        <div className="absolute top-[45px] md:top-20 w-full text-center z-20">
+        <div className="absolute top-[45px] md:top-[140px] w-full text-center z-20">
           <div className={`mb-5 text-center ${textColor? `text-${textColor} ` :  'text-white'} `}>
           {
                   logo ?

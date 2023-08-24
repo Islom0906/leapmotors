@@ -34,7 +34,7 @@ const BannerImage = ({ bg , logo , text , link }) => {
             </div>
             <Link  data-aos='fade-up' data-aos-anchor-placement="top-bottom"
               href={link}
-              className="text-white text-lg bg-transparent border border-white w-[145px] flex mx-auto justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
+              className="text-white text-lg bg-transparent border border-white w-[185px] flex mx-auto justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
             >
               {t('more')}
             </Link>

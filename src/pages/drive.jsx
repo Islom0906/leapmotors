@@ -44,17 +44,26 @@ const drive = () => {
                     for="countries"
                     class="block mb-2 text-sm font-medium text-gray-900  "
                   >
-                    Выберите город
+                    Выберите регион
                   </label>
                   <select
                     id="countries"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   >
-                    <option selected>Choose a country</option>
-                    <option value="US">Ташкент</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
+                    <option selected>Выберите регион</option>
+                    <option value="">Ташкент</option>
+                    <option value="">Андижан</option>
+                    <option value="">Бухара</option>
+                    <option value="">Фергана</option>
+                    <option value="">Жиззах</option>
+                    <option value="">Хоразм</option>
+                    <option value="">Наманган</option>
+                    <option value="">Навоий</option>
+                    <option value="">Қашқадарё</option>
+                    <option value="">Қорақалпоғистон</option>
+                    <option value="">Самарқанд</option>
+                    <option value="">Сирдарё</option>
+                    <option value="">Сурхондарё</option>
                   </select>
                 </div>
                 <div>
@@ -68,20 +77,17 @@ const drive = () => {
                     id="countries"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   >
-                    <option selected>Choose a country</option>
+                    <option selected>Выберите дилеров</option>
                     <option value="US">
-                      BYD Oloy (Мирзо Улугбекский район, ул. Алой 5)
+                      Парковка рынка Олой
                     </option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
                   </select>
                 </div>
               </div>
             </div>
             <div>
               <h5 className="mb-2 text-base font-bold md:text-xl">
-              договориться о времени
+                Договориться о времени
               </h5>
               <div className="grid grid-cols-2 gap-5">
                 <div>
@@ -89,17 +95,21 @@ const drive = () => {
                     for="countries"
                     class="block mb-2 text-sm font-medium text-gray-900  "
                   >
-                    Выберите город
+                    Выберите день
                   </label>
                   <select
                     id="countries"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   >
-                    <option selected>Choose a country</option>
-                    <option value="US">Ташкент</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
+                    <option selected>Выберите день</option>
+                    <option value="">Воскресенье</option>
+                    <option value="">Понедельник</option>
+                    <option value="">Вторник</option>
+                    <option value="">Среда</option>
+                    <option value="">Четверг</option>
+                    <option value="">Пятница</option>
+                    <option value="">Суббота
+                    </option>
                   </select>
                 </div>
                 <div>
@@ -107,19 +117,34 @@ const drive = () => {
                     for="countries"
                     class="block mb-2 text-sm font-medium text-gray-900  "
                   >
-                    Выберите дилера
+                    Выберите время
                   </label>
                   <select
                     id="countries"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   >
-                    <option selected>Choose a country</option>
-                    <option value="US">
-                      BYD Oloy (Мирзо Улугбекский район, ул. Алой 5)
-                    </option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
+                    <option selected>Выберите время</option>
+                    <option value="CA">09:00-09:30</option>
+                    <option value="CA">09:30-10:00</option>
+                    <option value="CA">10:00-10:30</option>
+                    <option value="CA">10:30-11:00</option>
+                    <option value="CA">11:00-11:30</option>
+                    <option value="CA">11:30-12:00</option>
+                    <option value="CA">12:00-12:30</option>
+                    <option value="CA">12:30-13:00</option>
+                    <option value="CA">13:00-13:30</option>
+                    <option value="CA">13:30-14:00</option>
+                    <option value="CA">14:00-14:30</option>
+                    <option value="CA">14:30:15:00</option>
+                    <option value="CA">15:30:16:00</option>
+                    <option value="CA">16:00:16:30</option>
+                    <option value="CA">16:30-17:00</option>
+                    <option value="CA">17:00-17:30</option>
+                    <option value="CA">17:30-18:00</option>
+                    <option value="CA">18:00-18:30</option>
+                    <option value="CA">18:30-19:00</option>
+                    <option value="CA">19:00-19:30</option>
+                    <option value="CA">19:30-20:00</option>
                   </select>
                 </div>
               </div>
@@ -148,13 +173,13 @@ const drive = () => {
                     for="helper-text"
                     class="block mb-2 text-sm font-medium text-gray-900 "
                   >
-                    Имя
+                    Телефон
                   </label>
                   <input
                     type="number"
                     id="helper-text"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                    placeholder="ООО “Предприятие”"
+                    placeholder="+(998) "
                   />
                 </div>
               </div>
