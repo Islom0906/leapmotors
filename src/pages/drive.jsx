@@ -7,6 +7,7 @@ import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/post
 import {useForm,Controller} from "react-hook-form";
 import {LuLoader2} from "react-icons/lu";
 import InputMask from 'react-input-mask';
+import ModalSuccess from "@/components/modal-success/modal-success";
 
 const Drive = () => {
   const {register,handleSubmit,control,reset,formState:{errors}}=useForm()
@@ -22,6 +23,7 @@ const Drive = () => {
 
   const [bg,setBg]=useState('')
   const [isActive,setIsActive]=useState(0)
+  const [isModal,setModal]=useState(false)
 
 
   useEffect(() => {
@@ -30,12 +32,14 @@ const Drive = () => {
   }, [data]);
 
   useEffect(() => {
-    reset()
 
 
     if (userPostSuccess){
-
-
+    reset()
+      setModal(true)
+      setTimeout(()=>{
+        setModal(false)
+      },2000)
     }
 
 
@@ -80,7 +84,7 @@ const Drive = () => {
               }
 
             </ul>
-            <form onSubmit={handleSubmit(onSubmit)} className={''}>
+            <form onSubmit={handleSubmit(onSubmit)} >
             <div >
               <h5 className="mb-2 text-base font-bold md:text-xl">
                 Выбор дилера
@@ -237,21 +241,21 @@ const Drive = () => {
                     Телефон
                   </label>
 
-                          <InputMask
-                              id={'tel'}
-                              {...register('tel',{required:true})}
-                              mask="+999 99 999 99 99"
-                              placeholder="+998 "
-                              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                          />
+                          {/*<InputMask*/}
+                          {/*    id={'tel'}*/}
 
-                  {/*<input*/}
-                  {/*  type="number"*/}
-                  {/*  {...register('tel',{required:true})}*/}
-                  {/*  id="tel"*/}
-                  {/*  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "*/}
-                  {/*  placeholder="+(998) "*/}
-                  {/*/>*/}
+                          {/*    mask="+999 99 999 99 99"*/}
+                          {/*    placeholder="+998 "*/}
+                          {/*    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"*/}
+                          {/*/>*/}
+
+                  <input
+                    type="number"
+                    {...register('tel',{required:true})}
+                    id="tel"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    placeholder="+(998) "
+                  />
                   {errors.tel && <span className={'text-xs text-red-600'}>Требуется телефон данные</span>}
 
                 </div>
@@ -271,6 +275,9 @@ const Drive = () => {
             </form>
           </div>
         </div>
+      </div>
+      <div className={`${isModal ? 'block' : 'hidden'} fixed  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full z-[999] min-h-screen backdrop_filter`}>
+      <ModalSuccess text={'Ваша заявка принята'}/>
       </div>
     </section>
   );
