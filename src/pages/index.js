@@ -31,19 +31,19 @@ export default function Home({banner, products}) {
             </Head>
             <main className={'bg-black section'}>
                 <section className="relative w-full h-screen scroll-snap">
-                    <video className="object-cover w-full h-full" autoPlay loop muted>
+                    <video className="object-cover w-full h-full" autoPlay playsinline  loop muted>
                         <source className="w-full"
                                 src={`${process.env.NEXT_PUBLIC_API_URL}/${banner?.videoBanner?.path}`}
                                 type="video/mp4"/>
                     </video>
 
 
-                    <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] opacity-90">
+                    <div className="absolute  top-[30%] left-[50%] md:top-[50%] md:translate-y-[-50%] translate-y-[-30%] translate-x-[-50%] opacity-90">
                         <div data-aos='fade-up' className="w-[180px] h-[180px] mx-auto bg-transparent relative">
                             <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${banner?.imageBrand?.path}`} alt="brand"
                                    fill className="object-contain w-full h-full"/>
                         </div>
-                        <div data-aos='fade-up' className="md:w-[532px] md:h-[118px] bg-transparent relative">
+                        <div data-aos='fade-up' className="w-[250px] h-[80px] md:w-[532px] md:h-[118px] bg-transparent relative">
                             <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${banner?.imageLogo?.path}`} alt="logo" fill
                                    className="object-contain w-full h-full"/>
                         </div>

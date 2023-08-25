@@ -1,12 +1,19 @@
 import Image from "next/image";
 
-const CarBannerContentBottom = ({ content , bg  }) => {
+const CarBannerContentBottom = ({ content , bg  ,bgRes }) => {
   return (
     <>
       <section className="h-screen">
         <div className="relative w-full h-full">
-        <Image  fill src={bg} alt="car" className="object-cover w-full h-full" />
-
+        {
+        bgRes ?
+          <>  
+            <Image src={bgRes} alt="car" className="block object-cover object-center w-full h-full md:hidden" fill priority={true}/>
+            <Image src={bg} alt="car" className="hidden object-cover object-center w-full h-full md:block" fill priority={true}/>
+          </>
+          :
+          <Image src={bg} alt="car" className="object-cover w-full h-full" fill priority={true}/>
+        }
           <div className="absolute z-20 block w-full text-center top-10 md:hidden">
             <div className="mb-5">
               {content?.map((item, ind) => (

@@ -2,23 +2,26 @@ import Image from "next/image"
 import Aos from "aos"
 import {useTranslation} from "react-i18next";
 
-const carBannerC11Reev = ({banner, title, subTitle, carData}) => {
+const carBannerC11Reev = ({bg, title, subTitle, carData, bgRes}) => {
     const {t}=useTranslation()
     return (
         <section className="h-screen mb-20 md:mb-0">
             <div className="relative w-full h-full">
-                <Image
-                    src={banner}
-                    alt="car"
-                    fill
-                    className="object-cover w-full h-full"
-                    priority={true}
-                />
-                <div className="absolute top-[45px] md:top-20 w-full text-center z-20">
+            {
+        bgRes ?
+          <>  
+            <Image src={bgRes} alt="car" className="block object-cover object-center w-full h-full md:hidden" fill priority={true}/>
+            <Image src={bg} alt="car" className="hidden object-cover object-center w-full h-full md:block" fill priority={true}/>
+          </>
+          :
+          <Image src={bg} alt="car" className="object-cover object-center w-full h-full" fill priority={true}/>
+        }
+               
+                <div className="relative z-20 w-full text-center py-[50px] md:py-[100px]">
                     <div className="flex flex-col items-center mb-5 text-center">
                         <p data-aos="fade-up"
                            data-aos-anchor-placement="top-bottom"
-                           className="text-white text-lg font-medium md:text-2xl lg:text-[36px]  md:w-[70%] w-[90%] mb-2">
+                           className="text-white text-[22px]  font-bold md:text-2xl lg:text-[36px]  md:w-[70%] w-[90%] mb-2">
                             {title}
                         </p>
                         <p data-aos="fade-up"
@@ -37,13 +40,13 @@ const carBannerC11Reev = ({banner, title, subTitle, carData}) => {
 
                                                 <div data-aos="fade-up"
                                                    data-aos-anchor-placement="top-bottom"
-                                                   className="text-xs md:text-base text-white opacity-80 font-thin leadin-[16px]" dangerouslySetInnerHTML={{__html: t(data.title)}}>
+                                                   className="text-xs md:text-base text-white opacity-80  font-thin leadin-[16px]" dangerouslySetInnerHTML={{__html: t(data.title)}}>
                                                 </div>
 
                                             </div>
                                             <p data-aos="fade-up"
                                                data-aos-anchor-placement="top-bottom"
-                                               className="text-xl md:text-[28px] text-white font-semibold md:font-medium leading-[24px]">
+                                               className="text-xl md:text-[28px]  text-white font-semibold md:font-medium leading-[22px]">
                                                 {t(data.data)}
                                             </p>
                                         </div>

@@ -126,7 +126,7 @@ const Navbar = () => {
                             </div>
                             <div className="flex items-center gap-2 divide-x">
                                 <button onClick={() => changLang('ru')}>Russia</button>
-                                <button onClick={() => changLang('uz')} className="pl-2">Uzbek</button>
+                                {/* <button onClick={() => changLang('uz')} className="pl-2">Uzbek</button> */}
                             </div>
                         </div>
                     </div>

@@ -1,10 +1,18 @@
 import Image from "next/image";
 
-const CarDetailBanner = ({ bg, img, text, title ,imgLong }) => {
+const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong }) => {
   return (
     <>
       <section className="relative h-screen">
-        <Image fill src={bg} alt="car" className="object-cover w-full h-full" priority={true}/>
+      {
+        bgRes ?
+          <>  
+            <Image src={bgRes} alt="car" className="block object-cover object-center w-full h-full md:hidden" fill priority={true}/>
+            <Image src={bg} alt="car" className="hidden object-cover object-center w-full h-full md:block" fill priority={true}/>
+          </>
+          :
+          <Image src={bg} alt="car" className="object-cover object-center w-full h-full" fill priority={true}/>
+        }
         <div className="absolute top-[140px] w-full text-center">
           <div className="flex items-center justify-center w-full ">
               {img ? (

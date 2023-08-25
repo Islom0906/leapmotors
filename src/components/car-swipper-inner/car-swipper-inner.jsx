@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const CarSwiperInner = ({title , subTitle , bg ,textColor,bgResp}) => {
+const CarSwiperInner = ({title , subTitle , bg ,textColor , bgResp}) => {
   return (
     <>
       <section className="relative h-full bg-white md:h-screen">

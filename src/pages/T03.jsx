@@ -30,6 +30,7 @@ const T03 = () => {
         section1: {
             subTitle: t('T03.section1.subtitle'),
             bg: `${process.env.NEXT_PUBLIC_API_URL}/media/50b3343f-5dc5-4650-97ae-3ef817ff7b7a-T03-section-1-bg.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/d17c3ad5-a7fe-4660-ab27-2ae0ed35af39-screen1.jpg`,
             content: [
                 {
                     title: t('T03.section1.title'),
@@ -89,15 +90,15 @@ const T03 = () => {
         {
             title: t('T03.carswipper2.title'),
             subTitle: t('T03.carswipper2.subtitle'),
-            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/ffb3e45f-f578-4d0b-8157-e73747122647-T03-section-5-slider-1-1bg.jpg`,
-            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/76e0fe00-6358-497b-885f-f720b8afe620-T03-section-5-slider-1-1bg-responsive.png`,
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/d20ff2a8-e5f7-4b11-be0a-9e60095e1d12-T03-section-5-slider-1-1bg-min.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/20ef0fca-189b-4d5e-9f7b-64fc5f189fc8-T03-section-5-slider-1-1bg-responsive-min.jpg`,
 
         },
         {
             title: t('T03.carswipper2.title2'),
             subTitle: t('T03.carswipper2.subtitle2'),
-            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/1a0634e9-7e4a-4a87-adfc-b2a5675380fe-T03-section-5-slider-1-2bg.jpg`,
-            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/e7af3608-25dd-4664-80ae-ce5d89d16f22-T03-section-5-slider-1-2bg-responsive.png`,
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/88c2b4b2-a1ca-4f34-849e-ee3b26c7fdbe-T03-section-5-slider-1-2bg-min.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/887d9f70-76da-4825-98b4-69ea9675fd79-T03-section-5-slider-1-2bg-responsive-min.jpg`,
         }
     ]
     const disclaimers = [
@@ -128,8 +129,14 @@ const T03 = () => {
                     <div className="relative w-full h-full">
                         <Image
                             alt="car"
+                            src={T03Data.section1.bgRes}
+                            className="block object-cover w-full h-full md:hidden"
+                            fill
+                        />
+                        <Image
+                            alt="car"
                             src={T03Data.section1.bg}
-                            className="object-cover w-full h-full"
+                            className="hidden object-cover w-full h-full md:block"
                             fill
                         />
                         <div
@@ -144,7 +151,7 @@ const T03 = () => {
                                     />
                                 </div>
                                 <div className="mb-3 text-center">
-                                    <p className="text-white font-arial-normal min-w-[320px] text-[20px] leading-[30px] md:leading-[56px]">
+                                    <p className="text-white font-normal min-w-[320px] text-[20px] leading-[30px] md:leading-[56px]">
                                         {T03Data.section1.subTitle}
                                     </p>
                                 </div>
@@ -155,10 +162,10 @@ const T03 = () => {
                                 <div className="flex flex-wrap items-center justify-start gap-10 text-white gap-y-5">
                                     {T03Data.section1.content.map((item, ind) => (
                                         <div className="" key={ind}>
-                                            <p className="text-white text-[10px]  lg:text-[14px] font-arial-medium">
+                                            <p className="text-white text-[10px]  lg:text-[14px] font-medium">
                                                 {item.title}
                                             </p>
-                                            <p className="text-[20px] font-arial-normal">
+                                            <p className="text-[20px] font-normal">
                                                 {item.content}
                                             </p>
                                         </div>
@@ -174,9 +181,18 @@ const T03 = () => {
                         <Image
                             alt="car"
                             src={`${process.env.NEXT_PUBLIC_API_URL}/media/8bd6857e-4221-4e86-9e42-b11626ebce1f-T03-section-2.jpg`}
-                            className="object-cover w-full h-full"
+                            className="hidden object-cover w-full h-full md:block"
+
                             fill
                         />
+                         <Image
+                            alt="car"
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/media/91befc72-588a-4c60-a59c-e3c138975c60-screen2.jpg`}
+
+                            className="block object-cover w-full h-full md:hidden"
+                            fill
+                        />
+                       
                         <div className="absolute top-0 left-0 w-full h-full">
                             <div
                                 className="container flex flex-col justify-between h-full py-10 md:py-20 md:justify-start">
@@ -242,12 +258,12 @@ const T03 = () => {
 
                 <CarBanner textColor={'black'} title={t('T03.carbanner.title')}
                            subTitle={t('T03.carbanner.subtitle')}
-                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/f7a4746a-838c-4a48-aafa-34f6326ccbe3-T03-section-6-bg.jpg`}
-                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/3e450220-8167-4391-b371-21610e422c8f-T03-section-6bg-responsive.jpg`}/>
+                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/f1d80e68-31d1-430b-8f34-325c4380db8d-T03-section-6-bg-min.jpg`}
+                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/a8bba7fe-e1e4-44d2-ab1b-87e639857b98-T03-section-6bg-responsive-min.jpg`}/>
                 <CarBanner title={t('T03.carbanner2.title')}
                            subTitle={t('T03.carbanner2.subtitle')}
-                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/92e586ac-173f-4c12-ad0d-8a8733b881bc-T03-section-7-bg.jpg`}
-                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/1c6e7ff6-9216-4060-aa39-180e53fa330a-T03-section-7bg-responsive.jpg`}/>
+                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/771c14e3-be5b-4e3e-845a-7ad65b8816ae-T03-section-7-bg-min.jpg`}
+                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/cd619eb4-443d-4f18-9749-a93b0e07c448-T03-section-7bg-responsive-min.jpg`}/>
                 <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
                     <div className="container pb-10 mx-auto">
                         <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>

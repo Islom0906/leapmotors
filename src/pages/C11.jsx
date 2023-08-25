@@ -56,16 +56,19 @@ const carSwipper1 = [
         title: t('C11.section3.title1'),
         subTitle: t('C11.section3.subTitle1'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/23337230-0163-43b0-9493-01f01ec23167-C11-section-3-slider-1-2bg.jpg`,
+        bgResp:`${process.env.NEXT_PUBLIC_API_URL}/media/f4222092-c9f6-4182-9731-c954bafadbf2-screen3-3-2023.png`
     },
     {
         title: t('C11.section3.title2'),
         subTitle:t('C11.section3.subTitle2'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/bb01e599-9cc4-4cb7-8d98-6ddb61521708-C11-section-3-slider-1-3bg.jpg`,
+        bgResp:`${process.env.NEXT_PUBLIC_API_URL}/media/cbad3f8f-4ec1-431f-b720-147a623dea8a-screen3-1-2023.png`
     },
     {
         title: t('C11.section3.title3'),
         subTitle: t('C11.section3.subTitle3'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/b36d9ec0-a7d5-42df-a312-851704b1f11c-C11-section-3-slider-1-1bg.jpg`,
+        bgResp:`${process.env.NEXT_PUBLIC_API_URL}/media/e129cc86-c25e-49a5-af9d-4b73a76c9a7d-screen3-2-2023.png`
     }
 ]
 const carSwipper2 = [
@@ -73,11 +76,14 @@ const carSwipper2 = [
         title: t('C11.section4.title1'),
         subTitle: t('C11.section4.subTitle1'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/2eee31cd-e306-4bda-8a78-992ec9637bc4-C11-section-4-slider-1-1bg.jpg`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/1edcc0e4-b367-4939-9687-c2e14101e951-screen4-1-2023.png`
     },
     {
         title: t('C11.section4.title2'),
         subTitle: t('C11.section4.subTitle2'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/f557c7ff-d137-43aa-b975-421bbdf19243-C11-section-4-slider-2bg.jpg`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/989ac1d3-b2ae-4197-9e70-3488c33d59df-screen4-2-2023.png`
+    
     },
 
 ]
@@ -86,16 +92,22 @@ const carSwipper3 = [
         title: t('C11.section5.title1'),
         subTitle: t('C11.section5.subTitle1'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/17ce7405-cb69-4e26-b9b1-555d2c5fe070-C11-section-5-slider-1bg.jpg`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/c4ca19e9-ff03-49b5-8fe8-128c9d5a0e93-screen5-3-2023.png`
+    
     },
     {
         title: t('C11.section5.title2'),
         subTitle: t('C11.section5.subTitle2'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/f5fb5d5f-c108-45a7-b79e-043dd225b058-C11-section-5-slider-1-3bg-min.jpg`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/33020bc4-0c82-4423-86f6-e9ffd9e8f516-screen5-1-2023.png`
+
     },
     {
         title: t('C11.section5.title3'),
         subTitle: t('C11.section5.subTitle3'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/945c2f54-3920-4c61-851c-2f7dd32371d3-C11-section-5-slider-1-2bg.jpg`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/ee86acc6-8ead-45aa-a4e0-a40fcd1862b2-screen5-2-2023.png`
+
     },
 
 ]
@@ -105,6 +117,7 @@ const carSwipper4 = [
         title: t('C11.section9.title1'),
         subTitle: t('C11.section9.subTitle1'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/3c99beed-4ac7-4643-bf59-b53bb7779636-C11-section-10-slider-1-1bg.jpg`,
+    
     },
     {
         title: t('C11.section9.title2'),
@@ -114,16 +127,20 @@ const carSwipper4 = [
 ]
 
 const carSwipper5 = [
+// rasmda text bor
+
+
     {
         title: t('C11.section10.title1'),
         subTitle: t('C11.section10.subTitle1'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/8bd90ef7-58de-47d8-95fd-5a0a168a19b5-C11-section-11-slider-1-1bg.jpg`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/c0669ece-ae4b-4e4e-a171-596d69008239-screen11-2-2023.png`,
     },
     {
         title: t('C11.section10.title2'),
         subTitle: t('C11.section10.subTitle2'),
-
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/bb59b523-8982-4113-8be6-969379e6f826-C11-section-11-slider-1-2bg.jpg`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/c0414782-f2e2-4a63-a6dc-52931e1f7608-screen11-1-2023.png`,
     }
 ]
 
@@ -169,10 +186,13 @@ const carSwipper6 = [
             </Head>
             <main className={'bg-black'}>
                 <CarCharacteristics
+                    bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/0b888d22-680d-462c-b673-b77a71c58a9f-screen1-1-2023.jpg`}
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/41e0fc8d-704a-493a-b7fc-cb2f23a1a20f-index-4-section-bg.jpg`}
                     logo={`${process.env.NEXT_PUBLIC_API_URL}/media/ab46d0a8-9d58-41e8-ba6d-06d50dadcc3d-logo-C11.png`}
                     characteristics={characteristics1}/>
                 <CarCharacteristics
+                    bgRes={`${process.env.NEXT_PUBLIC_API_URL}/`}
+
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/adceae5f-ba4e-4e47-ab99-922eebcbb878-C11-section-2-bg.jpg`}
                     characteristics={characteristics2}/>
                 <CarSwiper content={carSwipper1}/>
@@ -180,7 +200,9 @@ const carSwipper6 = [
                 <CarSwiper content={carSwipper3}/>
                 <CarBanner center={true} title={t('C11.section6.title')}
                            subTitle={t('C11.section6.subTitle')}
+                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/2d45c585-4aa4-4506-b3c4-fc611e62c9c4-screen6-1-2023.png`}
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/4658f37f-4537-44d8-929c-dfbd6f1f3b71-C11-section-6-bg.jpg`}/>
+              {/* Tarjima qilish kk */}
                 <CarBanner title={t('C11.section7.title')}
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/9f3c13fa-6810-468f-8f2d-56d9b24e60ce-C11-section-7-bg.jpg`}
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/d7b5e1e5-fc7d-467e-a463-a6544e57b8e8-C11-section-7-bg-responsive.jpg`}/>
@@ -191,6 +213,7 @@ const carSwipper6 = [
                            subTitle={t('C11.section8.subTitle')}
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/1e2cd239-f6b8-4890-8942-8552a239d10f-C11-section-9-bg.png`}
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/c443ca09-0d4a-4541-b083-50382b7e0d8a-C11-section-9-bg-responsive.jpg`}/>
+              {/* tarjima qiliw kk */}
                 <CarSwiper content={carSwipper4}/>
                 <CarSwiper content={carSwipper5}/>
                 <CarBanner title={t('C11.section11.title')}

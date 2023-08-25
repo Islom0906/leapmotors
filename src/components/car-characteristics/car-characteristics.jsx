@@ -1,13 +1,21 @@
 import Image from 'next/image'
 
-const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
+const CarCharacteristics = ({bg ,bgRes , characteristics , logo  ,textColor}) => {
   return (
     <>
       <section className="w-full h-screen mb-20 overflow-hidden md:mb-0">
       <div className="relative w-full h-full">
-        <Image src={bg} alt="car" className="object-cover w-full h-full shadow-inner" fill/>
+        {
+        bgRes ?
+          <>  
+            <Image src={bgRes} alt="car" className="block object-cover object-center w-full h-full md:hidden" fill priority={true}/>
+            <Image src={bg} alt="car" className="hidden object-cover object-center w-full h-full md:block" fill priority={true}/>
+          </>
+          :
+          <Image src={bg} alt="car" className="object-cover object-center w-full h-full" fill priority={true}/>
+        }
         <div className="w-full h-[150px] absolute top-0 left-0 bg-gradient-to-b from-black via-black z-10 block md:hidden object-bototm"></div>
-        <div className="absolute top-[45px] md:top-[140px] w-full text-center z-20">
+        <div className="relative z-20 w-full text-center py-[50px] md:py-[100px]">
           <div className={`mb-5 text-center ${textColor? `text-${textColor} ` :  'text-white'} `}>
           {
                   logo ?
@@ -20,7 +28,7 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
                   :
                   <h3 className=" font-semibold text-[22px] leading-7 md:leading-8"> {characteristics?.title} </h3>
               }
-            <p className="text-base font-normal leading-9 md:text-lg lg:text-xl" > {characteristics?.subTitle} </p>
+            <p className="text-base font-normal leading-9 md:text-lg lg:text-xl w-[80%] mx-auto" > {characteristics?.subTitle} </p>
           </div>
           <div className="hidden md:block">
             <div className={`mx-auto lg:divide-x text-left grid grid-cols-2 lg:grid-cols-4 gap-y-10 w-fit ${textColor ? `text-${textColor}`  : 'text-white'}`}>
@@ -36,7 +44,7 @@ const CarCharacteristics = ({bg , characteristics , logo  ,textColor}) => {
             </div>
           </div>
         </div>
-        <div className="absolute z-20 block w-full text-center bottom-5 md:hidden px-5">
+        <div className="absolute z-20 block w-full px-5 text-center bottom-5 md:hidden">
           <div className={`mx-auto text-left grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-[30px] w-fit text-white  text-${textColor} `}>
             {
               characteristics.about.map((item,ind)=>(
