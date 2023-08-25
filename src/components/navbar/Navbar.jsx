@@ -80,7 +80,7 @@ const Navbar = () => {
                     <GiHamburgerMenu onClick={(e) => showSidebar(e, !show)}
                                      className="text-2xl text-white cursor-pointer"/>
                     <div onClick={(e) => e.stopPropagation()}
-                         className={`fixed    top-0 ${show ? 'right-0' : '-right-full'} transition-[right]  duration-[.9s] bg-white w-full md:w-[200px] h-screen pt-5 pb-10 px-5 text-[#808080] shadow-2xl flex flex-col justify-between z-[99]`}>
+                         className={`fixed top-0 ${show ? 'right-0' : '-right-full'} transition-[right]  duration-[.9s] bg-white w-full xs:w-[200px] h-screen pt-5 pb-10 px-5 text-[#808080] shadow-2xl flex flex-col justify-between z-[99]`}>
                         <div>
                             <div className="flex justify-end mb-10">
                                 <GrClose onClick={(e) => showSidebar(e, !show)}

@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs':'450px',
+        // => @media (min-height: 800px) { ... }
+      },
       container: {
         center: true,
         padding: {
