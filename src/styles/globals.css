@@ -6,9 +6,9 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*#__next{*/
-/*    scroll-snap-type: y mandatory;*/
-/*}*/
+#__next{
+   scroll-snap-type: y mandatory;
+} 
 
 .section .scroll-snap,.footer{
     scroll-snap-align: center;

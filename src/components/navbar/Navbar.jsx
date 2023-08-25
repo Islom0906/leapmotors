@@ -75,7 +75,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center md:gap-14">
                 <Link href="/drive"
-                      className=" border-white border px-2 py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.testDrive')}</Link>
+                      className=" border-white border px-4 py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.testDrive')}</Link>
                 <div className="side-r">
                     <GiHamburgerMenu onClick={(e) => showSidebar(e, !show)}
                                      className="text-2xl text-white cursor-pointer"/>
@@ -86,7 +86,7 @@ const Navbar = () => {
                                 <GrClose onClick={(e) => showSidebar(e, !show)}
                                          className="text-2xl cursor-pointer"/>
                             </div>
-                            <ul className="space-y-5">
+                            <ul className="flex flex-col items-center space-y-5 md:items-start">
                                 {
                                     data?.data?.map(link => (
                                         <li key={link?._id} onClick={(e) => showSidebar(e, false)}>
@@ -107,7 +107,7 @@ const Navbar = () => {
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="#"
                                           className="capitalize">{t('navbar.service')}</Link></li>
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="/drive"
-                                          className="capitalize block  lg:hidden">{t('navbar.testDrive')}</Link></li>
+                                          className="block capitalize lg:hidden">{t('navbar.testDrive')}</Link></li>
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="#"
                                           className="capitalize">{t('navbar.accessories')}</Link></li>
                                 {/*
@@ -120,7 +120,7 @@ const Navbar = () => {
 
                             </ul>
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center justify-center gap-3 md:justify-start">
                             <div className="relative flex-shrink-0 w-5 h-5">
                                 <Image src="/global.png" alt="global" className="w-full h-full" fill/>
                             </div>

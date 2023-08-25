@@ -29,7 +29,7 @@
       "section1": "Умный, пятиместный внедорожник дальнего действия",
       "section2": {
         "title": "C11 Расширенный диапазон",
-        "sub-title": "Не применимо",
+        "sub-title": "",
         "carDataSectoin2": {
           "title1": "Версия “C11 Extended Range 180 Comfortable”",
           "data1": "",
@@ -163,8 +163,8 @@
         "content3": "Leapmotor Pilot"
       },
       "section2": {
-        "title": "Не применимо",
-        "subtitle": "Не применимо",
+        "title": "",
+        "subtitle": "",
         "name": "Версия “200 Light”",
         "name2": "Версия “310 Light”",
         "name3": "Версия “403 Light”",
