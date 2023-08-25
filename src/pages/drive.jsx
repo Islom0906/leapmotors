@@ -153,21 +153,12 @@ const Drive = () => {
                   >
                     Выберите день
                   </label>
-                  <select
+                  <input
                       {...register('day',{required:true})}
                     id="day"
+                      type={'date'}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  >
-                    <option value={''}>Выберите день</option>
-                    <option value="Воскресенье">Воскресенье</option>
-                    <option value="Понедельник">Понедельник</option>
-                    <option value="Вторник">Вторник</option>
-                    <option value="Среда">Среда</option>
-                    <option value="Четверг">Четверг</option>
-                    <option value="Пятница">Пятница</option>
-                    <option value="Суббота">Суббота
-                    </option>
-                  </select>
+                  />
                   {errors.day && <span className={'text-xs text-red-600'}>Требуется день</span>}
 
                 </div>
