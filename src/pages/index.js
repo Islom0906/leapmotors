@@ -18,6 +18,9 @@ export default function Home({banner, products}) {
             once: true
         });
     }, []);
+
+
+    
     return (
         <>
             <Head>
@@ -51,7 +54,9 @@ export default function Home({banner, products}) {
                         <BannerImage key={product?._id}
                                      bg={`${process.env.NEXT_PUBLIC_API_URL}/${product?.imageBanner?.path}`}
                                      logo={`${process.env.NEXT_PUBLIC_API_URL}/${product?.imageLogo?.path}`}
-                                     text={lang ==='ru' ? product?.textRu :product?.textUz} link={product?.model}/>
+                                     text={lang ==='ru' ? product?.textRu :product?.textUz} link={product?.model}
+                                     bgRes={`${process.env.NEXT_PUBLIC_API_URL}/${product?.model==="C11Reev" ? "media/82b5ac37-04f6-4cd6-adae-73297536767e-c11-reev-res.jpg" : product?.model==="C01" ? "media/8e828ba1-2076-45a3-8106-aa01c1e49de4-c01-res.png" : product?.model==="C11" ? "media/64d2f78d-e96c-47fb-b605-98e562ccebf1-screen-C11-res.jpg" : product?.model==="T03" && "media/b8e51963-82f2-42e5-bc35-ffff6a254da2-t03-res.jpg"    }` }
+                                     />
 
                     ))
 

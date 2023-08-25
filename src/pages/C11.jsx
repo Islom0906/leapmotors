@@ -90,7 +90,7 @@ const carSwipper3 = [
     {
         title: t('C11.section5.title2'),
         subTitle: t('C11.section5.subTitle2'),
-        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c3e041b5-a755-4f56-b681-2baad3550bf9-C11-section-5-slider-1-3bg.jpg`,
+        bg: `${process.env.NEXT_PUBLIC_API_URL}/media/f5fb5d5f-c108-45a7-b79e-043dd225b058-C11-section-5-slider-1-3bg-min.jpg`,
     },
     {
         title: t('C11.section5.title3'),
@@ -213,7 +213,7 @@ const carSwipper6 = [
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/21afa095-f51e-47b1-9b14-d1ff5e0275eb-section-13-responsive.jpg`}
                 />
                 <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
-                    <div className="container mx-auto pb-10">
+                    <div className="container pb-10 mx-auto">
                         <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
                     </div>

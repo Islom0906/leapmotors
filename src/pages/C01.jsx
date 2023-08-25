@@ -240,12 +240,12 @@ const characteristics = {
 
     const carBottomContent = [
         {
-            title: t('c01.carbootcontent.title'),
-            subTitle: t('c01.carbootcontent.subtitle2'),
+            title: t('c01.carbootincontent.title'),
+            subTitle: t('c01.carbootincontent.subTitle'),
         },
         {
-            title: t('c01.carbootcontent.title2'),
-            subTitle: t('c01.carbootcontent.subtitle2'),
+            title: t('c01.carbootincontent.title2'),
+            subTitle: t('c01.carbootincontent.subTitle2'),
         }
     ]
 
@@ -318,7 +318,7 @@ const characteristics = {
                 <CarContentFooter title={t('c01.carcontentfooter.title')} subTitle={t('c01.carcontentfooter.subtitle')}
                                   bg={`${process.env.NEXT_PUBLIC_API_URL}/media/a5c21aec-6a91-4953-b46d-e80e16646baf-C01-section-21-bg.jpg`}/>
                 <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
-                    <div className="container mx-auto pb-10">
+                    <div className="container pb-10 mx-auto">
                         <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
                     </div>

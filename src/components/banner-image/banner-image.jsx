@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
-const BannerImage = ({ bg, logo, text, link }) => {
+const BannerImage = ({ bg, logo, text, link,bgRes }) => {
   const { t } = useTranslation();
   return (
     <section className="relative w-full h-screen scroll-snap ">
@@ -15,11 +15,18 @@ const BannerImage = ({ bg, logo, text, link }) => {
         <Image
           src={bg}
           fill
-          alt={logo}
+          alt={logo}  
           priority={true}
-          className="object-cover object-bottom w-full h-full z-[3]"
+          className="object-cover object-bottom w-full h-full z-[3] lg:block hidden"
+          
         />
-        <div className="relative z-[10]  w-full h-screen flex justify-center pt-[30%] md:block  md:pt-32  ">
+        <Image
+          src={bgRes}
+          fill
+          alt={logo}  
+          priority={true}
+          className="object-cover object-center w-full h-full z-[3] lg:hidden block"/>
+        <div className="relative z-[10]  w-full h-screen flex justify-center pt-[35%] md:block  md:pt-32  ">
           <div>
             <div
               className="h-10 md:h-[60px] w-full"

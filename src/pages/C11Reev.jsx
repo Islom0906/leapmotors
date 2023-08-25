@@ -292,8 +292,8 @@ const C11Reev = () => {
                     bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/5541e411-9525-4191-87de-13fa5d592541-C11Reev-slide-08-res.jpg`}
                 />
                 <CarBanner
-                    bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7884874f-5ce2-4438-8cfc-415405d72e78-C11-Reev-section-9-bg.jpg`}
-                    bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/f79c95ac-797d-452a-8471-2958aea7252d-C11-Reev-section-9-bg-responsive.jpg`}/>
+                    bg={`${process.env.NEXT_PUBLIC_API_URL}/media/b6b4923e-9dab-4e8a-a34d-ff0c1365042d-C11-Reev-section-9-bg-min.jpg`}
+                    bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/84b73d90-50db-4672-bc06-9dd9dfeb47ee-C11-Reev-section-9-bg-responsive-min.jpg`}/>
                 <CarBanner
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/78b52aaa-4b94-472e-a313-13fc3b9eafd8-C11-Reev-section-10-bg.jpg`}
                     title={t('c11reev.section7.name')}
@@ -310,7 +310,7 @@ const C11Reev = () => {
                     subTitle={t('c11reev.section9.title')}
                     center={true}
                 />
-                <section className=" h-screen">
+                <section className="h-screen ">
                     <div className="relative w-full h-full">
                         <video className="object-cover w-full h-full" autoPlay loop muted>
                             <source
@@ -387,7 +387,7 @@ const C11Reev = () => {
                     title={t('c11reev.section13.name')}
                 />
                 <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
-                    <div className="container mx-auto pb-10">
+                    <div className="container pb-10 mx-auto">
                         <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
 

@@ -53,34 +53,34 @@ const T03 = () => {
         {
             title: t('T03.carswipper1.title'),
             subTitle: t('T03.carswipper1.subtitle'),
-            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/445a1d2b-3a77-4283-a623-dc1a0e1438e0-T03-section-4-slider-1-2bg.jpg`,
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/ad0b2c5d-0d66-420a-a2f9-04b5727d9477-T03-section-4-slider-1-2bg-min.jpg`,
             bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/9f824a2f-6873-4dbc-9cdf-3bd13c1471c1-T03-section-4-slider-1-2bg-responsive.png`,
         },
         {
             title: t('T03.carswipper1.title'),
             subTitle: t('T03.carswipper1.subtitle'),
-            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/c40cdf72-0a6e-48bf-9f97-6f562547b4b0-T03-section-4-slider-1-3bg.jpg`,
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/e226f9f7-aaf6-42eb-b8cc-eb82e4db554e-T03-section-4-slider-1-3bg-min.jpg`,
             bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/95613ae1-9071-4201-8aef-08fcf05fdb8e-T03-section-4-slider-1-3bg-responsive.png`,
 
         },
         {
             title: t('T03.carswipper1.title'),
             subTitle: t('T03.carswipper1.subtitle'),
-            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/7e006151-2435-4aaf-8c53-cabf6e2c9d14-T03-section-4-slider-1-4bg.jpg`,
-            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/41546e91-b553-43f7-864d-1ec3e8ac8542-T03-section-4-slider-1-4bg-responsive.png`,
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/9f137487-dded-4742-8313-f38b186e30e8-T03-section-4-slider-1-4bg-min.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/0cef2e79-0005-438e-9a1d-f059ebd74870-T03-section-4-slider-1-4bg-responsive-min.jpg`,
 
         },
         {
             title: t('T03.carswipper1.title'),
             subTitle: t('T03.carswipper1.subtitle'),
-            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/5196a6c8-646d-4a95-ac44-222f7e10094b-T03-slider-5.jpg`,
-            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/0e75d8c2-e01a-43a7-899e-e786b7d47a7d-T03-slider-5-responsive.png`,
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/36a44e7c-f692-4c49-8481-105fb96da123-T03-section-4-slider-1-5bg-min.jpg`,
+            bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/b382e5c3-2ac6-4768-b94a-3a41d59e1ca2-T03-section-4-slider-1-5bg-responsive-min.jpg`,
 
         },
         {
             title: t('T03.carswipper1.title'),
             subTitle: t('T03.carswipper1.subtitle'),
-            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/0c4362b2-fbca-4a69-843a-4bd1a27a34f8-T03-section-4-slider-1-5bg.jpg`,
+            bg: `${process.env.NEXT_PUBLIC_API_URL}/media/7de7ff6b-e1fe-4b34-8607-fca1c2135021-T03-section-4-slider-1-1bg-min.jpg`,
             bgRes: `${process.env.NEXT_PUBLIC_API_URL}/media/0049fb38-5ade-454b-9159-9de1308181da-T03-section-4-slider-1-5bg-responsive.png`,
 
         },
@@ -192,7 +192,7 @@ const T03 = () => {
                                 </div>
                                 <div className="flex justify-center">
                                     <div
-                                        className="flex flex-wrap justify-center  text-white md:gap-x-0 gap-x-2 gap-y-2"
+                                        className="flex flex-wrap justify-center text-white md:gap-x-0 gap-x-2 gap-y-2"
                                     >
                                         <div
                                             className="flex gap-3 items-center justify-center md:w-[33%] md:border-r-2  ">
@@ -233,7 +233,7 @@ const T03 = () => {
                 </section>
                 <CarBanner title={t('T03.section3.title')} subTitle={t('T03.section3.subtitle')}
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/c6130371-42d6-4fe6-84f8-dfd52b99a638-T03-section-3-bg.jpg`}
-                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/4a61b577-b2cf-4b1c-8d5b-ba03d750817c-T03-section-3bg-responsive.jpg`}
+                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/57faae92-2f31-4786-875c-25f6b15bbf91-T03-section-3bg-responsive-min.jpg`}
                            textColor={'black'}/>
 
 
@@ -249,7 +249,7 @@ const T03 = () => {
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/92e586ac-173f-4c12-ad0d-8a8733b881bc-T03-section-7-bg.jpg`}
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/1c6e7ff6-9216-4060-aa39-180e53fa330a-T03-section-7bg-responsive.jpg`}/>
                 <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
-                    <div className="container mx-auto pb-10">
+                    <div className="container pb-10 mx-auto">
                         <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
                     </div>
