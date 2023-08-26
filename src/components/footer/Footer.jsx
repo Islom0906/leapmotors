@@ -4,10 +4,10 @@ import Image from "next/image";
 import { AiFillFacebook } from "react-icons/ai";
 
 import {RiInstagramFill} from 'react-icons/ri';
-import {BsTwitter} from 'react-icons/bs';
 import {useRouter} from "next/router";
 import {useQuery} from "react-query";
 import apiService from "@/service/api";
+import {FaTelegram} from "react-icons/fa";
 
 
 const Footer = () => {
@@ -57,7 +57,7 @@ const Footer = () => {
                 </ul>
 
                 <div className="flex flex-col items-center space-y-3 md:items-start">
-                <div className="flex space-x-5  text-[#898989] ">
+                <div className="flex items-center space-x-5  text-[#898989] ">
                     <a target={'_blank'} href={data?.data?.facebook} className="">
                       <AiFillFacebook
                           className="text-xl md:text-2xl"
@@ -70,8 +70,8 @@ const Footer = () => {
                       />
                     </a>
                     <a target={'_blank'} href={data?.data?.twitter} className="">
-                      <BsTwitter
-                          className="text-xl md:text-2xl"
+                      <FaTelegram
+                          className="text-xl md:text-[23px]"
 
                       />
                     </a>
