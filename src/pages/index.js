@@ -31,7 +31,7 @@ export default function Home({banner, products}) {
             </Head>
             <main className={'bg-black section'}>
                 <section className="relative w-full h-screen scroll-snap">
-                    <video className="object-cover w-full h-full" autoPlay playsinline  loop muted>
+                    <video className="object-cover w-full h-full" autoPlay  loop muted>
                         <source className="w-full"
                                 src={`${process.env.NEXT_PUBLIC_API_URL}/${banner?.videoBanner?.path}`}
                                 type="video/mp4"/>

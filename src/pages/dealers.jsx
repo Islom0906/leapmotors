@@ -5,6 +5,7 @@ import apiService from "@/service/api";
 import {useEffect, useState} from "react";
 import {LuLoader2} from "react-icons/lu";
 import ModalSuccess from "@/components/modal-success/modal-success";
+import InputMask from "react-input-mask";
 
 
 const dealers = () => {
@@ -332,14 +333,26 @@ const dealers = () => {
                 >
                   Контактный номер
                 </label>
-                <input
-                  type="number"
-                  {...register('contactPhone',{required:true})}
-
-                  id="contactPhone"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  placeholder="+998 (--) --- -- --"
+                <InputMask
+                    // mask options
+                    mask="+\9\98 (99) 999-99-99"
+                    alwaysShowMask={false}
+                    // input options
+                    id="contactPhone"
+                    type={'text'}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    placeholder="+998 99 999 99 99"
+                    // react hook form register
+                    {...register('contactPhone',{required:true})}
                 />
+                {/*<input*/}
+                {/*  type="number"*/}
+                {/*  {...register('contactPhone',{required:true})}*/}
+
+                {/*  id="contactPhone"*/}
+                {/*  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "*/}
+                {/*  placeholder="+998 (--) --- -- --"*/}
+                {/*/>*/}
                 {errors.contactPhone && <span className={'text-red-600 text-xs'}>Требуется контактный номер</span>}
 
               </div>

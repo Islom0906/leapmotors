@@ -1,13 +1,13 @@
 import Image from "next/image";
 import {useMutation, useQuery} from "react-query";
 import apiService from "@/service/api";
-import Link from "next/link";
+
 import {useEffect, useState} from "react";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-import {useForm,Controller} from "react-hook-form";
+import {useForm} from "react-hook-form";
 import {LuLoader2} from "react-icons/lu";
-import InputMask from 'react-input-mask';
 import ModalSuccess from "@/components/modal-success/modal-success";
+import InputMask from 'react-input-mask';
 
 const Drive = () => {
   const {register,handleSubmit,control,reset,formState:{errors}}=useForm()
@@ -21,10 +21,10 @@ const Drive = () => {
     isSuccess:userPostSuccess
   } = useMutation(({url, data}) => apiService.postData(url, data))
 
+
   const [bg,setBg]=useState('')
   const [isActive,setIsActive]=useState(0)
   const [isModal,setModal]=useState(false)
-
 
   useEffect(() => {
     const defaultBg=data?.data[0]
@@ -58,6 +58,21 @@ const Drive = () => {
     userPost({url: '/testDrive', data: postData})
     console.log(postData)
   }
+
+  const handlePhoneNumberChange = (event) => {
+    // Remove any non-digit characters from the input
+    const rawValue = event.target.value.replace(/\D/g, '');
+
+
+
+
+// Format the input according to the mask
+
+
+    let formattedValue = '+998 ' + rawValue.slice(2, 4) + ' ' + rawValue.slice(4, 7) + ' ' + rawValue.slice(7, 9) + ' ' + rawValue.slice(9, 11);
+
+    setPhoneNumber(formattedValue);
+  };
 
   return (
     <section className="relative min-h-screen">
@@ -105,18 +120,18 @@ const Drive = () => {
                   >
                     <option value={''}>Выберите регион</option>
                     <option value="Ташкент">Ташкент</option>
-                    <option value="Андижан">Андижан</option>
-                    <option value="Бухара">Бухара</option>
-                    <option value="Фергана">Фергана</option>
-                    <option value="Жиззах">Жиззах</option>
-                    <option value="Хоразм">Хоразм</option>
-                    <option value="Наманган">Наманган</option>
-                    <option value="Навоий">Навоий</option>
-                    <option value="Қашқадарё">Қашқадарё</option>
-                    <option value="Қорақалпоғистон">Қорақалпоғистон</option>
-                    <option value="Самарқанд">Самарқанд</option>
-                    <option value="Сирдарё">Сирдарё</option>
-                    <option value="Сурхондарё">Сурхондарё</option>
+                    {/*<option value="Андижан">Андижан</option>*/}
+                    {/*<option value="Бухара">Бухара</option>*/}
+                    {/*<option value="Фергана">Фергана</option>*/}
+                    {/*<option value="Жиззах">Жиззах</option>*/}
+                    {/*<option value="Хоразм">Хоразм</option>*/}
+                    {/*<option value="Наманган">Наманган</option>*/}
+                    {/*<option value="Навоий">Навоий</option>*/}
+                    {/*<option value="Қашқадарё">Қашқадарё</option>*/}
+                    {/*<option value="Қорақалпоғистон">Қорақалпоғистон</option>*/}
+                    {/*<option value="Самарқанд">Самарқанд</option>*/}
+                    {/*<option value="Сирдарё">Сирдарё</option>*/}
+                    {/*<option value="Сурхондарё">Сурхондарё</option>*/}
                   </select>
                   {errors.region && <span className={'text-red-600 text-xs'}>Требуется регион</span>}
                 </div>
@@ -133,8 +148,8 @@ const Drive = () => {
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   >
                     <option value={''}>Выберите дилеров</option>
-                    <option value="Парковка рынка Олой">
-                      Парковка рынка Олой
+                    <option value="Leapmotorca">
+                      Leapmotorca
                     </option>
                   </select>
                   {errors.dealer && <span className={'text-xs text-red-600'}>Требуется дилера</span>}
@@ -157,6 +172,7 @@ const Drive = () => {
                       {...register('day',{required:true})}
                     id="day"
                       type={'date'}
+                      placeholder={'01.01.2024'}
                     className="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
                   />
                   {errors.day && <span className={'text-xs text-red-600'}>Требуется день</span>}
@@ -232,30 +248,26 @@ const Drive = () => {
                     Телефон
                   </label>
 
-                  {/* <Controller
-        control={control}
-        name="tel"
-        defaultValue=""
-        rules={{ required: true }}
-        render={({ field }) => (
-          <InputMask
-            mask="+(999) "
-            maskChar="_"
-            id="tel"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="+(998) "
-            {...field}
-          />
-        )}
-      /> */}
-
-                  <input
-                    type="number"
-                    {...register('tel',{required:true})}
-                    id="tel"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                    placeholder="+(998) "
+                  <InputMask
+                      // mask options
+                      mask="+\9\98 (99) 999-99-99"
+                      alwaysShowMask={false}
+                      // input options
+                      id={'tel'}
+                      type={'text'}
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="+998 99 999 99 99"
+                      // react hook form register
+                      {...register("tel", { required: true })}
                   />
+
+                  {/*<input*/}
+                  {/*  type="number"*/}
+                  {/*  {...register('tel',{required:true})}*/}
+                  {/*  id="tel"*/}
+                  {/*  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "*/}
+                  {/*  placeholder="+(998) "*/}
+                  {/*/>*/}
                   {errors.tel && <span className={'text-xs text-red-600'}>Требуется телефон данные</span>}
 
                 </div>

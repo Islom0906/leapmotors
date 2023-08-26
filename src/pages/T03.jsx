@@ -248,7 +248,7 @@ const T03 = () => {
 
                 </section>
                 <CarBanner title={t('T03.section3.title')} subTitle={t('T03.section3.subtitle')}
-                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/c6130371-42d6-4fe6-84f8-dfd52b99a638-T03-section-3-bg.jpg`}
+                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/a9765f3d-6b81-4c67-b4f0-f7c2b732fb5a-Group 49-min.jpg`}
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/57faae92-2f31-4786-875c-25f6b15bbf91-T03-section-3bg-responsive-min.jpg`}
                            textColor={'black'}/>
 

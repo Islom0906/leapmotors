@@ -17,7 +17,7 @@ const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong }) => {
           <div className="flex items-center justify-center w-full ">
               {img ? (
             <div className={`h-10 mb-3 relative  ${imgLong ? 'w-[500px]' : 'w-[88px] sm:w-[95px]'} `}>
-                <Image  src={img} alt="logo" className="object-contain w-full h-full " fill/>
+                <Image  src={img} alt="logo" className="object-contain w-full h-full " fill priority={true}/>
             </div>
               ) : (
                 <h3 className="text-white font-arial-semibold text-[22px] leading-7 md:leading-8">

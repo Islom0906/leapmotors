@@ -214,7 +214,7 @@ const C11Reev = () => {
       <main className={"bg-black"}>
         <CarDetailBanner
           imgLong={true}
-          img={`${process.env.NEXT_PUBLIC_API_URL}/media/7761680e-347d-47c4-a96a-4eccfd8f2ec1-slide-01-logo.png`}
+          img={`${process.env.NEXT_PUBLIC_API_URL}/media/fc3b974d-117e-4a1d-a2ee-e1d324eb7b17-c11reev.png`}
           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7c0b9341-73dc-4f0c-a4f5-6853f6ed5751-C11-Reev-section-1bg.jpg`}
           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/957044ed-0e6b-408b-9ac9-a2b88d1c0ee6-slide-01-new.jpg`}
           text={t("c11reev.section1")}

@@ -106,8 +106,8 @@ const Navbar = () => {
                                           className="capitalize">{t('navbar.dealers')}</Link></li>
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="#"
                                           className="capitalize">{t('navbar.service')}</Link></li>
-                                <li><Link onClick={(e) => showSidebar(e, false)} href="/drive"
-                                          className="block capitalize lg:hidden">{t('navbar.testDrive')}</Link></li>
+                                <li className={'block  lg:hidden'}><Link onClick={(e) => showSidebar(e, false)} href="/drive"
+                                          className="capitalize ">{t('navbar.testDrive')}</Link></li>
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="#"
                                           className="capitalize">{t('navbar.accessories')}</Link></li>
                                 {/*
