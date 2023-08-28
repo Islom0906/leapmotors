@@ -22,9 +22,9 @@ const news = ({news}) => {
             <section className="mt-4">
                 <div className="container ">
                     <div className="pt-[80px] pb-[60px]">
-                        <Link href="#" className="text-[#4d5d81] text-[20px] font-semibold"
+                        <p  className="text-[#4d5d81] text-[20px] font-semibold"
                         >{t('news.title')}
-                        </Link>
+                        </p>
                     </div>
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                         {

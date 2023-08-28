@@ -51,9 +51,8 @@ const dealers = () => {
           </Head>
             <div className="pt-[80px]">
                 <div className="container">
-
                     <div
-                        className="text-[#4d5d81]   relative mb-5 text-xl font-bold leading-7  md:text-3xl font-arial-semibold md:leading-8"
+                        className="text-[#4d5d81]   relative mb-1 pt-4 text-xl font-bold leading-7 font-semibold  font-arial-semibold md:leading-8"
                     >{t('dealers.title')}
                     </div>
                     <p className="text-md z-10 md:text-lg text-[#4d5d81]">{t('dealers.text')}
@@ -66,7 +65,7 @@ const dealers = () => {
                     <h5 className="text-base font-bold md:text-xl">Общая информация</h5>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         {/* md:grid-cols-2 */}
-                        <div className="grid grid-cols-1 gap-5">
+                        <div className="grid grid-cols-1 gap-5 mb-5">
                             <div>
                                 <label
                                     htmlFor="nameEnterprises"
@@ -86,7 +85,7 @@ const dealers = () => {
                             </div>
                         </div>
                         {/* md:grid-cols-2 lg:grid-cols-3 */}
-                        <div className="grid grid-cols-1 gap-5 ">
+                        <div className="grid grid-cols-1 gap-5 mb-5">
                             <div>
                                 <label
                                     htmlFor="countries"
@@ -155,7 +154,7 @@ const dealers = () => {
                             </div>
                         </div>
                         {/* lg:grid-cols-3 */}
-                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 ">
+                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mb-5">
                             <div>
                                 <h5 className="text-base font-bold md:text-xl">
                                     Прочая информация
@@ -182,7 +181,7 @@ const dealers = () => {
                                 <h5 className="text-base font-bold md:text-xl">
                                     Наличие шоурума
                                 </h5>
-                                <div className="flex justify-between space-x-1 ">
+                                <div className="flex justify-between space-x-5 ">
                                     <div className="w-full">
                                         <label
                                             htmlFor="showroomTotalAreat"
@@ -223,7 +222,7 @@ const dealers = () => {
                                     </div>
                                 </div>
                                 <h5 className="text-base font-bold md:text-xl">Наличие СТО</h5>
-                                <div className="flex justify-between space-x-1">
+                                <div className="flex justify-between space-x-5">
                                     <div className="w-full">
                                         <label
                                             htmlFor="serviceTotalArea"
@@ -263,7 +262,7 @@ const dealers = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-1 space-y-3 md:col-span-2">
+                            <div className="col-span-1 space-y-5 md:col-span-2">
                                 <h5 className="text-base font-bold md:text-xl">Наличие опыта</h5>
                                 <div>
                                     <label
