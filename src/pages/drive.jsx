@@ -18,10 +18,7 @@ const Drive = () => {
         data,
     } = useQuery('get-model', () => apiService.getData('/product'))
     const {
-        mutate: userPost,
-        data: userPostData,
-        isLoading: userPostLoading,
-        isSuccess: userPostSuccess
+        mutate: userPost, data: userPostData, isLoading: userPostLoading, isSuccess: userPostSuccess
     } = useMutation(({url, data}) => apiService.postData(url, data))
 
 
@@ -33,15 +30,16 @@ const Drive = () => {
         const defaultBg = data?.data[0]
         if (model === "") {
             setBg(defaultBg)
-
         } else {
-            data?.data?.map((item, ind) => {
+            data?.data?.map((item) => {
                 if (item?.model === model) {
                     setBg(item)
+                    console.log(item)
                 }
             })
 
         }
+        console.log('render')
     }, [data]);
 
     useEffect(() => {
@@ -79,24 +77,10 @@ const Drive = () => {
 
         const postData = {...data, model: bg?.model}
         userPost({url: '/testDrive', data: postData})
-        console.log(postData)
     }
 
-    const handlePhoneNumberChange = (event) => {
-        // Remove any non-digit characters from the input
-        const rawValue = event.target.value.replace(/\D/g, '');
 
-
-// Format the input according to the mask
-
-
-        let formattedValue = '+998 ' + rawValue.slice(2, 4) + ' ' + rawValue.slice(4, 7) + ' ' + rawValue.slice(7, 9) + ' ' + rawValue.slice(9, 11);
-
-        setPhoneNumber(formattedValue);
-    };
-
-    return (
-        <>
+    return (<>
             <Head>
                 <title>Leapmotorca Test Drive</title>
                 <meta property='og:title'
@@ -104,7 +88,7 @@ const Drive = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
-            <section className="relative min-h-screen">
+            <section className="relative min-h-screen bg-black">
                 <Image
                     src={`${process.env.NEXT_PUBLIC_API_URL}/${bg?.imageBanner?.path}`}
                     fill
@@ -117,18 +101,16 @@ const Drive = () => {
                         <div
                             className="px-3 py-3 space-y-5 border border-black sm:py-5 sm:px-5 rounded-xl h-fit drive-card md:cols-span-1">
                             <ul className="flex text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg shadow ">
-                                {
-                                    data?.data?.map((model, ind) => (
-                                        <li key={model?._id} className="w-full" onClick={() => checkModel(model, ind)}>
-                                            <button
-                                                className={`block w-full h-full p-2 font-bold   ${isActive === ind ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-900'} ${ind === 0 ? 'rounded-l-lg' : data?.data?.length - 1 === ind ? "rounded-r-lg" : ""}  active focus:outline-none`}>
-                                                {model?.model}
-                                            </button>
-                                        </li>
+                                {data?.data?.map((model, ind) => (
+                                    <li key={model?._id} className="w-full" onClick={() => checkModel(model, ind)}>
+                                        <button
+                                            className={`block w-full h-full p-2 font-bold   ${isActive === ind ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-900'} ${ind === 0 ? 'rounded-l-lg' : data?.data?.length - 1 === ind ? "rounded-r-lg" : ""}  active focus:outline-none`}>
+                                            {model?.model}
+                                        </button>
+                                    </li>
 
 
-                                    ))
-                                }
+                                ))}
 
                             </ul>
                             <form onSubmit={handleSubmit(onSubmit)} className="space-y-2 sm:space-y-3">
@@ -312,11 +294,8 @@ const Drive = () => {
                                 </div>
                                 <div className="flex justify-center ">
                                     <button className="px-3 py-2 text-white bg-blue-500 rounded-xl hover:bg-blue-400 ">
-                                        {
-                                            userPostLoading ?
-                                                <span><LuLoader2 className={'animate-spin'}/></span> :
-                                                <span>Отправить запрос</span>
-                                        }
+                                        {userPostLoading ? <span><LuLoader2 className={'animate-spin'}/></span> :
+                                            <span>Отправить запрос</span>}
 
 
                                     </button>
