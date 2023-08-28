@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 
 import '../localization/i18n'
 import {useEffect} from "react";
-// import {useTranslation} from "react-i18next";
+import {useTranslation} from "react-i18next";
 import 'aos/dist/aos.css';
 import {Provider, useDispatch} from "react-redux";
 import {store} from "@/store";
