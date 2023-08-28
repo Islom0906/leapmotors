@@ -11,7 +11,7 @@ import Head from "next/head";
 
 const dealers = () => {
     const {t} = useTranslation()
-    const {register, handleSubmit, control, reset, formState: {errors}} = useForm()
+    const {register, handleSubmit, reset, formState: {errors}} = useForm()
     const {
         mutate: userPost,
         data: userPostData,

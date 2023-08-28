@@ -13,7 +13,7 @@ import {useSelector} from "react-redux";
 
 const Drive = () => {
     const {model} = useSelector(state => state.drive)
-    const {register, handleSubmit, control, reset, formState: {errors}} = useForm()
+    const {register, handleSubmit, reset, formState: {errors}} = useForm()
     const {
         data,
     } = useQuery('get-model', () => apiService.getData('/product'))

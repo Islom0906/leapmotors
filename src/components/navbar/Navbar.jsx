@@ -13,7 +13,6 @@ import {useQuery} from "react-query";
 import {checkCarModel} from "@/slice/testDrive";
 
 const Navbar = () => {
-    const [openNavbar, setOpenNavbar] = useState(false)
     const [checkLang, setCheckLang] = useState('ru')
     const [isChangeLang, setIsChangeLang] = useState(false)
     const {t, i18n} = useTranslation()

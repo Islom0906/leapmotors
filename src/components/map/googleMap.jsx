@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, { useState} from 'react';
 import {GoogleMap, InfoWindowF, MarkerF, useLoadScript} from "@react-google-maps/api";
 
 import {RiMapPinLine, RiPhoneLine, RiTimeLine} from "react-icons/ri";

@@ -1,7 +1,6 @@
 import {
   CarDetailBanner,
   CarBannerC11Reev,
-  CarCharacteristics,
   CarSwiper,
   CarBanner,
   CarSwiperInnerVideo,
@@ -10,8 +9,7 @@ import {
 } from "@/components";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
-import { CarSwiperInner } from "@/components";
+import  { Pagination, Navigation } from "swiper";
 import Head from "next/head";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import { useTranslation } from "react-i18next";

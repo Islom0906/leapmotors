@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {useTranslation} from "react-i18next";
 import {useDispatch} from "react-redux";
-import {CarModelSlice, checkCarModel} from "@/slice/testDrive";
+import { checkCarModel} from "@/slice/testDrive";
 
 const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong ,model}) => {
   const {t}=useTranslation()
