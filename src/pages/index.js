@@ -24,8 +24,8 @@ export default function Home({banner, products}) {
     return (
         <>
             <Head>
-                <title>Leap-Motor</title>
-                <meta property='og:title' content="Leapmotor,Leapmotors,Leapmotor uz, Leapmotor uzbekistan,Leap-motor"/>
+                <title>Leapmotorca</title>
+                <meta property='og:title' content="Leapmotorca,Leapmotorca,Leapmotor uz, Leapmotor uzbekistan,Leapmotorca"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>

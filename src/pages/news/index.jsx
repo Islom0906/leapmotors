@@ -15,8 +15,8 @@ const news = ({news}) => {
 
         <>
             <Head>
-                <title>Leap-Motor News</title>
-                <meta property='og:title' content="Leapmotor uz News, Leapmotor uzbekistan News,Leap-motor News"/>
+                <title>Leapotorca News</title>
+                <meta property='og:title' content="Leapotorca uz News, Leapmotor uzbekistan News,Leapotorca News"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>

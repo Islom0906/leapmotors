@@ -10,6 +10,7 @@ import {isShowSidebar} from "@/slice/sidebar";
 import {checkLanguageAction} from "@/slice/language";
 import apiService from "@/service/api";
 import {useQuery} from "react-query";
+import {checkCarModel} from "@/slice/testDrive";
 
 const Navbar = () => {
     const [openNavbar, setOpenNavbar] = useState(false)
@@ -75,12 +76,14 @@ const Navbar = () => {
             </div>
             <div className="flex items-center md:gap-14">
                 <Link href="/drive"
+                      onClick={()=>dispatch(checkCarModel(""))}
                       className=" border-white border px-4 py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.testDrive')}</Link>
                 <div className="side-r">
                     <GiHamburgerMenu onClick={(e) => showSidebar(e, !show)}
                                      className="text-2xl text-white cursor-pointer"/>
+                    <div className={`backdrop-brightness-50 w-full h-screen fixed top-0 left-0 right-0 bottom-0 ${show ? 'block' : 'hidden'} duration-1000 ease-in-out`}></div>
                     <div onClick={(e) => e.stopPropagation()}
-                         className={`fixed top-0 ${show ? 'right-0' : '-right-full'} transition-[right]  duration-[.9s] bg-white w-full xs:w-[200px] h-screen pt-5 pb-10 px-5 text-[#808080] shadow-2xl flex flex-col justify-between z-[99]`}>
+                         className={`fixed top-0 ${show ? 'right-0' : '-right-full'}  duration-500 ease-in-out bg-white w-full xs:w-[200px] h-screen pt-5 pb-10 px-5 text-[#808080] shadow-2xl flex flex-col justify-between z-[99]`}>
                         <div>
                             <div className="flex justify-end mb-10">
                                 <GrClose onClick={(e) => showSidebar(e, !show)}

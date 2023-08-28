@@ -179,8 +179,8 @@ const carSwipper6 = [
     return (
         <>
             <Head>
-                <title>Leap-Motor C11</title>
-                <meta property='og:title' content="Leapmotor uz C11, Leapmotor uzbekistan C11,Leap-motor C11"/>
+                <title>Leapotorca C11</title>
+                <meta property='og:title' content="Leapotorca uz C11, Leapmotor uzbekistan C11,Leapotorca C11"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
@@ -189,7 +189,9 @@ const carSwipper6 = [
                     bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/0b888d22-680d-462c-b673-b77a71c58a9f-screen1-1-2023.jpg`}
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/41e0fc8d-704a-493a-b7fc-cb2f23a1a20f-index-4-section-bg.jpg`}
                     logo={`${process.env.NEXT_PUBLIC_API_URL}/media/ab46d0a8-9d58-41e8-ba6d-06d50dadcc3d-logo-C11.png`}
-                    characteristics={characteristics1}/>
+                    characteristics={characteristics1}
+                    model={'C11'}
+                />
                 <CarCharacteristics
                     bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/eee83706-5ca0-4d6e-9728-697b7fd3d350-Group 48-min.jpg`}
 

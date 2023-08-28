@@ -1,6 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
+import {useTranslation} from "react-i18next";
+import {useDispatch} from "react-redux";
+import {CarModelSlice, checkCarModel} from "@/slice/testDrive";
 
-const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong }) => {
+const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong ,model}) => {
+  const {t}=useTranslation()
+  const dispatch=useDispatch()
   return (
     <>
       <section className="relative h-screen">
@@ -30,6 +36,17 @@ const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong }) => {
               {text}
             </p>
           </div>
+          {
+            model &&
+          <Link
+
+              href="/drive"
+              onClick={()=>dispatch(checkCarModel(model))}
+              className="text-white text-lg bg-transparent border border-white w-[185px] flex mx-auto justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
+          >
+            {t('navbar.testDrive')}
+          </Link>
+          }
         </div>
       </section>
     </>

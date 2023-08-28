@@ -203,10 +203,10 @@ const C11Reev = () => {
   return (
     <>
       <Head>
-        <title>Leap-Motor C11REEV</title>
+        <title>Leapotorca C11REEV</title>
         <meta
           property="og:title"
-          content="Leapmotor uz C11REEV, Leapmotor uzbekistan C11REEV,Leap-motor C11REEV"
+          content="Leapmotor Leapotorca C11REEV, Leapmotor uzbekistan C11REEV,Leapotorca C11REEV"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/brand.png" />
@@ -218,6 +218,7 @@ const C11Reev = () => {
           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7c0b9341-73dc-4f0c-a4f5-6853f6ed5751-C11-Reev-section-1bg.jpg`}
           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/957044ed-0e6b-408b-9ac9-a2b88d1c0ee6-slide-01-new.jpg`}
           text={t("c11reev.section1")}
+          model={'C11Reev'}
         />
         <CarBannerC11Reev
           title={t("c11reev.section2.title")}

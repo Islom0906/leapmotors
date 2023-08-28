@@ -16,8 +16,8 @@ export default function About({about}) {
     return (
         <>
             <Head>
-                <title>Leap-Motor About</title>
-                <meta property='og:title' content="Leapmotor uz About, Leapmotor uzbekistan About,Leap-motor About"/>
+                <title>Leapotorca About</title>
+                <meta property='og:title' content="Leapotorca uz About, Leapmotor uzbekistan About,Leapotorca About"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>

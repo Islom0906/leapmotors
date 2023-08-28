@@ -37,7 +37,7 @@ const GoogleMaps = ({mapData}) => {
     return (
         <>
             <div
-                className={` ${mapData.length>1 ? 'flex' : 'hidden' } static md:absolute top-[10%] left-[3%] md:w-[460px] w-[90%] mx-auto  flex-col md:gap-0 gap-3 items-center  md:py-0 py-5   divide-y-0 md:divide-y max-h-[80%] overflow-y-auto z-50`}>
+                className={` ${mapData.length>0 ? 'flex' : 'hidden' } static shadow-xl md:absolute top-[10%] left-[3%] md:w-[460px] w-[90%] mx-auto  flex-col md:gap-0 gap-3 items-center  md:py-0 py-5   divide-y-0 md:divide-y max-h-[80%] overflow-y-auto z-50`}>
                 {
                     mapData.map((item, ind) => (
                         <div
@@ -63,13 +63,14 @@ const GoogleMaps = ({mapData}) => {
                     ))
                 }
             </div>
-            <div className="h-[400px] md:h-screen">
+            <div className="h-[400px] md:h-screen ">
                 {!isLoaded ? (
                     <h1>Loading...</h1>
                 ) : (
                     <GoogleMap
                         mapContainerClassName="map-container"
                         onLoad={onLoad}
+                        options={{mapId: '5d4e37b408dbedeb'}}
                     >
                         {mapData.map(({lat, lng, addressRu, addressUz, nameRu, nameUz, workingTime, tel}, ind) => (
                             <MarkerF position={{lat:Number(lat), lng:Number(lng)}} key={ind}

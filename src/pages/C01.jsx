@@ -23,19 +23,19 @@ const characteristics = {
     about: [
         {
             title: t('c01.characteristics.title3'),
-            text: "5050"
+            text: "5050мм"
         },
         {
             title: t('c01.characteristics.title4'),
-            text: "1902"
+            text: "1902мм"
         },
         {
             title:t('c01.characteristics.title5'),
-            text: "1509"
+            text: "1509мм"
         },
         {
             title: t('c01.characteristics.title6'),
-            text: "2930"
+            text: "2930мм"
         }
     ]
 }
@@ -321,8 +321,8 @@ const characteristics = {
     return (
         <>
             <Head>
-                <title>Leap-Motor C01</title>
-                <meta property='og:title' content="Leapmotor uz C01, Leapmotor uzbekistan C01,Leap-motor C01"/>
+                <title>Leapotorca C01</title>
+                <meta property='og:title' content="Leapotorca uz C01, Leapmotor uzbekistan C01,Leapotorca C01"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
@@ -331,7 +331,9 @@ const characteristics = {
                     img={`${process.env.NEXT_PUBLIC_API_URL}/media/e370fbc7-ad3c-4828-a089-2d424e67c0ac-section-2-logo.png`}
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/3b3cabd0-04eb-438b-b1f0-c56cb93d72cc-C01-1-section-bg.jpg`}
                     bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/7faf1f68-58ef-49a2-bd08-6f9b5759a7d4-screen1-1-2023.png`}
-                    text={t('c01.CarDetailBanner.title')}/>
+                    text={t('c01.CarDetailBanner.title')}
+                    model={'C01'}
+                />
 
                 <CarCharacteristics
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/32b56318-d01e-477e-b75d-1bcb823dde04-C01-section-2-bg.jpg`}
