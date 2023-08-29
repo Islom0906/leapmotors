@@ -15,6 +15,8 @@ import {checkCarModel} from "@/slice/testDrive";
 const Navbar = () => {
     const [checkLang, setCheckLang] = useState('ru')
     const [isChangeLang, setIsChangeLang] = useState(false)
+    const [sortProduct,setSortProduct]=useState([])
+
     const {t, i18n} = useTranslation()
     const {show} = useSelector(state => state.sidebar)
     const dispatch = useDispatch()
@@ -26,6 +28,27 @@ const Navbar = () => {
         e.stopPropagation()
         dispatch(isShowSidebar(show))
     }
+
+    useEffect(()=>{
+        const productSort=[]
+        data?.data?.map(product=>{
+            console.log(product?._id)
+            if (product?.model==='T03'){
+                productSort[0]=product
+            }
+            if (product?.model==='C01'){
+                productSort[1]=product
+            }
+            if (product?.model==='C11'){
+                productSort[2]=product
+            }
+            if (product?.model==='C11Reev'){
+                productSort[3]=product
+            }
+        })
+
+        setSortProduct(productSort)
+    },[data])
 
     // useEffect(() => {
     //     // const defaultLang = localStorage.getItem('langLeap')
@@ -62,7 +85,7 @@ const Navbar = () => {
                 </Link>
                 <ul className="items-center hidden gap-10 text-white uppercase lg:flex">
                     {
-                        data?.data?.map(link => (
+                        sortProduct?.map(link => (
                             <li key={link?._id}>
                                 <Link href={`/${link?.model}`}
                                       className="hover:underline hover:text-[#4f5f82] transition-all ease duration-500 underline-offset-8 font-semibold">{link?.model}</Link>

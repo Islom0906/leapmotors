@@ -42,7 +42,8 @@ const GoogleMaps = ({mapData}) => {
                     mapData.map((item, ind) => (
                         <div
                             className={'space-y-2 sm:space-y-3 px-4 py-2 sm:px-7 sm:py-5 cursor-pointer bg-white rounded-lg md:rounded-none w-full'}
-                            key={ind}>
+                            key={ind}
+                        onClick={()=>handleMarkerClick(ind,Number(item.lat), Number(item.lng), item.addressRu, item.addressUz, item.nameRu, item.nameUz, item.workingTime, item.tel)}>
                             <h3 className={'text-xl'}>{item.nameRu}</h3>
                             <div className={'space-y-2'}>
                                 <div className={'flex items-start gap-3'}>
