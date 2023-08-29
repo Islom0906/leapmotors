@@ -100,16 +100,16 @@ const Footer = () => {
                     {/*  <span> {t('footer.address')} </span>*/}
                     {/*</a>*/}
                   </div>
-                  <a target={'_blank'}
-                        className="text-base text-[#898989] font-bold flex gap-3 items-center justify-center md:justify-end"
-                        href={"https://abduganiev.uz/"}
-                    >
-                      <span>{t('footer.createdBy')}</span>
-                      <div className={'w-[50px] h-[50px] relative'}>
-                        <Image className="flex-shrink-0 w-10 object-contain md:w-14 hover:rotate-[360deg] duration-700" alt={'abduganiev logo'} fill src={'/A.png'} />
+                  {/*<a target={'_blank'}*/}
+                  {/*      className="text-base text-[#898989] font-bold flex gap-3 items-center justify-center md:justify-end"*/}
+                  {/*      href={"https://abduganiev.uz/"}*/}
+                  {/*  >*/}
+                  {/*    <span>{t('footer.createdBy')}</span>*/}
+                  {/*    <div className={'w-[50px] h-[50px] relative'}>*/}
+                  {/*      <Image className="flex-shrink-0 w-10 object-contain md:w-14 hover:rotate-[360deg] duration-700" alt={'abduganiev logo'} fill src={'/A.png'} />*/}
 
-                      </div>
-                    </a>
+                  {/*    </div>*/}
+                  {/*  </a>*/}
                 </div>
                
               </div>
