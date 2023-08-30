@@ -321,9 +321,12 @@ const characteristics = {
     return (
         <>
             <Head>
-                <title>Leapotorca C01</title>
-                <meta property='og:title' content="Leapotorca uz C01, Leapmotor uzbekistan C01,Leapotorca C01"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Leapotorca C01</title>
+                <meta
+                    property="og:title"
+                    content="Leapmotorca C01"
+                />
                 <link rel="icon" href="/brand.png"/>
             </Head>
             <main className={'bg-black'}>

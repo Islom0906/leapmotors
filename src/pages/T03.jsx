@@ -125,7 +125,10 @@ const T03 = () => {
         <>
             <Head>
                 <title>Leapmotorca T03</title>
-                <meta property='og:title' content="Leapmotorca uz T03, Leapmotor uzbekistan T03,Leapmotorca T03"/>
+                <meta
+                    property="og:title"
+                    content="Leapmotorca T03"
+                />
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>

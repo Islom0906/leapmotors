@@ -47,10 +47,20 @@ export default function Home({banner, products}) {
     return (
         <>
             <Head>
-                <title>Leapmotorca</title>
-                <meta property='og:title'
-                      content="Leapmotorca,Leapmotorca,Leapmotor uz, Leapmotor uzbekistan,Leapmotorca"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Leapmotorca</title>
+                <meta property='og:title' content="Leapmotorca , Leapmotorca Home, leapmotorca home"/>
+                <meta name="keywords" content=" Leapmotorca , Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz"/>
+                <meta
+                    property="og:title"
+                    content="Leapmotorca"
+                />
+                <meta
+                    property="og:description"
+                    content="Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности"
+                />
+                <meta property="og:site_name" content="Leapmotorca"/>
+                <meta property="og:image" content="/brand.png"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
             <main className={'bg-black section'}>

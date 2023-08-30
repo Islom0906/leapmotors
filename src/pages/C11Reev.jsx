@@ -201,12 +201,12 @@ const C11Reev = () => {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Leapotorca C11REEV</title>
         <meta
-          property="og:title"
-          content="Leapmotor Leapotorca C11REEV, Leapmotor uzbekistan C11REEV,Leapotorca C11REEV"
+            property="og:title"
+            content="Leapmotorca C11Reev"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/brand.png" />
       </Head>
       <main className={"bg-black"}>

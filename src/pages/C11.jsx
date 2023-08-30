@@ -179,9 +179,12 @@ const carSwipper6 = [
     return (
         <>
             <Head>
-                <title>Leapotorca C11</title>
-                <meta property='og:title' content="Leapotorca uz C11, Leapmotor uzbekistan C11,Leapotorca C11"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Leapotorca C11</title>
+                <meta
+                    property="og:title"
+                    content="Leapmotorca C11"
+                />
                 <link rel="icon" href="/brand.png"/>
             </Head>
             <main className={'bg-black'}>
