@@ -60,7 +60,7 @@ export default function Home({banner, products}) {
                     content="Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности"
                 />
                 <meta property="og:site_name" content="Leapmotorca"/>
-                <meta property="og:image" content="/brand.png"/>
+                <meta property="og:image" content="https://leapmotorca.uz/api/media/5c50e291-35be-46e2-8d99-f5780c1377b9-Leapmotor-logo.png"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
             <main className={'bg-black section'}>
