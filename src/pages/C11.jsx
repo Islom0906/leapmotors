@@ -134,13 +134,13 @@ const carSwipper5 = [
         title: t('C11.section10.title1'),
         subTitle: t('C11.section10.subTitle1'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/8bd90ef7-58de-47d8-95fd-5a0a168a19b5-C11-section-11-slider-1-1bg.jpg`,
-        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/c0669ece-ae4b-4e4e-a171-596d69008239-screen11-2-2023.png`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/7d82a51b-f5ca-40f7-be77-f1b57c9746f8-Group 50-min.jpg`,
     },
     {
         title: t('C11.section10.title2'),
         subTitle: t('C11.section10.subTitle2'),
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/bb59b523-8982-4113-8be6-969379e6f826-C11-section-11-slider-1-2bg.jpg`,
-        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/c0414782-f2e2-4a63-a6dc-52931e1f7608-screen11-1-2023.png`,
+        bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/ac8cc465-91d8-4953-b7a8-e1efb62c12b8-Group 51-min.jpg`,
     }
 ]
 
@@ -179,9 +179,12 @@ const carSwipper6 = [
     return (
         <>
             <Head>
-                <title>Leap-Motor C11</title>
-                <meta property='og:title' content="Leapmotor uz C11, Leapmotor uzbekistan C11,Leap-motor C11"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Leapotorca C11</title>
+                <meta
+                    property="og:title"
+                    content="Leapmotorca C11"
+                />
                 <link rel="icon" href="/brand.png"/>
             </Head>
             <main className={'bg-black'}>
@@ -189,9 +192,11 @@ const carSwipper6 = [
                     bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/0b888d22-680d-462c-b673-b77a71c58a9f-screen1-1-2023.jpg`}
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/41e0fc8d-704a-493a-b7fc-cb2f23a1a20f-index-4-section-bg.jpg`}
                     logo={`${process.env.NEXT_PUBLIC_API_URL}/media/ab46d0a8-9d58-41e8-ba6d-06d50dadcc3d-logo-C11.png`}
-                    characteristics={characteristics1}/>
+                    characteristics={characteristics1}
+                    model={'C11'}
+                />
                 <CarCharacteristics
-                    bgRes={`${process.env.NEXT_PUBLIC_API_URL}/`}
+                    bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/eee83706-5ca0-4d6e-9728-697b7fd3d350-Group 48-min.jpg`}
 
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/adceae5f-ba4e-4e47-ab99-922eebcbb878-C11-section-2-bg.jpg`}
                     characteristics={characteristics2}/>
@@ -204,15 +209,15 @@ const carSwipper6 = [
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/4658f37f-4537-44d8-929c-dfbd6f1f3b71-C11-section-6-bg.jpg`}/>
               {/* Tarjima qilish kk */}
                 <CarBanner title={t('C11.section7.title')}
-                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/9f3c13fa-6810-468f-8f2d-56d9b24e60ce-C11-section-7-bg.jpg`}
-                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/d7b5e1e5-fc7d-467e-a463-a6544e57b8e8-C11-section-7-bg-responsive.jpg`}/>
+                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/93ff1f9e-1fe4-4266-944e-78ee25e5b9f7-screen7-2-min.jpg`}
+                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/86dd19e6-e44b-4728-bae8-dbc783cd7819-Group 55-min.jpg`}/>
                 <CarBanner
-                    bg={`${process.env.NEXT_PUBLIC_API_URL}/media/0bc23872-9c09-4034-82cf-1b411cd67d4c-C11-section-8-bg.jpg`}
-                    bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/72879c1c-b942-4453-85e6-d468b6869282-C11-section-8-bg-responsive.jpg`}/>
+                    bg={`${process.env.NEXT_PUBLIC_API_URL}/media/b2266a95-0b0b-4fd5-9767-8802b2bc65f3-screen8-2-min.jpg`}
+                    bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/eb1610cf-096e-4fa1-a00d-13a250848483-Group 54-min.jpg`}/>
                 <CarBanner title={t('C11.section8.title')}
                            subTitle={t('C11.section8.subTitle')}
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/1e2cd239-f6b8-4890-8942-8552a239d10f-C11-section-9-bg.png`}
-                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/c443ca09-0d4a-4541-b083-50382b7e0d8a-C11-section-9-bg-responsive.jpg`}/>
+                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/be2d8aef-d15f-4375-b781-7e1117f88a33-Group 52-min.jpg`}/>
               {/* tarjima qiliw kk */}
                 <CarSwiper content={carSwipper4}/>
                 <CarSwiper content={carSwipper5}/>

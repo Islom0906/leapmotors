@@ -9,8 +9,8 @@ const DealersCenter = ({filial,filialInner,map}) => {
     return (
         <>
             <Head>
-                <title>Leap-Motor DealersCenter</title>
-                <meta property='og:title' content="Leapmotor uz DealersCenter, Leapmotor uzbekistan DealersCenter,Leap-motor DealersCenter"/>
+                <title>Leapmotorca Dealers Center</title>
+                <meta property='og:title' content="Leapmotorca uz DealersCenter, Leapmotor uzbekistan DealersCenter,Leapmotorca DealersCenter"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>

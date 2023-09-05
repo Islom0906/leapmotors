@@ -16,8 +16,8 @@ export default function About({about}) {
     return (
         <>
             <Head>
-                <title>Leap-Motor About</title>
-                <meta property='og:title' content="Leapmotor uz About, Leapmotor uzbekistan About,Leap-motor About"/>
+                <title>Leapotorca About</title>
+                <meta property='og:title' content="Leapotorca uz About, Leapmotor uzbekistan About,Leapotorca About"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
@@ -90,7 +90,7 @@ export default function About({about}) {
                         <p className="md:w-[95%] text-center text-[#4d5d80] text-xl">{lang === 'ru' ? about[0]?.research?.textRu : about[0]?.research?.textUz}</p>
                         <div className={'w-full h-[31vh] sm:h-[45vh] md:h-[55vh] lg:h-[65vh] xl:h-[685px] relative'}>
                             <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${about[0]?.research?.image?.path}`}
-                                   alt="OS Image" className="w-full " fill/>
+                                   alt="OS Image" className="w-full object-contain" fill/>
 
                         </div>
                     </div>

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import news1 from '/public/About-us/about us section 1.jpg'
 import {NewsCard} from '@/components'
 import Head from "next/head";
 import axios from "axios";
@@ -15,17 +14,17 @@ const news = ({news}) => {
 
         <>
             <Head>
-                <title>Leap-Motor News</title>
-                <meta property='og:title' content="Leapmotor uz News, Leapmotor uzbekistan News,Leap-motor News"/>
+                <title>Leapotorca News</title>
+                <meta property='og:title' content="Leapotorca uz News, Leapmotor uzbekistan News,Leapotorca News"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
             <section className="mt-4">
                 <div className="container ">
                     <div className="pt-[80px] pb-[60px]">
-                        <Link href="#" className="text-[#4d5d81] text-[20px] font-semibold"
+                        <p  className="text-[#4d5d81] text-[20px] font-semibold"
                         >{t('news.title')}
-                        </Link>
+                        </p>
                     </div>
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                         {

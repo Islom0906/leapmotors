@@ -1,4 +1,3 @@
-import Aos from "aos";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
@@ -26,7 +25,7 @@ const BannerImage = ({ bg, logo, text, link,bgRes }) => {
           alt={logo}  
           priority={true}
           className="object-cover object-center w-full h-full z-[3] lg:hidden block"/>
-        <div className="relative z-[10]  w-full h-screen flex justify-center pt-[35%] md:block  md:pt-20  ">
+        <div className="relative z-[10]  w-full h-screen flex justify-center pt-[35%] md:block  md:pt-[8%]  ">
           <div>
             <div
               className="h-10 md:h-[60px] w-full"

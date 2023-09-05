@@ -1,7 +1,6 @@
 import {
   CarDetailBanner,
   CarBannerC11Reev,
-  CarCharacteristics,
   CarSwiper,
   CarBanner,
   CarSwiperInnerVideo,
@@ -10,8 +9,7 @@ import {
 } from "@/components";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
-import { CarSwiperInner } from "@/components";
+import  { Pagination, Navigation } from "swiper";
 import Head from "next/head";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import { useTranslation } from "react-i18next";
@@ -203,21 +201,22 @@ const C11Reev = () => {
   return (
     <>
       <Head>
-        <title>Leap-Motor C11REEV</title>
-        <meta
-          property="og:title"
-          content="Leapmotor uz C11REEV, Leapmotor uzbekistan C11REEV,Leap-motor C11REEV"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Leapotorca C11REEV</title>
+        <meta
+            property="og:title"
+            content="Leapmotorca C11Reev"
+        />
         <link rel="icon" href="/brand.png" />
       </Head>
       <main className={"bg-black"}>
         <CarDetailBanner
           imgLong={true}
-          img={`${process.env.NEXT_PUBLIC_API_URL}/media/7761680e-347d-47c4-a96a-4eccfd8f2ec1-slide-01-logo.png`}
+          img={`${process.env.NEXT_PUBLIC_API_URL}/media/fc3b974d-117e-4a1d-a2ee-e1d324eb7b17-c11reev.png`}
           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7c0b9341-73dc-4f0c-a4f5-6853f6ed5751-C11-Reev-section-1bg.jpg`}
           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/957044ed-0e6b-408b-9ac9-a2b88d1c0ee6-slide-01-new.jpg`}
           text={t("c11reev.section1")}
+          model={'C11Reev'}
         />
         <CarBannerC11Reev
           title={t("c11reev.section2.title")}

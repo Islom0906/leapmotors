@@ -23,19 +23,19 @@ const characteristics = {
     about: [
         {
             title: t('c01.characteristics.title3'),
-            text: "5050"
+            text: "5050мм"
         },
         {
             title: t('c01.characteristics.title4'),
-            text: "1902"
+            text: "1902мм"
         },
         {
             title:t('c01.characteristics.title5'),
-            text: "1509"
+            text: "1509мм"
         },
         {
             title: t('c01.characteristics.title6'),
-            text: "2930"
+            text: "2930мм"
         }
     ]
 }
@@ -321,9 +321,12 @@ const characteristics = {
     return (
         <>
             <Head>
-                <title>Leap-Motor C01</title>
-                <meta property='og:title' content="Leapmotor uz C01, Leapmotor uzbekistan C01,Leap-motor C01"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Leapotorca C01</title>
+                <meta
+                    property="og:title"
+                    content="Leapmotorca C01"
+                />
                 <link rel="icon" href="/brand.png"/>
             </Head>
             <main className={'bg-black'}>
@@ -331,7 +334,9 @@ const characteristics = {
                     img={`${process.env.NEXT_PUBLIC_API_URL}/media/e370fbc7-ad3c-4828-a089-2d424e67c0ac-section-2-logo.png`}
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/3b3cabd0-04eb-438b-b1f0-c56cb93d72cc-C01-1-section-bg.jpg`}
                     bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/7faf1f68-58ef-49a2-bd08-6f9b5759a7d4-screen1-1-2023.png`}
-                    text={t('c01.CarDetailBanner.title')}/>
+                    text={t('c01.CarDetailBanner.title')}
+                    model={'C01'}
+                />
 
                 <CarCharacteristics
                     bg={`${process.env.NEXT_PUBLIC_API_URL}/media/32b56318-d01e-477e-b75d-1bcb823dde04-C01-section-2-bg.jpg`}
@@ -367,7 +372,7 @@ const characteristics = {
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/cddff61c-1e1b-4206-be40-c374abc798cf-C01-section-11-bg.jpg`}/>
                 <CarBanner title={t('c01.carbanner3.title3')}
                            subTitle={t('c01.carbanner3.subtitle3')}
-                        bgRes={`${process.env.NEXT_PUBLIC_API_URL}media/5e795e8e-0aa2-46b2-8fc2-8862f5348986-screen14.jpg`}
+                        bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/5e795e8e-0aa2-46b2-8fc2-8862f5348986-screen14.jpg`}
                            bg={`${process.env.NEXT_PUBLIC_API_URL}/media/7bb8b225-df81-4e77-b018-b28514246559-C01-section-12-bg.jpg`}/>
                 <CarSwiper content={carSwipper5}/>
                 <CarBanner title={t('c01.carbanner4.title')}
@@ -383,8 +388,7 @@ const characteristics = {
                 <CarBanner title={t('c01.carbanner4.title3')}
                            subTitle={t('c01.carbanner4.subtitle3')}
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/0b78659d-0c41-488b-b606-4b09085a8cca-screen20.jpg`}
-
-                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/0b78659d-0c41-488b-b606-4b09085a8cca-screen20.jpg`}/>
+                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/b5e5383b-23ea-4af7-89b7-0f76c96d1210-C01-section-17-bg.jpg`}/>
                 <CarBanner title={t('c01.carbanner4.title4')}
                            subTitle={t('c01.carbanner4.subtitle4')}
                            bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/c75cbc24-e823-4324-bf24-ac6cf526c08d-screen21.jpg`}

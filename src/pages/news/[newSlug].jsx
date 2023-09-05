@@ -28,8 +28,8 @@ const NewsInner = () => {
     return (
         <>
             <Head>
-                <title>Leap-Motor Slug</title>
-                <meta property='og:title' content="Leapmotor uz News, Leapmotor uzbekistan News,Leap-motor News"/>
+                <title>Leapotorca {data?.titleRu}</title>
+                <meta property='og:title' content="Leapmotor uz News, Leapmotor uzbekistan News,Leapotorca News"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>

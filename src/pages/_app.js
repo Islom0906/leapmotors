@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import '../localization/i18n'
 import {useEffect} from "react";
 import {useTranslation} from "react-i18next";
+import NextNProgress from 'nextjs-progressbar'
 import 'aos/dist/aos.css';
 import {Provider, useDispatch} from "react-redux";
 import {store} from "@/store";
@@ -40,6 +41,7 @@ export default function App({Component, pageProps}) {
             <HydrationProvider>
                 <main >
                     <Layout>
+                        <NextNProgress/>
                         <Component {...pageProps} />
                     </Layout>
                 </main>
