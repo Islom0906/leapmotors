@@ -32,7 +32,6 @@ const Navbar = () => {
     useEffect(()=>{
         const productSort=[]
         data?.data?.map(product=>{
-            console.log(product?._id)
             if (product?.model==='T03'){
                 productSort[0]=product
             }

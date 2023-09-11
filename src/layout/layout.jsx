@@ -1,4 +1,4 @@
-import {  Footer, Navbar } from "@/components";
+import { Footer, Navbar } from "@/components";
 import {useEffect} from "react";
 import {isShowSidebar} from "@/slice/sidebar";
 import {useDispatch, useSelector} from "react-redux";
@@ -15,7 +15,6 @@ const Layout = ({ children }) => {
 
         return () => {
             window.removeEventListener('click', handleWindow)
-
         }
 
     }, [show]);
