@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, {Autoplay, Navigation} from "swiper";
@@ -8,6 +7,7 @@ import teamImage from '/public/About-us/section-3 img1.jpg'
 import {AboutTeam, HoverCard} from "@/components";
 import axios from "axios";
 import {useSelector} from "react-redux";
+import SEO from 'src/layout/seo/seo';
 
 SwiperCore.use([Autoplay]);
 
@@ -15,13 +15,8 @@ export default function About({about}) {
     const {lang} = useSelector(state => state.lang)
     return (
         <>
-            <Head>
-                <title>Leapotorca About</title>
-                <meta property='og:title' content="Leapotorca uz About, Leapmotor uzbekistan About,Leapotorca About"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="icon" href="/brand.png"/>
-            </Head>
-            <main className={'bg-black'}>
+        <SEO  title={'Leapotorca About'}  og_title={'Leapotorca About'}  keywords={'Leapotorca About , Leapmotors About, Leapmotorauto About , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz , leap haqida'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
+        <main className={'bg-black'}>
                 {/*section banner*/}
                 <section className="w-full h-screen relative  bg-[#000]">
                     <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${about[0]?.mainSection?.imageMain?.path}`}
@@ -90,7 +85,7 @@ export default function About({about}) {
                         <p className="md:w-[95%] text-center text-[#4d5d80] text-xl">{lang === 'ru' ? about[0]?.research?.textRu : about[0]?.research?.textUz}</p>
                         <div className={'w-full h-[31vh] sm:h-[45vh] md:h-[55vh] lg:h-[65vh] xl:h-[685px] relative'}>
                             <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${about[0]?.research?.image?.path}`}
-                                   alt="OS Image" className="w-full object-contain" fill/>
+                                   alt="OS Image" className="object-contain w-full" fill/>
 
                         </div>
                     </div>
@@ -112,6 +107,9 @@ export default function About({about}) {
                     </div>
                 </section>
             </main>
+        </SEO>
+            
+            
 
         </>
     )

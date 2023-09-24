@@ -1,10 +1,9 @@
-import Link from 'next/link'
 import {NewsCard} from '@/components'
-import Head from "next/head";
 import axios from "axios";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
+import SEO from 'src/layout/seo/seo';
 
 
 const news = ({news}) => {
@@ -13,12 +12,7 @@ const news = ({news}) => {
     return (
 
         <>
-            <Head>
-                <title>Leapotorca News</title>
-                <meta property='og:title' content="Leapotorca uz News, Leapmotor uzbekistan News,Leapotorca News"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="icon" href="/brand.png"/>
-            </Head>
+         <SEO  title={'Leapotorca News'}  og_title={'Leapotorca uz News, Leapmotor uzbekistan News,Leapotorca News'}  keywords={'Leapotorca uz News, Leapmotor uzbekistan News,Leapotorca News'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
             <section className="mt-4">
                 <div className="container ">
                     <div className="pt-[80px] pb-[60px]">
@@ -26,7 +20,7 @@ const news = ({news}) => {
                         >{t('news.title')}
                         </p>
                     </div>
-                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    <div className="grid w-full grid-cols-2 gap-6 lg:grid-cols-3">
                         {
                             news?.map((item) => (
                                 <NewsCard key={item?._id} url={item?.slug} img={item?.description[0]?.image?.path}
@@ -39,6 +33,7 @@ const news = ({news}) => {
                     </div>
                 </div>
             </section>
+        </SEO>
         </>
 
     )

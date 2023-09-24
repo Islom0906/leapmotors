@@ -2,26 +2,40 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState={
   stepCar : 'Версия',
-  versionModel:"",
-  priceModel:"",
+  headerImage : '',
+  priceModel:0,
+  versionModel:{
+    title: '',
+    price: 0,
+    content: []
+  },
   colorExterior: {
+    image: '',
     colorImg : '',
-    colorName : ''
+    colorName : '',
+    price: 0
   },
   colorInterior: {
+    image: '',
     colorImg : '',
-    colorName : ''
+    colorName : '',
+    price: 0
   },
+  optionCar :[]
   
 }
 
 export const CarSale=createSlice({
-    name:'language',
-    initialState,
-    reducers:{
-
+  name:'sale',
+  initialState,
+  reducers:{
+    setHeaderImage:(state , {payload}) => {
+      state.headerImage = payload
+    },
         setVersionModel:(state,{payload})=>{
-            state.versionModel=payload
+            state.versionModel.title=payload.title
+            state.versionModel.price=payload.price
+            state.versionModel.content=payload.content
         },
         setPriceModel: (state , {payload}) => {
             state.priceModel = payload
@@ -30,16 +44,24 @@ export const CarSale=createSlice({
             state.stepCar = payload
         },
         setColorExterior: (state , {payload}) => {
+            state.colorExterior.image = payload.image
             state.colorExterior.colorImg = payload.colorImg
             state.colorExterior.colorName = payload.colorName
+            state.colorExterior.price = payload.price
+            
+            
         },
         setColorInterior: (state , {payload}) => {
-            state.colorExterior.colorImg = payload.colorImg
-            state.colorExterior.colorName = payload.colorName
-
+            state.colorInterior.image = payload.image
+            state.colorInterior.colorImg = payload.colorImg
+            state.colorInterior.colorName = payload.colorName
+            state.colorInterior.price = payload.price
+        },
+        setOptionCar : (state , {payload}) =>{
+          state.optionCar = payload
         }
     }
 })
 
-export const {setVersionModel , setStepCar,  setPriceModel ,setColorExterior ,setColorInterior}=CarSale.actions
+export const {setVersionModel , setHeaderImage ,setOptionCar , setStepCar,  setPriceModel ,setColorExterior ,setColorInterior}=CarSale.actions
 export default CarSale.reducer

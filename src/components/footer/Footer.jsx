@@ -11,6 +11,7 @@ import {FaTelegram} from "react-icons/fa";
 
 
 const Footer = () => {
+  const sale = useRouter()
         const {t}=useTranslation()
     const {pathname}=useRouter()
 
@@ -19,7 +20,7 @@ const Footer = () => {
   } = useQuery('get-contact', () => apiService.getData('/contact'))
         return (
           <>
-            <footer className={`bg-[#efefef] py-10 ${pathname==='/' && 'footer'}`}>
+            <footer className={` ${sale.asPath == '/car-sale' ? 'hidden' : 'block'} bg-[#efefef] py-10 ${pathname==='/' && 'footer'}`}>
               <div className="container grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <ul className="flex flex-col items-center md:items-start gap-2 text-base text-[#898989] font-bold ">
                   <li className={'flex justify-center'}>

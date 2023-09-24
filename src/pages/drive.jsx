@@ -8,7 +8,8 @@ import {useForm} from "react-hook-form";
 import {LuLoader2} from "react-icons/lu";
 import ModalSuccess from "@/components/modal-success/modal-success";
 import InputMask from 'react-input-mask';
-import Head from "next/head";
+import SEO from 'src/layout/seo/seo';
+
 import {useSelector} from "react-redux";
 
 const Drive = () => {
@@ -18,7 +19,10 @@ const Drive = () => {
         data,
     } = useQuery('get-model', () => apiService.getData('/product'))
     const {
-        mutate: userPost, data: userPostData, isLoading: userPostLoading, isSuccess: userPostSuccess
+        mutate: userPost, 
+        data: userPostData, 
+        isLoading: userPostLoading,
+        isSuccess: userPostSuccess
     } = useMutation(({url, data}) => apiService.postData(url, data))
 
 
@@ -34,12 +38,10 @@ const Drive = () => {
             data?.data?.map((item) => {
                 if (item?.model === model) {
                     setBg(item)
-                    console.log(item)
                 }
             })
 
         }
-        console.log('render')
     }, [data]);
 
     useEffect(() => {
@@ -81,13 +83,8 @@ const Drive = () => {
 
 
     return (<>
-            <Head>
-                <title>Leapmotorca Test Drive</title>
-                <meta property='og:title'
-                      content="Leapmotorca uz Test Drive, Leapmotor uzbekistan Test Drive,Leapmotorca Test Drive"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="icon" href="/brand.png"/>
-            </Head>
+            <SEO title={'Leapmotorca Test-drive'}  og_title={'Leapmotorca  Test-drive, Leapmotorca Test-drive, leapmotorca Test-drive'}  keywords={'Test-drive , drive car , Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'}>
+                
             <section className="relative min-h-screen bg-black">
                 <Image
                     src={`${process.env.NEXT_PUBLIC_API_URL}/${bg?.imageBanner?.path}`}
@@ -309,6 +306,7 @@ const Drive = () => {
                     <ModalSuccess text={'Ваша заявка принята'}/>
                 </div>
             </section>
+            </SEO>
         </>
 
     );

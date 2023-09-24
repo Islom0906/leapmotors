@@ -6,172 +6,195 @@ import {
   ComplectCar,
 } from "@/components";
 import Image from "next/image";
-import { MdDoubleArrow } from "react-icons/md";
-import { PiCheckBold } from "react-icons/pi";
-import { setStepCar } from "@/slice/sale";
+import {
+  setColorExterior,
+  setColorInterior,
+  setOptionCar,
+  setPriceModel,
+  setStepCar,
+} from "@/slice/sale";
 import { useDispatch, useSelector } from "react-redux";
+import { useQuery } from "react-query";
+import apiService from "@/service/api";
+import { useState } from "react";
+import SEO from 'src/layout/seo/seo';
+
 
 const CarSale = () => {
-  const versionData = {
-    title: "C11 Extended Range 180 Comfort Edition",
-    price: "$2000",
-    content: [
-      {
-        id: 1,
-        content:
-          " CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-      {
-        id: 2,
-        content:
-          " Адаптивный круиз на полной скорости ACC, автоматическое экстренное торможение AEB",
-      },
-      {
-        id: 3,
-        content:
-          " CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-      {
-        id: 4,
-        content:
-          " CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-    ],
-  };
-  const versionData1 = {
-    title: "C11 Extended Range 200 Comfort Edition",
-    price: "$149000",
-    content: [
-      {
-        id: 1,
-        content:
-          "2 CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-      {
-        id: 2,
-        content:
-          "2 Адаптивный круиз на полной скорости ACC, автоматическое экстренное торможение AEB",
-      },
-      {
-        id: 3,
-        content:
-          "2 CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-      {
-        id: 4,
-        content:
-          "2 CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-      {
-        id: 4,
-        content:
-          "2 CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-      {
-        id: 4,
-        content:
-          "2 CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-    ],
-  };
+  const { versionModel } = useSelector((state) => state.sale);
+  const [loading, setLoading] = useState(true);
 
-  const optional = {
-    id:'5',
-    headerImage: '/banner-complect.png',
-    title: 'выбрать цвет',
-    price: '¥15,000',
-    disk: {
-      img: '/wheel.png',
-      title: '20-дюймовые диски цвета метеорита серого цвета',
-      subTitle: 'Цена включена'
-    },
-    version: [
-      {
-        id: 1,
-        content:
-          " CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-      {
-        id: 2,
-        content:
-          " Адаптивный круиз на полной скорости ACC, автоматическое экстренное торможение AEB",
-      },
-      {
-        id: 3,
-        content:
-          " CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-      {
-        id: 4,
-        content:
-          " CLTC имеет срок службы батареи 180 км и общую мощность электропривода 200 кВт.",
-      },
-    ]
-  }
-  const optional2 = {
-    id:'6',
-    headerImage: '/banner-complect.png',
-    title: 'выбрать цвет',
-    price: '¥15,000',
-    
-    
-  }
-  const { priceModel,colorInterior,stepCar,colorExterior } = useSelector((state) => state.sale);
+  const { data: position } = useQuery("position", () =>
+    apiService.getData("/position?model=T03")
+  );
 
+  const { data: exterior, refetch: refetchExterior } = useQuery(
+    "exterior",
+    () =>
+      apiService.getData(`/exterior?model=T03&position=${versionModel.title}`),
+    {
+      enabled: false,
+    }
+  );
+
+  const { data: interior, refetch: refetchInterior } = useQuery(
+    "interior",
+    () =>
+      apiService.getData(
+        `/interior?model=T03&position=${versionModel.title}&exterior=${colorExterior.colorName}`
+      ),
+    {
+      enabled: false,
+    }
+  );
+  const { data: option, refetch: refetchOption } = useQuery(
+    "option",
+    () =>
+      apiService.getData(
+        `/option?model=T03&position=${versionModel.title}&exterior=${colorExterior.colorName}&interior=${colorInterior.colorName}`
+      ),
+    {
+      enabled: false,
+    }
+  );
+
+  const {
+    priceModel,
+    colorInterior,
+    stepCar,
+    colorExterior,
+    headerImage,
+    optionCar,
+  } = useSelector((state) => state.sale);
   const dispatch = useDispatch();
 
-  const changeStepList = () => {  
+  console.log(option?.data);
+
+  // const {
+  //   mutate: userPost,
+  //   data: userPostData,
+  //   isLoading: userPostLoading,
+  //   isSuccess: userPostSuccess
+  // } = useMutation(({url, data}) => apiService.postData(url, data))
+
+  const returnStep = (e) => {
+    const target = e.target;
+    let colorNull = {
+      image: "",
+      colorImg: "",
+      colorName: "",
+      price: 0,
+    };
+
+    let optionNull = [];
+
+    if (target.innerText == "Версия" && priceModel != 0) {
+      dispatch(setStepCar("Версия"));
+      dispatch(setColorExterior(colorNull));
+      dispatch(setColorInterior(colorNull));
+      dispatch(setOptionCar(optionNull));
+    } else if (target.innerText == "Экстерьер" && colorExterior.colorName) {
+      dispatch(setStepCar("Экстерьер"));
+      dispatch(setColorInterior(colorNull));
+      dispatch(setOptionCar(optionNull));
+      dispatch(setPriceModel(versionModel.price));
+    } else if (
+      target.innerText == "интерьер" &&
+      colorInterior.colorName &&
+      colorExterior.colorName
+    ) {
+      dispatch(setStepCar("интерьер"));
+      dispatch(setColorInterior(colorNull));
+      dispatch(setOptionCar(optionNull));
+      dispatch(setPriceModel(versionModel.price + colorExterior.price));
+    } else {
+    }
+  };
+
+  const changeStepList = () => {
     if (priceModel && stepCar === "Версия") {
       dispatch(setStepCar("Экстерьер"));
-    } else if (colorExterior && stepCar === "Экстерьер") {
+      refetchExterior();
+    } else if (colorExterior.colorName && stepCar === "Экстерьер") {
+      refetchInterior();
       dispatch(setStepCar("интерьер"));
-    } else if (colorInterior && stepCar === "интерьер") {
+    } else if (colorInterior.colorName && stepCar === "интерьер") {
       dispatch(setStepCar("Необязательный"));
-    } else if (colorInterior && stepCar === "Необязательный") {
-      dispatch(setStepCar("Необязательный"));
+      refetchOption();
+    } else if (stepCar === "Необязательный") {
+      dispatch(setStepCar("allProduct"));
     }
-
-    console.log(1);
   };
 
   return (
+    <SEO title={'Leapmotorca car sale'}  og_title={'Leapmotorca , Leapmotorca car-sale, leapmotorca car-sale'}  keywords={'Leapmotorca , Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'}>
+      
     <div>
-      <div className="px-2 md:px-5 py-20 bg-[#eeeff4] relative">
+      <div className="px-2 md:px-5 pt-[60px] py-[60px] bg-[#eeeff4] relative">
         <div className="grid min-h-screen grid-cols-1 lg:grid-cols-6">
           <div className="relative md:col-span-4 aspect-square md:aspect-video">
-            <Image src={"/banner-sale.png"} objectFit="contain" fill />
+            <div className="relative w-full h-full">
+              <Image
+                fill
+                src={`${process.env.NEXT_PUBLIC_API_URL}/${headerImage}`}
+                alt={"car"}
+                className={` w-full h-full  duration-200 ease-in-out  ${
+                  loading
+                    ? "scale-110 blur-2xl grayscale"
+                    : "scale-100  blur-0 grayscale-0"
+                } `}
+                priority={true}
+                onLoadingComplete={() => setLoading(false)}
+              />
+              
+            </div>
           </div>
-          <div className="w-full col-span-2 p-1 bg-white rounded-lg md:p-3 ">
-            <div className="lg:h-[10vh] fixed lg:static left-0 z-20 flex justify-center w-full top-16 lg:block">
-              <ul class={` text-sm sm:text-xs  xl:text-sm font-medium text-center text-[#333] divide-x divide-gray-200 rounded-lg shadow flex `}>
-                <li class="w-full">
+          <div className="w-full col-span-2 p-1 bg-white rounded-b-lg md:p-3 ">
+            <div className={` ${stepCar ? 'hidden' : "flex lg:block"} lg:h-[10vh] fixed  left-0 z-20  justify-center w-full top-16 `}>
+              <ul
+                onClick={(e) => returnStep(e)}
+                className={` text-sm sm:text-xs  xl:text-sm font-medium text-center text-[#333] divide-x divide-gray-200 rounded-lg shadow  `}
+              >
+                <li className="w-full">
                   <button
-                    
-                    class={` ${stepCar === 'Версия'? 'bg-gray-200 hover:bg-gray-200' : 'bg-white hover:bg-gray-50'} inline-block w-full p-2 text-gray-900  rounded-l-lg  active focus:outline-none `}
+                    className={` ${
+                      stepCar == "Версия"
+                        ? "bg-gray-200 hover:bg-gray-200"
+                        : "bg-white hover:bg-gray-50 "
+                    } inline-block w-full p-2  text-gray-900 rounded-l-lg   focus:outline-none `}
                   >
                     Версия
                   </button>
                 </li>
-                <li class="w-full">
+                <li className="w-full">
                   <button
-                    
-                    class={`${stepCar === 'Экстерьер' ? 'bg-gray-200 hover:bg-gray-200' : 'bg-white hover:bg-gray-50'} inline-block w-full p-2 bg-white  hover:bg-gray-50  focus:outline-none `}
+                    className={`${
+                      stepCar == "Экстерьер"
+                        ? "bg-gray-200 hover:bg-gray-200"
+                        : "bg-white hover:bg-gray-50"
+                    } inline-block w-full p-2   focus:outline-none `}
                   >
                     Экстерьер
                   </button>
                 </li>
-                <li class="w-full">
+                <li className="w-full">
                   <button
-                    
-                    class={`${stepCar === 'интерьер'? 'bg-gray-200 hover:bg-gray-200' : 'bg-white hover:bg-gray-50'} inline-block w-full p-2 bg-white  hover:bg-gray-50  focus:outline-none `}
+                    className={`${
+                      stepCar == "интерьер"
+                        ? "bg-gray-200 hover:bg-gray-200"
+                        : "bg-white hover:bg-gray-50"
+                    } inline-block w-full p-2   focus:outline-none `}
                   >
                     интерьер
                   </button>
                 </li>
-                <li class="w-full">
+                <li className="w-full">
                   <button
-                    
-                    class={`${stepCar === 'Необязательный' ? 'bg-gray-200 hover:bg-gray-200' : 'bg-white hover:bg-gray-50'} inline-block w-full p-2 bg-white rounded-r-lg   focus:outline-none  `}
+                    className={`${
+                      stepCar == "Необязательный"
+                        ? "bg-gray-200 hover:bg-gray-200"
+                        : "bg-white hover:bg-gray-50"
+                    } inline-block w-full p-2  rounded-r-lg   focus:outline-none  `}
                   >
                     Необязательный
                   </button>
@@ -179,29 +202,23 @@ const CarSale = () => {
               </ul>
             </div>
 
-            <div className="py-3 md:py-5 space-y-4 h-auto md:h-[75vh] md:overflow-y-scroll">
-              {/* <VersionCard />
-              <VersionCard /> */}
-              {/* <ColorCard /> */}
+            <div className="py-3 md:py-5 space-y-4 h-auto md:h-[55vh] lg:h-[65vh] xl:h-[75vh] md:overflow-y-scroll">
               {stepCar === "Версия" ? (
                 <>
                   <div className="text-[#333]">
-                    <SaleCardTitle title={"выбрать цвет"} />
+                    <SaleCardTitle title={"выбрать Версия"} />
                     <div className="grid items-center content-center justify-center grid-cols-4 gap-5 p-2 md:p-5 ">
-                      <div className="col-span-4 ">
-                        <VersionCard
-                          title={versionData.title}
-                          price={versionData.price}
-                          content={versionData.content}
-                        />
-                      </div>
-                      <div className="col-span-4">
-                        <VersionCard
-                          title={versionData1.title}
-                          price={versionData1.price}
-                          content={versionData1.content}
-                        />
-                      </div>
+                      {position?.data?.map((version) => (
+                        <div key={version._id} className="col-span-4 ">
+                          <VersionCard
+                            headerImage={version?.image.path}
+                            title={version?.name}
+                            price={version?.price}
+                            content={version?.includedList}
+                            firstActive={position?.data[0]}
+                          />
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </>
@@ -212,17 +229,19 @@ const CarSale = () => {
               {stepCar === "Экстерьер" ? (
                 <>
                   <div className="text-[#333]">
-                    <SaleCardTitle title={"выбрать цвет"} />
+                    <SaleCardTitle title={"выбрать Экстерьер"} />
                     <div className="grid items-center content-center justify-center grid-cols-4 gap-5 p-2 md:p-5 ">
-                      <ColorCard
-                        catalogType={stepCar}
-                        colorImg={"/color-car.png"}
-                        colorName={"небесно-серый"}
-                      />
-                      <ColorCard
-                        colorImg={"/color-car.png"}
-                        colorName={"небесно-серый-2"}
-                      />
+                      {exterior?.data.map((ext) => (
+                        <ColorCard
+                          key={ext._id}
+                          catalogType={stepCar}
+                          colorImg={ext.colorImage.path}
+                          img={ext.image.path}
+                          colorName={ext.name}
+                          firstActive={exterior.data[0]}
+                          price={ext.price}
+                        />
+                      ))}
                     </div>
                   </div>
                 </>
@@ -233,33 +252,76 @@ const CarSale = () => {
               {stepCar === "интерьер" ? (
                 <>
                   <div className="text-[#333]">
-                    <SaleCardTitle title={"выбрать цвет"} />
+                    <SaleCardTitle title={"выбрать интерьер"} />
                     <div className="grid items-center content-center justify-center grid-cols-4 gap-5 p-2 md:p-5 ">
-                      <ColorCard
-                        catalogType={stepCar}
-                        colorImg={"/color-car.png"}
-                        colorName={"небесно-серый-5"}
-                      />
-                      <ColorCard
-                        catalogType={stepCar}
-                        colorImg={"/color-car.png"}
-                        colorName={"небесно-серый-4"}
-                      />
+                      {interior?.data.map((int) => (
+                        <ColorCard
+                          key={int._id}
+                          catalogType={stepCar}
+                          colorImg={int.colorImage.path}
+                          img={int.image.path}
+                          colorName={int.name}
+                          firstActive={interior.data[0]}
+                          price={int.price}
+                        />
+                      ))}
                     </div>
                   </div>
                 </>
               ) : (
                 ""
               )}
-               {stepCar === "Необязательный" ? (
+              {stepCar === "Необязательный" ? (
                 <>
                   <div className="text-[#333]">
-                    <SaleCardTitle title={"выбрать цвет"} />
+                    <SaleCardTitle title={"выбрать Необязательный"} />
                     <div className="grid items-center content-center justify-center grid-cols-4 gap-5 p-2 md:p-5 ">
-                      <ComplectCar headerImage={optional.headerImage} title={optional.title} price={optional.price} saleList={optional.disk} version={optional.version}  />
-                      <ComplectCar headerImage={optional2.headerImage} title={optional2.title} price={optional2.price} />
+                      {option?.data?.map((opt) => (
+                        <ComplectCar
+                          key={opt._id}
+                          bannerImage={opt.bannerImage.path}
+                          headerImage={opt.mainImage.path}
+                          includes={opt.includes}
+                          title={opt.name}
+                          price={opt.price}
+                        />
+                      ))}
                     </div>
                   </div>
+                </>
+              ) : (
+                ""
+              )}
+              <></>
+              {stepCar == "allProduct" ? (
+                <>
+                  <SaleCardTitle
+                    title={versionModel?.title}
+                    btnText={"refresh"}
+                  />
+                  <div className="border-b border-b-[#eee] py-4 space-y-2">
+                    <SaleList
+                      src={colorExterior?.colorImg}
+                      title={colorExterior?.colorName}
+                      subtitle={colorExterior?.price}
+                    />
+                    <SaleList
+                      src={colorInterior?.colorImg}
+                      title={colorInterior?.colorName}
+                      subtitle={colorInterior?.price}
+                    />
+                    {optionCar?.map((item) => (
+                      <SaleList
+                        src={item.headerImage}
+                        title={item.optName}
+                        subtitle={item.price}
+                      />
+                    ))}
+                  </div>
+                  <div className="mb-3">
+                    <SaleCardTitle title={"Сводка конфигурации"} />
+                  </div>
+                  {<VersionCard content={versionModel.content} />}
                 </>
               ) : (
                 ""
@@ -274,13 +336,15 @@ const CarSale = () => {
                 onClick={changeStepList}
                 className="text-[#333] text-lg bg-transparent border border-[#333] p-4 flex  justify-center py-2 hover:text-white hover:bg-[#333] rounded-md transition-all ease duration-500"
               >
-                <MdDoubleArrow />
+                {/* <MdDoubleArrow /> */}
+                Далее
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </SEO>
   );
 };
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {PiCaretDownBold} from "react-icons/pi";
 import {CarSwiper, CarText, CarBanner, HoverCard} from "@/components";
-import Head from "next/head";
+import SEO from 'src/layout/seo/seo';
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useTranslation} from "react-i18next";
 import {checkCarModel} from "@/slice/testDrive";
@@ -123,15 +123,8 @@ const T03 = () => {
 
     return (
         <>
-            <Head>
-                <title>Leapmotorca T03</title>
-                <meta
-                    property="og:title"
-                    content="Leapmotorca T03"
-                />
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="icon" href="/brand.png"/>
-            </Head>
+            <SEO  title={'T03'}  og_title={'T03 '}  keywords={'T03 , mini-car, Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
+                
             <main className={'bg-black'}>
                 <section className="h-screen ">
                     <div className="relative w-full h-full">
@@ -226,28 +219,28 @@ const T03 = () => {
                                     <div className="flex flex-wrap justify-center text-white md:gap-x-0 gap-x-2 gap-y-2"
                                     >
                                         <div
-                                            className="flex gap-3 items-center justify-center  lg:border-r-2 px-6  ">
+                                            className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
                                             <p className="text-white text-[21px] font-semibold">
                                                 {t('T03.section2.name')}
                                             </p>
 
                                         </div>
                                         <div
-                                            className="flex gap-3 items-center justify-center  lg:border-r-2 px-6 ">
+                                            className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
                                             <p className="text-white text-[21px] font-semibold">
                                                 {t('T03.section2.name2')}
                                             </p>
 
                                         </div>
                                         <div
-                                            className="flex gap-3 items-center justify-center  lg:border-r-2 px-6 ">
+                                            className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
                                             <p className="text-white text-[21px] font-semibold">
                                                 {t('T03.section2.name3')}
                                             </p>
 
                                         </div>
                                         <div
-                                            className="flex gap-3 items-center justify-center  px-6">
+                                            className="flex items-center justify-center gap-3 px-6">
                                             <p className="text-white text-[21px] font-semibold">
                                                 {t('T03.section2.name4')}
                                             </p>
@@ -299,6 +292,7 @@ const T03 = () => {
                 <CarText content={disclaimers}/>
 
             </main>
+            </SEO>
         </>
 
     );

@@ -7,11 +7,9 @@ import {
     CarSwiper,
     CarText, HoverCard
 } from '@/components'
-
-import Head from "next/head";
+import SEO from 'src/layout/seo/seo';
 import {useEffect} from "react";
 import AOS from "aos";
-
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useTranslation} from "react-i18next";
 const C01 = () => {
@@ -320,15 +318,7 @@ const characteristics = {
 
     return (
         <>
-            <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <title>Leapotorca C01</title>
-                <meta
-                    property="og:title"
-                    content="Leapmotorca C01"
-                />
-                <link rel="icon" href="/brand.png"/>
-            </Head>
+          <SEO  title={'Leapotorca C01'}  og_title={'Leapotorca C01 '}  keywords={'C01 , Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
             <main className={'bg-black'}>
                 <CarDetailBanner
                     img={`${process.env.NEXT_PUBLIC_API_URL}/media/e370fbc7-ad3c-4828-a089-2d424e67c0ac-section-2-logo.png`}
@@ -422,6 +412,8 @@ const characteristics = {
 
                 <CarText content={disclaimers}/>
             </main>
+          </SEO>
+          
         </>
 
     )

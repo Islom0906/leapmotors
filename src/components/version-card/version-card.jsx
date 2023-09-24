@@ -1,21 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {MdKeyboardArrowDown , MdKeyboardArrowUp} from 'react-icons/md'
-import {setVersionModel , setPriceModel} from "@/slice/sale";
+import {setVersionModel , setPriceModel , setHeaderImage } from "@/slice/sale";
 import {useDispatch, useSelector} from "react-redux";
 
 
 
-const VersionCard = ({title , price , content}) => {
+const VersionCard = ({title , price , content ,headerImage  , firstActive }) => {
   const dispatch = useDispatch()
+const {versionModel } = useSelector(state => state.sale)
+
   const [openList , setOpenList] = useState(false)
-
-
-  
 const versionSelect  = () => {
-  dispatch(setVersionModel(title))
-  dispatch(setPriceModel(price))
+  
+  if(price){
+    dispatch(setHeaderImage(headerImage))
+    dispatch(setPriceModel(price))
+    dispatch(setVersionModel({title:title , price:price ,content:content }))
+    
+  }
 }
-const {versionModel} = useSelector(state => state.sale)
+
+useEffect(() => {
+  if(firstActive) {
+    dispatch(setVersionModel({title :firstActive?.name , price :firstActive?.price  , content: firstActive?.includedList}))
+    dispatch(setPriceModel(firstActive?.price))
+    dispatch(setHeaderImage(firstActive?.image.path))
+  }
+} , [firstActive])
 
   return (
     <div>
@@ -29,8 +40,8 @@ const {versionModel} = useSelector(state => state.sale)
             content?.map((item , ind) => (
               ind < 3 || openList ? 
               <li className='' key={ind}>
-              {item.content}
-            </li>
+                {item}
+              </li>
             : <></>
             ))
           }

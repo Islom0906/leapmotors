@@ -1,19 +1,42 @@
 import { SaleList , VersionCard  } from "@/components"
 import Image from 'next/image'
 import {PiCheckBold} from 'react-icons/pi'
-import { useDispatch } from "react-redux";
-import { setStepCar } from "@/slice/sale";
+import {BsPlusLg} from 'react-icons/bs'
+import { useDispatch, useSelector } from "react-redux";
+import {setHeaderImage, setOptionCar ,setPriceModel } from "@/slice/sale";
+import { useState } from "react";
+const ComplectCar = ( {headerImage ,  title , price ,includes , bannerImage  } ) => {
+  const [activeOpen , setActiveOpen] = useState(false)
+  const {priceModel} = useSelector(state => state.sale)
+  const {optionCar}=useSelector(state=>state.sale)
 
-const ComplectCar = ( {headerImage ,  title , price , saleList , version  } ) => {
-  
   const dispatch = useDispatch();
-  
+
+
+  const selectCard = () => {
+    const data={headerImage:headerImage , bannerImage,  optName: title , optPrice: price}
+    setActiveOpen(!activeOpen)
+    let addPrice = ''
+    if(!activeOpen) {
+      dispatch(setHeaderImage(bannerImage))
+      dispatch(setOptionCar([...optionCar ,data  ]))
+      addPrice = priceModel + price
+
+    }else {
+      const deleteOption=optionCar.filter((option)=>option.optName!==data.optName)
+      dispatch(setOptionCar(deleteOption))
+      addPrice = priceModel - price
+    }
+    dispatch(setPriceModel(addPrice))
+  }
+
+
   return (
     <>
       <div className="col-span-4 ">
         <div className="relative bg-black aspect-video">
           <Image
-            src={headerImage}
+            src={`${process.env.NEXT_PUBLIC_API_URL}/${headerImage}`}
             fill
             className="w-full h-full"
             alt={title}
@@ -24,23 +47,34 @@ const ComplectCar = ( {headerImage ,  title , price , saleList , version  } ) =>
             <h5 className="text-sm font-semibold">{title}</h5>
             <p className="text-xs">{price}</p>
           </div>
-          <button className="text-[#333] text-sm bg-transparent  flex  justify-center py-2 px-3 hover:text-white hover:bg-[#333] rounded-md transition-all ease duration-500">
-            <PiCheckBold />
+          <button onClick={selectCard} className={` ${activeOpen ? ' text-white bg-[#333]' : 'text-[#333] bg-transparent  '} text-sm flex  justify-center py-2 px-3 rounded-md transition-all ease duration-200`}>
+            {
+              activeOpen ?
+              <PiCheckBold />:
+              <BsPlusLg />
+            }
+            
           </button>
         </div>
         <div className="px-2 py-5 space-y-4">
-        {
-          saleList &&
-          <SaleList
-            src={saleList.img}
-            title={saleList.title}
-            subtitle={saleList.subTitle}
-          />
-        }
-        {
-          version &&
-          <VersionCard title={''} price={''} content={version} />
-        }
+          {
+            activeOpen?
+            includes?.map((card , ind) => {
+             
+              if(card.image.name !== 'null'  ) {
+                return (<SaleList key={ind}
+                  src={card.image.path}
+                  title={card.title}
+                  subtitle={card.comment}
+                /> ) 
+              } else if(card.image.name === 'null') {
+                return (<VersionCard  content={card.tags} />)        
+              }
+             }):
+             ""
+            
+            }
+       
         </div>
       </div>
     </>

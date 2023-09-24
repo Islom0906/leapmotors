@@ -2,7 +2,7 @@ import {FiRefreshCw} from 'react-icons/fi'
 
 const SaleCardTitle = ({ title ,  btnText}) => {
   return (
-    <div className={`flex items-center ${ btnText ? ' justify-between' : 'justify-center'}  `}>
+    <div className={`flex items-center ${ btnText ? ' justify-between' : 'justify-center px-2'}  `}>
                       <h5 className="text-xl font-bold text-center">{title}</h5>
       {
         btnText ? 

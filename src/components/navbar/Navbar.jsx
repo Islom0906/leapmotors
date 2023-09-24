@@ -11,16 +11,20 @@ import {checkLanguageAction} from "@/slice/language";
 import apiService from "@/service/api";
 import {useQuery} from "react-query";
 import {checkCarModel} from "@/slice/testDrive";
+import { useRouter } from "next/router";
+
+// import blackLogo from 'https://leapmotorca.uz/api/media/5c50e291-35be-46e2-8d99-f5780c1377b9-Leapmotor-logo.png'
 
 const Navbar = () => {
+    const sale = useRouter()
     const [checkLang, setCheckLang] = useState('ru')
     const [isChangeLang, setIsChangeLang] = useState(false)
     const [sortProduct,setSortProduct]=useState([])
-
     const {t, i18n} = useTranslation()
     const {show} = useSelector(state => state.sidebar)
     const dispatch = useDispatch()
 
+    console.log(sale);
     const {
         data,
     } = useQuery('get-model', () => apiService.getData('/product'))
@@ -70,19 +74,30 @@ const Navbar = () => {
         // setOpenNavbar(false)
     }
 
-    return (<nav className="w-full fixed top-0 left-0 h-[60px] z-[999] " style={{background: "rgba(27, 27, 27, 0.85)"}}>
+    return (<nav className={`${sale.asPath == '/car-sale' ? 'bg-white' : 'bg-[rgba(27,27,27,0.85)]'} w-full fixed  top-0 left-0 h-[60px] z-[999]  `}  >
         <div className="container relative flex items-center justify-between w-full h-full">
             <div className="flex items-center justify-between sm:gap-20">
                 <Link href="/" className="w-[154px] h-[34px] relative">
-                    <Image
-                        src={logo}
-                        alt="Leapmotor"
-                        className="object-contain"
-                        fill
-                    />
+                    {
+                        sale.asPath == '/car-sale' ? 
+                        <Image
+                            src={logo}
+                            alt="Leapmotor"
+                            className="object-contain"
+                            fill
+                        />
+                        :
+                        <Image
+                            src={logo}
+                            alt="Leapmotor"
+                            className="object-contain"
+                            fill
+                        />
+                        
+                    }
 
                 </Link>
-                <ul className="items-center hidden gap-10 text-white uppercase lg:flex">
+                <ul className={`${sale.asPath == '/car-sale' ? 'hidden' : 'lg:flex'} items-center hidden gap-10 text-white uppercase `}>
                     {
                         sortProduct?.map(link => (
                             <li key={link?._id}>

@@ -10,10 +10,9 @@ import {
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import  { Pagination, Navigation } from "swiper";
-import Head from "next/head";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import { useTranslation } from "react-i18next";
-
+import SEO from 'src/layout/seo/seo';
 const C11Reev = () => {
   const { t } = useTranslation();
   const disclaimers = [
@@ -200,15 +199,8 @@ const C11Reev = () => {
 
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Leapotorca C11REEV</title>
-        <meta
-            property="og:title"
-            content="Leapmotorca C11Reev"
-        />
-        <link rel="icon" href="/brand.png" />
-      </Head>
+      <SEO  title={'Leapotorca C11REEV'}  og_title={'Leapmotorca C11Reev'}  keywords={'C11REEV , Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
+        
       <main className={"bg-black"}>
         <CarDetailBanner
           imgLong={true}
@@ -430,6 +422,8 @@ const C11Reev = () => {
         </section>
         <CarText content={disclaimers} />
       </main>
+      </SEO>
+      
     </>
   );
 };
