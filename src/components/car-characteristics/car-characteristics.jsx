@@ -60,14 +60,24 @@ const CarCharacteristics = ({bg, bgRes, characteristics, logo, textColor, model}
                         </div>
                         {
                             model &&
+                            <div className="flex items-center justify-center mt-5 space-x-2">
                                 <Link
 
                                     href="/drive"
                                     onClick={() => dispatch(checkCarModel(model))}
-                                    className="mt-10 text-white text-lg bg-transparent border border-white w-[185px] flex mx-auto justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
+                                    className="text-white text-lg bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
                                 >
                                     {t('navbar.testDrive')}
                                 </Link>
+                                 <Link
+
+                                 href="/car-sale"
+                                 onClick={() => dispatch(setCarModal(model))}
+                                 className=" text-white text-lg  bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
+                             >
+                                 Забронируйте
+                             </Link>
+                            </div>
                         }
                     </div>
                     <div className="absolute z-20 block w-full px-5 text-center bottom-5 md:hidden">

@@ -24,7 +24,6 @@ const Navbar = () => {
     const {show} = useSelector(state => state.sidebar)
     const dispatch = useDispatch()
 
-    console.log(sale);
     const {
         data,
     } = useQuery('get-model', () => apiService.getData('/product'))
@@ -74,14 +73,14 @@ const Navbar = () => {
         // setOpenNavbar(false)
     }
 
-    return (<nav className={`${sale.asPath == '/car-sale' ? 'bg-white' : 'bg-[rgba(27,27,27,0.85)]'} w-full fixed  top-0 left-0 h-[60px] z-[999]  `}  >
-        <div className="container relative flex items-center justify-between w-full h-full">
+    return (<nav className={`${sale.asPath == '/car-sale' ? 'bg-white shadow-sm' : 'bg-[rgba(27,27,27,0.85)]'} w-full fixed  top-0 left-0 h-[60px] z-[999]  `}  >
+        <div className={` ${sale.asPath == '/car-sale' ? 'md:container px-1' : 'container'}  relative flex items-center justify-between w-full h-full`}>
             <div className="flex items-center justify-between sm:gap-20">
-                <Link href="/" className="w-[154px] h-[34px] relative">
+                <Link href="/" className={` ${sale.asPath == '/car-sale' ? 'w-[35px]' : 'w-[154px]'}  h-[34px] relative`}>
                     {
                         sale.asPath == '/car-sale' ? 
                         <Image
-                            src={logo}
+                            src={'https://leapmotorca.uz/api/media/5c50e291-35be-46e2-8d99-f5780c1377b9-Leapmotor-logo.png'}
                             alt="Leapmotor"
                             className="object-contain"
                             fill

@@ -5,6 +5,7 @@ import SEO from 'src/layout/seo/seo';
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useTranslation} from "react-i18next";
 import {checkCarModel} from "@/slice/testDrive";
+import {setCarModal} from "@/slice/sale";
 import Link from "next/link";
 import {useDispatch} from "react-redux";
 
@@ -120,7 +121,6 @@ const T03 = () => {
 
 
 
-
     return (
         <>
             <SEO  title={'T03'}  og_title={'T03 '}  keywords={'T03 , mini-car, Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
@@ -131,57 +131,73 @@ const T03 = () => {
                         <Image
                             alt="car"
                             src={T03Data.section1.bgRes}
-                            className="block object-cover w-full h-full md:hidden"
+                            className="absolute top-0 left-0 block object-cover w-full h-full md:hidden"
                             fill
                         />
                         <Image
                             alt="car"
                             src={T03Data.section1.bg}
-                            className="hidden object-cover w-full h-full md:block"
+                            className="absolute top-0 left-0 hidden object-cover w-full h-full md:block"
                             fill
                         />
                         <div
-                            className="absolute  top-[140px] left-[50%] translate-x-[-50%] h-[calc(100%-80px)] flex flex-col items-center lg:justify-start justify-between">
-                            <div>
-                                <div className="relative h-[29px] mx-auto w-[60px]">
-                                    <Image
-                                        src={T03Data.logo}
-                                        alt="logo"
-                                        className="w-full h-full mx-auto"
-                                        fill
-                                    />
-                                </div>
-                                <div className="mb-3 text-center">
-                                    <p className="text-white font-normal min-w-[320px] text-[20px] leading-[30px] md:leading-[56px]">
-                                        {T03Data.section1.subTitle}
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div className="flex flex-col items-center justify-center gap-5 pb-5">
-                                <div className="flex flex-wrap items-center justify-start gap-10 text-white gap-y-5">
-                                    {T03Data.section1.content.map((item, ind) => (
-                                        <div className="" key={ind}>
-                                            <p className="text-white text-[10px]  lg:text-[14px] font-medium">
-                                                {item.title}
-                                            </p>
-                                            <p className="text-[20px] font-normal">
-                                                {item.content}
+                            className="relative z-10 h-full pt-20 " >
+                                <div className="container flex flex-col items-center justify-between h-full lg:justify-start">
+                                    <div>
+                                        <div className="relative h-[29px] mx-auto w-[60px]">
+                                            <Image
+                                                src={T03Data.logo}
+                                                alt="logo"
+                                                className="w-full h-full mx-auto"
+                                                fill
+                                            />
+                                        </div>
+                                        <div className="mb-3 text-center">
+                                            <p className="text-white font-normal min-w-[320px] text-[20px] leading-[30px] md:leading-[56px]">
+                                                {T03Data.section1.subTitle}
                                             </p>
                                         </div>
-                                    ))}
-                                </div>
-                                <PiCaretDownBold className="block w-6 h-6 text-white lg:hidden"/>
-                            </div>
-                            <Link
+                                    </div>
 
-                                href="/drive"
-                                onClick={() => dispatch(checkCarModel('T03'))}
-                                className="mt-10 text-white text-lg bg-transparent border border-white w-[185px] flex mx-auto justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
-                            >
-                                {t('navbar.testDrive')}
-                            </Link>
+
+                                    <div className="flex flex-col items-center justify-center gap-5 pb-5">
+                                        <div className="flex flex-wrap items-center justify-start gap-10 text-white gap-y-5">
+                                            {T03Data.section1.content.map((item, ind) => (
+                                                <div className="" key={ind}>
+                                                    <p className="text-white text-[10px]  lg:text-[14px] font-medium">
+                                                        {item.title}
+                                                    </p>
+                                                    <p className="text-[20px] font-normal">
+                                                        {item.content}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <PiCaretDownBold className="block w-6 h-6 text-white lg:hidden"/>
+                                    <div className="flex items-center justify-center mt-5 space-x-2">
+                                        <Link
+
+                                            href="/drive"
+                                            onClick={() => dispatch(checkCarModel('T03'))}
+                                            className=" text-white text-lg bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
+                                        >
+                                            {t('navbar.testDrive')}
+                                        </Link>
+                                        
+                                        <Link
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  href="/car-sale"
+                  onClick={() => dispatch(setCarModal('T03'))}
+                  className=" text-white text-lg  bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
+                >
+                  Забронируйте
+                </Link>
+                                        
+                                    </div>
+                                    </div>
+                                    
+                                </div>
                         </div>
                     </div>
                 </section>

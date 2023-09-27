@@ -30,7 +30,7 @@ useEffect(() => {
 
   return (
     <div>
-      <div onClick={versionSelect} className={`${versionModel === title ? 'border-[#333]' : 'border-[#ddd] '} px-3 cursor-pointer  py-2 space-y-2 border-[.5px] rounded-lg`} >
+      <div onClick={versionSelect} className={`${versionModel.title === title ? 'border-[#333]' : 'border-[#ddd] '} px-3 cursor-pointer  py-2 space-y-2 border-[.5px] rounded-lg`} >
         <div className="flex items-center justify-between text-sm font-semibold">
           <h4> {title} </h4>
           <span>{price} </span>

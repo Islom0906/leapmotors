@@ -9,11 +9,12 @@ const ComplectCar = ( {headerImage ,  title , price ,includes , bannerImage  } )
   const [activeOpen , setActiveOpen] = useState(false)
   const {priceModel} = useSelector(state => state.sale)
   const {optionCar}=useSelector(state=>state.sale)
-
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
 
 
   const selectCard = () => {
+    
     const data={headerImage:headerImage , bannerImage,  optName: title , optPrice: price}
     setActiveOpen(!activeOpen)
     let addPrice = ''
@@ -35,11 +36,25 @@ const ComplectCar = ( {headerImage ,  title , price ,includes , bannerImage  } )
     <>
       <div className="col-span-4 ">
         <div className="relative bg-black aspect-video">
+        {
+                loading ? 
+                <div className="absolute top-[40%] left-[40%]" >
+                    <img 
+                    src={'/loading.gif'}
+                    alt={"car"}
+                    className={`w-5 h-5 md:w-[60px] md:h-[60px]`}
+                  />
+                </div>
+               :
+               ''
+              }
           <Image
             src={`${process.env.NEXT_PUBLIC_API_URL}/${headerImage}`}
             fill
             className="w-full h-full"
             alt={title}
+            priority={true}
+            onLoadingComplete={() => setLoading(false)}
           />
         </div>
         <div className="flex items-center justify-between px-4 py-3 border-b border-b-[#ddd]">
@@ -61,13 +76,13 @@ const ComplectCar = ( {headerImage ,  title , price ,includes , bannerImage  } )
             activeOpen?
             includes?.map((card , ind) => {
              
-              if(card.image.name !== 'null'  ) {
+              if(card?.image?.name !== 'null'  ) {
                 return (<SaleList key={ind}
-                  src={card.image.path}
+                  src={card?.image?.path}
                   title={card.title}
                   subtitle={card.comment}
                 /> ) 
-              } else if(card.image.name === 'null') {
+              } else if(card?.image?.name === 'null') {
                 return (<VersionCard  content={card.tags} />)        
               }
              }):

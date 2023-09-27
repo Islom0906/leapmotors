@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #898989 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #898989;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
 
 html{
    scroll-snap-type: y mandatory;

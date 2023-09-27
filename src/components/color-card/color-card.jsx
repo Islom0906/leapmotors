@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 const ColorCard = ({colorImg , colorName ,  catalogType ,firstActive , img , price}) => {
   const dispatch = useDispatch()
+ 
   const {priceModel} = useSelector(state => state.sale)
   const {colorInterior} = useSelector(state => state.sale)
   const {colorExterior} = useSelector(state => state.sale)
@@ -37,12 +38,17 @@ const ColorCard = ({colorImg , colorName ,  catalogType ,firstActive , img , pri
 
   return (
     <>
-      <div onClick={selectColor}   className={` cursor-pointer ${colorName === colorExterior.colorName  ? 'ring-4 ring-slate-300' : " " } ${colorName === colorInterior.colorName  ? 'ring-4' : " " }  flex  font-medium flex-col  items-center justify-center text-xs hover:text-[#333] group gap-y-3`} >
-        <div className="w-[50px] relative h-[50px] rounded-full group-hover:ring-4   bg-slate-500 aspect-square">
+      <div onClick={selectColor}   className={`relative cursor-pointer  h-full  flex  font-medium flex-col  items-center gap-y-2 text-xs hover:text-[#333] group `} >
+        <div className={`w-[50px] relative h-[50px] rounded-full ${colorName === colorExterior.colorName  ? 'ring-4 ring-slate-300' : " " } ${colorName === colorInterior.colorName  ? 'ring-4' : " " } aspect-square`}>
           <Image fill  src={`${process.env.NEXT_PUBLIC_API_URL}/${colorImg}`}  />
+        
         </div>
-        <p className='font-bold'>{colorName}</p>
-        <p>{price} <span className='text-[9px]'> UZS</span> </p>
+        <p className='font-bold text-center'>{colorName}</p>
+        {
+          price == 0 ? 
+          "" :
+          <p className='text-xs' >{price} <span className='text-[9px]'> UZS</span> </p>
+        }
       </div>
     </>
   );

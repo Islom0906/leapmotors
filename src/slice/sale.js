@@ -4,6 +4,7 @@ const initialState={
   stepCar : 'Версия',
   headerImage : '',
   priceModel:0,
+  carModal: '',
   versionModel:{
     title: '',
     price: 0,
@@ -29,6 +30,10 @@ export const CarSale=createSlice({
   name:'sale',
   initialState,
   reducers:{
+    setCarModal : (state , {payload}) => {
+      console.log(payload);
+      state.carModal = payload
+    },
     setHeaderImage:(state , {payload}) => {
       state.headerImage = payload
     },
@@ -63,5 +68,5 @@ export const CarSale=createSlice({
     }
 })
 
-export const {setVersionModel , setHeaderImage ,setOptionCar , setStepCar,  setPriceModel ,setColorExterior ,setColorInterior}=CarSale.actions
+export const {setVersionModel , setHeaderImage ,setOptionCar , setStepCar,  setPriceModel ,setColorExterior ,setColorInterior,setCarModal}=CarSale.actions
 export default CarSale.reducer
