@@ -21,10 +21,10 @@ const queryClient = new QueryClient();
 
 import { Inter } from "@next/font/google";
 
-const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
-});
+// const inter = Inter({
+//   subsets: ["latin", "cyrillic"],
+//   weight: ["400", "500", "600", "700"],
+// });
 //
 export default function App({ Component, pageProps }) {
   // const {i18n} = useTranslation()
@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }) {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <HydrationProvider>
-            <main className={inter.className}>
+            <main >
               <Layout>
                 <NextNProgress />
                 <Component {...pageProps} />
