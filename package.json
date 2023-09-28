@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.40",
     "@next/font": "^13.1.6",
     "@react-google-maps/api": "^2.13.1",
     "@reduxjs/toolkit": "^1.9.5",
