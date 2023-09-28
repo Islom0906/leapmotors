@@ -73,7 +73,9 @@ const Navbar = () => {
         // setOpenNavbar(false)
     }
 
-    return (<nav className={`${sale.asPath == '/car-sale' ? 'bg-white shadow-sm' : 'bg-[rgba(27,27,27,0.85)]'} w-full fixed  top-0 left-0 h-[60px] z-[999]  `}  >
+    return (
+    <nav className={`${sale.asPath == '/car-sale' ? 'bg-white shadow-sm' : 'bg-[rgba(27,27,27,0.85)]'} w-full fixed  top-0 left-0 h-[60px] z-[999]  `}  >
+       
         <div className={` ${sale.asPath == '/car-sale' ? 'md:container px-1' : 'container'}  relative flex items-center justify-between w-full h-full`}>
             <div className="flex items-center justify-between sm:gap-20">
                 <Link href="/" className={` ${sale.asPath == '/car-sale' ? 'w-[35px]' : 'w-[154px]'}  h-[34px] relative`}>
@@ -171,6 +173,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
+        
     </nav>)
 }
 

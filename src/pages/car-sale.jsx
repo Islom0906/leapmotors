@@ -302,6 +302,12 @@ const CarSale = () => {
                     : "block lg:relative fixed"
                 }    left-0 z-20   w-full lg:top-0 top-20 `}
               >
+                 <marquee>
+        <p className="py-2">
+            Сайт находится в тестовом режиме   
+
+        </p>
+        </marquee>
                 <ul
                   onClick={(e) => returnStep(e)}
                   className={` text-sm sm:text-xs flex justify-beetwen xl:text-sm font-medium text-center text-[#333] divide-x divide-gray-200 rounded-lg shadow  `}
