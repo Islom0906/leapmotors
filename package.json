@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.1.6",
+    "@next/font": "^13.5.3",
     "@react-google-maps/api": "^2.13.1",
     "@reduxjs/toolkit": "^1.9.5",
     "aos": "^2.3.4",
