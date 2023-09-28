@@ -150,13 +150,7 @@ const Navbar = () => {
                                           className="capitalize ">{t('navbar.testDrive')}</Link></li>
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="#"
                                           className="capitalize">{t('navbar.accessories')}</Link></li>
-                                {/*
-О Leapmotor
-Новости
-Дилерские центры
-Сервис
-Аксессуары
-Контакты */}
+
 
                             </ul>
                         </div>
