@@ -240,6 +240,7 @@ const CarSale = () => {
                 stepCar == "form-user" ? "h-[calc(100%-60px)]" : "h-[calc(100%-148px)]" 
               }  mt-[60px]  md:mt-0 grid-cols-1 lg:grid-cols-6 lg:grid-rows-1 grid-rows-2 md:h-auto`}>
             <div className="relative h-[100%] md:h-full  md:col-span-4  ">
+              
               <div className="relative w-full h-full md:h-auto md:aspect-video">
                 {loading ? (
                   <div className="absolute top-[40%] left-[40%]">
@@ -302,12 +303,7 @@ const CarSale = () => {
                     : "block lg:relative fixed"
                 }    left-0 z-20   w-full lg:top-0 top-20 `}
               >
-                 <marquee>
-        <p className="py-2">
-        Платежная система работает в тестовом режиме. 
-
-        </p>
-        </marquee>
+             
                 <ul
                   onClick={(e) => returnStep(e)}
                   className={` text-sm sm:text-xs flex justify-beetwen xl:text-sm font-medium text-center text-[#333] divide-x divide-gray-200 rounded-lg shadow  `}
@@ -359,6 +355,12 @@ const CarSale = () => {
                 </ul>
               </div>
               <div className="pt-3 pb-2 md:pt-5">
+              <marquee>
+        <p className="py-2">
+        Платежная система работает в тестовом режиме. 
+
+        </p>
+        </marquee>
                 {stepCar === "Версия" ? (
                   <SaleCardTitle title={"Выбрать Версия"} />
                 ) : (
@@ -386,8 +388,8 @@ const CarSale = () => {
                 className={`
                 ${
                   stepCar == "allProduct"
-                    ? " h-[100%] lg:h-[35vh] xl:h-[55vh]"
-                    : "h-[100%] lg:h-[35vh] xl:h-[55vh]"
+                    ? " h-[100%] lg:h-[35vh] xl:h-[65vh]"
+                    : "h-[100%] lg:h-[35vh] xl:h-[65vh]"
                 }
                 
                 ${
@@ -620,6 +622,7 @@ const CarSale = () => {
                 </button>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
