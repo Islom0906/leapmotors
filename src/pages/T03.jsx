@@ -10,8 +10,6 @@ import Link from "next/link";
 import {useDispatch} from "react-redux";
 
 
-
-
 const carSwipper3 = [
     {
         bg: `${process.env.NEXT_PUBLIC_API_URL}/media/1512bb5e-bb4c-4ff3-833e-5fe7e7372849-t03-gallery-03.jpg`,
@@ -120,29 +118,31 @@ const T03 = () => {
     ]
 
 
-
     return (
         <>
-            <SEO  title={'T03'}  og_title={'T03 '}  keywords={'T03 , mini-car, Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
-                
-            <main className={'bg-black'}>
-                <section className="h-screen ">
-                    <div className="relative w-full h-full">
-                        <Image
-                            alt="car"
-                            src={T03Data.section1.bgRes}
-                            className="absolute top-0 left-0 block object-cover w-full h-full md:hidden"
-                            fill
-                        />
-                        <Image
-                            alt="car"
-                            src={T03Data.section1.bg}
-                            className="absolute top-0 left-0 hidden object-cover w-full h-full md:block"
-                            fill
-                        />
-                        <div
-                            className="relative z-10 h-full pt-20 " >
-                                <div className="container flex flex-col items-center justify-between h-full lg:justify-start">
+            <SEO title={'T03'} og_title={'T03 '}
+                 keywords={'T03 , mini-car, Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}
+                 description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'}>
+
+                <main className={'bg-black'}>
+                    <section className="h-screen ">
+                        <div className="relative w-full h-full">
+                            <Image
+                                alt="car"
+                                src={T03Data.section1.bgRes}
+                                className="absolute top-0 left-0 block object-cover w-full h-full md:hidden"
+                                fill
+                            />
+                            <Image
+                                alt="car"
+                                src={T03Data.section1.bg}
+                                className="absolute top-0 left-0 hidden object-cover w-full h-full md:block"
+                                fill
+                            />
+                            <div
+                                className="relative z-10 h-full pt-20 ">
+                                <div
+                                    className="container flex flex-col items-center justify-between h-full lg:justify-start">
                                     <div>
                                         <div className="relative h-[29px] mx-auto w-[60px]">
                                             <Image
@@ -161,7 +161,8 @@ const T03 = () => {
 
 
                                     <div className="flex flex-col items-center justify-center gap-5 pb-5">
-                                        <div className="flex flex-wrap items-center justify-start gap-10 text-white gap-y-5">
+                                        <div
+                                            className="flex flex-wrap items-center justify-start gap-10 text-white gap-y-5">
                                             {T03Data.section1.content.map((item, ind) => (
                                                 <div className="" key={ind}>
                                                     <p className="text-white text-[10px]  lg:text-[14px] font-medium">
@@ -174,140 +175,141 @@ const T03 = () => {
                                             ))}
                                         </div>
                                         <PiCaretDownBold className="block w-6 h-6 text-white lg:hidden"/>
-                                    <div className="flex items-center justify-center mt-5 space-x-2">
-                                        <Link
+                                        <div className="flex items-center justify-center mt-5 space-x-2">
+                                            <Link
 
-                                            href="/drive"
-                                            onClick={() => dispatch(checkCarModel('T03'))}
-                                            className=" text-white text-lg bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
-                                        >
-                                            {t('navbar.testDrive')}
-                                        </Link>
-                                        
-                                        <Link
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  href="/car-sale"
-                  onClick={() => dispatch(setCarModal('T03'))}
-                  className=" text-white text-lg  bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
-                >
-                  Забронируйте
-                </Link>
-                                        
+                                                href="/drive"
+                                                onClick={() => dispatch(checkCarModel('T03'))}
+                                                className=" text-white text-lg bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
+                                            >
+                                                {t('navbar.testDrive')}
+                                            </Link>
+
+                                            {/*<Link*/}
+                                            {/*    data-aos="fade-up"*/}
+                                            {/*    data-aos-anchor-placement="top-bottom"*/}
+                                            {/*    href="/car-sale"*/}
+                                            {/*    onClick={() => dispatch(setCarModal('T03'))}*/}
+                                            {/*    className=" text-white text-lg  bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"*/}
+                                            {/*>*/}
+                                            {/*    Забронируйте*/}
+                                            {/*</Link>*/}
+
+                                        </div>
                                     </div>
-                                    </div>
-                                    
+
                                 </div>
+                            </div>
                         </div>
-                    </div>
-                </section>
-                <section className="h-screen ">
-                    <div className="relative w-full h-full">
-                        <Image
-                            alt="car"
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/media/8bd6857e-4221-4e86-9e42-b11626ebce1f-T03-section-2.jpg`}
-                            className="hidden object-cover w-full h-full md:block"
+                    </section>
+                    <section className="h-screen ">
+                        <div className="relative w-full h-full">
+                            <Image
+                                alt="car"
+                                src={`${process.env.NEXT_PUBLIC_API_URL}/media/8bd6857e-4221-4e86-9e42-b11626ebce1f-T03-section-2.jpg`}
+                                className="hidden object-cover w-full h-full md:block"
 
-                            fill
-                        />
-                         <Image
-                            alt="car"
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/media/91befc72-588a-4c60-a59c-e3c138975c60-screen2.jpg`}
+                                fill
+                            />
+                            <Image
+                                alt="car"
+                                src={`${process.env.NEXT_PUBLIC_API_URL}/media/91befc72-588a-4c60-a59c-e3c138975c60-screen2.jpg`}
 
-                            className="block object-cover w-full h-full md:hidden"
-                            fill
-                        />
-                       
-                        <div className="absolute top-0 left-0 w-full h-full">
-                            <div
-                                className="container flex flex-col justify-between h-full py-10 md:py-20 md:justify-start">
-                                <div className="mb-5 text-center">
-                                    <p
-                                        className="text-white font-arial-semibold  text-[24px] md:text-[26px]"
-                                    >
-                                        {t('T03.section2.title')}
-                                    </p>
-                                    <p className="mt-[6px] lg:text-[14px] text-white font-arial-normal">
-                                        {t('T03.section2.subtitle')}
-                                    </p>
-                                </div>
-                                <div className="flex justify-center">
-                                    <div className="flex flex-wrap justify-center text-white md:gap-x-0 gap-x-2 gap-y-2"
-                                    >
+                                className="block object-cover w-full h-full md:hidden"
+                                fill
+                            />
+
+                            <div className="absolute top-0 left-0 w-full h-full">
+                                <div
+                                    className="container flex flex-col justify-between h-full py-10 md:py-20 md:justify-start">
+                                    <div className="mb-5 text-center">
+                                        <p
+                                            className="text-white font-arial-semibold  text-[24px] md:text-[26px]"
+                                        >
+                                            {t('T03.section2.title')}
+                                        </p>
+                                        <p className="mt-[6px] lg:text-[14px] text-white font-arial-normal">
+                                            {t('T03.section2.subtitle')}
+                                        </p>
+                                    </div>
+                                    <div className="flex justify-center">
                                         <div
-                                            className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
-                                            <p className="text-white text-[21px] font-semibold">
-                                                {t('T03.section2.name')}
-                                            </p>
+                                            className="flex flex-wrap justify-center text-white md:gap-x-0 gap-x-2 gap-y-2"
+                                        >
+                                            <div
+                                                className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
+                                                <p className="text-white text-[21px] font-semibold">
+                                                    {t('T03.section2.name')}
+                                                </p>
 
-                                        </div>
-                                        <div
-                                            className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
-                                            <p className="text-white text-[21px] font-semibold">
-                                                {t('T03.section2.name2')}
-                                            </p>
+                                            </div>
+                                            <div
+                                                className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
+                                                <p className="text-white text-[21px] font-semibold">
+                                                    {t('T03.section2.name2')}
+                                                </p>
 
-                                        </div>
-                                        <div
-                                            className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
-                                            <p className="text-white text-[21px] font-semibold">
-                                                {t('T03.section2.name3')}
-                                            </p>
+                                            </div>
+                                            <div
+                                                className="flex items-center justify-center gap-3 px-6 lg:border-r-2 ">
+                                                <p className="text-white text-[21px] font-semibold">
+                                                    {t('T03.section2.name3')}
+                                                </p>
 
-                                        </div>
-                                        <div
-                                            className="flex items-center justify-center gap-3 px-6">
-                                            <p className="text-white text-[21px] font-semibold">
-                                                {t('T03.section2.name4')}
-                                            </p>
+                                            </div>
+                                            <div
+                                                className="flex items-center justify-center gap-3 px-6">
+                                                <p className="text-white text-[21px] font-semibold">
+                                                    {t('T03.section2.name4')}
+                                                </p>
 
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
+                        </div>
+
+                    </section>
+                    <CarBanner title={t('T03.section3.title')} subTitle={t('T03.section3.subtitle')}
+                               bg={`${process.env.NEXT_PUBLIC_API_URL}/media/930ed5c5-9ec4-4357-9d21-8eade048affb-Group 49-min.jpg`}
+                               bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/d836d3f0-e22d-4103-af08-db7c1a7bdc14-Group 9-min.jpg`}
+                               textColor={'black'}/>
+
+
+                    <CarSwiper content={carSwipper1} textColor={'black'}/>
+                    <CarSwiper content={carSwipper2}/>
+
+                    <CarBanner textColor={'black'} title={t('T03.carbanner.title')}
+                               subTitle={t('T03.carbanner.subtitle')}
+                               bg={`${process.env.NEXT_PUBLIC_API_URL}/media/88829038-aacd-48a6-a701-e530240c9c5e-Group 23-min.jpg`}
+                               bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/e93b360f-4840-4e4e-9dcd-d8f151c77fc1-Group 27-min.jpg`}/>
+                    <CarBanner title={t('T03.carbanner2.title')}
+                               subTitle={t('T03.carbanner2.subtitle')}
+                               bg={`${process.env.NEXT_PUBLIC_API_URL}/media/6e6b39b4-e070-49c6-9574-614a044b8a28-Group 37-min.jpg`}
+                               bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/591452de-b40b-4ace-9064-f63ff26bccca-Group 38-min.jpg`}/>
+                    <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
+                        <div className="container pb-10 mx-auto">
+                            <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
 
                         </div>
-                    </div>
+                        <div
+                            className={'overflow-x-hidden w-full  relative flex flex-col md:flex-row  md:h-[90vh] gap-y-6'}>
+                            {
+                                carSwipper3?.map((item, ind) => (
+                                    <HoverCard
+                                        image={item.bg}
+                                        key={ind}
+                                    />
+                                ))
+                            }
+                        </div>
+                    </section>
+                    <CarText content={disclaimers}/>
 
-                </section>
-                <CarBanner title={t('T03.section3.title')} subTitle={t('T03.section3.subtitle')}
-                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/930ed5c5-9ec4-4357-9d21-8eade048affb-Group 49-min.jpg`}
-                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/d836d3f0-e22d-4103-af08-db7c1a7bdc14-Group 9-min.jpg`}
-                           textColor={'black'}/>
-
-
-                <CarSwiper content={carSwipper1} textColor={'black'}/>
-                <CarSwiper content={carSwipper2}/>
-
-                <CarBanner textColor={'black'} title={t('T03.carbanner.title')}
-                           subTitle={t('T03.carbanner.subtitle')}
-                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/88829038-aacd-48a6-a701-e530240c9c5e-Group 23-min.jpg`}
-                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/e93b360f-4840-4e4e-9dcd-d8f151c77fc1-Group 27-min.jpg`}/>
-                <CarBanner title={t('T03.carbanner2.title')}
-                           subTitle={t('T03.carbanner2.subtitle')}
-                           bg={`${process.env.NEXT_PUBLIC_API_URL}/media/6e6b39b4-e070-49c6-9574-614a044b8a28-Group 37-min.jpg`}
-                           bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/591452de-b40b-4ace-9064-f63ff26bccca-Group 38-min.jpg`}/>
-                <section className={'min-h-screen pt-16 md:pt-20 swiper-scroll px-66'}>
-                    <div className="container pb-10 mx-auto">
-                        <p className={'text-[30px] font-semibold text-white'}>{t('picture')}</p>
-
-                    </div>
-                    <div
-                        className={'overflow-x-hidden w-full  relative flex flex-col md:flex-row  md:h-[90vh] gap-y-6'}>
-                        {
-                            carSwipper3?.map((item, ind) => (
-                                <HoverCard
-                                    image={item.bg}
-                                    key={ind}
-                                />
-                            ))
-                        }
-                    </div>
-                </section>
-                <CarText content={disclaimers}/>
-
-            </main>
+                </main>
             </SEO>
         </>
 

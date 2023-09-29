@@ -48,14 +48,14 @@ const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong ,model}) => {
           >
             {t('navbar.testDrive')}
           </Link>
-                     <Link
+                 {/*    <Link*/}
 
-                     href="/car-sale"
-                     onClick={() => dispatch(setCarModal(model))}
-                     className=" text-white text-lg  bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
-                 >
-                     Забронируйте
-                 </Link>
+                 {/*    href="/car-sale"*/}
+                 {/*    onClick={() => dispatch(setCarModal(model))}*/}
+                 {/*    className=" text-white text-lg  bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"*/}
+                 {/*>*/}
+                 {/*    Забронируйте*/}
+                 {/*</Link>*/}
             </div>
           }
          
