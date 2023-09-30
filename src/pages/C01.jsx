@@ -130,32 +130,19 @@ const characteristics = {
     ]
     const carSwipper3 = [
         {
-            title: t('c01.carswip3.title'),
+            title: t('c01.carswip3.title1'),
             subTitle: t('c01.carswip3.subtitle'),
             bg: `${process.env.NEXT_PUBLIC_API_URL}/media/3978b103-5203-4305-935a-90c728bb6e40-C01-section-7-slider-1-2bg.jpg`,
             bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/4974ca14-ef45-488d-a191-2608a7472c3b-screen8-2-2023.png`,
         },
         {
-            title: t('c01.carswip3.title'),
+            title: t('c01.carswip3.title2'),
             subTitle: t('c01.carswip3.subtitle2'),
             bg: `${process.env.NEXT_PUBLIC_API_URL}/media/3325ff16-020d-4b3d-8aec-fa259a08989b-C01-section-7-slider-1-1bg.jpg`,
             bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/be1d05e1-5c0f-4690-bde4-44d9199586fd-screen8-1-2023.png`,
 
         },
-        // {
-        //     title: t('c01.carswip3.title'),
-        //     subTitle: t('c01.carswip3.subtitle3'),
-        //     bg: `${process.env.NEXT_PUBLIC_API_URL}/media/3978b103-5203-4305-935a-90c728bb6e40-C01-section-7-slider-1-2bg.jpg`,
-        //     bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/4974ca14-ef45-488d-a191-2608a7472c3b-screen8-2-2023.png`,
 
-        // },
-        // {
-        //     title: t('c01.carswip3.title'),
-        //     subTitle: t('c01.carswip3.subtitle4'),
-        //     bg: `${process.env.NEXT_PUBLIC_API_URL}/media/3325ff16-020d-4b3d-8aec-fa259a08989b-C01-section-7-slider-1-1bg.jpg`,
-        //     bgResp: `${process.env.NEXT_PUBLIC_API_URL}/media/be1d05e1-5c0f-4690-bde4-44d9199586fd-screen8-1-2023.png`,
-
-        // }
     ]
 
     const carSwipper4 = [

@@ -24,7 +24,7 @@ const NewsCard = ({url , text , img , data} ) => {
                 {text}
               </p>
             </div>
-            <p className="leading-[22px] text-base text-[#666]"> {moment(data).fromNow()} </p>
+            <p className="leading-[22px] text-base text-[#666]"> {moment(data).format('D.M.YYYY')} </p>
           </Link>
     </>
   )

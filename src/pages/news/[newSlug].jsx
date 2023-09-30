@@ -8,11 +8,13 @@ import {useRouter} from "next/router";
 import {useQuery} from "react-query";
 import apiService from "@/service/api";
 import {useSelector} from "react-redux";
+import {useTranslation} from "react-i18next";
 
 
 const NewsInner = () => {
     const {lang} = useSelector(state => state.lang)
     const router = useRouter()
+    const {t}=useTranslation()
     const {newSlug} = router.query
     const {
         data,
@@ -33,13 +35,13 @@ const NewsInner = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/brand.png"/>
             </Head>
-            <section className={'pb-10'}>
+            <section className={'pb-10 '}>
                 <div className="container ">
                     <div className="mt-[95px] mb-[35px] md:mb-[40px]">
                         <Link
                             href="/news"
                             className="text-[#4d5d81] text-[20px] font-semibold"
-                        >News Room
+                        >{t('news.title')}
                         </Link>
                     </div>
                     <h1
@@ -49,9 +51,9 @@ const NewsInner = () => {
                     </h1>
                     {
                         data?.description.map(item => (
-                            <div className={'flex flex-col items-start pb-5'}>
+                            <div className={'flex flex-col items-start pb-5 '}>
 
-                                <div className="tracking-[.12rem] text-justify text-[18px] leading-[35px] mt-3"
+                                <div className="tracking-[.12rem] text-justify text-[18px] leading-[35px] mt-3 prose max-w-none"
                                      dangerouslySetInnerHTML={{__html: lang === 'ru' ? item?.textRu : item?.textUz}}
                                 >
 
