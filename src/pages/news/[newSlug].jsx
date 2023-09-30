@@ -2,7 +2,6 @@ import React, {useEffect} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import news1 from '/public/About-us/about us section 1.jpg'
 import Head from "next/head";
 import {useRouter} from "next/router";
 import {useQuery} from "react-query";

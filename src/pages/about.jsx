@@ -1,9 +1,7 @@
 import Image from "next/image";
 import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, {Autoplay, Navigation} from "swiper";
-import section1image1 from '/public/About-us/about us section 1.jpg'
 import section1image2 from '/public/About-us/about us section 1 image2.jpg'
-import teamImage from '/public/About-us/section-3 img1.jpg'
 import {AboutTeam, HoverCard} from "@/components";
 import axios from "axios";
 import {useSelector} from "react-redux";
