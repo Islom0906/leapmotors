@@ -76,7 +76,7 @@ const GoogleMaps = ({mapData}) => {
                         {mapData.map(({lat, lng, addressRu, addressUz, nameRu, nameUz, workingTime, tel}, ind) => (
                             <MarkerF position={{lat:Number(lat), lng:Number(lng)}} key={ind}
                                      icon={{
-                                         url: '/store-checked.png', // Path to your custom image
+                                         url: '/store-checked.png',
                                          scaledSize: new window.google.maps.Size(45, 50),
                                      }}
                                      onClick={() => {
