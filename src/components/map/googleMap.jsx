@@ -13,8 +13,8 @@ const GoogleMaps = ({mapData}) => {
     const onLoad = (map) => {
         setMapRef(map)
         if (mapData.length===1){
-        map.setCenter({lat:Number(mapData[0].lat),lng:Number(mapData[0].lng)})
-        map.setZoom(14)
+        map.setCenter({lat:41.337380,lng:64.478760})
+        map.setZoom(7)
 
         }else {
         const bounds = new google.maps.LatLngBounds();

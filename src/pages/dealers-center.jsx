@@ -14,6 +14,9 @@ const DealersCenter = ({filial,filialInner,map}) => {
         </SEO>
          
             <div className={'bg-black store'}>
+                <div className={'h-auto md:min-h-screen w-full relative bg-[#f5f5f5] '}>
+                    <GoogleMap mapData={map}/>
+                </div>
                 <header className="bg-black lg:pt-[60px] h-[100vh] ">
                     <div className="grid w-full h-full gap-4 overflow-x-hidden overflow-y-hidden lg:grid-cols-2">
                         {
@@ -34,9 +37,7 @@ const DealersCenter = ({filial,filialInner,map}) => {
                     }
 
                 </div>
-                <div className={'h-auto md:min-h-screen w-full relative bg-[#f5f5f5] '}>
-                    <GoogleMap mapData={map}/>
-                </div>
+
             </div>
         </>
 
