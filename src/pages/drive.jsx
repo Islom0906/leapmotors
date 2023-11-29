@@ -19,6 +19,10 @@ const Drive = () => {
         data,
     } = useQuery('get-model', () => apiService.getData('/product'))
     const {
+        data:getRegion,
+    } = useQuery('get-region', () => apiService.getData('/region'))
+
+    const {
         mutate: userPost, 
         data: userPostData, 
         isLoading: userPostLoading,
@@ -29,7 +33,7 @@ const Drive = () => {
     const [bg, setBg] = useState('')
     const [isActive, setIsActive] = useState(0)
     const [isModal, setModal] = useState(false)
-
+    const [getDealers, setGetDealers] = useState()
     useEffect(() => {
         const defaultBg = data?.data[0]
         if (model === "") {
@@ -69,9 +73,15 @@ const Drive = () => {
     }, [model]);
 
     const checkModel = (model, ind) => {
+        console.log(model)
         setBg(model)
         setIsActive(ind)
 
+    }
+
+    const handleChange = (country) => {
+        const findDelaers=getRegion.data.find(region=>region.nameRu===country)
+        setGetDealers(findDelaers?.dealers)
     }
 
     const onSubmit = (data) => {
@@ -80,6 +90,8 @@ const Drive = () => {
         const postData = {...data, model: bg?.model}
         userPost({url: '/testDrive', data: postData})
     }
+
+
 
 
     return (<>
@@ -125,24 +137,17 @@ const Drive = () => {
                                             </label>
                                             <select
                                                 id="countries"
-
                                                 {...register('region', {required: true})}
+                                                onChange={e=>handleChange(e.target.value)}
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                             >
                                                 <option value={''}>Выберите регион</option>
-                                                <option value="Ташкент">Ташкент</option>
-                                                {/*<option value="Андижан">Андижан</option>*/}
-                                                {/*<option value="Бухара">Бухара</option>*/}
-                                                {/*<option value="Фергана">Фергана</option>*/}
-                                                {/*<option value="Жиззах">Жиззах</option>*/}
-                                                {/*<option value="Хоразм">Хоразм</option>*/}
-                                                {/*<option value="Наманган">Наманган</option>*/}
-                                                {/*<option value="Навоий">Навоий</option>*/}
-                                                {/*<option value="Қашқадарё">Қашқадарё</option>*/}
-                                                {/*<option value="Қорақалпоғистон">Қорақалпоғистон</option>*/}
-                                                {/*<option value="Самарқанд">Самарқанд</option>*/}
-                                                {/*<option value="Сирдарё">Сирдарё</option>*/}
-                                                {/*<option value="Сурхондарё">Сурхондарё</option>*/}
+                                                {
+                                                    getRegion?.data?.map(country=>(
+                                                        <option key={country?._id} value={country?.nameRu}>{country?.nameRu}</option>
+
+                                                    ))
+                                                }
                                             </select>
                                             {errors.region &&
                                                 <span className={'text-red-600 text-xs'}>Требуется регион</span>}
@@ -160,9 +165,14 @@ const Drive = () => {
                                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                             >
                                                 <option value={''}>Выберите дилеров</option>
-                                                <option value="Leapmotorca">
-                                                    Leapmotorca
+                                                {
+                                                    getDealers?.map(dealer=>(
+                                                <option key={dealer?._id} value={dealer.nameRu}>
+                                                    {dealer.nameRu}
                                                 </option>
+
+                                                    ))
+                                                }
                                             </select>
                                             {errors.dealer &&
                                                 <span className={'text-xs text-red-600'}>Требуется дилера</span>}
