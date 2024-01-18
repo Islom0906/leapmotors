@@ -111,10 +111,15 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div className="flex items-center md:gap-14">
+            <div className="flex items-center md:gap-5 xl:gap-14">
+                <div className={'flex items-center gap-2'}>
+
+                <a href="tel:+998 78 141 88 88"
+                      className=" border-white border px-3 py-0.5 xl:px-4 xl:py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.tel')}</a>
                 <Link href="/drive"
                       onClick={()=>dispatch(checkCarModel(""))}
-                      className=" border-white border px-4 py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.testDrive')}</Link>
+                      className=" border-white border px-3 py-0.5 xl:px-4 xl:py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.testDrive')}</Link>
+                </div>
                 <div className="side-r">
                     <GiHamburgerMenu onClick={(e) => showSidebar(e, !show)}
                                      className="text-2xl text-white cursor-pointer"/>
