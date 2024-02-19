@@ -1,10 +1,14 @@
 import {CarCharacteristics, CarSwiper, CarBanner, CarText, HoverCard} from "@/components"
-import SEO from 'src/layout/seo/seo';
+import SEO from '@/SEO/SEO';
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useTranslation} from "react-i18next";
+import {useSelector} from "react-redux";
+import {C11SEO} from "@/SEO/SEOconfig";
 
 const C11 = () => {
     const {t}=useTranslation()
+    const {lang} = useSelector(state => state.lang)
+
 const characteristics1 = {
     title: t('C11.section1.title'),
     subTitle: t('C11.section1.subTitle'),
@@ -178,7 +182,7 @@ const carSwipper6 = [
 
     return (
         <>
-         <SEO  title={'Leapotorca C11'}  og_title={'Leapmotorca C11'}  keywords={'C11 , Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
+            <SEO title={C11SEO[lang].title} description={C11SEO[lang].description} ogTitle={C11SEO[lang].ogTitle} ogDescription={C11SEO[lang].ogDescription} />
             <main className={'bg-black'}>
                 <CarCharacteristics
                     bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/0b888d22-680d-462c-b673-b77a71c58a9f-screen1-1-2023.jpg`}
@@ -252,8 +256,7 @@ const carSwipper6 = [
                 <CarText content={disclaimers}/>
 
             </main>
-         </SEO>
-          
+
         </>
 
     )

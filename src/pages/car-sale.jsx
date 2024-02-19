@@ -20,11 +20,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useMutation, useQuery } from "react-query";
 import apiService from "@/service/api";
 import { useEffect, useState } from "react";
-import SEO from "src/layout/seo/seo";
+import SEO from '@/SEO/SEO'
 import { useForm } from "react-hook-form";
 import { LuLoader2 } from "react-icons/lu";
 import { useRouter } from "next/router";
 import InputMask from "react-input-mask";
+import {index, newsSEO} from "@/SEO/SEOconfig";
 
 const CarSale = () => {
   const router = useRouter();
@@ -224,23 +225,19 @@ const CarSale = () => {
 }, [])
 
   return (
-    <SEO
-      title={"Leapmotorca car sale"}
-      og_title={"Leapmotorca , Leapmotorca car-sale, leapmotorca car-sale"}
-      keywords={
-        "Leapmotorca , Leapmotors , Leapmotorauto , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz"
-      }
-      description={
-        "Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности"
-      }
-    >
+
+      <>
+        <SEO title={index[lang].title} description={index[lang].description} ogTitle={index[lang].ogTitle} ogDescription={index[lang].ogDescription} />
+
+
+
       <div>
         <div className="px-2 md:px-5 h-screen  overflow-hidden bg-[#eeeff4] relative">
           <div className={`grid ${
                 stepCar == "form-user" ? "h-[calc(100%-60px)]" : "h-[calc(100%-148px)]" 
               }  mt-[60px]  md:mt-0 grid-cols-1 lg:grid-cols-6 lg:grid-rows-1 grid-rows-2 md:h-auto`}>
             <div className="relative h-[100%] md:h-full  md:col-span-4  ">
-              
+
               <div className="relative w-full h-full md:h-auto md:aspect-video">
                 {loading ? (
                   <div className="absolute top-[40%] left-[40%]">
@@ -303,7 +300,7 @@ const CarSale = () => {
                     : "block lg:relative fixed"
                 }    left-0 z-20   w-full lg:top-0 top-20 `}
               >
-             
+
                 <ul
                   onClick={(e) => returnStep(e)}
                   className={` text-sm sm:text-xs flex justify-beetwen xl:text-sm font-medium text-center text-[#333] divide-x divide-gray-200 rounded-lg shadow  `}
@@ -357,7 +354,7 @@ const CarSale = () => {
               <div className="pt-3 pb-2 md:pt-5">
               <marquee>
         <p className="py-2">
-        Платежная система работает в тестовом режиме. 
+        Платежная система работает в тестовом режиме.
 
         </p>
         </marquee>
@@ -482,7 +479,7 @@ const CarSale = () => {
                   ""
                 )}
                 <></>
-                {stepCar == "allProduct" ? (
+                {stepCar === "allProduct" ? (
                   <>
                     <SaleCardTitle
                       title={versionModel?.title}
@@ -516,7 +513,7 @@ const CarSale = () => {
                 ) : (
                   ""
                 )}
-                {stepCar == "form-user" ? (
+                {stepCar === "form-user" ? (
                   <>
                     {modal ? (
                       <SaleCardTitle title={"Спасибо, ваша заявка принята."} />
@@ -606,7 +603,7 @@ const CarSale = () => {
               </div>
               <div
                 className={`${
-                  stepCar == "form-user" ? "hidden" : "flex"
+                  stepCar === "form-user" ? "hidden" : "flex"
                 }  items-center w-full h-auto py-5 lg:py-0 lg:h-[10vh] justify-between border-[#ddd] border-t fixed bottom-0 left-0 lg:static bg-white px-5 lg:px-0`}
               >
                 <span className="flex flex-col text-[#333] space-y-1">
@@ -622,11 +619,11 @@ const CarSale = () => {
                 </button>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
-    </SEO>
+      </>
   );
 };
 
