@@ -25,11 +25,12 @@ import { useForm } from "react-hook-form";
 import { LuLoader2 } from "react-icons/lu";
 import { useRouter } from "next/router";
 import InputMask from "react-input-mask";
-import {index, newsSEO} from "@/SEO/SEOconfig";
+import {index,} from "@/SEO/SEOconfig";
 
 const CarSale = () => {
   const router = useRouter();
   const [modal, setModal] = useState(false);
+  const {lang} = useSelector(state => state.lang)
   const {
     priceModel,
     colorInterior,

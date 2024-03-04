@@ -26,7 +26,10 @@ const Navbar = () => {
 
     const {
         data,
-    } = useQuery('get-model', () => apiService.getData('/product'))
+        refetch
+    } = useQuery('get-model', () => apiService.getData('/product'),{
+        enabled:false
+    })
     const showSidebar = (e, show) => {
         e.stopPropagation()
         dispatch(isShowSidebar(show))
@@ -52,6 +55,10 @@ const Navbar = () => {
         setSortProduct(productSort)
     },[data])
 
+
+    useEffect(() => {
+        refetch()
+    }, []);
     // useEffect(() => {
     //     // const defaultLang = localStorage.getItem('langLeap')
     //     dispatch(checkLanguageAction(defaultLang))

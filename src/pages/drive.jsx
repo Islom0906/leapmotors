@@ -17,7 +17,10 @@ const Drive = () => {
     const {register, handleSubmit, reset, formState: {errors}} = useForm()
     const {
         data,
-    } = useQuery('get-model', () => apiService.getData('/product'))
+        refetch:modelRefetch
+    } = useQuery('get-model', () => apiService.getData('/product'),{
+        enabled:false
+    })
     const {
         data:getRegion,
     } = useQuery('get-region', () => apiService.getData('/region'))
@@ -62,6 +65,9 @@ const Drive = () => {
 
     }, [userPostData])
 
+    useEffect(() => {
+        modelRefetch()
+    }, []);
 
     useEffect(() => {
         setBg({...bg, model})
