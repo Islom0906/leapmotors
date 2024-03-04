@@ -47,8 +47,10 @@ const CarSale = () => {
   const { versionModel, carModal } = useSelector((state) => state.sale);
   const [loading, setLoading] = useState(true);
 
-  const { data: position } = useQuery("position", () =>
-    apiService.getData(`/position?model=${carModal}`)
+  const { data: position ,refetch:refetchPosition} = useQuery("position", () =>
+    apiService.getData(`/position?model=${carModal}`),{
+      enabled:false
+    }
   );
 
   const { data: exterior, refetch: refetchExterior } = useQuery(
@@ -98,7 +100,11 @@ const CarSale = () => {
     let optionNull = [];
     dispatch(setHeaderImage(""));
     dispatch(setPriceModel(0));
-    dispatch(setCarModal(""));
+    //================== KEYIN YOQIB QOYISH KERAK==================== 
+
+    // dispatch(setCarModal(""));
+
+
     dispatch(setVersionModel(versionModelNull));
     dispatch(setColorExterior(colorNull));
     dispatch(setColorInterior(colorNull));
@@ -201,6 +207,9 @@ const CarSale = () => {
   }, [userPostData]);
   
   useEffect(() => {
+
+    refetchPosition()
+
     let colorNull = {
       image: "",
       colorImg: "",
@@ -237,11 +246,11 @@ const CarSale = () => {
       <div>
         <div className="px-2 md:px-5 h-screen  overflow-hidden bg-[#eeeff4] relative">
           <div className={`grid ${
-                stepCar == "form-user" ? "h-[calc(100%-60px)]" : "h-[calc(100%-148px)]" 
-              }  mt-[60px]  md:mt-0 grid-cols-1 lg:grid-cols-6 lg:grid-rows-1 grid-rows-2 md:h-auto`}>
-            <div className="relative h-[100%] md:h-full  md:col-span-4  ">
+                stepCar == "form-user" ? "h-[calc(100vh-60px)]" : "h-[calc(100vh-148px)]" 
+              }  mt-[60px]   grid-cols-1 lg:grid-cols-6 lg:grid-rows-1 grid-rows-2 lg:mt-[80px]`}>
+            <div className="relative h-[100%] md:h-full  md:col-span-4 ">
               
-              <div className="relative w-full h-full md:h-auto md:aspect-video">
+              <div className="relative w-full h-full ">
                 {loading ? (
                   <div className="absolute top-[40%] left-[40%]">
                     <img
@@ -254,14 +263,31 @@ const CarSale = () => {
                   ""
                 )}
 
-                {stepCar == "form-user" ? (
-                  <div className="flex items-center justify-center w-full h-full">
+                {stepCar === "form-user" ? (
+                  <div className="flex items-center justify-center w-full h-full relative">
+                    <div className={'relative w-full h-full '}>
+                      <Image
+                          fill
+                          src={"/login-bg.png"}
+                          alt={"car"}
+                          className={`duration-200 ease-in-out  
+                    ${
+                              loading
+                                  ? "scale-110 blur-2xl grayscale"
+                                  : "scale-100  blur-0 grayscale-0"
+                          }
+                    `}
+                          priority={true}
+                          onLoadingComplete={() => setLoading(false)}
+                      />
+                    </div>
                     <Image
                       width={300}
                       height={200}
                       src={"/login-logo.png"}
                       alt={"car"}
                       className={`duration-200 ease-in-out  
+                      absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                     ${
                       loading
                         ? "scale-110 blur-2xl grayscale"
@@ -294,7 +320,7 @@ const CarSale = () => {
             </div>
             <div className={`${
                 stepCar == "form-user" ? "bottom-0" : "bottom-[89px]" 
-              } h-[100%]  w-full col-span-2 p-1 bg-white rounded-lg md:p-3  left-0 mt-0 lg:mt-[80px] `}
+              } h-[100%]  w-full col-span-2 p-1 bg-white rounded-lg md:p-3  left-0 mt-0  `}
             >
               <div
                 className={` ${
@@ -311,7 +337,7 @@ const CarSale = () => {
                   <li className="w-full">
                     <button
                       className={` ${
-                        stepCar == "Версия"
+                        stepCar === "Версия"
                           ? "bg-gray-200 hover:bg-gray-200"
                           : "bg-white hover:bg-gray-50 "
                       } inline-block w-full p-2  text-gray-900 rounded-l-lg   focus:outline-none `}
@@ -322,7 +348,7 @@ const CarSale = () => {
                   <li className="w-full">
                     <button
                       className={`${
-                        stepCar == "Экстерьер"
+                        stepCar === "Экстерьер"
                           ? "bg-gray-200 hover:bg-gray-200"
                           : "bg-white hover:bg-gray-50"
                       } inline-block w-full p-2   focus:outline-none `}
@@ -333,7 +359,7 @@ const CarSale = () => {
                   <li className="w-full">
                     <button
                       className={`${
-                        stepCar == "интерьер"
+                        stepCar === "интерьер"
                           ? "bg-gray-200 hover:bg-gray-200"
                           : "bg-white hover:bg-gray-50"
                       } inline-block w-full p-2   focus:outline-none `}
@@ -344,7 +370,7 @@ const CarSale = () => {
                   <li className="w-full">
                     <button
                       className={`${
-                        stepCar == "Необязательный"
+                        stepCar === "Необязательный"
                           ? "bg-gray-200 hover:bg-gray-200"
                           : "bg-white hover:bg-gray-50"
                       } inline-block w-full p-2  rounded-r-lg   focus:outline-none  `}
@@ -388,8 +414,8 @@ const CarSale = () => {
                 className={`
                 ${
                   stepCar == "allProduct"
-                    ? " h-[100%] lg:h-[35vh] xl:h-[65vh]"
-                    : "h-[100%] lg:h-[35vh] xl:h-[65vh]"
+                    ? " h-[30vh] lg:h-[60vh]"
+                    : "h-[30vh] lg:h-[60vh]"
                 }
                 
                 ${

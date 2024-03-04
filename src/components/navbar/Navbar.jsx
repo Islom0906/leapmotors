@@ -111,11 +111,11 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div className="flex items-center md:gap-5 xl:gap-14">
+            <div className={`${sale.asPath==='/car-sale' ? 'hidden' : 'flex'}  items-center md:gap-5 xl:gap-14`}>
                 <div className={'flex items-center gap-2'}>
 
                 <a href="tel:+998 78 141 88 88"
-                      className=" border-white border px-3 py-0.5 xl:px-4 xl:py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.tel')}</a>
+                      className="border-white border px-3 py-0.5 xl:px-4 xl:py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.tel')}</a>
                 <Link href="/drive"
                       onClick={()=>dispatch(checkCarModel(""))}
                       className=" border-white border px-3 py-0.5 xl:px-4 xl:py-1 text-white hover:text-[#4f5f82] hover:bg-white  transition-all ease duration-500 underline-offset-8 font-arial-semibold hidden lg:block">{t('navbar.testDrive')}</Link>
@@ -138,7 +138,6 @@ const Navbar = () => {
                                             <Link href={`/${link?.model}`}
                                                   className="block uppercase lg:hidden ">{link?.model}</Link>
                                         </li>
-
                                     ))
                                 }
                                 <li><Link onClick={(e) => showSidebar(e, false)} href="/about"
