@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { LuLoader2 } from "react-icons/lu";
 import ModalSuccess from "@/components/modal-success/modal-success";
 import InputMask from "react-input-mask";
-import SEO from 'src/layout/seo/seo';
+import SEO from "@/SEO/SEO";
 const dealers = () => {
   const { t } = useTranslation();
   const {
@@ -41,16 +41,7 @@ const dealers = () => {
 
   return (
     <>
-      <SEO
-        title={"Leapmotorca Dealers"}
-        og_title={"Leapmotorca , Leapmotorca Dealers, leapmotorca Dealers"}
-        keywords={
-          "Dealers , cooperation , work together , Dealers uz , Leapmotorca uz, Leapmotors uz, Leapmotorauto uz"
-        }
-        description={
-          "Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности"
-        }
-      >
+        <SEO title={dealersSEO[lang].title} description={dealersSEO[lang].description} ogTitle={dealersSEO[lang].ogTitle} ogDescription={dealersSEO[lang].ogDescription} />
         <div className="pt-[80px]">
           <div className="container">
             <div className="text-[#4d5d81]   relative mb-1 pt-4 text-xl font-bold leading-7  font-arial-semibold md:leading-8">
@@ -427,7 +418,6 @@ const dealers = () => {
             <ModalSuccess text={"Ваша заявка принята"} />
           </div>
         </section>
-      </SEO>
     </>
   );
 };

@@ -3,7 +3,8 @@ import axios from "axios";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import {useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
-import SEO from 'src/layout/seo/seo';
+import SEO from '@/SEO/SEO';
+import {newsSEO} from "@/SEO/SEOconfig";
 
 
 const news = ({news}) => {
@@ -12,7 +13,8 @@ const news = ({news}) => {
     return (
 
         <>
-         <SEO  title={'Leapotorca News'}  og_title={'Leapotorca uz News, Leapmotor uzbekistan News,Leapotorca News'}  keywords={'Leapotorca uz News, Leapmotor uzbekistan News,Leapotorca News'}  description={'Мы являемся ведущей компанией по производству интеллектуальных электромобилей, которая стремится предоставить всем потребителям наилучшие возможности инновационной мобильности'} >
+            <SEO title={newsSEO[lang].title} description={newsSEO[lang].description} ogTitle={newsSEO[lang].ogTitle} ogDescription={newsSEO[lang].ogDescription} />
+
             <section className="mt-4">
                 <div className="container ">
                     <div className="pt-[80px] pb-[60px]">
@@ -33,7 +35,6 @@ const news = ({news}) => {
                     </div>
                 </div>
             </section>
-        </SEO>
         </>
 
     )
