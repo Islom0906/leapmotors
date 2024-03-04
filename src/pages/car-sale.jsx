@@ -102,10 +102,10 @@ const CarSale = () => {
     let optionNull = [];
     dispatch(setHeaderImage(""));
     dispatch(setPriceModel(0));
-    //================== KEYIN YOQIB QOYISH KERAK==================== 
+    //==================KEYIN YOQIB QOYISH KERAK====================
 
     // dispatch(setCarModal(""));
-    localStorage.clear()
+
 
     dispatch(setVersionModel(versionModelNull));
     dispatch(setColorExterior(colorNull));
@@ -209,7 +209,7 @@ const CarSale = () => {
   }, [userPostData]);
   
   useEffect(() => {
-
+    dispatch(setCarModal("T03"));
     refetchPosition()
 
     let colorNull = {
@@ -411,13 +411,13 @@ const CarSale = () => {
               <div
                 className={`
                 ${
-                  stepCar == "allProduct"
-                    ? " h-[30vh] lg:h-[60vh]"
-                    : "h-[30vh] lg:h-[60vh]"
+                  stepCar === "allProduct"
+                    ? " h-[30vh] lg:h-[58vh]"
+                    : "h-[30vh] lg:h-[58vh]"
                 }
                 
                 ${
-                  stepCar == "form-user" ? "flex justify-center flex-col pb-4" : "overflow-y-scroll"
+                  stepCar === "form-user" ? "flex justify-center flex-col pb-4" : "overflow-y-scroll"
                 }  space-y-4 pb-3 md:pb-5    `}
               >
                 {stepCar === "Версия" ? (
