@@ -105,7 +105,7 @@ const CarSale = () => {
     //================== KEYIN YOQIB QOYISH KERAK==================== 
 
     // dispatch(setCarModal(""));
-
+    localStorage.clear()
 
     dispatch(setVersionModel(versionModelNull));
     dispatch(setColorExterior(colorNull));
