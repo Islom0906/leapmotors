@@ -11,9 +11,12 @@ import InputMask from 'react-input-mask';
 import SEO from '@/SEO/SEO';
 
 import {useSelector} from "react-redux";
+import {driveSEO} from "@/SEO/SEOconfig";
 
 const Drive = () => {
     const {model} = useSelector(state => state.drive)
+    const {lang} = useSelector(state => state.lang)
+
     const {register, handleSubmit, reset, formState: {errors}} = useForm()
     const {
         data,
