@@ -79,7 +79,6 @@ const Drive = () => {
     }, [model]);
 
     const checkModel = (model, ind) => {
-        console.log(model)
         setBg(model)
         setIsActive(ind)
 

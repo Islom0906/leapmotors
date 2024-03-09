@@ -5,7 +5,7 @@ const SaleList = ( {title , subtitle ,src}) => {
     <>
       <div className="flex items-center p-2 bg-[rgba(51,51,51,.06)] border rounded gap-x-3">
         <div className="w-[50px] h-[50px] relative">
-          <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${src}`} alt={title} fill />
+          <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${src}`} alt={title} fill className={'rounded-full'}/>
         </div>
         <div className="text-[#333] space-y-1">
           <h5 className="text-xs font-semibold">

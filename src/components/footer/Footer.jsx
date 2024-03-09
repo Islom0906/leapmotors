@@ -8,6 +8,7 @@ import {useRouter} from "next/router";
 import {useQuery} from "react-query";
 import apiService from "@/service/api";
 import {FaTelegram} from "react-icons/fa";
+import {useEffect} from "react";
 
 
 const Footer = () => {
@@ -16,8 +17,14 @@ const Footer = () => {
     const {pathname}=useRouter()
 
   const {
-    data,
-  } = useQuery('get-contact', () => apiService.getData('/contact'))
+    data,refetch
+  } = useQuery('get-contact', () => apiService.getData('/contact'),{
+    enabled:false
+  })
+
+  useEffect(() => {
+    refetch()
+  }, []);
         return (
           <>
             <footer className={` ${sale.asPath == '/car-sale' ? 'hidden' : 'block'} bg-[#efefef] py-10 ${pathname==='/' && 'footer'}`}>

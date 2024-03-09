@@ -40,7 +40,7 @@ const ColorCard = ({colorImg , colorName ,  catalogType ,firstActive , img , pri
     <>
       <div onClick={selectColor}   className={`relative cursor-pointer  h-full  flex  font-medium flex-col  items-center gap-y-2 text-xs hover:text-[#333] group `} >
         <div className={`w-[50px] relative h-[50px] rounded-full ${colorName === colorExterior.colorName  ? 'ring-4 ring-slate-300' : " " } ${colorName === colorInterior.colorName  ? 'ring-4' : " " } aspect-square`}>
-          <Image fill  src={`${process.env.NEXT_PUBLIC_API_URL}/${colorImg}`}  />
+          <Image fill  src={`${process.env.NEXT_PUBLIC_API_URL}/${colorImg}`} className={'rounded-full'} alt={colorName ? colorName :'color image'} />
         
         </div>
         <p className='font-bold text-center'>{colorName}</p>

@@ -27,7 +27,6 @@ useEffect(() => {
     dispatch(setHeaderImage(firstActive?.image.path))
   }
 } , [firstActive])
-
   return (
     <div>
       <div onClick={versionSelect} className={`${versionModel.title === title ? 'border-[#333]' : 'border-[#ddd] '} px-3 cursor-pointer  py-2 space-y-2 border-[.5px] rounded-lg`} >
@@ -38,11 +37,11 @@ useEffect(() => {
         <ul className="space-y-1 text-xs font-thin list-disc list-inside ">
           {
             content?.map((item , ind) => (
-              ind < 3 || openList ? 
-              <li className='' key={ind}>
+
+              <li className={`${ind < 3 || openList ?'':'hidden'}`} key={ind}>
                 {item}
               </li>
-            : <></>
+
             ))
           }
          

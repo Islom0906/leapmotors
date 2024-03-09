@@ -49,7 +49,7 @@ const CarSale = () => {
   const { versionModel, carModal } = useSelector((state) => state.sale);
   const [loading, setLoading] = useState(true);
 
-  const { data: position ,refetch:refetchPosition} = useQuery("position", () =>
+  const { data: position ,refetch:refetchPosition,isSuccess:positionSuccess} = useQuery("position", () =>
     apiService.getData(`/position?model=${carModal}`),{
       enabled:false
     }
@@ -76,7 +76,7 @@ const CarSale = () => {
       enabled: false,
     }
   );
-  const { data: option, refetch: refetchOption } = useQuery(
+  const { data: option, refetch: refetchOption,isSuccess:optoinSuccess } = useQuery(
     "option",
     () =>
       apiService.getData(
@@ -104,7 +104,7 @@ const CarSale = () => {
     dispatch(setPriceModel(0));
     //==================KEYIN YOQIB QOYISH KERAK====================
 
-    // dispatch(setCarModal(""));
+    dispatch(setCarModal(""));
 
 
     dispatch(setVersionModel(versionModelNull));
@@ -209,7 +209,7 @@ const CarSale = () => {
   }, [userPostData]);
   
   useEffect(() => {
-    dispatch(setCarModal("T03"));
+    // dispatch(setCarModal("T03"));
     refetchPosition()
 
     let colorNull = {
@@ -234,6 +234,16 @@ const CarSale = () => {
     }
 }, [])
 
+  useEffect(() => {
+    if (optoinSuccess){
+      if (!option?.data?.length>0&&positionSuccess){
+        dispatch(setHeaderImage(position?.data[0]?.image?.path))
+      }else {
+      dispatch(setHeaderImage(option?.data[0]?.bannerImage?.path))
+      }
+    }
+  }, [option]);
+
   return (
 
       <>
@@ -253,7 +263,7 @@ const CarSale = () => {
                   <div className="absolute top-[40%] left-[40%]">
                     <img
                       src={"/loading.gif"}
-                      alt={"car"}
+                      alt={"loading leapmotor"}
                       className={`w-5 h-5 md:w-[60px] md:h-[60px]`}
                     />
                   </div>
@@ -267,7 +277,7 @@ const CarSale = () => {
                       <Image
                           fill
                           src={"/login-bg.png"}
-                          alt={"car"}
+                          alt={"login bg"}
                           className={`duration-200 ease-in-out  
                     ${
                               loading
@@ -283,7 +293,7 @@ const CarSale = () => {
                       width={300}
                       height={200}
                       src={"/login-logo.png"}
-                      alt={"car"}
+                      alt={"login logo"}
                       className={`duration-200 ease-in-out  
                       absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                     ${
@@ -300,7 +310,7 @@ const CarSale = () => {
                   <Image
                     fill
                     src={`${process.env.NEXT_PUBLIC_API_URL}/${headerImage}`}
-                    alt={"car"}
+                    alt={"banner image leapmotor"}
                     className={` ${
                       stepCar == "интерьер" ? "object-cover" : "object-contain"
                     } w-full h-full  duration-200 ease-in-out  
@@ -412,8 +422,8 @@ const CarSale = () => {
                 className={`
                 ${
                   stepCar === "allProduct"
-                    ? " h-[30vh] lg:h-[58vh]"
-                    : "h-[30vh] lg:h-[58vh]"
+                    ? " h-[30vh] lg:h-[calc(65vh-100px)]"
+                    : "h-[30vh] lg:h-[calc(65vh-100px)]"
                 }
                 
                 ${
@@ -425,7 +435,7 @@ const CarSale = () => {
                     <div className="text-[#333]">
                       <div className="grid items-center content-center justify-center grid-cols-4 gap-5 p-2 md:p-5 ">
                         {position?.data?.map((version) => (
-                          <div key={version._id} className="col-span-4 ">
+                          <div key={version?._id} className="col-span-4 ">
                             <VersionCard
                               headerImage={version?.image.path}
                               title={version?.name}
@@ -487,37 +497,47 @@ const CarSale = () => {
                 )}
                 {stepCar === "Необязательный" ? (
                   <>
-                    <div className="text-[#333]">
-                      <div className="grid items-center content-center justify-center grid-cols-4 gap-5 p-2 md:p-5 ">
-                        {option?.data?.map((opt) => (
-                          <ComplectCar
-                            key={opt._id}
-                            bannerImage={opt.bannerImage.path}
-                            headerImage={opt.mainImage.path}
-                            includes={opt.includes}
-                            title={opt.name}
-                            price={opt.price}
-                          />
-                        ))}
-                      </div>
-                    </div>
+                    {
+                      option?.data?.length > 0 ?
+                          <div className="text-[#333]">
+                            <div
+                                className="grid items-center content-center justify-center grid-cols-4 gap-5 p-2 md:p-5 ">
+                              {option?.data?.map((opt) => (
+                                  <ComplectCar
+                                      key={opt?._id}
+                                      bannerImage={opt.bannerImage.path}
+                                      headerImage={opt.mainImage.path}
+                                      includes={opt.includes}
+                                      title={opt.name}
+                                      price={opt.price}
+                                  />
+                              ))}
+                            </div>
+                          </div>
+                          :
+
+                          <p className={"text-xs opacity-40 font-bold text-center w-full"}>
+                          Для данной позиции не добавлено ни одного пакета. Вы можете перейти в следующий раздел
+                          </p>
+                    }
+
                   </>
                 ) : (
-                  ""
+                    ""
                 )}
                 <></>
                 {stepCar === "allProduct" ? (
-                  <>
-                    <SaleCardTitle
-                      title={versionModel?.title}
-                      btnText={"refresh"}
-                      carModal={carModal}
-                    />
-                    <div className="border-b border-b-[#eee] py-4 space-y-2">
-                      <SaleList
-                        src={colorExterior?.colorImg}
-                        title={colorExterior?.colorName}
-                        subtitle={colorExterior?.price}
+                    <>
+                      <SaleCardTitle
+                          title={versionModel?.title}
+                          btnText={"refresh"}
+                          carModal={carModal}
+                      />
+                      <div className="border-b border-b-[#eee] py-4 space-y-2">
+                        <SaleList
+                            src={colorExterior?.colorImg}
+                            title={colorExterior?.colorName}
+                            subtitle={colorExterior?.price}
                       />
                       <SaleList
                         src={colorInterior?.colorImg}

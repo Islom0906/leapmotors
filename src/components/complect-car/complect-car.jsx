@@ -19,7 +19,7 @@ const ComplectCar = ( {headerImage ,  title , price ,includes , bannerImage  } )
     setActiveOpen(!activeOpen)
     let addPrice = ''
     if(!activeOpen) {
-      dispatch(setHeaderImage(bannerImage))
+      // dispatch(setHeaderImage(bannerImage))
       dispatch(setOptionCar([...optionCar ,data  ]))
       addPrice = priceModel + price
 
