@@ -155,4 +155,4 @@ export const seoContent = {
   }
 };
 
-export const {index, C11SEO ,driveSEO,T03SEO, C01SEO ,C11REEVSEO,   newsSEO, aboutUsSEO  ,serviceSEO , dealerCenterSEO} = seoContent
+export const {index,dealersSEO, C11SEO ,driveSEO,T03SEO, C01SEO ,C11REEVSEO,   newsSEO, aboutUsSEO  ,serviceSEO , dealerCenterSEO} = seoContent

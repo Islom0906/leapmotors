@@ -7,8 +7,11 @@ import { LuLoader2 } from "react-icons/lu";
 import ModalSuccess from "@/components/modal-success/modal-success";
 import InputMask from "react-input-mask";
 import SEO from "@/SEO/SEO";
+import {dealersSEO} from "@/SEO/SEOconfig";
+import {useSelector} from "react-redux";
 const dealers = () => {
   const { t } = useTranslation();
+  const {lang} = useSelector(state => state.lang)
   const {
     register,
     handleSubmit,
