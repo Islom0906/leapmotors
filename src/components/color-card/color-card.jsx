@@ -44,11 +44,11 @@ const ColorCard = ({colorImg , colorName ,  catalogType ,firstActive , img , pri
         
         </div>
         <p className='font-bold text-center'>{colorName}</p>
-        {
-          price == 0 ? 
-          "" :
-          <p className='text-xs' >{price} <span className='text-[9px]'> UZS</span> </p>
-        }
+        {/*{*/}
+        {/*  price === 0 ? */}
+        {/*  "" :*/}
+        {/*  <p className='text-xs' >{price} <span className='text-[9px]'> UZS</span> </p>*/}
+        {/*}*/}
       </div>
     </>
   );

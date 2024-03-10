@@ -7,6 +7,9 @@ import { useDispatch } from "react-redux";
 const BannerImage = ({ bg, logo, text, link, bgRes }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+
+
+
   return (
     <section className="relative w-full h-screen scroll-snap ">
       <div
@@ -63,11 +66,12 @@ const BannerImage = ({ bg, logo, text, link, bgRes }) => {
                   {t("more")}
                 </Link>
                 <Link
+
                   data-aos="fade-up"
                   data-aos-anchor-placement="top-bottom"
                   href="/car-sale"
                   onClick={() => dispatch(setCarModal(link))}
-                  className=" text-white text-lg  bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500"
+                  className={`${link==='C11Reev' ? 'pointer-events-none':''} text-white text-lg  bg-transparent border border-white w-auto px-2 md:px-0 md:w-[185px] flex  justify-center py-1 hover:text-[#4f5f81] hover:bg-white transition-all ease duration-500`}
                 >
                   Забронируйте
                 </Link>

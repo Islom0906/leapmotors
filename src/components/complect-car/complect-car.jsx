@@ -60,7 +60,7 @@ const ComplectCar = ( {headerImage ,  title , price ,includes , bannerImage  } )
         <div className="flex items-center justify-between px-4 py-3 border-b border-b-[#ddd]">
           <div>
             <h5 className="text-sm font-semibold">{title}</h5>
-            <p className="text-xs">{price}</p>
+            {/*<p className="text-xs">{price}</p>*/}
           </div>
           <button onClick={selectCard} className={` ${activeOpen ? ' text-white bg-[#333]' : 'text-[#333] bg-transparent  '} text-sm flex  justify-center py-2 px-3 rounded-md transition-all ease duration-200`}>
             {
@@ -77,6 +77,7 @@ const ComplectCar = ( {headerImage ,  title , price ,includes , bannerImage  } )
             includes?.map((card , ind) => {
              
               if(card?.image?.name !== 'null'  ) {
+
                 return (<SaleList key={ind}
                   src={card?.image?.path}
                   title={card.title}

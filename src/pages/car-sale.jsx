@@ -87,6 +87,13 @@ const CarSale = () => {
     }
   );
 
+  const {
+    mutate: userPost,
+    data: userPostData,
+    isLoading: userPostLoading,
+    isSuccess: userPostSuccess,
+  } = useMutation(({ url, data }) => apiService.postData(url, data));
+
   const deleteLocal = () => {
     let colorNull = {
       image: "",
@@ -102,7 +109,6 @@ const CarSale = () => {
     let optionNull = [];
     dispatch(setHeaderImage(""));
     dispatch(setPriceModel(0));
-    //==================KEYIN YOQIB QOYISH KERAK====================
 
     dispatch(setCarModal(""));
 
@@ -115,7 +121,9 @@ const CarSale = () => {
   };
 
 
-  
+
+
+
   const returnStep = (e) => {
     const target = e.target;
     let colorNull = {
@@ -167,12 +175,7 @@ const CarSale = () => {
     }
   };
 
-  const {
-    mutate: userPost,
-    data: userPostData,
-    isLoading: userPostLoading,
-    isSuccess: userPostSuccess,
-  } = useMutation(({ url, data }) => apiService.postData(url, data));
+
 
   const userSubmit = (data) => {
     const optionName = [];
@@ -422,8 +425,8 @@ const CarSale = () => {
                 className={`
                 ${
                   stepCar === "allProduct"
-                    ? " h-[30vh] lg:h-[calc(65vh-100px)]"
-                    : "h-[30vh] lg:h-[calc(65vh-100px)]"
+                    ? " h-[30vh] lg:h-[calc(100%-240px)]"
+                    : "h-[30vh] lg:h-[calc(100%-240px)]"
                 }
                 
                 ${
@@ -537,18 +540,19 @@ const CarSale = () => {
                         <SaleList
                             src={colorExterior?.colorImg}
                             title={colorExterior?.colorName}
-                            subtitle={colorExterior?.price}
+                            // subtitle={colorExterior?.price}
                       />
                       <SaleList
                         src={colorInterior?.colorImg}
                         title={colorInterior?.colorName}
-                        subtitle={colorInterior?.price}
+                        // subtitle={colorInterior?.price}
                       />
-                      {optionCar?.map((item) => (
+                      {optionCar?.map((item,ind) => (
                         <SaleList
+                            key={ind}
                           src={item.headerImage}
                           title={item.optName}
-                          subtitle={item.price}
+                          // subtitle={item.price}
                         />
                       ))}
                     </div>
@@ -654,8 +658,8 @@ const CarSale = () => {
                 }  items-center w-full h-auto py-5 lg:py-0 lg:h-[10vh] justify-between border-[#ddd] border-t fixed bottom-0 left-0 lg:static bg-white px-5 lg:px-0`}
               >
                 <span className="flex flex-col text-[#333] space-y-1">
-                  <h5 className="text-xl font-bold">{priceModel}</h5>
-                  <p className="text-xs">Депозит $5000</p>
+                  {/*<h5 className="text-xl font-bold">{priceModel}</h5>*/}
+                  {/*<p className="text-xs">Депозит $5000</p>*/}
                 </span>
                 <button
                   onClick={changeStepList}

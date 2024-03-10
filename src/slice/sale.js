@@ -61,9 +61,12 @@ export const CarSale = createSlice({
     },
     setOptionCar: (state, { payload }) => {
       state.optionCar = payload
+    },
+    clearState:(state)=>{
+      state=initialState
     }
   }
 })
 
-export const { setVersionModel, setHeaderImage, setOptionCar, setStepCar, setPriceModel, setColorExterior, setColorInterior, setCarModal } = CarSale.actions
+export const { setVersionModel,clearState, setHeaderImage, setOptionCar, setStepCar, setPriceModel, setColorExterior, setColorInterior, setCarModal } = CarSale.actions
 export default CarSale.reducer
