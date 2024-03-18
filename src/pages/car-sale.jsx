@@ -375,7 +375,7 @@ const CarSale = () => {
                           : "bg-white hover:bg-gray-50"
                       } inline-block w-full p-2   focus:outline-none `}
                     >
-                      интерьер
+                      Интерьер
                     </button>
                   </li>
                   <li className="w-full">
@@ -392,12 +392,7 @@ const CarSale = () => {
                 </ul>
               </div>
               <div className="pt-3 pb-2 md:pt-5">
-              <marquee>
-        <p className="py-2">
-        Платежная система работает в тестовом режиме.
 
-        </p>
-        </marquee>
                 {stepCar === "Версия" ? (
                   <SaleCardTitle title={"Выбрать Версия"} />
                 ) : (

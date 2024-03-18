@@ -12,8 +12,16 @@ import SEO from '@/SEO/SEO';
 
 import {useSelector} from "react-redux";
 import {driveSEO} from "@/SEO/SEOconfig";
+import {useRouter} from "next/router";
 
 const Drive = () => {
+    const navigate=useRouter()
+
+    const [bg, setBg] = useState('')
+    const [isActive, setIsActive] = useState(0)
+    const [isModal, setModal] = useState(false)
+    const [getDealers, setGetDealers] = useState()
+
     const {model} = useSelector(state => state.drive)
     const {lang} = useSelector(state => state.lang)
 
@@ -35,11 +43,8 @@ const Drive = () => {
         isSuccess: userPostSuccess
     } = useMutation(({url, data}) => apiService.postData(url, data))
 
+    console.log(getRegion)
 
-    const [bg, setBg] = useState('')
-    const [isActive, setIsActive] = useState(0)
-    const [isModal, setModal] = useState(false)
-    const [getDealers, setGetDealers] = useState()
     useEffect(() => {
         const defaultBg = data?.data[0]
         if (model === "") {
@@ -62,6 +67,7 @@ const Drive = () => {
             setModal(true)
             setTimeout(() => {
                 setModal(false)
+                navigate.push('/')
             }, 2000)
         }
 

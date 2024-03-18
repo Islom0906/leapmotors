@@ -9,7 +9,9 @@ import InputMask from "react-input-mask";
 import SEO from "@/SEO/SEO";
 import {dealersSEO} from "@/SEO/SEOconfig";
 import {useSelector} from "react-redux";
+import {useRouter} from "next/router";
 const dealers = () => {
+  const navigate=useRouter()
   const { t } = useTranslation();
   const {lang} = useSelector(state => state.lang)
   const {
@@ -34,6 +36,7 @@ const dealers = () => {
       setModal(true);
       setTimeout(() => {
         setModal(false);
+        navigate.push('/')
       }, 2000);
     }
   }, [userPostData]);
