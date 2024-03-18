@@ -43,7 +43,6 @@ const Drive = () => {
         isSuccess: userPostSuccess
     } = useMutation(({url, data}) => apiService.postData(url, data))
 
-    console.log(getRegion)
 
     useEffect(() => {
         const defaultBg = data?.data[0]
