@@ -15,8 +15,11 @@ const BannerImage = ({ bg, logo, text, link, bgRes }) => {
       <div
         data-aos="fade"
         data-aos-anchor-placement="top-bottom"
-        className="relative w-full h-full"
+        className="relative w-full h-full "
       >
+        <div className={'absolute top-0 left-0 w-full h-full z-[5] bg--gradient'}>
+
+        </div>
         <div className="container">
           <Image
             src={bg}

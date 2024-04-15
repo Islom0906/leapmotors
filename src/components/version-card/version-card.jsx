@@ -30,9 +30,9 @@ useEffect(() => {
   return (
     <div>
       <div onClick={versionSelect} className={`${versionModel.title === title ? 'border-[#333]' : 'border-[#ddd] '} px-3 cursor-pointer  py-2 space-y-2 border-[.5px] rounded-lg`} >
-        <div className="flex items-center justify-between text-sm font-semibold">
+        <div className="flex items-start gap-2 justify-between text-sm font-semibold">
           <h4> {title} </h4>
-          {/*<span>{price} </span>*/}
+          <span className={'whitespace-nowrap'}>{price?.toLocaleString('en-US', { style: 'decimal' }).replace(/,/g, ' ')} </span>
         </div>
         <ul className="space-y-1 text-xs font-thin list-disc list-inside ">
           {
