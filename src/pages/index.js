@@ -23,17 +23,20 @@ export default function Home({ banner, products }) {
     const productSort = [];
 
     products?.map((product) => {
-      if (product?.model === "T03") {
+      if (product?.model === "C10") {
         productSort[0] = product;
       }
-      if (product?.model === "C01") {
+      if (product?.model === "T03") {
         productSort[1] = product;
       }
-      if (product?.model === "C11") {
+      if (product?.model === "C01") {
         productSort[2] = product;
       }
-      if (product?.model === "C11Reev") {
+      if (product?.model === "C11") {
         productSort[3] = product;
+      }
+      if (product?.model === "C11Reev") {
+        productSort[4] = product;
       }
     });
 
@@ -92,8 +95,10 @@ export default function Home({ banner, products }) {
                   ? "media/29f607a1-f30d-41a0-b662-257b2813544e-c01-res.jpg"
                   : product?.model === "C11"
                   ? "media/d66383ea-8997-4374-935c-5bd7ebf26e03-c11-res.jpg"
-                  : product?.model === "T03" &&
-                    "media/6c0219f0-5c24-4370-9d0e-4ae372837b5d-t03-res.jpg"
+                  : product?.model === "T03" ?
+                    "media/6c0219f0-5c24-4370-9d0e-4ae372837b5d-t03-res.jpg" 
+                  : product?.model === "C10" &&
+                    "media/c10/c10-res.jpg"
               }`}
             />
           ))}

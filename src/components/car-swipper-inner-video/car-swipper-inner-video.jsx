@@ -16,8 +16,15 @@ const CarSwiperInnerVideo = ({textColor , content , video}) => {
         </div>
         <div className="md:absolute top-[60px] w-full text-center z-[40]">
           <div className={`w-full  mb-5 text-center ${textColor ? `text-${textColor} ` : 'md:text-white'} `}>
+            {
+              content.title &&
             <p className={` font-semibold text-[22px] leading-7 md:leading-8 mb-2`}>{content.title}</p>
+            }
+            {
+              content.subTitle
+                &&
             <p className="text-sm font-normal md:leading-5">{content.subTitle}</p>
+            }
           </div>
         </div>
       </div>

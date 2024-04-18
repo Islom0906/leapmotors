@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 const CarSwiperInner = ({title , subTitle , bg ,textColor , bgResp}) => {
+
   return (
     <>
       <section className="relative h-full bg-white md:h-screen">
@@ -18,8 +19,12 @@ const CarSwiperInner = ({title , subTitle , bg ,textColor , bgResp}) => {
         </div>
         <div className="md:absolute z-[40] top-[60px] w-full text-center">
           <div className={`w-full  mb-5 text-center ${textColor ? `text-${textColor} ` : 'md:text-white'} `}>
+              {title &&
             <p className={` font-semibold text-[22px] leading-7 md:leading-8 mb-2`}>{title}</p>
+              }
+              {subTitle &&
             <p className="text-sm font-normal md:leading-5">{subTitle}</p>
+              }
           </div>
         </div>
       </div>

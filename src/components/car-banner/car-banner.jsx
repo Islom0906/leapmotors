@@ -25,8 +25,13 @@ const CarBanner = ({title , subTitle , bg , bgRes , center ,textColor ,imgStyle}
         {/*<div className="w-full h-[150px] absolute  top-0 left-0 bg-gradient-to-b from-black via-black z-10 block md:hidden"></div>*/}
         <div  className={`absolute top-0 left-0 py-[60px] z-[100] w-full h-full text-center  ${imgStyle}  ${center ? 'flex justify-center items-center' : ''} `}>
           <div className={` mt-10 mb-5 text-center mx-auto w-[90%] ${textColor ? `text-${textColor}` : 'text-white'} `}>
+              {title&&
             <p data-aos='fade-up' data-aos-anchor-placement="top-bottom" className="  text-[28px] leading-7 md:leading-8 mb-4 ">{title}</p>
+              }
+              {
+                  subTitle &&
             <p data-aos='fade-up' data-aos-anchor-placement="top-bottom" className="text-sm md:leading-5 w-[90%]  mx-auto">{subTitle}</p>
+              }
           </div>
         </div>
         {/*<div className="w-full h-[150px] absolute bottom-0 left-0 bg-gradient-to-t from-black via-black z-10 block md:hidden"></div>*/}
