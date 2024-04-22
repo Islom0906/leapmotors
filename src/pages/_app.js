@@ -6,8 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "../localization/i18n";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+
 import NextNProgress from "nextjs-progressbar";
 import "aos/dist/aos.css";
 import { Provider, useDispatch } from "react-redux";
@@ -19,7 +18,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 
 const queryClient = new QueryClient();
 
-import { Inter } from "@next/font/google";
+// import { Inter } from "@next/font/google";
 
 // const inter = Inter({
 //   subsets: ["latin", "cyrillic"],

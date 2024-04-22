@@ -4,7 +4,7 @@ import apiService from "@/service/api";
 
 import {useEffect, useState} from "react";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-import {useForm} from "react-hook-form";
+import {Controller, useForm} from "react-hook-form";
 import {LuLoader2} from "react-icons/lu";
 import ModalSuccess from "@/components/modal-success/modal-success";
 import InputMask from 'react-input-mask';
@@ -13,10 +13,15 @@ import SEO from '@/SEO/SEO';
 import {useSelector} from "react-redux";
 import {driveSEO} from "@/SEO/SEOconfig";
 import {useRouter} from "next/router";
+import DatePicker from "react-datepicker";
+
+import 'react-datepicker/dist/react-datepicker.css';
+import moment from "moment";
 
 const Drive = () => {
     const navigate=useRouter()
 
+    const [selectedDate, setSelectedDate] = useState(null);
     const [bg, setBg] = useState('')
     const [isActive, setIsActive] = useState(0)
     const [isModal, setModal] = useState(false)
@@ -25,7 +30,7 @@ const Drive = () => {
     const {model} = useSelector(state => state.drive)
     const {lang} = useSelector(state => state.lang)
 
-    const {register, handleSubmit, reset, formState: {errors}} = useForm()
+    const {register, handleSubmit, reset,control,setValue, formState: {errors}} = useForm()
     const {
         data,
         refetch:modelRefetch
@@ -104,7 +109,20 @@ const Drive = () => {
         userPost({url: '/testDrive', data: postData})
     }
 
+    const checkDate=(date)=>{
+        setValue('day',moment(date).format('DD-MM-YYYY'))
+        setSelectedDate(date)
+    }
 
+
+    const isWeekend = (date) => {
+        const day = date.getDay();
+        return day === 0 || day === 6; // 0 for Sunday, 6 for Saturday
+    };
+
+    const filterWeekends = (date) => {
+        return isWeekend(date);
+    };
 
 
     return (<>
@@ -114,7 +132,7 @@ const Drive = () => {
                     src={`${process.env.NEXT_PUBLIC_API_URL}/${bg?.imageBanner?.path}`}
                     fill
                     className="object-cover z-7"
-                    alt={bg?.textRu}
+                    alt={'test-drive'}
                 />
                 <div className="container relative h-full">
                     <div
@@ -203,13 +221,24 @@ const Drive = () => {
                                             >
                                                 Выберите день
                                             </label>
-                                            <input
-                                                {...register('day', {required: true})}
-                                                id="day"
-                                                type={'date'}
-                                                placeholder={'01.01.2024'}
-                                                className="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
+                                            <Controller
+                                                control={control}
+                                                name={'day'}
+                                                rules={{required:true}}
+                                                render={()=>(
+                                                    <DatePicker
+                                                        dataFormat={'dd/MM/yyyy'}
+                                                        minDate={moment().add(0, 'days').toDate()}
+                                                        selected={selectedDate}
+                                                        placeholderText={"Выберите день"}
+                                                        onChange={(date) => checkDate(date)}
+                                                        filterDate={filterWeekends}
+                                                        className="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                                    />
+                                                )}
                                             />
+
+
                                             {errors.day &&
                                                 <span className={'text-xs text-red-600'}>Требуется день</span>}
 
