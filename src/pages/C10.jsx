@@ -4,12 +4,10 @@ import {
     CarDetailBanner,
     CarSwiper, CarText,
     GifSection, HoverCard,
-    VideoCard,
     VideoSection
 } from "@/components";
 import {useTranslation} from "react-i18next";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-import Image from "next/image";
 
 
 const C10 = () => {
@@ -406,7 +404,8 @@ const C10 = () => {
                 bgRes={`${process.env.NEXT_PUBLIC_API_URL}/media/c10/section-2-res.jpg`}
                 isDouble={true}
                 textColor={'black'}
-                characteristics={characteristics}/>
+                characteristics={characteristics}
+            />
             {/*section3*/}
             <CarBanner
                 title={''}

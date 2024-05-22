@@ -18,7 +18,7 @@ const CarCharacteristics = ({bg, bgRes, characteristics, logo, textColor, model,
                         bgRes ?
                             <>
                                 <Image src={bgRes} alt="car"
-                                       className={`block ${isDouble ? 'object-top':'object-center'} object-cover  w-full h-full md:hidden`} fill
+                                       className={`block object-center object-cover  w-full h-full md:hidden`} fill
                                        priority={true}/>
                                 <Image src={bg} alt="car"
                                        className="hidden object-cover object-center w-full h-full md:block" fill
@@ -118,10 +118,10 @@ const CarCharacteristics = ({bg, bgRes, characteristics, logo, textColor, model,
 
                             </div>
                         </div>
-                        {
-                            isDouble &&
-                            <CharacterBottom character={characteristics.bottomCharacter}/>
-                        }
+                        {/*{*/}
+                        {/*    isDouble &&*/}
+                        {/*    <CharacterBottom character={characteristics.bottomCharacter}/>*/}
+                        {/*}*/}
                     </div>
 
                     <div

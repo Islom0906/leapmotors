@@ -38,20 +38,23 @@ const Navbar = () => {
     useEffect(()=>{
         const productSort=[]
         data?.data?.map(product=>{
-            if (product?.model==='C10'){
+            if (product?.model==='C16'){
                 productSort[0]=product
             }
-            if (product?.model==='T03'){
+            if (product?.model==='C10'){
                 productSort[1]=product
             }
-            if (product?.model==='C01'){
+            if (product?.model==='T03'){
                 productSort[2]=product
             }
-            if (product?.model==='C11'){
+            if (product?.model==='C01'){
                 productSort[3]=product
             }
-            if (product?.model==='C11Reev'){
+            if (product?.model==='C11'){
                 productSort[4]=product
+            }
+            if (product?.model==='C11Reev'){
+                productSort[5]=product
             }
         })
 
@@ -108,7 +111,7 @@ const Navbar = () => {
                     }
 
                 </Link>
-                <ul className={`${sale.asPath == '/car-sale' ? 'hidden' : 'lg:flex'} items-center hidden gap-10 text-white uppercase `}>
+                <ul className={`${sale.asPath == '/car-sale' ? 'hidden' : 'lg:flex'} items-center hidden gap-6 xl:gap-10 text-white uppercase `}>
                     {
                         sortProduct?.map(link => (
                             <li key={link?._id}>

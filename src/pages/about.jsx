@@ -1,8 +1,7 @@
 import Image from "next/image";
-import {Swiper, SwiperSlide} from "swiper/react";
-import SwiperCore, {Autoplay, Navigation} from "swiper";
+import SwiperCore, {Autoplay} from "swiper";
 import section1image2 from '/public/about us section 1 image2.jpg'
-import {AboutTeam, HoverCard} from "@/components";
+import { HoverCard} from "@/components";
 import axios from "axios";
 import {useSelector} from "react-redux";
 import SEO from "@/SEO/SEO";
@@ -78,17 +77,17 @@ export default function About({about}) {
                 {/*            <p className="text-white text-[10px] md:text-2xl leading-[25px] md:leading-[25px] mt-5">We have a deep management team with diverse backgrounds who worked at world-renowned automotive and technology companies and financial institutions to bring us years of in-depth expertise and business acumen.</p>*/}
                 {/*        </div>*/}
                 {/*    </section>*/}
-                <section className="h-screen py-10 bg-white md:py-20">
-                    <div className="container flex flex-col items-center justify-center h-full md:justify-start">
-                        <h1 className="text-[19px] text-[#4d5d80] font-arial-semibold md:text-[28px] text-center pb-4">{lang === 'ru' ? about[0]?.research?.titleRu : about[0]?.research?.titleUz}</h1>
-                        <p className="md:w-[95%] text-center text-[#4d5d80] text-xl">{lang === 'ru' ? about[0]?.research?.textRu : about[0]?.research?.textUz}</p>
-                        <div className={'w-full h-[31vh] sm:h-[45vh] md:h-[55vh] lg:h-[65vh] xl:h-[685px] relative'}>
-                            <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${about[0]?.research?.image?.path}`}
-                                   alt="OS Image" className="object-contain w-full" fill/>
+                {/*<section className="h-screen py-10 bg-white md:py-20">*/}
+                {/*    <div className="container flex flex-col items-center justify-center h-full md:justify-start">*/}
+                {/*        <h1 className="text-[19px] text-[#4d5d80] font-arial-semibold md:text-[28px] text-center pb-4">{lang === 'ru' ? about[0]?.research?.titleRu : about[0]?.research?.titleUz}</h1>*/}
+                {/*        <p className="md:w-[95%] text-center text-[#4d5d80] text-xl">{lang === 'ru' ? about[0]?.research?.textRu : about[0]?.research?.textUz}</p>*/}
+                {/*        <div className={'w-full h-[31vh] sm:h-[45vh] md:h-[55vh] lg:h-[65vh] xl:h-[685px] relative'}>*/}
+                {/*            <Image src={`${process.env.NEXT_PUBLIC_API_URL}/${about[0]?.research?.image?.path}`}*/}
+                {/*                   alt="OS Image" className="object-contain w-full" fill/>*/}
 
-                        </div>
-                    </div>
-                </section>
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</section>*/}
                 <section className="min-h-screen px-6 pt-16 md:pt-20 swiper-scroll">
                     <div className="flex flex-col items-center h-[20vh] ">
                         <p className="text-white text-sm leading-[20px] lg:w-[60%] text-center w-[90%] md:text-[22px] md:leading-[28px] mb-6 md:m-0">{lang === 'ru' ? about[0]?.aboutSystems?.descriptionRu : about?.aboutSystems?.descriptionUz}</p>

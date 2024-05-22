@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 import { checkCarModel} from "@/slice/testDrive";
 import {setCarModal} from "@/slice/sale";
 
-const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong ,model}) => {
+const CarDetailBanner = ({ bgRes ,  bg, img, text, textColor,title ,imgLong ,model}) => {
   const {t}=useTranslation()
   const dispatch=useDispatch()
   return (
@@ -33,7 +33,7 @@ const CarDetailBanner = ({ bgRes ,  bg, img, text, title ,imgLong ,model}) => {
               )}
           </div>
           <div className="mb-5 text-center">
-            <p className={`text-white text-lg   font-arial-semibold ${imgLong ? 'text-[20px] md:text-[24px]' : ' md:text-2xl lg:text-[28px]'} leading-10 md:leading-[56px]`}>
+            <p className={`${textColor? 'text-black':'text-white'}  text-lg   font-arial-semibold ${imgLong ? 'text-[20px] md:text-[24px]' : ' md:text-2xl lg:text-[28px]'} leading-10 md:leading-[56px]`}>
               {text}
             </p>
           </div>
