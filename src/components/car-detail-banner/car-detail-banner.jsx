@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 import { checkCarModel} from "@/slice/testDrive";
 import {setCarModal} from "@/slice/sale";
 
-const CarDetailBanner = ({ bgRes ,  bg, img, text, textColor,title ,imgLong ,model}) => {
+const CarDetailBanner = ({ bgRes ,  bg, img, text, textColor,title ,imgLong ,model  }) => {
   const {t}=useTranslation()
   const dispatch=useDispatch()
   return (
@@ -40,7 +40,8 @@ const CarDetailBanner = ({ bgRes ,  bg, img, text, textColor,title ,imgLong ,mod
           {
             model &&
             <div className="flex items-center justify-center mt-5 space-x-2">
-              
+              {
+                model !== 'C10' &&
           <Link
 
               href="/drive"
@@ -49,6 +50,7 @@ const CarDetailBanner = ({ bgRes ,  bg, img, text, textColor,title ,imgLong ,mod
           >
             {t('navbar.testDrive')}
           </Link>
+              }
                      <Link
 
                      href="/car-sale"

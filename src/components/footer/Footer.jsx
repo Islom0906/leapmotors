@@ -21,7 +21,6 @@ const Footer = () => {
   } = useQuery('get-contact', () => apiService.getData('/contact'),{
     enabled:false
   })
-
   useEffect(() => {
     refetch()
   }, []);
@@ -93,13 +92,20 @@ const Footer = () => {
                  
                 </div>
                 <div className="space-y-3">
-                
-                  <div className="flex flex-col justify-center md:justify-end items-center md:items-end    gap-4 text-base text-[#4d5d81] font-bold ">
+
+                  <div
+                      className="flex flex-col justify-center md:justify-end items-center md:items-end    gap-4 text-base text-[#4d5d81] font-bold ">
                     <a
-                      href={`tel:${data?.data?.tel}`}
-                        className="text-[#898989]    "
+                        href={`tel:${data?.data?.tel}`}
+                        className="text-[#898989]"
                     >
                       <span>{data?.data?.tel} </span>
+                    </a>
+                    <a
+                        href={`mailto:info@leapmotorca.uz`}
+                        className="text-[#898989]"
+                    >
+                      <span>info@leapmotorca.uz </span>
                     </a>
                     {/*<a*/}
                     {/*    href={`tel:${data?.data?.tel}`}*/}

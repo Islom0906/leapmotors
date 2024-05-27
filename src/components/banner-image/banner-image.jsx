@@ -50,7 +50,7 @@ const BannerImage = ({ bg, logo, text, link, bgRes }) => {
                   className="w-[280px] xs:w-[425px] lg:w-[637px] h-full mx-auto object-contain"
                 />
               </div>
-              <div className="mb-5 text-center">
+              <div className="my-5 text-center">
                 <p
                   data-aos="fade-up"
                   data-aos-anchor-placement="top-bottom"
